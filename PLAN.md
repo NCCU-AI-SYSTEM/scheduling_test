@@ -115,7 +115,7 @@ CREATE TABLE course_meta_v1 (
 |---|---|---|---|---|---|
 | M1 | Dense embedding | `BAAI/bge-m3` | 本機（scheduling_test） | 主向量檢索 | 必要 |
 | M2 | Reranker | `BAAI/bge-reranker-v2-m3` | 本機 | top-50 → top-10 重排 | 必要 |
-| M3 | 輕量生成 LLM | `gemma3:4b`（Ollama，home_mac:11434） | home_mac via SSH tunnel | (a) course meta 生成 (b) HyDE/Q2D/Multi-Query 等 query rewriter (c) Structured Extraction | 必要 |
+| M3 | 輕量生成 LLM | `gemma4:e4b`（Ollama，home_mac:11434） | home_mac via SSH tunnel | (a) course meta 生成 (b) HyDE/Q2D/Multi-Query 等 query rewriter (c) Structured Extraction | 必要 |
 | M4a | Eval-set 生成 #1 | `claude-opus-4`（Anthropic Message Batches API，50% 折扣） | API | 合成 query（風格 A） | 必要 |
 | M4b | Eval-set 生成 #2 | `gpt-4o-mini` 或 `gpt-4.1-mini`（OpenAI Batch API，50% 折扣） | API | 合成 query（風格 B） | 必要 |
 | M5 | 替代 dense embedding | `jinaai/jina-embeddings-v3` | 本機 | M1 ablation | Optional |
@@ -133,8 +133,8 @@ ssh -fNL 11434:127.0.0.1:11434 home_mac
 健康檢查：
 ```bash
 curl http://127.0.0.1:11434/api/tags
-# 確認 gemma3:4b 已 pull；若無：
-ssh home_mac "ollama pull gemma3:4b"
+# 確認 gemma4:e4b 已 pull；若無：
+ssh home_mac "ollama pull gemma4:e4b"
 ```
 
 呼叫慣例（src 內統一 wrapper，方便切換）：
@@ -142,7 +142,7 @@ ssh home_mac "ollama pull gemma3:4b"
 # src/llm/ollama_client.py
 import ollama
 client = ollama.Client(host="http://127.0.0.1:11434")
-resp = client.chat(model="gemma3:4b", messages=[...], options={"temperature": 0.3})
+resp = client.chat(model="gemma4:e4b", messages=[...], options={"temperature": 0.3})
 ```
 
 `pyproject.toml` 加入 `ollama` python client。tunnel 中斷時程式應 fail loud，不要 silent fallback。
@@ -172,7 +172,7 @@ prompt 一致，溫度 0.7~0.9。每門課各生 3 type，總共 6 query。
 - M4a Claude Opus batch：2,795 × ~600 tokens × $7.5/M（input batch 價）≈ **US$13**
 - M4b GPT-4o-mini batch：2,795 × ~600 tokens × $0.075/M ≈ **US$0.5**
 - 共 ~US$14，比原估的 50 美降 70%
-- M3 gemma3:4b 完全本地，無金錢成本
+- M3 gemma4:e4b 完全本地，無金錢成本
 
 ### 3.3 算力估算
 
@@ -422,10 +422,10 @@ scheduling_test/
 | 來源 A LLM 生成 query 過度貼近 objective → 高估準確度 | 最終數字一律以 test set (來源 B) 為準 |
 | 標註者疲勞、κ 不夠 | 每 query 限制候選 ≤ 30，先用 baseline 預檢索，標註者只審核 |
 | bge-m3 對冷門系所術語 OOV | M3 keywords 步驟強制覆蓋學科術語 |
-| LLM 成本 | meta_gen 走 home_mac gemma3:4b（免費）；query rewriter 同走 gemma3:4b；只有 eval-set 合成用 Claude/GPT-5（一次性，~US$50） |
+| LLM 成本 | meta_gen 走 home_mac gemma4:e4b（免費）；query rewriter 同走 gemma4:e4b；只有 eval-set 合成用 Claude/GPT-5（一次性，~US$50） |
 | reranker 推論慢 | top-50 → top-10，rerank 規模可控；GPU 不可得時降到 top-30 |
 | home_mac SSH tunnel 中斷 | 程式 fail loud，加 reconnect script；長跑任務改用 tmux 在 home_mac 本機跑 |
-| gemma3:4b 中文 query rewrite 品質不足 | 抽樣比較 vs Claude，必要時 fallback 到 API 模型，僅換 query 端，不影響檢索層 ablation |
+| gemma4:e4b 中文 query rewrite 品質不足 | 抽樣比較 vs Claude，必要時 fallback 到 API 模型，僅換 query 端，不影響檢索層 ablation |
 
 ---
 
