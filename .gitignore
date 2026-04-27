@@ -1,0 +1,34 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Project
+data/processed/
+data/raw/*.jsonl
+results/runs/
+results/tables/
+batches/*.jsonl
+batches/*.out
+*.faiss
+*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Env
+.env
+
+# Hermes / Claude
+.claude/
+CLAUDE.md
+docs/AI_*
+
+# OS
+.DS_Store
