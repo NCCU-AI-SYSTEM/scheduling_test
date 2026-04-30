@@ -16,6 +16,8 @@ dependencies = [
     "jupyter>=1.0",
     "pyarrow>=18.0",
     "rank-bm25>=0.2.2",
+    "sentence-transformers>=5.4.1",
+    "transformers>=4.40,<5",
 ]
 
 [project.optional-dependencies]
