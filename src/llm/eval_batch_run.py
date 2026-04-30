@@ -22,7 +22,10 @@ import sys
 import time
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 ROOT = Path(__file__).resolve().parents[2]
+load_dotenv(ROOT / ".env")
 BATCH_DIR = ROOT / "batches"
 STATE_DIR = BATCH_DIR / "state"
 STATE_DIR.mkdir(parents=True, exist_ok=True)
@@ -105,14 +108,34 @@ def openai_fetch() -> Path:
 # --- Anthropic ----------------------------------------------------------------
 
 def anthropic_submit() -> dict:
+    """Anthropic batch — chunk into <=1000 reqs per batch (cloudflare 5MB limit)."""
     import anthropic
 
-    client = anthropic.Anthropic()
+    client = anthropic.Anthropic(max_retries=5, timeout=120.0)
     requests = [json.loads(line) for line in ANTHROPIC_INPUT.read_text().splitlines() if line]
-    print(f"[anthropic] submitting {len(requests)} requests")
-    batch = client.messages.batches.create(requests=requests)
-    print(f"[anthropic] batch_id={batch.id}  status={batch.processing_status}")
-    state = {"batch_id": batch.id, "status": batch.processing_status}
+    print(f"[anthropic] total {len(requests)} requests")
+
+    chunk_size = 500
+    batch_ids: list[str] = []
+    for i in range(0, len(requests), chunk_size):
+        chunk = requests[i : i + chunk_size]
+        for attempt in range(5):
+            try:
+                batch = client.messages.batches.create(requests=chunk)
+                batch_ids.append(batch.id)
+                print(
+                    f"[anthropic] chunk {i//chunk_size+1}/"
+                    f"{(len(requests)+chunk_size-1)//chunk_size} -> {batch.id} "
+                    f"({len(chunk)} reqs)"
+                )
+                break
+            except (anthropic.APIConnectionError, anthropic.InternalServerError) as e:
+                wait = 5 * (2**attempt)
+                print(f"[anthropic] chunk {i} attempt {attempt+1} fail: {e}; sleep {wait}s")
+                time.sleep(wait)
+        else:
+            raise RuntimeError(f"chunk {i} failed after 5 attempts")
+    state = {"batch_ids": batch_ids, "n_chunks": len(batch_ids)}
     _save_state("anthropic", state)
     return state
 
@@ -120,17 +143,35 @@ def anthropic_submit() -> dict:
 def anthropic_status() -> dict:
     import anthropic
 
-    client = anthropic.Anthropic()
+    client = anthropic.Anthropic(max_retries=5, timeout=60.0)
     state = _load_state("anthropic")
-    batch = client.messages.batches.retrieve(state["batch_id"])
-    rc = batch.request_counts
+    bids = state.get("batch_ids") or [state["batch_id"]]  # back-compat
+    summary: list[dict] = []
+    all_ended = True
+    total_succ = total_err = total_proc = 0
+    for bid in bids:
+        b = client.messages.batches.retrieve(bid)
+        rc = b.request_counts
+        summary.append(
+            {
+                "id": bid,
+                "status": b.processing_status,
+                "succeeded": rc.succeeded,
+                "errored": rc.errored,
+                "processing": rc.processing,
+            }
+        )
+        if b.processing_status != "ended":
+            all_ended = False
+        total_succ += rc.succeeded
+        total_err += rc.errored
+        total_proc += rc.processing
     print(
-        f"[anthropic] {batch.id}  status={batch.processing_status}  "
-        f"succeeded={rc.succeeded}  errored={rc.errored}  "
-        f"processing={rc.processing}  cancelled={rc.canceled}"
+        f"[anthropic] chunks={len(bids)}  all_ended={all_ended}  "
+        f"succ={total_succ}  err={total_err}  processing={total_proc}"
     )
-    state["status"] = batch.processing_status
-    state["results_url"] = getattr(batch, "results_url", None)
+    state["status"] = "ended" if all_ended else "in_progress"
+    state["chunks"] = summary
     _save_state("anthropic", state)
     return state
 
@@ -138,16 +179,22 @@ def anthropic_status() -> dict:
 def anthropic_fetch() -> Path:
     import anthropic
 
-    client = anthropic.Anthropic()
+    client = anthropic.Anthropic(max_retries=5, timeout=60.0)
     state = _load_state("anthropic")
-    if state["status"] != "ended":
-        state = anthropic_status()
-        if state["status"] != "ended":
-            raise RuntimeError(f"batch not complete: {state['status']}")
+    bids = state.get("batch_ids") or [state["batch_id"]]
+    written = 0
     with ANTHROPIC_RESULT.open("w", encoding="utf-8") as out:
-        for entry in client.messages.batches.results(state["batch_id"]):
-            out.write(json.dumps(entry.model_dump(), ensure_ascii=False) + "\n")
-    print(f"[anthropic] wrote {ANTHROPIC_RESULT}  ({ANTHROPIC_RESULT.stat().st_size/1024:.1f} KB)")
+        for bid in bids:
+            b = client.messages.batches.retrieve(bid)
+            if b.processing_status != "ended":
+                raise RuntimeError(f"batch {bid} not complete: {b.processing_status}")
+            for entry in client.messages.batches.results(bid):
+                out.write(json.dumps(entry.model_dump(), ensure_ascii=False) + "\n")
+                written += 1
+    print(
+        f"[anthropic] wrote {ANTHROPIC_RESULT}  "
+        f"({ANTHROPIC_RESULT.stat().st_size/1024:.1f} KB, {written} results)"
+    )
     return ANTHROPIC_RESULT
 
 
