@@ -2513,6 +2513,7 @@ dependencies = [
     { name = "pandas" },
     { name = "pyarrow" },
     { name = "python-dotenv" },
+    { name = "rank-bm25" },
     { name = "tqdm" },
 ]
 
@@ -2549,6 +2550,7 @@ requires-dist = [
     { name = "pandas", specifier = ">=2.2" },
     { name = "pyarrow", specifier = ">=18.0" },
     { name = "python-dotenv", specifier = ">=1.0" },
+    { name = "rank-bm25", specifier = ">=0.2.2" },
     { name = "rank-bm25", marker = "extra == 'retrieval'", specifier = ">=0.2.2" },
     { name = "sentence-transformers", marker = "extra == 'retrieval'", specifier = ">=3.0" },
     { name = "tqdm", specifier = ">=4.66" },
