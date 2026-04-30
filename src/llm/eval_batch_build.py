@@ -25,7 +25,7 @@ BATCH_DIR = ROOT / "batches"
 BATCH_DIR.mkdir(parents=True, exist_ok=True)
 
 OPENAI_MODEL = "gpt-4.1-mini"
-ANTHROPIC_MODEL = "claude-opus-4-20250514"
+ANTHROPIC_MODEL = "claude-opus-4-7"
 
 SYSTEM_PROMPT = (
     "你是政治大學選課學生，會用日常口吻搜尋自己想修的課。"
