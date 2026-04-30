@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import os
+import time
 from dataclasses import dataclass
 
 import ollama
@@ -44,17 +45,28 @@ def chat(
     temperature: float = 0.3,
     json_mode: bool = False,
     num_ctx: int = 8192,
+    max_retries: int = 3,
+    backoff: float = 2.0,
 ) -> LLMResponse:
-    client = get_client(host)
     options: dict = {"temperature": temperature, "num_ctx": num_ctx}
     fmt = "json" if json_mode else None
-    resp = client.chat(model=model, messages=messages, options=options, format=fmt)
-    return LLMResponse(
-        text=resp.message.content or "",
-        model=resp.model,
-        prompt_tokens=resp.prompt_eval_count or 0,
-        completion_tokens=resp.eval_count or 0,
-    )
+    last_err: Exception | None = None
+    for attempt in range(max_retries):
+        client = get_client(host)
+        try:
+            resp = client.chat(model=model, messages=messages, options=options, format=fmt)
+            return LLMResponse(
+                text=resp.message.content or "",
+                model=resp.model,
+                prompt_tokens=resp.prompt_eval_count or 0,
+                completion_tokens=resp.eval_count or 0,
+            )
+        except Exception as e:  # noqa: BLE001 — connection / timeout / 5xx
+            last_err = e
+            if attempt < max_retries - 1:
+                time.sleep(backoff * (2**attempt))
+    assert last_err is not None
+    raise last_err
 
 
 def chat_json(

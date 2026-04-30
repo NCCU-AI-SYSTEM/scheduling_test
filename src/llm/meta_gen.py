@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import json
 import sqlite3
+import subprocess
 import sys
 import threading
 import time
@@ -29,6 +30,17 @@ from src.loader import Course, load_courses
 
 ROOT = Path(__file__).resolve().parents[2]
 META_DB = ROOT / "data" / "processed" / "course_meta.db"
+ENSURE_TUNNEL = ROOT / "scripts" / "ensure_tunnel.sh"
+
+
+def _try_reconnect_tunnel() -> bool:
+    if not ENSURE_TUNNEL.exists():
+        return False
+    try:
+        r = subprocess.run([str(ENSURE_TUNNEL)], capture_output=True, timeout=20)
+        return r.returncode == 0
+    except Exception:  # noqa: BLE001
+        return False
 
 CONTROLLED_TAGS = [
     "AI", "資料科學", "機器學習", "程式設計", "數學", "統計",
@@ -171,11 +183,22 @@ def main(argv: list[str] | None = None) -> int:
     t0 = time.time()
 
     def work(c: Course) -> tuple[Course, dict | None, str | None]:
-        try:
-            obj = generate_one(c, args.model)
-            return c, obj, None
-        except Exception as e:  # noqa: BLE001
-            return c, None, str(e)
+        for attempt in range(3):
+            try:
+                obj = generate_one(c, args.model)
+                return c, obj, None
+            except Exception as e:  # noqa: BLE001
+                err = str(e)
+                # Connection-level error: try to revive the SSH tunnel once.
+                if "connect" in err.lower() or "refused" in err.lower():
+                    _try_reconnect_tunnel()
+                    time.sleep(1.0)
+                    continue
+                if attempt < 2:
+                    time.sleep(1.5 * (attempt + 1))
+                    continue
+                return c, None, err
+        return c, None, "exhausted retries"
 
     with ThreadPoolExecutor(max_workers=max(1, args.workers)) as ex:
         futures = [ex.submit(work, c) for c in todo]
