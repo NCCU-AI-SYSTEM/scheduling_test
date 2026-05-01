@@ -116,8 +116,7 @@ CREATE TABLE course_meta_v1 (
 | M1 | Dense embedding | `BAAI/bge-m3` | 本機（scheduling_test） | 主向量檢索 | 必要 |
 | M2 | Reranker | `BAAI/bge-reranker-v2-m3` | 本機 | top-50 → top-10 重排 | 必要 |
 | M3 | 輕量生成 LLM | `gemma4:e4b`（Ollama，home_mac:11434） | home_mac via SSH tunnel | (a) course meta 生成 (b) HyDE/Q2D/Multi-Query 等 query rewriter (c) Structured Extraction | 必要 |
-| M4a | Eval-set 生成 #1 | `claude-opus-4`（Anthropic Message Batches API，50% 折扣） | API | 合成 query（風格 A） | 必要 |
-| M4b | Eval-set 生成 #2 | `gpt-4o-mini` 或 `gpt-4.1-mini`（OpenAI Batch API，50% 折扣） | API | 合成 query（風格 B） | 必要 |
+| M4a | Eval-set 生成 | `gpt-4.1-mini`（OpenAI Batch API，50% 折扣） | API | 合成 query | 必要 |
 | M5 | 替代 dense embedding | `jinaai/jina-embeddings-v3` | 本機 | M1 ablation | Optional |
 | M6 | Multi-vector / late interaction | `bge-m3` ColBERT mode | 本機 | RQ4 進階組 | Optional |
 

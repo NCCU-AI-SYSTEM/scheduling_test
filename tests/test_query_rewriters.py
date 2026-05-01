@@ -38,9 +38,17 @@ def test_kind_neg():
 
 
 def test_points_threshold():
-    c = parse_constraints("3 學分以上的法律課")
+    c = parse_constraints("3 學分以上的法律系課")
     assert c.point_min == 3.0
     assert "法律" in c.unit_include
+
+
+def test_unit_requires_collocation():
+    """經濟學等學科名稱不應被誤判為經濟系。"""
+    c = parse_constraints("想學經濟學的入門")
+    assert "經濟" not in c.unit_include
+    c2 = parse_constraints("經濟系大三必修")
+    assert "經濟" in c2.unit_include
 
 
 def test_lang_keyword_only_when_collocated():

@@ -164,14 +164,19 @@ def parse_constraints(query: str) -> QueryConstraints:
         else:
             c.point_min = c.point_max = float(n)
 
-    # unit/dept
+    # unit/dept — require collocation with 系/院/所/學系/系所 to avoid 經濟學被當成經濟系
+    unit_triggers = ("系", "院", "所", "學系", "系所", "學院")
     for kw in UNIT_KEYWORDS:
-        if kw in s:
-            idx = s.find(kw)
-            if _is_negated(s, (idx, idx + len(kw))):
-                c.unit_exclude.add(kw)
-            else:
-                c.unit_include.add(kw)
+        idx = s.find(kw)
+        if idx < 0:
+            continue
+        tail = s[idx + len(kw) : idx + len(kw) + 2]
+        if not any(tail.startswith(t) for t in unit_triggers):
+            continue
+        if _is_negated(s, (idx, idx + len(kw))):
+            c.unit_exclude.add(kw)
+        else:
+            c.unit_include.add(kw)
 
     # build semantic residual: drop the constraint phrases we matched
     residual = s
