@@ -1,7 +1,7 @@
 {
   "file_id": "file-XUgrtoFBecqtA9NTVNy7gv",
   "batch_id": "batch_69f390eb793c81909f1fbd1824f8ff64",
-  "status": "in_progress",
-  "output_file_id": null,
-  "error_file_id": null
+  "status": "completed",
+  "output_file_id": "file-Wqxhfpg9qVvcVevrSpLHYW",
+  "error_file_id": "file-BgcZqkzXthCYZvbK9sAJzL"
 }
