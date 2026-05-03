@@ -113,8 +113,10 @@ def build_d_v2(courses: list[Course]) -> list[RetrievalDoc]:
     out: list[RetrievalDoc] = []
     for c in courses:
         m = meta.get(c.course_id, {})
-        kw = "、".join(m.get("keywords") or []) if m else ""
-        tags = "、".join(m.get("topic_tags") or []) if m else ""
+        kws_raw = m.get("keywords") or []
+        kw = "、".join(str(k) for k in kws_raw if isinstance(k, str)) if m else ""
+        tags_raw = m.get("topic_tags") or []
+        tags = "、".join(str(t) for t in tags_raw if isinstance(t, str)) if m else ""
         summary = m.get("summary") or ""
         objective = (c.objective or "").strip()
         topic_lines = "、".join(c.weekly_topics) if c.weekly_topics else ""
