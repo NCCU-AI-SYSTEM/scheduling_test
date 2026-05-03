@@ -3,7 +3,7 @@ name = "scheduling-test"
 version = "0.1.0"
 description = "NCCU course retrieval experiment harness"
 readme = "README.md"
-requires-python = ">=3.13,<3.14"
+requires-python = ">=3.12"
 dependencies = [
     "pandas>=2.2",
     "numpy>=1.26",
