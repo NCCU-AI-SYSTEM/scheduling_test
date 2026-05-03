@@ -21,7 +21,6 @@ from src.filters import filter_hits
 from src.loader import load_courses
 from src.query_rewriters import hyde, multi_query, parse_constraints, q2d, step_back
 from src.retrievers import BM25Retriever, rrf_fuse
-
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS_DIR = ROOT / "results" / "runs"
 TABLES_DIR = ROOT / "results" / "tables"
@@ -50,6 +49,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--semester", default="2")
     p.add_argument("--doc", choices=list(BUILDERS), default="d-base")
     p.add_argument("--retriever", choices=["bm25", "dense", "rrf"], default="bm25")
+    p.add_argument("--reranker", choices=["none", "bge"], default="none")
     p.add_argument("--rewrite", choices=["raw", "hyde", "q2d", "stepback", "multi"], default="raw")
     p.add_argument("--filter", choices=["none", "struct"], default="none")
     p.add_argument("--dense-model", default="BAAI/bge-m3")
@@ -62,7 +62,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--tag", default=None)
     args = p.parse_args(argv)
 
-    tag = args.tag or f"{args.doc}__{args.retriever}__{args.rewrite}__{args.filter}__{args.eval}"
+    tag = args.tag or f"{args.doc}__{args.retriever}__{args.reranker}__{args.rewrite}__{args.filter}__{args.eval}"
     print(f"[run] tag={tag}")
 
     courses = load_courses(year=args.year, semester=args.semester)
@@ -79,30 +79,46 @@ def main(argv: list[str] | None = None) -> int:
     print(f"[run] index ready in {time.time()-t0:.1f}s")
 
     queries = from_objective(courses, n=args.n) if args.eval == "objective_smoke" else from_jsonl()
+    if args.n and args.eval == "synth_jsonl":
+        import random
+        rng = random.Random(42)
+        rng.shuffle(queries)
+        queries = queries[: args.n]
     print(f"[run] eval queries={len(queries)}")
 
     evals: list[QueryEval] = []
     dump: list[dict] = []
     t0 = time.time()
+
+    # collect all hits first (needed for batch_rerank)
+    all_hits: list[list[tuple]] = []
+    all_queries_str: list[str] = []
     for q in tqdm(queries, desc="retrieve"):
         rewritten = _rewrite(q.query, args.rewrite)
-
         runs: list[list] = []
         for rq in rewritten:
             if args.retriever == "bm25":
                 runs.append(bm25.search(rq, k=args.retrieve_k))
             elif args.retriever == "dense":
                 runs.append(dense.search(rq, k=args.retrieve_k))
-            else:  # rrf
+            else:
                 runs.append(bm25.search(rq, k=args.retrieve_k))
                 runs.append(dense.search(rq, k=args.retrieve_k))
-
         hits = runs[0] if len(runs) == 1 else rrf_fuse(runs, top_k=args.retrieve_k)
-
         if args.filter == "struct":
             constraints = parse_constraints(q.query)
             hits = filter_hits(hits, constraints)
+        all_hits.append(hits)
+        all_queries_str.append(q.query)
 
+    # batch rerank if requested
+    if args.reranker == "bge":
+        from src.rerankers import batch_rerank
+        print(f"[run] reranking {len(all_queries_str)} queries × {args.retrieve_k} pairs...")
+        all_hits = batch_rerank(all_queries_str, all_hits, top_k=args.top_k)
+        print(f"[run] rerank done in {time.time()-t0:.1f}s")
+
+    for q, hits in zip(queries, all_hits):
         ids = [d.course_id for d, _ in hits[: args.top_k]]
         evals.append(QueryEval(qid=q.qid, relevant=q.gold, retrieved=ids))
         dump.append(
@@ -112,7 +128,7 @@ def main(argv: list[str] | None = None) -> int:
                 "gold": sorted(q.gold),
                 "retrieved": ids,
                 "qtype": q.qtype,
-                "rewritten": rewritten if args.rewrite != "raw" else None,
+                "rewritten": _rewrite(q.query, args.rewrite) if args.rewrite != "raw" else None,
             }
         )
     elapsed = time.time() - t0
@@ -120,6 +136,7 @@ def main(argv: list[str] | None = None) -> int:
     metrics = aggregate(evals, ks=(5, 10, 20))
     metrics["doc_builder"] = args.doc
     metrics["retriever"] = args.retriever
+    metrics["reranker"] = args.reranker
     metrics["rewrite"] = args.rewrite
     metrics["filter"] = args.filter
     metrics["eval_set"] = args.eval
