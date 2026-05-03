@@ -58,7 +58,11 @@ def main() -> None:
     import sys
     sys.path.insert(0, str(ROOT))
     from src.eval import from_jsonl
-    queries = from_jsonl()[:500]
+    import random
+    queries_all = from_jsonl()
+    rng = random.Random(42)
+    rng.shuffle(queries_all)
+    queries = queries_all[:500]
     print(f"[batch] {len(queries)} queries")
 
     # save qid -> query mapping for merge step

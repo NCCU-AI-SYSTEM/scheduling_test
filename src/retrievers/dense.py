@@ -23,10 +23,13 @@ CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def _device() -> str:
+    # MPS has intermittent hangs on first query encode; prefer CPU for stability
+    # Set env FORCE_MPS=1 to override
+    import os
+    if os.environ.get("FORCE_MPS") and torch.backends.mps.is_available():
+        return "mps"
     if torch.cuda.is_available():
         return "cuda"
-    if torch.backends.mps.is_available():
-        return "mps"
     return "cpu"
 
 
