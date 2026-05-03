@@ -1,14 +1,16 @@
-"""LLM-based query rewriters using Ollama (gemma4:e4b on home_mac).
+"""LLM-based query rewriters.
 
-Implements:
-  - HyDE  : generate a hypothetical course description matching the query
-  - Q2D   : Query2Doc — produce an expanded passage that contains the query
-  - Multi : multi-query (N paraphrases for RAG-Fusion)
-  - StepBack : abstract the query to a higher-level concept
+Primary flow: OpenAI gpt-4o-mini batch (build_rewrite_batch.py → run_rewrite_batch.py --merge)
+writes disk cache. Falls back to Ollama gemma4:e4b for cache misses.
+
+Methods:
+  - HyDE      : hypothetical course description matching the query
+  - Q2D       : Query2Doc — expanded passage containing the query
+  - Multi     : N paraphrases for RAG-Fusion
+  - StepBack  : abstract the query to a higher-level concept
 
 All return strings (or list[str] for Multi). Caller embeds/searches them.
-Cached on disk under data/processed/query_cache/<sha256>.json so re-runs are
-free.
+Cached on disk under data/processed/query_cache/<sha256>.json so re-runs are free.
 """
 
 from __future__ import annotations
