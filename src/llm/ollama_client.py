@@ -26,7 +26,7 @@ class LLMResponse:
 
 
 def get_client(host: str = DEFAULT_HOST) -> ollama.Client:
-    return ollama.Client(host=host, timeout=120)
+    return ollama.Client(host=host, timeout=300)
 
 
 def health_check(host: str = DEFAULT_HOST, model: str = DEFAULT_MODEL) -> None:
