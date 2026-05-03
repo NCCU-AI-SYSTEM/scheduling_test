@@ -107,81 +107,47 @@ CREATE TABLE course_meta_v1 (
 
 ---
 
-## 3. 模型清單
+## 3. 模型清單（已更新：全面改用 GPT）
 
-實驗共用 **6 個模型**：3 個 retrieval 必要、2 個 LLM 用於 eval set 生成（多樣性）、1 個輕量 LLM 跑 query rewriter / meta 生成。
+實驗共用 **4 個模型**：Ollama 依賴已全部移除，統一走 OpenAI Batch API（50% 折扣）。
 
-| # | 角色 | 模型 | 部署位置 | 用途 | 必要性 |
+| # | 角色 | 模型 | 部署 | 用途 | 必要性 |
 |---|---|---|---|---|---|
-| M1 | Dense embedding | `BAAI/bge-m3` | 本機（scheduling_test） | 主向量檢索 | 必要 |
-| M2 | Reranker | `BAAI/bge-reranker-v2-m3` | 本機 | top-50 → top-10 重排 | 必要 |
-| M3 | 輕量生成 LLM | `gemma4:e4b`（Ollama，home_mac:11434） | home_mac via SSH tunnel | (a) course meta 生成 (b) HyDE/Q2D/Multi-Query 等 query rewriter (c) Structured Extraction | 必要 |
-| M4a | Eval-set 生成 | `gpt-4.1-mini`（OpenAI Batch API，50% 折扣） | API | 合成 query | 必要 |
-| M5 | 替代 dense embedding | `jinaai/jina-embeddings-v3` | 本機 | M1 ablation | Optional |
-| M6 | Multi-vector / late interaction | `bge-m3` ColBERT mode | 本機 | RQ4 進階組 | Optional |
+| M1 | Dense embedding | `BAAI/bge-m3` | 本機（CPU，doc embeddings from cache） | 主向量檢索 | 必要 |
+| M2 | Reranker | `BAAI/bge-reranker-v2-m3` | home_mac / home_wsl | top-k 重排 | 必要 |
+| M3 | 生成 LLM（batch） | `gpt-4o-mini`（OpenAI Batch API） | API | meta 生成、HyDE、Q2D、eval-set 合成 | 必要 |
+| M4 | 替代 dense embedding | `jinaai/jina-embeddings-v3` | 本機 | ablation | Optional |
 
-### 3.1 M3：Ollama on home_mac via SSH tunnel
+### 3.1 OpenAI Batch 工作流（統一入口）
 
-連線方式：
-```bash
-# 在 scheduling_test 開發機建 tunnel（背景執行）
-ssh -fNL 11434:127.0.0.1:11434 home_mac
-# 之後本機所有程式用 http://127.0.0.1:11434 即可
-```
+所有 LLM 生成任務走 Batch API（24h 內完成，費用 50% 折扣）：
 
-健康檢查：
-```bash
-curl http://127.0.0.1:11434/api/tags
-# 確認 gemma4:e4b 已 pull；若無：
-ssh home_mac "ollama pull gemma4:e4b"
-```
+| 任務 | Script | Batch ID |
+|---|---|---|
+| Eval-set 合成（8,253 query） | `src/llm/eval_batch_build.py` + `eval_batch_run.py` | 已完成 |
+| Course meta（summary/keywords） | `scripts/run_meta_batch.py` | batch_69f786db3f148190 |
+| HyDE + Q2D cache（500 query） | `scripts/build_rewrite_batch.py` + `run_rewrite_batch.py` | batch_69f77fea3d448190 |
 
-呼叫慣例（src 內統一 wrapper，方便切換）：
-```python
-# src/llm/ollama_client.py
-import ollama
-client = ollama.Client(host="http://127.0.0.1:11434")
-resp = client.chat(model="gemma4:e4b", messages=[...], options={"temperature": 0.3})
-```
+**費用估算（實際）**：
+- Eval-set：~US$1.5
+- Meta batch：1,574 課 × ~500 tokens × $0.075/M ≈ **US$0.06**
+- HyDE/Q2D：1,000 req × ~300 tokens × $0.075/M ≈ **US$0.02**
+- 合計：**< US$2**
 
-`pyproject.toml` 加入 `ollama` python client。tunnel 中斷時程式應 fail loud，不要 silent fallback。
+### 3.2 MPS 注意事項
 
-### 3.2 M4a / M4b：Eval-set 生成用雙模型增加多樣性
-
-策略：每門課跑 **同一 prompt 但兩個模型各生 1 組**，最後合併並去重。
-
-- M4a：Claude Opus，走 Anthropic **Message Batches API**（24h 完成，50% 折扣）
-- M4b：GPT-4o-mini 或 GPT-4.1-mini，走 OpenAI **Batch API**（24h 完成，50% 折扣）
-
-兩個模型故意挑「重量級 vs 輕量級」搭配：
-- Opus 提供深度語意改寫、學科術語準度
-- 4o-mini / 4.1-mini 便宜量大，提供口語、閒聊風格、噪音多樣性
-- 風格 bias 互相中和，避免單一模型風格汙染 eval
-
-prompt 一致，溫度 0.7~0.9。每門課各生 3 type，總共 6 query。
-
-**Batch 工作流**：
-1. `scripts/build_batch_jobs.py` 把 2,795 課讀出 → 產生兩支 jsonl：
-   - `batches/anthropic_eval.jsonl`（custom_id = courseId）
-   - `batches/openai_eval.jsonl`（custom_id = courseId）
-2. 同時 submit 兩個 batch；輪詢 status；完成後拉回 results
-3. `scripts/merge_eval.py` 解析、去重、合併成 `data/eval_synth.jsonl`
-
-成本估算（含 batch 折扣）：
-- M4a Claude Opus batch：2,795 × ~600 tokens × $7.5/M（input batch 價）≈ **US$13**
-- M4b GPT-4o-mini batch：2,795 × ~600 tokens × $0.075/M ≈ **US$0.5**
-- 共 ~US$14，比原估的 50 美降 70%
-- M3 gemma4:e4b 完全本地，無金錢成本
+`BAAI/bge-m3` 在本機 MPS 有 intermittent hang（第一次 query encode 卡死）。
+`src/retrievers/dense.py` 預設使用 CPU；設 `FORCE_MPS=1` 才用 MPS。
+Reranker 建議固定在 home_mac 或 home_wsl 跑（home_wsl 資源較好）。
 
 ### 3.3 算力估算
 
-| 階段 | 計算量 | 預估時間 |
+| 階段 | 方式 | 預估時間/成本 |
 |---|---|---|
-| M3 meta_gen | 2,795 課 × 1 次 | home_mac M1/M2/M3/M4 級別 ~60 分鐘 |
-| M3 query rewriter (E6–E11) | 150 query × 多 pipeline | 每 pipeline ~3 分鐘 |
-| M1 build (D-V3) | 2,795 doc × 5 field ≈ 14k 段 | GPU < 30s / CPU ~5min |
-| M2 rerank | 150 query × 50 pair | GPU ~15s / CPU ~5min |
-| M4a/b eval gen | 2,795 課 × 2 模型 | 並行下 ~30 分鐘 |
+| LLM 生成（meta / HyDE / Q2D / eval-set） | OpenAI Batch gpt-4o-mini | 24h 內，< US$2 |
+| Dense doc embedding | bge-m3 本機 CPU（從 cache pkl） | 一次性完成 |
+| Query encode（retrieve） | bge-m3 CPU ~50ms/query | 即時 |
+| Reranker | bge-reranker-v2-m3 on home_wsl | ~46s/128 pairs |
 
 ---
 
@@ -421,10 +387,9 @@ scheduling_test/
 | 來源 A LLM 生成 query 過度貼近 objective → 高估準確度 | 最終數字一律以 test set (來源 B) 為準 |
 | 標註者疲勞、κ 不夠 | 每 query 限制候選 ≤ 30，先用 baseline 預檢索，標註者只審核 |
 | bge-m3 對冷門系所術語 OOV | M3 keywords 步驟強制覆蓋學科術語 |
-| LLM 成本 | meta_gen 走 home_mac gemma4:e4b（免費）；query rewriter 同走 gemma4:e4b；只有 eval-set 合成用 Claude/GPT-5（一次性，~US$50） |
-| reranker 推論慢 | top-50 → top-10，rerank 規模可控；GPU 不可得時降到 top-30 |
-| home_mac SSH tunnel 中斷 | 程式 fail loud，加 reconnect script；長跑任務改用 tmux 在 home_mac 本機跑 |
-| gemma4:e4b 中文 query rewrite 品質不足 | 抽樣比較 vs Claude，必要時 fallback 到 API 模型，僅換 query 端，不影響檢索層 ablation |
+| LLM 成本 | 全部走 OpenAI Batch gpt-4o-mini（< US$2 合計） |
+| MPS hang | dense.py 預設 CPU，reranker 在 home_wsl 跑 |
+| reranker 推論慢 | home_wsl 約 46s/128 pairs，500 query × k=20 約 50 分鐘 |
 
 ---
 
