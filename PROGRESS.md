@@ -1,7 +1,7 @@
 # NCCU 課程推薦系統 Retrieval 改進實驗 — 進度與結果分析
 
-版本：v5（最終結果）
-更新日期：2026-05-04
+版本：v6（新增 RRF/Struct 實驗）
+更新日期：2026-05-16
 
 ---
 
@@ -37,15 +37,18 @@
 | d-obj+Dense+HyDE | 500 | 0.616 | 0.432 | 0.373 | 794ms |
 | d-obj+Dense | 8253 | 0.675 | 0.476 | 0.414 | 82ms |
 | d-v2+Dense | 500 | 0.682 | 0.478 | 0.414 | 182ms |
+| d-v2+Dense+Struct（無 rerank） | 500 | 0.690 | 0.488 | 0.424 | — |
 | d-obj+Q2D+Dense+Rerank(k=20) | 500 | 0.660 | 0.508 | 0.447 | — |
 | d-obj+HyDE+Dense+Rerank(k=20) | 500 | 0.702 | 0.535 | 0.471 | — |
 | d-obj+RRF+Rerank(k=20) | 500 | 0.708 | 0.541 | 0.486 | 2713ms |
 | d-obj+Dense+Rerank(k=50) | 500 | 0.708 | 0.521 | 0.461 | 32113ms |
 | d-obj+Dense+Rerank(k=20) | 500 | 0.716 | 0.542 | 0.486 | 4405ms |
-| **d-v2+Dense+Rerank(k=20)** | 500 | **0.740** | **0.561** | **0.507** | — |
+| d-v2+Dense+Rerank(k=20) | 500 | 0.740 | 0.561 | 0.507 | 5470ms |
+| d-v2+Dense+Rerank+Struct | 500 | 0.744 | 0.559 | 0.499 | — |
+| **d-v2+RRF+Rerank(k=20)** | 500 | **0.766** | **0.576** | **0.514** | 53644ms |
 
-**最佳：D-V2 + Dense bge-m3 + Reranker(k=20)，R@10=0.740**
-（vs 現行 0.288，**+45.2pp**）
+**最佳：D-V2 + RRF + Reranker(k=20)，R@10=0.766**
+（vs 現行 0.288，**+47.8pp**）
 
 ---
 
@@ -61,45 +64,50 @@
 - D-V2 Dense：0.682（vs D-Obj Dense 0.675，僅 +0.7pp）→ Dense 已從 objective 學到語意，meta 邊際低
 - D-V2 + Rerank：0.740（vs D-Obj + Rerank 0.716，**+2.4pp**）→ Reranker 能利用更豐富文字
 
-**F3：RRF 在 oral query 反不如純 Dense**
-- D-Obj RRF 0.577 < D-Obj Dense 0.675（-10pp）
-- BM25 weak signal 汙染 fusion；oral query 中 BM25 是噪音
+**F3：RRF 在 D-V2 文件下終於有效**
+- D-Obj RRF 0.577 < D-Obj Dense 0.675（-10pp）→ BM25 弱訊號汙染 fusion
+- D-V2 RRF + Rerank：**0.766**（> D-V2 Dense + Rerank 0.740，**+2.6pp**）
+- D-V2 LLM meta 讓 BM25 有足夠關鍵字命中，RRF 才能正向貢獻
 
 **F4：Reranker 有效，k=20 優於 k=50**
 - Dense + Rerank(k=20)：0.675 → 0.716（+4.1pp）
 - Dense + Rerank(k=50)：0.675 → 0.708（+3.3pp，更多候選反帶雜訊）
-- D-V2 + Rerank(k=20)：0.740（最佳）
+- D-V2 + RRF + Rerank(k=20)：0.766（最佳）
 
-**F5：HyDE > Q2D，+Rerank 雙雙有效**
-- HyDE+Dense+Rerank：0.702（vs Dense+Rerank 0.716 略低）
-- Q2D+Dense+Rerank：0.660（vs Dense+Rerank 0.716 低一些）
-- 這個結果顯示 D-Obj + Dense + HyDE 沒有疊加優勢（HyDE text 和 objective 語意重疊高）
-- **D-V2+Dense+Rerank 才是最強組合**（LLM meta 豐富了文件，reranker 充分利用）
+**F5：HyDE/Q2D 沒有邊際收益**
+- D-Obj 文件已含 objective，HyDE 生成的假設文件語意重疊 → 無效
+- HyDE+Rerank：0.702 < D-obj+Dense+Rerank 0.716（-1.4pp）
+- Q2D+Rerank：0.660（-5.6pp）
+
+**F6：Structured Filter 幾乎無效（synth eval）**
+- D-V2+Dense+Struct（無 rerank）：0.690（vs D-V2+Dense 0.682，+0.8pp）
+- D-V2+Dense+Rerank+Struct：0.744（vs D-V2+Dense+Rerank 0.740，+0.4pp）
+- Synth query 的 constraint 語義不夠精確，filter 有時反而過濾掉正解
 
 ---
 
 ## 5. 建議部署配置
 
-**D-V2 + Dense bge-m3 + Reranker bge-v2-m3（retrieve-k=20 → top-10）**
+**D-V2 + RRF(bge-m3 dense + BM25 jieba) + Reranker bge-v2-m3（retrieve-k=20 → top-10）**
 
 | | 現行 | 建議 |
 |---|---|---|
 | page_content | 課名+時間+老師 | 課名+教師+單位+語言+objective+LLM摘要+關鍵字 |
-| 索引 | BM25 whitespace | Dense bge-m3（doc embedding cached） |
+| 索引 | BM25 whitespace | RRF（Dense bge-m3 + BM25 jieba） |
 | 後處理 | 無 | Reranker bge-v2-m3 |
-| R@10 | 28.8% | **74.0%** |
-| nDCG@10 | 0.188 | 0.561 |
+| R@10 | 28.8% | **76.6%** |
+| nDCG@10 | 0.188 | 0.576 |
 | 延遲 | 5ms | ~82ms dense + ~4s rerank |
 
 ---
 
-## 6. 未完成（P0 必做）
+## 6. 未完成
 
 | 項目 | 說明 |
 |---|---|
-| **Human gold-set 150 query** | 現在全靠 LLM synth，有 model bias；需人工標注做最終 test |
-| **Structured filter 整合** | code 完成（時段/語言/必選修），未接進最佳 pipeline |
-| **Port 回 CourseLangChain** | build.py 要換 D-V2 + dense + reranker |
+| **Port 回 CourseLangChain** | build.py 要換 D-V2 + RRF + reranker |
+| **Structured filter 整合** | code 完成（時段/語言/必選修），對 constraint query 有潛力，但需人工標注 eval set 才能評估真實收益 |
+| **Human gold-set** | 決定不做，以 LLM synth 為準（注意 model bias 約 5-10pp 高估） |
 
 ---
 
