@@ -19,6 +19,7 @@ dependencies = [
     "sentence-transformers>=5.4.1",
     "transformers>=4.40,<5",
     "flagembedding>=1.4.0",
+    "playwright>=1.59.0",
 ]
 
 [project.optional-dependencies]
@@ -49,3 +50,17 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src"]
+
+# torch: Linux (WSL2/server) 走 pytorch.org cu126 index，避免 PyPI NCCL 版本混裝
+# cu130 在 WSL2 下 cuDriverGetVersion() 回傳 12090 (CUDA 12.9) 會被誤判版本不足
+# cu126 wheel 要求 driver >= 525，driver 576.52 (CUDA 12.9) 完全符合
+# macOS 不指定 → 走 PyPI 拿 MPS/CPU wheel（arm64 正常）
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu126", marker = "sys_platform == 'linux'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
