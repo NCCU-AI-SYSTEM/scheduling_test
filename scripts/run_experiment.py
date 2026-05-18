@@ -17,6 +17,7 @@ from tqdm import tqdm
 
 from src.doc_builders import BUILDERS
 from src.eval import QueryEval, aggregate, from_jsonl, from_objective
+from src.eval.datasets import EVAL_V2
 from src.filters import filter_hits
 from src.loader import load_courses
 from src.query_rewriters import hyde, multi_query, parse_constraints, q2d, step_back
@@ -54,9 +55,9 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--filter", choices=["none", "struct"], default="none")
     p.add_argument("--dense-model", default="BAAI/bge-m3")
     p.add_argument(
-        "--eval", choices=["objective_smoke", "synth_jsonl"], default="objective_smoke"
+        "--eval", choices=["objective_smoke", "synth_jsonl", "eval_v2"], default="objective_smoke"
     )
-    p.add_argument("--n", type=int, default=200)
+    p.add_argument("--n", type=int, default=200, help="query cap; 0 = all")
     p.add_argument("--top-k", type=int, default=20)
     p.add_argument("--retrieve-k", type=int, default=50)
     p.add_argument("--tag", default=None)
@@ -78,8 +79,9 @@ def main(argv: list[str] | None = None) -> int:
         dense = DenseRetriever.from_docs(docs, model_name=args.dense_model, k=args.retrieve_k)
     print(f"[run] index ready in {time.time()-t0:.1f}s")
 
-    queries = from_objective(courses, n=args.n) if args.eval == "objective_smoke" else from_jsonl()
-    if args.n and args.eval == "synth_jsonl":
+    queries = from_objective(courses, n=args.n) if args.eval == "objective_smoke" else \
+              from_jsonl(EVAL_V2) if args.eval == "eval_v2" else from_jsonl()
+    if args.n and args.eval in ("synth_jsonl", "eval_v2"):  # 0 = all
         import random
         rng = random.Random(42)
         rng.shuffle(queries)
@@ -105,9 +107,6 @@ def main(argv: list[str] | None = None) -> int:
                 runs.append(bm25.search(rq, k=args.retrieve_k))
                 runs.append(dense.search(rq, k=args.retrieve_k))
         hits = runs[0] if len(runs) == 1 else rrf_fuse(runs, top_k=args.retrieve_k)
-        if args.filter == "struct":
-            constraints = parse_constraints(q.query)
-            hits = filter_hits(hits, constraints)
         all_hits.append(hits)
         all_queries_str.append(q.query)
 
@@ -117,6 +116,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"[run] reranking {len(all_queries_str)} queries × {args.retrieve_k} pairs...")
         all_hits = batch_rerank(all_queries_str, all_hits, top_k=args.top_k)
         print(f"[run] rerank done in {time.time()-t0:.1f}s")
+
+    # smart struct filter: post-rerank, only when constraints detected
+    if args.filter == "struct":
+        filtered_hits = []
+        for q, hits in zip(queries, all_hits):
+            constraints = parse_constraints(q.query)
+            if constraints.has_constraints():
+                hits = filter_hits(hits, constraints)
+            filtered_hits.append(hits)
+        all_hits = filtered_hits
 
     for q, hits in zip(queries, all_hits):
         ids = [d.course_id for d, _ in hits[: args.top_k]]
