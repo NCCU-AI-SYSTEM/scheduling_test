@@ -40,6 +40,13 @@ def doc_passes(doc: RetrievalDoc, c: QueryConstraints) -> bool:
         if sessions and not _session_overlaps(sessions, c.hour_min, c.hour_max):
             return False
 
+    # hour_exclude_ranges: reject if ALL sessions fall within an excluded range
+    for lo, hi in c.hour_exclude_ranges:
+        if sessions and all(
+            s["start"] >= lo and s["end"] <= hi for s in sessions
+        ):
+            return False
+
     if c.lang_include and md.get("lang") not in c.lang_include:
         return False
     if c.lang_exclude and md.get("lang") in c.lang_exclude:

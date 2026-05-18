@@ -69,6 +69,7 @@ class QueryConstraints:
     weekday_exclude: set[int] = field(default_factory=set)
     hour_min: int | None = None
     hour_max: int | None = None
+    hour_exclude_ranges: list[tuple[int, int]] = field(default_factory=list)  # e.g. [(13,18)] for 不要下午
     lang_include: set[str] = field(default_factory=set)
     lang_exclude: set[str] = field(default_factory=set)
     kind_include: set[int] = field(default_factory=set)
@@ -80,8 +81,20 @@ class QueryConstraints:
     raw: str = ""
     semantic_residual: str = ""
 
+    def has_constraints(self) -> bool:
+        """Return True if any hard constraint was parsed (used for smart filter)."""
+        return bool(
+            self.weekday_include or self.weekday_exclude
+            or self.hour_min is not None or self.hour_max is not None
+            or self.hour_exclude_ranges
+            or self.lang_include or self.lang_exclude
+            or self.kind_include or self.kind_exclude
+            or self.point_min is not None or self.point_max is not None
+            or self.unit_include or self.unit_exclude
+        )
 
-def _is_negated(text: str, span: tuple[int, int], window: int = 4) -> bool:
+
+def _is_negated(text: str, span: tuple[int, int], window: int = 8) -> bool:
     start, _ = span
     pre = text[max(0, start - window) : start]
     return any(neg in pre for neg in NEG_PREFIXES)
@@ -107,7 +120,9 @@ def parse_constraints(query: str) -> QueryConstraints:
         if not m:
             continue
         if _is_negated(s, m.span()):
-            # negation: clamp away from this bucket — best-effort, just record
+            # negation: exclude this time window
+            # store as hour_exclude range — filter layer checks non-overlap
+            c.hour_exclude_ranges.append((lo, hi))
             continue
         # Keep tightest intersecting window
         c.hour_min = max(c.hour_min or lo, lo)
