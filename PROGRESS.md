@@ -123,6 +123,26 @@ Parser fix 內容：
 - weekday range「週一到週五」→ {1,2,3,4,5}（原本只取端點 {1,5}）
 - kind filter 改 soft（全部 kind_include 停用，避免 "通識"/"必修" 過度 filter）
 
+**F9：BM25 weight boost 對 constraint 無效（weight sweep）**
+
+| | BM25 R@10 | Dense R@10 | both top-10 | BM25 only | Dense only |
+|---|---|---|---|---|---|
+| Raw retrieval (n=2329) | 0.228 | 0.303 | 12.6% | 10.2% | 17.6% |
+
+→ Dense 獨家命中遠多於 BM25 獨家，加大 BM25 權重會擠掉 Dense 推上來的正解。
+
+RRF weight sweep（rerank 前候選池 recall）：
+
+| w_bm25 : w_dense | R@10 | R@20 | R@50 |
+|---|---|---|---|
+| 0.5 : 1.0 | **0.332** | 0.448 | 0.571 |
+| **1.0 : 1.0**（現有） | 0.316 | 0.434 | **0.588** |
+| 1.5 : 1.0 | 0.288 | 0.354 | 0.518 |
+| 2.0 : 1.0 | 0.290 | 0.355 | 0.427 |
+| 3.0 : 1.0 | 0.282 | 0.349 | 0.427 |
+
+**結論**：1.0:1.0 是現有最佳的 R@50（rerank 候選池）配置；降低 BM25 權重（0.5）能拉高 rerank 前的 R@10，但會削弱 R@50 給 rerank 的長尾候選。BM25 weight boost 假設失敗，constraint 短板的真正瓶頸是 retrieval 上界 R@50≈0.588，不是 fusion 比例。
+
 ---
 
 ## 5. 建議部署配置
@@ -147,7 +167,7 @@ Parser fix 內容：
 | **Port 回 CourseLangChain** | 待做 | build.py 要換 D-V2 + RRF + reranker |
 | **Structured filter parser** | ✅ 已修 | weekday range 展開、kind 改 soft，commit e261b2f |
 | **Constraint eval cleaner** | ✅ 已建 | scripts/build_eval_constraint_clean.py，輸出 2329q 乾淨集 |
-| **BM25 weight boost for constraint** | 可選 | RRF BM25:Dense 試 2:1，預估 constraint +2~4pp |
+| **BM25 weight boost for constraint** | ❌ 無效 | weight sweep 後 1.0:1.0 仍最佳，BM25 獨家命中 < Dense 獨家命中 |
 | **Constraint-aware query expansion** | 可選 | parse_constraints 結果轉 BM25 boost 字串，預估 +3~6pp |
 | **Human gold-set** | 不做 | 決定以 LLM synth 為準（注意 model bias 約 5-10pp 高估） |
 
