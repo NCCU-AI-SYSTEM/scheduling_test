@@ -1,7 +1,7 @@
 # NCCU 課程推薦系統 Retrieval 改進實驗 — 進度與結果分析
 
-版本：v6（新增 RRF/Struct 實驗）
-更新日期：2026-05-16
+版本：v7（Intent slice + constraint eval 清理）
+更新日期：2026-05-19
 
 ---
 
@@ -79,10 +79,41 @@
 - HyDE+Rerank：0.702 < D-obj+Dense+Rerank 0.716（-1.4pp）
 - Q2D+Rerank：0.660（-5.6pp）
 
-**F6：Structured Filter 幾乎無效（synth eval）**
+**F6：Structured Filter 幾乎無效（synth eval，全集 8253q）**
 - D-V2+Dense+Struct（無 rerank）：0.690（vs D-V2+Dense 0.682，+0.8pp）
 - D-V2+Dense+Rerank+Struct：0.744（vs D-V2+Dense+Rerank 0.740，+0.4pp）
-- Synth query 的 constraint 語義不夠精確，filter 有時反而過濾掉正解
+- Smart filter（E5, 8253q）overall: 0.739（vs baseline 0.766，-2.7pp）
+- 問題：filter 誤殺有結構詞但非 constraint 語意的 topic query
+
+**F7：Intent Slice — constraint 是最弱環節**
+
+| Intent | R@10 (500q) | R@10 (8253q) |
+|---|---|---|
+| topic | 0.976 | 0.917 |
+| colloquial | 0.868 | 0.867 |
+| **constraint** | **0.448** | **0.432** |
+
+**F8：Constraint eval 清理後真實能力**
+
+eval_synth 的 constraint query 中，有 15.3%（422/2751）gold 課程與 query
+的星期/時段/課別條件根本不一致（synth 生成問題，非 pipeline 問題）：
+- weekday mismatch：181 個（query 說週三，gold 開在週五）
+- kind mismatch：163 個（query 說必修，gold 是選修）
+- hour mismatch：78 個
+
+剔除後乾淨 subset（2329q）：
+
+| Pipeline | N | R@10（dirty） | R@10（clean 2329q） |
+|---|---|---|---|
+| E3 RRF+Rerank (no filter) | 137（overlap） | 0.448 | 0.474 |
+| E5 RRF+Rerank+SmartFilter | 2329 | 0.432 | **0.506** |
+| E5 fixed parser | 2329 | — | **0.507** |
+
+→ clean subset 上 constraint R@10 = **0.507**（原本 0.432 是被 dirty gold 拉低）
+
+Parser fix 內容：
+- weekday range「週一到週五」→ {1,2,3,4,5}（原本只取端點 {1,5}）
+- kind filter 改 soft（全部 kind_include 停用，避免 "通識"/"必修" 過度 filter）
 
 ---
 
