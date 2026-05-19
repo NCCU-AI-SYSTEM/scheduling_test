@@ -37,7 +37,13 @@ LANG_KEYWORDS = {
     "土耳其文": "土耳其文",
     "俄文": "俄文",
 }
-KIND_KEYWORDS = {
+# kind filter is HIGH-PRECISION only: only set kind_include when the keyword
+# unambiguously maps to a single DB kind value.
+# "通識" can be kind=3 (校定通識) or kind=4 (系定通識) — too ambiguous, skip.
+# "體育" in the query often means "體育系" or athletic topic, not kind=4 PE class.
+# Keep only keywords that are unambiguous and reliably correct.
+KIND_KEYWORDS: dict[str, int] = {}  # disabled: all kind parsing moved to soft hints
+KIND_KEYWORDS_SOFT = {
     "必修": 1, "選修": 2, "通識": 3, "體育": 4, "服學": 4, "服務學習": 4,
 }
 
@@ -105,14 +111,27 @@ def parse_constraints(query: str) -> QueryConstraints:
     s = query
 
     # weekday: 週X / 星期X / 禮拜X
-    for m in re.finditer(r"(?:週|周|星期|禮拜)([一二三四五六日天])", s):
-        wd = WEEKDAY_MAP.get(m.group(1))
-        if wd is None:
+    # Also handle ranges like "週一到週五" / "週一至週五" → expand to {1,2,3,4,5}
+    for m in re.finditer(
+        r"(?:週|周|星期|禮拜)([一二三四五六日天])(?:\s*(?:到|至|~)\s*(?:週|周|星期|禮拜)?([一二三四五六日天]))?",
+        s,
+    ):
+        wd_start = WEEKDAY_MAP.get(m.group(1))
+        wd_end   = WEEKDAY_MAP.get(m.group(2)) if m.group(2) else None
+        if wd_start is None:
             continue
         if _is_negated(s, m.span()):
-            c.weekday_exclude.add(wd)
+            if wd_end:
+                for wd in range(wd_start, wd_end + 1):
+                    c.weekday_exclude.add(wd)
+            else:
+                c.weekday_exclude.add(wd_start)
         else:
-            c.weekday_include.add(wd)
+            if wd_end and wd_end >= wd_start:
+                for wd in range(wd_start, wd_end + 1):
+                    c.weekday_include.add(wd)
+            else:
+                c.weekday_include.add(wd_start)
 
     # time-of-day buckets
     for kw, (lo, hi) in TIME_BUCKETS.items():
