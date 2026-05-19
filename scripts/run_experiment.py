@@ -29,6 +29,38 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 TABLES_DIR.mkdir(parents=True, exist_ok=True)
 
 
+WEEKDAY_ZH = ["", "一", "二", "三", "四", "五", "六", "日"]
+
+
+def _expand_for_bm25(query: str) -> str:
+    """Append constraint-aware exact-match terms to a query for BM25 retrieval.
+
+    Aligns with D-V2 doc text format (星期X / HH:00 / lang / unit系).
+    Single weekday only; ranges (week 1..5) skipped to avoid dilution.
+    """
+    c = parse_constraints(query)
+    parts: list[str] = []
+    if len(c.weekday_include) == 1:
+        wd = next(iter(c.weekday_include))
+        parts.append(f"星期{WEEKDAY_ZH[wd]}")
+    if c.hour_min is not None and c.hour_max is not None:
+        mid = (int(c.hour_min) + int(c.hour_max)) // 2
+        seen: set[int] = set()
+        for h in (int(c.hour_min), mid, int(c.hour_max)):
+            if h not in seen:
+                parts.append(f"{h:02d}:00")
+                seen.add(h)
+    elif c.hour_min is not None:
+        parts.append(f"{int(c.hour_min):02d}:00")
+    for lang in sorted(c.lang_include):
+        parts.append(lang)
+    for unit in sorted(c.unit_include):
+        parts.append(f"{unit}系")
+    if not parts:
+        return query
+    return f"{query} {' '.join(parts)}"
+
+
 def _rewrite(query: str, mode: str) -> list[str]:
     """Return list of query strings to retrieve with (RRF-fused if >1)."""
     if mode == "raw":
@@ -53,6 +85,11 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--reranker", choices=["none", "bge"], default="none")
     p.add_argument("--rewrite", choices=["raw", "hyde", "q2d", "stepback", "multi"], default="raw")
     p.add_argument("--filter", choices=["none", "struct"], default="none")
+    p.add_argument(
+        "--bm25-expand-constraint",
+        action="store_true",
+        help="Append constraint-aware exact-match terms to BM25 query (Dense unchanged).",
+    )
     p.add_argument("--dense-model", default="BAAI/bge-m3")
     p.add_argument(
         "--eval", choices=["objective_smoke", "synth_jsonl", "eval_v2"], default="objective_smoke"
@@ -99,12 +136,14 @@ def main(argv: list[str] | None = None) -> int:
         rewritten = _rewrite(q.query, args.rewrite)
         runs: list[list] = []
         for rq in rewritten:
+            # constraint-aware expansion: only the BM25 leg sees the boosted query
+            rq_bm25 = _expand_for_bm25(rq) if args.bm25_expand_constraint else rq
             if args.retriever == "bm25":
-                runs.append(bm25.search(rq, k=args.retrieve_k))
+                runs.append(bm25.search(rq_bm25, k=args.retrieve_k))
             elif args.retriever == "dense":
                 runs.append(dense.search(rq, k=args.retrieve_k))
             else:
-                runs.append(bm25.search(rq, k=args.retrieve_k))
+                runs.append(bm25.search(rq_bm25, k=args.retrieve_k))
                 runs.append(dense.search(rq, k=args.retrieve_k))
         hits = runs[0] if len(runs) == 1 else rrf_fuse(runs, top_k=args.retrieve_k)
         all_hits.append(hits)
