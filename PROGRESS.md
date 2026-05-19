@@ -45,10 +45,13 @@
 | d-obj+Dense+Rerank(k=20) | 500 | 0.716 | 0.542 | 0.486 | 4405ms |
 | d-v2+Dense+Rerank(k=20) | 500 | 0.740 | 0.561 | 0.507 | 5470ms |
 | d-v2+Dense+Rerank+Struct | 500 | 0.744 | 0.559 | 0.499 | — |
-| **d-v2+RRF+Rerank(k=20)** | 500 | **0.766** | **0.576** | **0.514** | 53644ms |
+| **d-v2+RRF+Rerank(k=20)** | **500** | **0.766** | **0.576** | **0.514** | 53644ms |
+| d-v2+RRF+Rerank+SmartFilter（E5） | 8253 | 0.739 | — | — | — |
 
 **最佳：D-V2 + RRF + Reranker(k=20)，R@10=0.766**
 （vs 現行 0.288，**+47.8pp**）
+
+> E5（8253q 全集）整體 0.739 略低於 500q 的 0.766，差距主因是 constraint subset 的 synth gold 噪音（見 F8）。
 
 ---
 
@@ -87,11 +90,16 @@
 
 **F7：Intent Slice — constraint 是最弱環節**
 
-| Intent | R@10 (500q) | R@10 (8253q) |
+| Intent | R@10 (E3, 500q sample) | R@10 (E5, 8253q) |
 |---|---|---|
 | topic | 0.976 | 0.917 |
 | colloquial | 0.868 | 0.867 |
 | **constraint** | **0.448** | **0.432** |
+| overall | 0.766 | 0.739 |
+
+> colloquial 在全集跟 500q 幾乎一樣（0.867 vs 0.868），說明 dense embed 對口語泛化穩定。
+> topic 在全集略降（0.917 vs 0.976），可能 500q sample 偏易。
+> constraint 是明顯短板，原因見 F8。
 
 **F8：Constraint eval 清理後真實能力**
 
@@ -132,13 +140,16 @@ Parser fix 內容：
 
 ---
 
-## 6. 未完成
+## 6. 未完成 / 後續方向
 
-| 項目 | 說明 |
-|---|---|
-| **Port 回 CourseLangChain** | build.py 要換 D-V2 + RRF + reranker |
-| **Structured filter 整合** | code 完成（時段/語言/必選修），對 constraint query 有潛力，但需人工標注 eval set 才能評估真實收益 |
-| **Human gold-set** | 決定不做，以 LLM synth 為準（注意 model bias 約 5-10pp 高估） |
+| 項目 | 狀態 | 說明 |
+|---|---|---|
+| **Port 回 CourseLangChain** | 待做 | build.py 要換 D-V2 + RRF + reranker |
+| **Structured filter parser** | ✅ 已修 | weekday range 展開、kind 改 soft，commit e261b2f |
+| **Constraint eval cleaner** | ✅ 已建 | scripts/build_eval_constraint_clean.py，輸出 2329q 乾淨集 |
+| **BM25 weight boost for constraint** | 可選 | RRF BM25:Dense 試 2:1，預估 constraint +2~4pp |
+| **Constraint-aware query expansion** | 可選 | parse_constraints 結果轉 BM25 boost 字串，預估 +3~6pp |
+| **Human gold-set** | 不做 | 決定以 LLM synth 為準（注意 model bias 約 5-10pp 高估） |
 
 ---
 
