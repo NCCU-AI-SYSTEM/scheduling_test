@@ -47,6 +47,7 @@
 | d-v2+Dense+Rerank+Struct | 500 | 0.744 | 0.559 | 0.499 | — |
 | **d-v2+RRF+Rerank(k=20)** | **500** | **0.766** | **0.576** | **0.514** | 53644ms |
 | d-v2+RRF+Rerank+SmartFilter（E5） | 8253 | 0.739 | — | — | — |
+| **d-v2+RRF+Rerank+SmartFilter+BM25Expand（E6）** | 8253 | **0.750** | **0.563** | **0.503** | — |
 
 **最佳：D-V2 + RRF + Reranker(k=20)，R@10=0.766**
 （vs 現行 0.288，**+47.8pp**）
@@ -143,6 +144,32 @@ RRF weight sweep（rerank 前候選池 recall）：
 
 **結論**：1.0:1.0 是現有最佳的 R@50（rerank 候選池）配置；降低 BM25 權重（0.5）能拉高 rerank 前的 R@10，但會削弱 R@50 給 rerank 的長尾候選。BM25 weight boost 假設失敗，constraint 短板的真正瓶頸是 retrieval 上界 R@50≈0.588，不是 fusion 比例。
 
+**F10：Constraint-aware BM25 Query Expansion（E6）**
+
+策略：parse_constraints 解析結果轉成 D-V2 doc 字面對齊的 exact-match 字串，僅加入 BM25 腿（Dense 保持原 query）：
+- 單一 weekday → "星期X"（多個跳過，避免 dilution）
+- hour → "HH:00"（min/mid/max）
+- lang → "中文" / "英文" 等
+- unit → "X系"
+
+Offline sweep（RRF fusion 前，無 rerank）：
+- BM25 orig: R@10=0.228 → BM25 expanded: R@10=0.246（+1.8pp）
+- RRF(BM25 orig + Dense): R@10=0.316 → RRF(BM25 exp + Dense): R@10=0.328（+1.2pp）
+- R@50 候選池：0.588 → 0.593（+0.5pp）
+
+完整 pipeline 結果（E6，8253q，RRF+Rerank+SmartFilter+BM25Expand）：
+
+| Intent | E5 (no expand) | E6 (expanded) | Δ |
+|---|---|---|---|
+| OVERALL | 0.739 | **0.750** | +1.1pp |
+| topic | 0.917 | 0.924 | +0.7pp |
+| colloquial | 0.867 | 0.873 | +0.6pp |
+| **constraint** | **0.432** | **0.454** | **+2.2pp** |
+
+Constraint CLEAN (2329q): E5=0.506 → E6=0.503（-0.3pp，expansion 在乾淨集上 rescued 31，broken 39）
+
+**結論**：BM25 expansion 對全集 overall +1.1pp，constraint 最受益 +2.2pp。在乾淨 constraint subset 上略負（-0.3pp），原因是 expansion 對有 unit 詞但無時間約束的 query 貢獻較大，乾淨集已剔除這類誤配 query 後，expansion 的邊際貢獻下降。
+
 ---
 
 ## 5. 建議部署配置
@@ -168,7 +195,7 @@ RRF weight sweep（rerank 前候選池 recall）：
 | **Structured filter parser** | ✅ 已修 | weekday range 展開、kind 改 soft，commit e261b2f |
 | **Constraint eval cleaner** | ✅ 已建 | scripts/build_eval_constraint_clean.py，輸出 2329q 乾淨集 |
 | **BM25 weight boost for constraint** | ❌ 無效 | weight sweep 後 1.0:1.0 仍最佳，BM25 獨家命中 < Dense 獨家命中 |
-| **Constraint-aware query expansion** | 可選 | parse_constraints 結果轉 BM25 boost 字串，預估 +3~6pp |
+| **Constraint-aware BM25 expansion** | ✅ 完成 | E6: overall +1.1pp, constraint +2.2pp（全集 8253q）|
 | **Human gold-set** | 不做 | 決定以 LLM synth 為準（注意 model bias 約 5-10pp 高估） |
 
 ---
