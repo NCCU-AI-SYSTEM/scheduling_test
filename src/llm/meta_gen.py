@@ -4,8 +4,6 @@ Output schema (cached in SQLite `course_meta_v1`):
   summary_100   : 100-char Chinese summary of the course
   keywords      : list[str], 6-10 学科关键词 / 课程关键词
   topic_tags    : list[str], coarse topic tags from a controlled vocab
-  level         : "入門" | "進階" | "研究所" | "未知"
-  prereq_inferred : str, suggested prerequisites or ""
 
 CLI:
     uv run python -m src.llm.meta_gen --year 114 --semester 2 [--limit N] [--force] [--workers 2]
@@ -76,9 +74,7 @@ USER_TEMPLATE = """請根據以下課程資訊產出檢索用 metadata。
 {{
   "summary_100": "100 字以內的繁中摘要，避免抄課名",
   "keywords": ["6 到 10 個檢索關鍵詞，含學科術語與口語別稱"],
-  "topic_tags": ["從 {tags} 中挑 1~3 個最相關的"],
-  "level": "入門 | 進階 | 研究所 | 未知",
-  "prereq_inferred": "可能需要的先備課，沒有就空字串"
+  "topic_tags": ["從 {tags} 中挑 1~3 個最相關的"]
 }}"""
 
 
@@ -92,8 +88,6 @@ def init_db(path: Path = META_DB) -> sqlite3.Connection:
           summary_100 TEXT,
           keywords_json TEXT,
           topic_tags_json TEXT,
-          level TEXT,
-          prereq_inferred TEXT,
           model TEXT,
           generated_at TEXT,
           raw_json TEXT
@@ -138,17 +132,15 @@ def upsert(con: sqlite3.Connection, course_id: str, model: str, obj: dict) -> No
     con.execute(
         """
         INSERT OR REPLACE INTO course_meta_v1
-          (course_id, summary_100, keywords_json, topic_tags_json, level,
-           prereq_inferred, model, generated_at, raw_json)
-        VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'), ?)
+          (course_id, summary_100, keywords_json, topic_tags_json,
+           model, generated_at, raw_json)
+        VALUES (?, ?, ?, ?, ?, datetime('now'), ?)
         """,
         (
             course_id,
             (obj.get("summary_100") or "")[:300],
             json.dumps(obj.get("keywords") or [], ensure_ascii=False),
             json.dumps(obj.get("topic_tags") or [], ensure_ascii=False),
-            obj.get("level") or "未知",
-            obj.get("prereq_inferred") or "",
             model,
             json.dumps(obj, ensure_ascii=False),
         ),
