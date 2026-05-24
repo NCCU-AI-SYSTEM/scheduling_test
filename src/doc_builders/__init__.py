@@ -132,18 +132,12 @@ def build_d_v2(courses: list[Course]) -> list[RetrievalDoc]:
 
         lines: list[str] = []
         lines.append(f"課名: {c.name}")
-        if c.name_en:
-            lines.append(f"英文課名: {c.name_en}")
         lines.append(f"教師: {c.teacher}")
-        if c.teacher_en:
-            lines.append(f"英文教師: {c.teacher_en}")
         lines.append(f"開課單位: {c.unit}　語言: {c.lang}　學分: {c.point}")
         lines.append(f"課程類別: {_kind_str(c)}")
         if c.core:
             lines.append("核心通識: 是")
         lines.append(f"上課時間: {_time_str(c)}")
-        if c.classroom:
-            lines.append(f"教室: {c.classroom}")
         if tags:
             lines.append(f"主題標籤: {tags}")
         if kw:
