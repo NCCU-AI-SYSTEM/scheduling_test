@@ -144,8 +144,6 @@ def build_d_v2(courses: list[Course]) -> list[RetrievalDoc]:
         lines.append(f"上課時間: {_time_str(c)}")
         if c.classroom:
             lines.append(f"教室: {c.classroom}")
-        if c.teaching_approach:
-            lines.append(f"教學方式: {c.teaching_approach[:200]}")
         if tags:
             lines.append(f"主題標籤: {tags}")
         if kw:
