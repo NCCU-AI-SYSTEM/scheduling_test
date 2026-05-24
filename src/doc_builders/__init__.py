@@ -6,11 +6,9 @@ retrievers see. `metadata` carries structured fields for the SQL filter layer.
 Variants:
   D-Base  : name + teacher + time   (reproduces CourseLangChain baseline)
   D-Obj   : + objective + classroom + unit + lang
-  D-V2    : + LLM summary + keywords + topic_tags + weekly_topics  (needs meta_gen)
-  D-V3    : multi-field — returns multiple sub-docs per course, each tied to a
-            field with its own weight. Caller is responsible for fusion.
-
-W5 ships D-Base and D-Obj only; D-V2/V3 land in W6 once meta_gen finishes.
+  D-V2    : + LLM summary + keywords + topic_tags + weekly_topics
+            + kind text + core + lmt_kind + classroom + teaching_approach
+            + English name/teacher
 """
 
 from __future__ import annotations
@@ -43,6 +41,7 @@ def _course_metadata(c: Course) -> dict:
         "lang": c.lang,
         "kind": c.kind,
         "lmt_kind": c.lmt_kind,
+        "core": c.core,
         "point": c.point,
         "unit": c.unit,
         "time_raw": c.time_raw,
@@ -51,6 +50,16 @@ def _course_metadata(c: Course) -> dict:
             for s in c.sessions
         ],
     }
+
+
+_KIND_ZH = {1: "必修課", 2: "選修課", 3: "通識課", 4: "體育課"}
+
+
+def _kind_str(c: Course) -> str:
+    base = _KIND_ZH.get(c.kind, "其他")
+    if c.lmt_kind:
+        return f"{base}（{c.lmt_kind}）"
+    return base
 
 
 def _time_str(c: Course) -> str:
@@ -108,7 +117,7 @@ def _load_meta(db_path: Path = META_DB) -> dict[str, dict]:
 
 
 def build_d_v2(courses: list[Course]) -> list[RetrievalDoc]:
-    """D-Obj + LLM summary/keywords/tags. Falls back to D-Obj when meta missing."""
+    """D-Obj + LLM summary/keywords/tags + kind/core/lmt_kind/classroom/teaching_approach/en fields."""
     meta = _load_meta()
     out: list[RetrievalDoc] = []
     for c in courses:
@@ -120,17 +129,35 @@ def build_d_v2(courses: list[Course]) -> list[RetrievalDoc]:
         summary = m.get("summary") or ""
         objective = (c.objective or "").strip()
         topic_lines = "、".join(c.weekly_topics) if c.weekly_topics else ""
-        text = (
-            f"課名: {c.name}\n"
-            f"教師: {c.teacher}\n"
-            f"開課單位: {c.unit}　語言: {c.lang}　學分: {c.point}\n"
-            f"上課時間: {_time_str(c)}\n"
-            f"主題標籤: {tags}\n"
-            f"關鍵字: {kw}\n"
-            f"摘要: {summary}\n"
-            f"週次主題: {topic_lines}\n"
-            f"課程目標: {objective[:400]}"
-        )
+
+        lines: list[str] = []
+        lines.append(f"課名: {c.name}")
+        if c.name_en:
+            lines.append(f"英文課名: {c.name_en}")
+        lines.append(f"教師: {c.teacher}")
+        if c.teacher_en:
+            lines.append(f"英文教師: {c.teacher_en}")
+        lines.append(f"開課單位: {c.unit}　語言: {c.lang}　學分: {c.point}")
+        lines.append(f"課程類別: {_kind_str(c)}")
+        if c.core:
+            lines.append("核心通識: 是")
+        lines.append(f"上課時間: {_time_str(c)}")
+        if c.classroom:
+            lines.append(f"教室: {c.classroom}")
+        if c.teaching_approach:
+            lines.append(f"教學方式: {c.teaching_approach[:200]}")
+        if tags:
+            lines.append(f"主題標籤: {tags}")
+        if kw:
+            lines.append(f"關鍵字: {kw}")
+        if summary:
+            lines.append(f"摘要: {summary}")
+        if topic_lines:
+            lines.append(f"週次主題: {topic_lines}")
+        if objective:
+            lines.append(f"課程目標: {objective[:400]}")
+
+        text = "\n".join(lines)
         meta_dict = _course_metadata(c)
         meta_dict["meta_v1_present"] = bool(m)
         out.append(RetrievalDoc(course_id=c.course_id, text=text, metadata=meta_dict))
