@@ -22,6 +22,8 @@ import json
 import logging
 import sys
 import time
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from collections import defaultdict
 
@@ -39,21 +41,33 @@ EVAL_PATH = ROOT / "data/raw/eval_conditions_v1.jsonl"
 DIMS = ["course_lang", "weekday", "hour_range", "point", "kind", "lmt_kind", "unit"]
 
 
-def load_parser(name: str):
-    """動態載入 parser，回傳 parse function。"""
+def load_parser(name: str, model: str | None = None):
+    """
+    動態載入 parser，回傳 (parse_fn, label)。
+    支援 p2@gpt-4.1-mini 格式指定 model。
+    """
+    if "@" in name:
+        name, model = name.split("@", 1)
+
     if name == "p0":
-        return rule_v0.parse, "P0 Rule-based (現有)"
+        return rule_v0.parse, "P0 Rule-based"
     if name == "p1":
         return regex_v1.parse, "P1 Regex+否定詞"
+
+    from src.parsers import llm_zeroshot, llm_fewshot, llm_structured
+
     if name == "p2":
-        from src.parsers import llm_zeroshot
-        return llm_zeroshot.parse, "P2 LLM zero-shot"
+        label = f"P2 zero-shot [{model or 'default'}]"
+        fn = lambda q, _m=model: llm_zeroshot.parse(q, model=_m)
+        return fn, label
     if name == "p3":
-        from src.parsers import llm_fewshot
-        return llm_fewshot.parse, "P3 LLM few-shot"
+        label = f"P3 few-shot [{model or 'default'}]"
+        fn = lambda q, _m=model: llm_fewshot.parse(q, model=_m)
+        return fn, label
     if name == "p4":
-        from src.parsers import llm_structured
-        return llm_structured.parse, "P4 LLM structured"
+        label = f"P4 structured [{model or 'default'}]"
+        fn = lambda q, _m=model: llm_structured.parse(q, model=_m)
+        return fn, label
     raise ValueError(f"Unknown parser: {name}")
 
 
@@ -164,8 +178,9 @@ def print_summary(s: dict) -> None:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit",   type=int, default=0)
-    parser.add_argument("--parsers", default="p0,p1", help="comma-separated: p0,p1,p2,p3,p4")
+    parser.add_argument("--parsers", default="p0,p1", help="e.g. p0,p1,p3@gpt-4.1-mini")
     parser.add_argument("--eval",    default=str(EVAL_PATH))
+    parser.add_argument("--workers", type=int, default=10, help="LLM 並行數（預設 10）")
     args = parser.parse_args()
 
     parser_names = [p.strip() for p in args.parsers.split(",")]
@@ -192,22 +207,40 @@ def main():
             continue
 
         log.info(f"Running {label} ...")
-        results = []
+        results_map: dict[int, dict] = {}
         t0 = time.time()
+        base_name = pname.split("@")[0]
+        is_llm = base_name not in ("p0", "p1")
 
-        for i, row in enumerate(rows):
+        def _run_one(idx_row):
+            idx, row = idx_row
             query = row["queries"]["zh"]
             try:
                 pred = parse_fn(query)
             except Exception as e:
                 log.warning(f"Parse error [{pname}] qid={row['qid']}: {e}")
                 pred = ConditionResult()
+            return idx, eval_one(pred, row)
 
-            result = eval_one(pred, row)
-            results.append(result)
+        if is_llm and args.workers > 1:
+            with ThreadPoolExecutor(max_workers=args.workers) as ex:
+                futures = {ex.submit(_run_one, (i, row)): i
+                           for i, row in enumerate(rows)}
+                done = 0
+                for fut in as_completed(futures):
+                    idx, result = fut.result()
+                    results_map[idx] = result
+                    done += 1
+                    if done % 200 == 0:
+                        log.info(f"  {pname}: {done}/{len(rows)}")
+        else:
+            for i, row in enumerate(rows):
+                _, result = _run_one((i, row))
+                results_map[i] = result
+                if (i + 1) % 200 == 0:
+                    log.info(f"  {pname}: {i+1}/{len(rows)}")
 
-            if (i + 1) % 200 == 0:
-                log.info(f"  {pname}: {i+1}/{len(rows)}")
+        results = [results_map[i] for i in range(len(rows))]
 
         elapsed = time.time() - t0
         log.info(f"  Done in {elapsed:.1f}s ({elapsed/len(rows)*1000:.1f}ms/query)")
