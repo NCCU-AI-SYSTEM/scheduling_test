@@ -264,12 +264,22 @@ def main():
                   f"{s['overall_slot_f1']*100:>7.1f}% "
                   f"{s['negation_f1']*100:>7.1f}%")
 
-    # 儲存
+    # 儲存（append 模式：合併舊結果，同 parser name 的就覆蓋）
     out = ROOT / "results/tables/parser_eval_result.json"
     out.parent.mkdir(parents=True, exist_ok=True)
+    existing = []
+    if out.exists():
+        try:
+            existing = json.loads(out.read_text())
+        except Exception:
+            existing = []
+    # 用 parser name 當 key merge
+    merged = {s["parser"]: s for s in existing}
+    for s in all_summaries:
+        merged[s["parser"]] = s
     with open(out, "w") as f:
-        json.dump(all_summaries, f, ensure_ascii=False, indent=2)
-    log.info(f"Saved to {out}")
+        json.dump(list(merged.values()), f, ensure_ascii=False, indent=2)
+    log.info(f"Saved to {out} ({len(merged)} parsers total)")
 
 
 if __name__ == "__main__":

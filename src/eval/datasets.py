@@ -19,6 +19,7 @@ from src.loader import Course
 
 ROOT = Path(__file__).resolve().parents[2]
 EVAL_SYNTH = ROOT / "data" / "raw" / "eval_synth.jsonl"
+EVAL_V2 = ROOT / "data" / "raw" / "eval_v2.jsonl"
 
 
 @dataclass(slots=True)

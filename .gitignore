@@ -26,9 +26,13 @@ batches/*.out
 .env
 
 # Hermes / Claude
+.hermes/
 .claude/
 CLAUDE.md
 docs/AI_*
+
+# Database files
+data/*.db
 
 # OS
 .DS_Store
