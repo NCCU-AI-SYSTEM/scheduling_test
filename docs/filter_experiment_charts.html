@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>Filter 實驗結果</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang HK", "Noto Sans TC", sans-serif;
+    background: #f8f9fa;
+    color: #1a1a2e;
+    padding: 32px;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #1a1a2e;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 36px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1100px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .card.wide {
+    grid-column: 1 / -1;
+  }
+  .card h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 4px;
+  }
+  .card .desc {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 18px;
+  }
+  canvas { max-height: 260px; }
+  .note {
+    font-size: 11.5px;
+    color: #999;
+    margin-top: 10px;
+  }
+  .insight {
+    background: #f0f4ff;
+    border-left: 3px solid #4f6ef7;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-top: 24px;
+    max-width: 1100px;
+  }
+  .insight h3 { font-size: 13px; font-weight: 600; color: #2d4ecf; margin-bottom: 8px; }
+  .insight ul { font-size: 13px; color: #444; line-height: 1.8; padding-left: 18px; }
+</style>
+</head>
+<body>
+
+<h1>Filter 實驗結果</h1>
+<p class="subtitle">eval_conditions_v1.jsonl · 2,160 筆 · no_rerank · 2026-05-25</p>
+
+<div class="grid">
+
+  <!-- Chart 1: R@10 比較 -->
+  <div class="card">
+    <h2>R@10 比較（三種 Filter 設定）</h2>
+    <p class="desc">越高越好</p>
+    <canvas id="r10Chart"></canvas>
+    <p class="note">* with rerank 版本因只跑 20 筆，數字不可信，此處不列入</p>
+  </div>
+
+  <!-- Chart 2: avg_pool 比較 -->
+  <div class="card">
+    <h2>平均候選池大小（avg_pool）</h2>
+    <p class="desc">越小代表 filter 縮減效果越好（全庫 2,795 門）</p>
+    <canvas id="poolChart"></canvas>
+  </div>
+
+  <!-- Chart 3: 速度比較 -->
+  <div class="card">
+    <h2>推論速度（ms / query）</h2>
+    <p class="desc">越低越快</p>
+    <canvas id="speedChart"></canvas>
+    <p class="note">* oracle 快是因為候選池縮小後矩陣乘積成本下降</p>
+  </div>
+
+  <!-- Chart 4: oracle filter 品質 -->
+  <div class="card">
+    <h2>Oracle Filter：候選池縮減品質</h2>
+    <p class="desc">gold_in_pool = 99.86%（2,157 / 2,160）</p>
+    <canvas id="oracleChart"></canvas>
+  </div>
+
+  <!-- Chart 5: pool size 分布（oracle）-->
+  <div class="card wide">
+    <h2>Oracle Filter 候選池大小分布（各維度）</h2>
+    <p class="desc">越小代表該維度的篩選力越強</p>
+    <canvas id="dimChart"></canvas>
+  </div>
+
+</div>
+
+<!-- Insight -->
+<div class="insight">
+  <h3>實驗洞察</h3>
+  <ul>
+    <li><b>Oracle filter 有效</b>：候選池從 2,795 縮至 808.7（-71%），R@10 從 0.2431 → 0.3722（+14.9pp）</li>
+    <li><b>P1 regex filter 反效果</b>：R@10 0.2222（-2.1pp vs no_filter），因 ExactMatch 63.2% 不夠高，parser 誤解導致 gold 被 filter 掉</li>
+    <li><b>Oracle R@10 上界低（0.37）的原因</b>：eval_conditions_v1 設計為 filter-hard 題型（如「找星期二的課」），query 缺乏語意線索，dense retrieval 接近隨機猜</li>
+    <li><b>速度</b>：oracle（54ms）比 no_filter（499ms）快 9× ——候選池縮小大幅降低矩陣乘積成本</li>
+    <li><b>待完成</b>：加入 rerank 後的全集結果（batch rerank 實作中），以及 p3 LLM parser 的組合</li>
+  </ul>
+</div>
+
+<script>
+const LABELS   = ['no_filter', 'oracle', 'p1 regex'];
+const COLORS   = ['#adb5bd', '#4f6ef7', '#f4a261'];
+const BORDERS  = ['#6c757d', '#2d4ecf', '#e76f51'];
+
+// ── Chart 1: R@10 ──
+new Chart(document.getElementById('r10Chart'), {
+  type: 'bar',
+  data: {
+    labels: LABELS,
+    datasets: [{
+      label: 'R@10（no rerank）',
+      data: [0.2431, 0.3722, 0.2222],
+      backgroundColor: COLORS,
+      borderColor: BORDERS,
+      borderWidth: 1.5,
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ` R@10 = ${ctx.parsed.y.toFixed(4)}`
+        }
+      },
+      annotation: {
+        annotations: {
+          line1: { type:'line', yMin:0.2431, yMax:0.2431, borderColor:'#adb5bd', borderWidth:1, borderDash:[4,4] }
+        }
+      }
+    },
+    scales: {
+      y: {
+        min: 0, max: 0.5,
+        ticks: { stepSize: 0.1 },
+        grid: { color: '#f0f0f0' }
+      },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// ── Chart 2: avg_pool ──
+new Chart(document.getElementById('poolChart'), {
+  type: 'bar',
+  data: {
+    labels: LABELS,
+    datasets: [{
+      label: 'avg pool size',
+      data: [2795, 808.7, 850.3],
+      backgroundColor: COLORS,
+      borderColor: BORDERS,
+      borderWidth: 1.5,
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ` avg pool = ${ctx.parsed.y.toFixed(0)} 門` } }
+    },
+    scales: {
+      y: {
+        min: 0, max: 3200,
+        grid: { color: '#f0f0f0' },
+        ticks: {
+          callback: v => v === 2795 ? '全庫 2795' : v
+        }
+      },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// ── Chart 3: speed ──
+new Chart(document.getElementById('speedChart'), {
+  type: 'bar',
+  data: {
+    labels: LABELS,
+    datasets: [{
+      label: 'ms / query',
+      data: [499.0, 54.3, 47.7],
+      backgroundColor: COLORS,
+      borderColor: BORDERS,
+      borderWidth: 1.5,
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.y.toFixed(1)} ms/q` } }
+    },
+    scales: {
+      y: { min: 0, grid: { color: '#f0f0f0' } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// ── Chart 4: oracle filter 品質（donut）──
+new Chart(document.getElementById('oracleChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['gold 在候選池內（2,157）', 'gold 被錯誤排除（3）'],
+    datasets: [{
+      data: [2157, 3],
+      backgroundColor: ['#4f6ef7', '#f4a261'],
+      borderWidth: 0,
+    }]
+  },
+  options: {
+    cutout: '65%',
+    plugins: {
+      legend: { position: 'bottom', labels: { font: { size: 12 } } },
+      tooltip: { callbacks: { label: ctx => ` ${ctx.label}` } }
+    }
+  }
+});
+
+// ── Chart 5: pool size by dimension ──
+new Chart(document.getElementById('dimChart'), {
+  type: 'bar',
+  data: {
+    labels: ['unit（系所）', 'lmt_kind（通識細分）', 'lang+unit+point', 'lang+weekday+hour', 'weekday', 'lang（單獨）'],
+    datasets: [
+      {
+        label: 'avg pool size',
+        data: [20, 35, 15, 151, 554, 1649],
+        backgroundColor: [
+          '#4f6ef7','#4f6ef7','#4f6ef7',
+          '#74b9ff','#f4a261','#e17055'
+        ],
+        borderRadius: 6,
+      },
+      {
+        label: '全庫（2,795）',
+        data: [2795,2795,2795,2795,2795,2795],
+        type: 'line',
+        borderColor: '#dee2e6',
+        borderDash: [5,5],
+        borderWidth: 1.5,
+        pointRadius: 0,
+        fill: false,
+      }
+    ]
+  },
+  options: {
+    indexAxis: 'y',
+    plugins: {
+      legend: {
+        labels: { font: { size: 12 }, filter: i => i.text !== '全庫（2,795）' || true }
+      },
+      tooltip: {
+        callbacks: {
+          label: ctx => ctx.dataset.type === 'line'
+            ? ` 全庫 ${ctx.parsed.x} 門`
+            : ` avg pool = ${ctx.parsed.x} 門（縮減 ${(100 - ctx.parsed.x/2795*100).toFixed(1)}%）`
+        }
+      }
+    },
+    scales: {
+      x: { min: 0, max: 3000, grid: { color: '#f0f0f0' } },
+      y: { grid: { display: false } }
+    }
+  }
+});
+</script>
+</body>
+</html>

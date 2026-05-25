@@ -21,8 +21,13 @@ _reranker = None
 def _get_reranker():
     global _reranker
     if _reranker is None:
+        import os
         from FlagEmbedding import FlagReranker
-        use_fp16 = torch.backends.mps.is_available() or torch.cuda.is_available()
+        force_cpu = os.environ.get("FORCE_CPU", "0") == "1"
+        if force_cpu:
+            use_fp16 = False
+        else:
+            use_fp16 = torch.backends.mps.is_available() or torch.cuda.is_available()
         _reranker = FlagReranker(_MODEL_NAME, use_fp16=use_fp16)
     return _reranker
 
