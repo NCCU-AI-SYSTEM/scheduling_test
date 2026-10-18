@@ -36,3 +36,7 @@ data/*.db
 
 # OS
 .DS_Store
+
+# personal data: 全人 transcript exports must never be committed
+data/exportStudentData.json
+data/**/exportStudentData*.json
