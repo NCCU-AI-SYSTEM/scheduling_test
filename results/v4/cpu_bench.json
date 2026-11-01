@@ -1,0 +1,106 @@
+[
+  {
+    "kind": "encoder",
+    "model": "bge-base-zh",
+    "threads": 12,
+    "load_s": 4.0,
+    "peak_rss_mb": 1796,
+    "query_ms_p50": 14.0,
+    "index_min_est": 3.7
+  },
+  {
+    "kind": "encoder",
+    "model": "bge-base-zh",
+    "threads": 4,
+    "load_s": 4.0,
+    "peak_rss_mb": 1752,
+    "query_ms_p50": 24.7,
+    "index_min_est": 10.8
+  },
+  {
+    "kind": "encoder",
+    "model": "e5-large-instruct",
+    "threads": 12,
+    "load_s": 5.5,
+    "peak_rss_mb": 4072,
+    "query_ms_p50": 43.4,
+    "index_min_est": 12.3
+  },
+  {
+    "kind": "encoder",
+    "model": "e5-large-instruct",
+    "threads": 4,
+    "load_s": 5.5,
+    "peak_rss_mb": 4071,
+    "query_ms_p50": 79.3,
+    "index_min_est": 35.4
+  },
+  {
+    "kind": "encoder",
+    "model": "bge-m3",
+    "threads": 12,
+    "load_s": 4.7,
+    "peak_rss_mb": 3133,
+    "query_ms_p50": 56.9,
+    "index_min_est": 14.2
+  },
+  {
+    "kind": "encoder",
+    "model": "bge-m3",
+    "threads": 4,
+    "load_s": 4.6,
+    "peak_rss_mb": 3122,
+    "query_ms_p50": 54.9,
+    "index_min_est": 41.9
+  },
+  {
+    "kind": "encoder",
+    "model": "qwen3-emb-0.6b",
+    "threads": 12,
+    "load_s": 5.7,
+    "peak_rss_mb": 7051,
+    "query_ms_p50": 86.4,
+    "index_min_est": 31.9
+  },
+  {
+    "kind": "encoder",
+    "model": "qwen3-emb-0.6b",
+    "threads": 4,
+    "load_s": 5.5,
+    "peak_rss_mb": 6921,
+    "query_ms_p50": 126.2,
+    "index_min_est": 76.2
+  },
+  {
+    "kind": "reranker",
+    "model": "bge-reranker-v2-m3",
+    "threads": 12,
+    "load_s": 1.3,
+    "peak_rss_mb": 3311,
+    "rerank20_ms_p50": 15837.0
+  },
+  {
+    "kind": "reranker",
+    "model": "bge-reranker-v2-m3",
+    "threads": 4,
+    "load_s": 1.3,
+    "peak_rss_mb": 3303,
+    "rerank20_ms_p50": 44479.9
+  },
+  {
+    "kind": "reranker",
+    "model": "qwen3-rerank-0.6b",
+    "threads": 12,
+    "load_s": 1.9,
+    "peak_rss_mb": 6211,
+    "rerank20_ms_p50": 15136.3
+  },
+  {
+    "kind": "reranker",
+    "model": "qwen3-rerank-0.6b",
+    "threads": 4,
+    "load_s": 1.8,
+    "peak_rss_mb": 6183,
+    "rerank20_ms_p50": 37934.0
+  }
+]

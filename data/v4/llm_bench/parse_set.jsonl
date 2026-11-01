@@ -1,0 +1,220 @@
+{"qid": "cond-56e5975d", "src": "cond", "stratum": "complex-neg", "query": "我想找英文授課、企博學系所開的課，星期二和星期日不要，還要避開體育課。", "gold": "1142355511001", "must": {"course_lang": ["英文"], "unit": ["企博學一企博學二企博學三企博學四企博學五企博學六"]}, "must_not": {"weekday": [2, 7], "kind": ["體育"]}}
+{"qid": "cond-e9453970", "src": "cond", "stratum": "complex-neg", "query": "想找星期五上、中文授課的課，晚上時段不要，而且不要通識類的", "gold": "1142258718001", "must": {"weekday": [5], "course_lang": ["中文"]}, "must_not": {"hour_range": [18, 24], "kind": ["通識"]}}
+{"qid": "cond-ae749a74", "src": "cond", "stratum": "complex-neg", "query": "我想找中文授課、公共行政系大一到大四都能修的課，最好不要星期三也不是體育課。", "gold": "1142206834001", "must": {"course_lang": ["中文"], "unit": ["公行一公行二公行三公行四"]}, "must_not": {"weekday": [3], "kind": ["體育"]}}
+{"qid": "cond-9255eda7", "src": "cond", "stratum": "complex-neg", "query": "我想找中文授課、下午上課的必修課，不要週三和週六", "gold": "1142002340021", "must": {"course_lang": ["中文"], "hour_range": [13, 18], "kind": ["必修"]}, "must_not": {"weekday": [3, 6]}}
+{"qid": "cond-21e41ee8", "src": "cond", "stratum": "complex-neg", "query": "我想找中文授課、下午上課的選修課，星期二不要排到。", "gold": "1142354707001", "must": {"course_lang": ["中文"], "hour_range": [13, 18], "kind": ["選修"]}, "must_not": {"weekday": [2]}}
+{"qid": "cond-9ba7d23b", "src": "cond", "stratum": "complex-neg", "query": "我想找日文授課、日文碩一開的課，最好是星期二上課，避開中午時段。", "gold": "1142556783001", "must": {"unit": ["日文碩一"], "course_lang": ["日文"], "weekday": [2]}, "must_not": {"hour_range": [12, 13]}}
+{"qid": "cond-4e6695f3", "src": "cond", "stratum": "complex-neg", "query": "想找中文授課、法律一甲一乙一丙可以修的課，別在星期三或星期六，也不要體育課", "gold": "1142601158011", "must": {"course_lang": ["中文"], "unit": ["法律一甲法律一乙法律一丙"]}, "must_not": {"weekday": [3, 6], "kind": ["體育"]}}
+{"qid": "cond-daa4e4fd", "src": "cond", "stratum": "complex-neg", "query": "想選中文授課、星期五上課的課，晚上時段和體育課不要", "gold": "1142208764002", "must": {"weekday": [5], "course_lang": ["中文"]}, "must_not": {"hour_range": [18, 24], "kind": ["體育"]}}
+{"qid": "cond-cf875440", "src": "cond", "stratum": "complex-neg", "query": "我想找資訊學院開、中文授課的課，星期一和星期六不要，還要排除通識", "gold": "1142046001031", "must": {"course_lang": ["中文"], "unit": ["資訊學院"]}, "must_not": {"weekday": [1, 6], "kind": ["通識"]}}
+{"qid": "cond-d5ad0b7b", "src": "cond", "stratum": "complex-neg", "query": "我想找中文系星期二上、用中文授課的課，最好不要晚上時段", "gold": "1142031004051", "must": {"unit": ["中文系"], "course_lang": ["中文"], "weekday": [2]}, "must_not": {"hour_range": [18, 24]}}
+{"qid": "cond-da096d2e", "src": "cond", "stratum": "complex-neg", "query": "我想找中文授課、星期三上課的課，最好不要在中午，也不要必修。", "gold": "1142353743001", "must": {"weekday": [3], "course_lang": ["中文"]}, "must_not": {"hour_range": [12, 13], "kind": ["必修"]}}
+{"qid": "cond-a9970810", "src": "cond", "stratum": "complex-neg", "query": "我想找英文授課、星期四上課的課，晚上時段不要，體育類也不要。", "gold": "1142501814001", "must": {"weekday": [4], "course_lang": ["英文"]}, "must_not": {"hour_range": [18, 24], "kind": ["體育"]}}
+{"qid": "cond-a5de5dc9", "src": "cond", "stratum": "complex-neg", "query": "我想找民族系開的泰雅族語（四），中文授課，星期二上課，別排在早上時段。", "gold": "1142070330001", "must": {"unit": ["民族系"], "course_lang": ["中文"], "weekday": [2]}, "must_not": {"hour_range": [8, 12]}}
+{"qid": "cond-bd85eda6", "src": "cond", "stratum": "complex-neg", "query": "我想找英文授課、外文中系上開的課，最好不是通識，也不要排在星期一和星期三。", "gold": "1142070171021", "must": {"course_lang": ["英文"], "unit": ["外文中"]}, "must_not": {"weekday": [1, 3], "kind": ["通識"]}}
+{"qid": "cond-e261f6be", "src": "cond", "stratum": "complex-neg", "query": "我想選星期一用英文授課的體育課，避開早上時段，也不要自然通識。", "gold": "1142046006011", "must": {"course_lang": ["英文"], "weekday": [1], "kind": ["體育"]}, "must_not": {"hour_range": [8, 12], "lmt_kind": ["自然通識"]}}
+{"qid": "cond-12320588", "src": "cond", "stratum": "complex-neg", "query": "我想找中文授課、星期二上課、華語文中心開的課，下午或晚上都可以，避開早上的", "gold": "1142088210021", "must": {"unit": ["華語文中心"], "course_lang": ["中文"], "weekday": [2]}, "must_not": {"hour_range": [8, 12]}}
+{"qid": "cond-13367828", "src": "cond", "stratum": "complex-neg", "query": "我想修中文授課、哲學碩博班開的課，星期一不要，通識也不要。", "gold": "1142154373001", "must": {"course_lang": ["中文"], "unit": ["哲學碩一哲學博一哲學碩二哲學博二"]}, "must_not": {"weekday": [1], "kind": ["通識"]}}
+{"qid": "cond-f741bfc1", "src": "cond", "stratum": "complex-neg", "query": "我想找星期三上課、中文授課的課，最好不要中午時段，也不要通識類。", "gold": "1142ZC0932001", "must": {"weekday": [3], "course_lang": ["中文"]}, "must_not": {"hour_range": [12, 13], "kind": ["通識"]}}
+{"qid": "cond-f769d95c", "src": "cond", "stratum": "complex-neg", "query": "想找中文授課、傳院二甲乙丙丁開的課，有沒有不是星期五、也不是體育的？", "gold": "1142405937001", "must": {"course_lang": ["中文"], "unit": ["傳院二甲傳院二乙傳院二丙傳院二丁"]}, "must_not": {"weekday": [5], "kind": ["體育"]}}
+{"qid": "cond-221692f9", "src": "cond", "stratum": "complex-neg", "query": "想找中文授課、星期六開課、圖資專一的課，別排在晚上時段", "gold": "1142913931001", "must": {"unit": ["圖資專一"], "course_lang": ["中文"], "weekday": [6]}, "must_not": {"hour_range": [18, 24]}}
+{"qid": "cond-04a99482", "src": "cond", "stratum": "multi", "query": "我想找星期二用西班牙文授課的課程", "gold": "1142509009002", "must": {"course_lang": ["西班牙文"], "weekday": [2]}, "must_not": {}}
+{"qid": "cond-7f482b0c", "src": "cond", "stratum": "multi", "query": "我想找中文授課、星期二上課的課程", "gold": "1142703053001", "must": {"course_lang": ["中文"], "weekday": [2]}, "must_not": {}}
+{"qid": "cond-765d6f90", "src": "cond", "stratum": "multi", "query": "我想找中文授課、星期三晚上上的課，有嗎？", "gold": "1142971875001", "must": {"weekday": [3], "hour_range": [18, 24], "course_lang": ["中文"]}, "must_not": {}}
+{"qid": "cond-df1366c4", "src": "cond", "stratum": "multi", "query": "我想找英文授課的選修課，最好是和俄羅斯外交政策相關的", "gold": "1142263830001", "must": {"course_lang": ["英文"], "kind": ["選修"]}, "must_not": {}}
+{"qid": "cond-faf30dda", "src": "cond", "stratum": "multi", "query": "我想找中文授課的選修課，適合企研碩一或碩二修嗎？", "gold": "1142363877001", "must": {"course_lang": ["中文"], "kind": ["選修"]}, "must_not": {}}
+{"qid": "cond-ce139b5c", "src": "cond", "stratum": "multi", "query": "想找中文授課的體育課，還要是社會通識的", "gold": "1142042139021", "must": {"course_lang": ["中文"], "kind": ["體育"], "lmt_kind": ["社會通識"]}, "must_not": {}}
+{"qid": "cond-4afff125", "src": "cond", "stratum": "multi", "query": "想找中文授課、3學分、統計碩一的課", "gold": "1142354001002", "must": {"course_lang": ["中文"], "unit": ["統計碩一"], "point": 3.0}, "must_not": {}}
+{"qid": "cond-fad6321f", "src": "cond", "stratum": "multi", "query": "想找英文授課、下午時段的課", "gold": "1142305666001", "must": {"course_lang": ["英文"], "hour_range": [13, 18]}, "must_not": {}}
+{"qid": "cond-e60e435a", "src": "cond", "stratum": "multi", "query": "我想找中文授課、星期二上課的課程。", "gold": "1142401143001", "must": {"course_lang": ["中文"], "weekday": [2]}, "must_not": {}}
+{"qid": "cond-bc4a5a8f", "src": "cond", "stratum": "multi", "query": "想找中文授課、3學分，而且是法律碩博班的課", "gold": "1142651B53001", "must": {"course_lang": ["中文"], "unit": ["法律碩一法律博一法律碩二法律博二"], "point": 3.0}, "must_not": {}}
+{"qid": "cond-60ab4902", "src": "cond", "stratum": "multi", "query": "我想選星期三上課、用英文授課的課", "gold": "1142153530001", "must": {"course_lang": ["英文"], "weekday": [3]}, "must_not": {}}
+{"qid": "cond-d0c895e7", "src": "cond", "stratum": "multi", "query": "想找中文授課、星期四上課的課程。", "gold": "1142103112001", "must": {"course_lang": ["中文"], "weekday": [4]}, "must_not": {}}
+{"qid": "cond-657f7923", "src": "cond", "stratum": "multi", "query": "我想找中文授課、星期四下午上課的課", "gold": "1142401132001", "must": {"weekday": [4], "hour_range": [13, 18], "course_lang": ["中文"]}, "must_not": {}}
+{"qid": "cond-8dac7791", "src": "cond", "stratum": "multi", "query": "我想找中文授課、星期四上課的課", "gold": "1142010058002", "must": {"course_lang": ["中文"], "weekday": [4]}, "must_not": {}}
+{"qid": "cond-cff139d7", "src": "cond", "stratum": "multi", "query": "我想找中文授課、3學分的課", "gold": "1142070252001", "must": {"course_lang": ["中文"], "point": 3.0}, "must_not": {}}
+{"qid": "cond-2b54f747", "src": "cond", "stratum": "multi", "query": "我想找英文授課、星期四上課的課，可以嗎？", "gold": "1142551731001", "must": {"course_lang": ["英文"], "weekday": [4]}, "must_not": {}}
+{"qid": "cond-57dec7e2", "src": "cond", "stratum": "multi", "query": "我想找中文授課、星期四早上上的課", "gold": "1142358065001", "must": {"weekday": [4], "hour_range": [8, 12], "course_lang": ["中文"]}, "must_not": {}}
+{"qid": "cond-527ec2a8", "src": "cond", "stratum": "multi", "query": "想找英文授課、星期一上的課", "gold": "1142504777002", "must": {"course_lang": ["英文"], "weekday": [1]}, "must_not": {}}
+{"qid": "cond-e4ae9887", "src": "cond", "stratum": "multi", "query": "我想找中文授課、週一晚上有開的課", "gold": "1142000318131", "must": {"weekday": [1], "hour_range": [18, 24], "course_lang": ["中文"]}, "must_not": {}}
+{"qid": "cond-2baa58ee", "src": "cond", "stratum": "multi", "query": "我想找星期五上、用中文授課的課，適合我修嗎？", "gold": "1142010931001", "must": {"course_lang": ["中文"], "weekday": [5]}, "must_not": {}}
+{"qid": "cond-248b0877", "src": "cond", "stratum": "multi-neg", "query": "我想修資管三甲、三乙、四甲或四乙開的課，授課不要是日文的。", "gold": "1142306859001", "must": {"unit": ["資管三甲資管三乙資管四甲資管四乙"]}, "must_not": {"course_lang": ["日文"]}}
+{"qid": "cond-ce47881e", "src": "cond", "stratum": "multi-neg", "query": "我想找必修的課，最好不要法文授課。", "gold": "1142002303041", "must": {"kind": ["必修"]}, "must_not": {"course_lang": ["法文"]}}
+{"qid": "cond-f4413658", "src": "cond", "stratum": "multi-neg", "query": "我想修教育三教育四的2學分課，不是選修的那種可以嗎", "gold": "1142102118001", "must": {"unit": ["教育三教育四"], "point": 2.0}, "must_not": {"kind": ["選修"]}}
+{"qid": "cond-7c08eb42", "src": "cond", "stratum": "multi-neg", "query": "我想找中文授課的選修課，有沒有適合的？不要星期二上課", "gold": "1142352714001", "must": {"course_lang": ["中文"], "kind": ["選修"]}, "must_not": {"weekday": [2]}}
+{"qid": "cond-06df0132", "src": "cond", "stratum": "multi-neg", "query": "我想找中文授課、不是星期日上的課，適合研究所學生", "gold": "1142156625001", "must": {"course_lang": ["中文"]}, "must_not": {"weekday": [7]}}
+{"qid": "cond-021783d5", "src": "cond", "stratum": "multi-neg", "query": "我想修2學分、台史碩博一年級到二年級都能上的課，不要體育課", "gold": "1142158804001", "must": {"unit": ["台史碩一台史博一台史碩二台史博二"], "point": 2.0}, "must_not": {"kind": ["體育"]}}
+{"qid": "cond-c6ed0bab", "src": "cond", "stratum": "multi-neg", "query": "我想找中文授課，而且不要晚上上課的課", "gold": "1142961023001", "must": {"course_lang": ["中文"]}, "must_not": {"hour_range": [18, 24]}}
+{"qid": "cond-d29e15e1", "src": "cond", "stratum": "multi-neg", "query": "我想選中文授課，而且不要星期二上課的課。", "gold": "1142556743001", "must": {"course_lang": ["中文"]}, "must_not": {"weekday": [2]}}
+{"qid": "cond-059a9d60", "src": "cond", "stratum": "multi-neg", "query": "我想找日文系的必修課，授課不要是韓文的", "gold": "1142010103082", "must": {"kind": ["必修"]}, "must_not": {"course_lang": ["韓文"]}}
+{"qid": "cond-0652456d", "src": "cond", "stratum": "multi-neg", "query": "我想選中文授課的體育課，想學橄欖球初級，而且不要星期二和星期日的課", "gold": "1142002343001", "must": {"course_lang": ["中文"]}, "must_not": {"weekday": [2, 7]}}
+{"qid": "cond-408d336a", "src": "cond", "stratum": "multi-neg", "query": "我想修中文授課的課，星期四和星期日不要開", "gold": "1142506859001", "must": {"course_lang": ["中文"]}, "must_not": {"weekday": [4, 7]}}
+{"qid": "cond-abfd7f6f", "src": "cond", "stratum": "multi-neg", "query": "我想找中文授課、必修的課，而且不要星期五上課", "gold": "1142002311021", "must": {"course_lang": ["中文"], "kind": ["必修"]}, "must_not": {"weekday": [5]}}
+{"qid": "cond-0e41fd72", "src": "cond", "stratum": "multi-neg", "query": "我想找中文授課的體育課，星期四和星期日不要開課", "gold": "1142042183001", "must": {"course_lang": ["中文"], "kind": ["體育"]}, "must_not": {"weekday": [4, 7]}}
+{"qid": "cond-ac35c93f", "src": "cond", "stratum": "multi-neg", "query": "我想找星期五上課的，午休時段不要安排的課", "gold": "1142206785001", "must": {"weekday": [5]}, "must_not": {"hour_range": [12, 13]}}
+{"qid": "cond-15f13779", "src": "cond", "stratum": "multi-neg", "query": "我想找星期二上課，而且不要下午時段的課", "gold": "1142752013001", "must": {"weekday": [2]}, "must_not": {"hour_range": [13, 18]}}
+{"qid": "cond-82388c7e", "src": "cond", "stratum": "multi-neg", "query": "我想找中文授課的課，別排在中午時段", "gold": "1142206814001", "must": {"course_lang": ["中文"]}, "must_not": {"hour_range": [12, 13]}}
+{"qid": "cond-a5a2b218", "src": "cond", "stratum": "multi-neg", "query": "我想找企研碩一二可選、1學分的課，而且不要選修", "gold": "1142363023001", "must": {"unit": ["企研碩一企研碩二"], "point": 1.0}, "must_not": {"kind": ["選修"]}}
+{"qid": "cond-9ddc1a8b", "src": "cond", "stratum": "multi-neg", "query": "我想找外文中心3學分的英文選修課，可以嗎？不要必修課。", "gold": "1142599771011", "must": {"unit": ["外文中心"], "point": 3.0}, "must_not": {"kind": ["必修"]}}
+{"qid": "cond-7182f70c", "src": "cond", "stratum": "multi-neg", "query": "我想找中文授課的選修課，先不要星期一的", "gold": "1142351735001", "must": {"course_lang": ["中文"], "kind": ["選修"]}, "must_not": {"weekday": [1]}}
+{"qid": "cond-d42bb12d", "src": "cond", "stratum": "multi-neg", "query": "我想找星期三上課、但不要早上的課程", "gold": "1142921025001", "must": {"weekday": [3]}, "must_not": {"hour_range": [8, 12]}}
+{"qid": "cond-4bdbe15a", "src": "cond", "stratum": "single", "query": "我想找中文通識的課，內容不要太硬也能多了解文學的那種", "gold": "1142031008051", "must": {"lmt_kind": ["中文通識"]}, "must_not": {}}
+{"qid": "cond-0fa0e4d1", "src": "cond", "stratum": "single", "query": "我想找一門三學分的商院選修課，內容偏商用中級寫作訓練", "gold": "1142300747031", "must": {"point": 3.0}, "must_not": {}}
+{"qid": "cond-b2e39a73", "src": "cond", "stratum": "single", "query": "我想選星期二和星期四都有開的課。", "gold": "1142751793001", "must": {"weekday": [2, 4]}, "must_not": {}}
+{"qid": "cond-bff8cf2f", "src": "cond", "stratum": "single", "query": "我想找星期一有排課的課，有什麼選擇嗎？", "gold": "1142504838002", "must": {"weekday": [1]}, "must_not": {}}
+{"qid": "cond-5c95ad61", "src": "cond", "stratum": "single", "query": "我想選這門課，請問限這些系所的學生可以修嗎？", "gold": "1142921799001", "must": {"unit": ["行管碩一行國防一行領導一行管碩二行國防二行領導二"]}, "must_not": {}}
+{"qid": "cond-e06eb9c2", "src": "cond", "stratum": "single", "query": "我想找星期四上課的課，可以幫我看看嗎？", "gold": "1142209001002", "must": {"weekday": [4]}, "must_not": {}}
+{"qid": "cond-3c3072fc", "src": "cond", "stratum": "single", "query": "有沒有全英文授課的研究所課程？", "gold": "1142755947001", "must": {"course_lang": ["英文"]}, "must_not": {}}
+{"qid": "cond-5af379cc", "src": "cond", "stratum": "single", "query": "我想找統計所博士班的必修課有哪些？", "gold": "1142354003002", "must": {"kind": ["必修"]}, "must_not": {}}
+{"qid": "cond-725e3f66", "src": "cond", "stratum": "single", "query": "我想找有哪些選修課可以選？", "gold": "1142752590001", "must": {"kind": ["選修"]}, "must_not": {}}
+{"qid": "cond-c37790ab", "src": "cond", "stratum": "single", "query": "我想找跨領域的人文或社會類通識課", "gold": "1142044110001", "must": {"lmt_kind": ["跨領域(人文、社會)"]}, "must_not": {}}
+{"qid": "cond-f24fac9c", "src": "cond", "stratum": "single", "query": "我想找神科碩一或碩二的上午課程，可以幫我看看嗎", "gold": "1142754946001", "must": {"hour_range": [8, 12]}, "must_not": {}}
+{"qid": "cond-a6dadc95", "src": "cond", "stratum": "single", "query": "我想找星期四有開的外文課，有沒有推薦？", "gold": "1142599947041", "must": {"weekday": [4]}, "must_not": {}}
+{"qid": "cond-e04da904", "src": "cond", "stratum": "single", "query": "我想找星期五有課的，有什麼課可以選嗎？", "gold": "1142156626001", "must": {"weekday": [5]}, "must_not": {}}
+{"qid": "cond-1cfeafc6", "src": "cond", "stratum": "single", "query": "我想找全程用中文上課的課，有什麼推薦嗎？", "gold": "1142088400021", "must": {"course_lang": ["中文"]}, "must_not": {}}
+{"qid": "cond-b20b0a5a", "src": "cond", "stratum": "single", "query": "我想找星期一上課的課程", "gold": "1142000347041", "must": {"weekday": [1]}, "must_not": {}}
+{"qid": "cond-f8a72198", "src": "cond", "stratum": "single", "query": "我想找星期四上課的課程", "gold": "1142257755001", "must": {"weekday": [4]}, "must_not": {}}
+{"qid": "cond-e5c03680", "src": "cond", "stratum": "single", "query": "我想找三學分的課，內容不要太硬，最好好拿分", "gold": "1142403076001", "must": {"point": 3.0}, "must_not": {}}
+{"qid": "cond-e32d4864", "src": "cond", "stratum": "single", "query": "我想找星期五上課的課，方便排我的行程", "gold": "1142861813001", "must": {"weekday": [5]}, "must_not": {}}
+{"qid": "cond-39d7cfcd", "src": "cond", "stratum": "single", "query": "我想找亞太研究博士班的選修課，有什麼推薦的嗎？", "gold": "1142265803001", "must": {"kind": ["選修"]}, "must_not": {}}
+{"qid": "cond-32614072", "src": "cond", "stratum": "single", "query": "請問有哪些早上時段的課程可以選？", "gold": "1142ZM1881001", "must": {"hour_range": [8, 12]}, "must_not": {}}
+{"qid": "cond-5cf94269", "src": "cond", "stratum": "single-neg", "query": "我想找星期一以外的課，最好是國際人道法與難民法相關的", "gold": "1142601521001", "must": {}, "must_not": {"weekday": [1]}}
+{"qid": "cond-cfb4c536", "src": "cond", "stratum": "single-neg", "query": "想選一門明清制度與地方社會相關的課，但不要星期五上課", "gold": "1142153492001", "must": {}, "must_not": {"weekday": [5]}}
+{"qid": "cond-04d8d7f4", "src": "cond", "stratum": "single-neg", "query": "我想找會計四甲或四乙都能選、但不是星期五上課的課", "gold": "1142303043011", "must": {}, "must_not": {"weekday": [5]}}
+{"qid": "cond-d2bac7b6", "src": "cond", "stratum": "single-neg", "query": "我想選地政系的人本交通與永續校園規劃，不要自然通識", "gold": "1142042222001", "must": {}, "must_not": {"lmt_kind": ["自然通識"]}}
+{"qid": "cond-1ca70a3e", "src": "cond", "stratum": "single-neg", "query": "我想找全民國防教育軍事訓練中，不要韓文授課的課。", "gold": "1142003830101", "must": {}, "must_not": {"course_lang": ["韓文"]}}
+{"qid": "cond-4ff63349", "src": "cond", "stratum": "single-neg", "query": "我想找地政碩博一二都能修的課，但不要通識", "gold": "1142257743001", "must": {}, "must_not": {"kind": ["通識"]}}
+{"qid": "cond-82740689", "src": "cond", "stratum": "single-neg", "query": "我想找華語密集班閱讀課，先不要學分是2的", "gold": "1142088310041", "must": {}, "must_not": {"point": 2.0}}
+{"qid": "cond-ffcac129", "src": "cond", "stratum": "single-neg", "query": "我想找中文系的國文課，但不要書院通識那種", "gold": "1142031008011", "must": {}, "must_not": {"lmt_kind": ["書院通識"]}}
+{"qid": "cond-d717b9f3", "src": "cond", "stratum": "single-neg", "query": "我想找創國碩士的大數據與社會分析課，但不要星期一或星期二上課的。", "gold": "1142Z23937001", "must": {}, "must_not": {"weekday": [1, 2]}}
+{"qid": "cond-21ec10a4", "src": "cond", "stratum": "single-neg", "query": "我想找資管三甲、三乙、四甲或四乙能修的 gold 課程，而且不要 1 學分的", "gold": "1142306723001", "must": {}, "must_not": {"point": 1.0}}
+{"qid": "cond-fd7890c3", "src": "cond", "stratum": "single-neg", "query": "我想找一門不是資訊通識的幸福學課程", "gold": "1142090118001", "must": {}, "must_not": {"lmt_kind": ["資訊通識"]}}
+{"qid": "cond-32bf5e2a", "src": "cond", "stratum": "single-neg", "query": "我想找不是4學分的中文二甲課程，最好有歷代文選及習作", "gold": "1142101033011", "must": {}, "must_not": {"point": 4.0}}
+{"qid": "cond-6272dbff", "src": "cond", "stratum": "single-neg", "query": "我想找不是星期日上課的課程", "gold": "1142101033011", "must": {}, "must_not": {"weekday": [7]}}
+{"qid": "cond-eeb4f6a0", "src": "cond", "stratum": "single-neg", "query": "我想找數位學程裡的機器人與AI互動設計，最好不是必修課。", "gold": "1142781913001", "must": {}, "must_not": {"kind": ["必修"]}}
+{"qid": "cond-030f2421", "src": "cond", "stratum": "single-neg", "query": "我想找國貿系的課，不要通識，內容最好是法律風險實務探討", "gold": "1142301772001", "must": {}, "must_not": {"kind": ["通識"]}}
+{"qid": "cond-2da24b40", "src": "cond", "stratum": "single-neg", "query": "我想找不是人文通識的課，可以幫我嗎？", "gold": "1142032002691", "must": {}, "must_not": {"lmt_kind": ["人文通識"]}}
+{"qid": "cond-bf3b5e78", "src": "cond", "stratum": "single-neg", "query": "我想選韓文三或韓文四開的課，排除早上時段", "gold": "1142507936001", "must": {}, "must_not": {"hour_range": [8, 12]}}
+{"qid": "cond-7af0b05b", "src": "cond", "stratum": "single-neg", "query": "我想找會議及期刊論文發表，但不要四學分的課", "gold": "1142555842001", "must": {}, "must_not": {"point": 4.0}}
+{"qid": "cond-2e6f664d", "src": "cond", "stratum": "single-neg", "query": "我想找產業經濟學（二），不要選修課", "gold": "1142208025001", "must": {}, "must_not": {"kind": ["選修"]}}
+{"qid": "cond-a717f708", "src": "cond", "stratum": "single-neg", "query": "我想選歷史二的課，能不能不要中午 12:00 到 13:00 的時段？", "gold": "1142103279001", "must": {}, "must_not": {"hour_range": [12, 13]}}
+{"qid": "1142042215001-oc-a207d843", "src": "synth", "stratum": "colloquial", "query": "有沒有那種講AI怎麼影響社會的課啊", "gold": "1142042215001", "must": null, "must_not": null}
+{"qid": "1142000605022-oc-58e988cf", "src": "synth", "stratum": "colloquial", "query": "有沒有教證券法那種課啊", "gold": "1142000605022", "must": null, "must_not": null}
+{"qid": "1142103415001-oc-3e9b5d9b", "src": "synth", "stratum": "colloquial", "query": "有沒有講德國以前故事的課啊", "gold": "1142103415001", "must": null, "must_not": null}
+{"qid": "1142151528001-oc-c01f405b", "src": "synth", "stratum": "colloquial", "query": "政大中文系有沒有講新儒家的課", "gold": "1142151528001", "must": null, "must_not": null}
+{"qid": "1142000361011-oc-b89704c0", "src": "synth", "stratum": "colloquial", "query": "有沒有教企業該怎麼負責的課", "gold": "1142000361011", "must": null, "must_not": null}
+{"qid": "1142510905002-oc-143b50b5", "src": "synth", "stratum": "colloquial", "query": "政大有沒有教越南話的課啊", "gold": "1142510905002", "must": null, "must_not": null}
+{"qid": "1142702863001-oc-7a4c487b", "src": "synth", "stratum": "colloquial", "query": "有沒有那種教怎麼做遊戲的心理課啊", "gold": "1142702863001", "must": null, "must_not": null}
+{"qid": "1142651458001-oc-da8c6637", "src": "synth", "stratum": "colloquial", "query": "有沒有教清朝法律跟AI分析的課", "gold": "1142651458001", "must": null, "must_not": null}
+{"qid": "1142262868001-oc-d4cf4489", "src": "synth", "stratum": "colloquial", "query": "有沒有討論不同國家勞工關係的課", "gold": "1142262868001", "must": null, "must_not": null}
+{"qid": "1142353915001-oc-4b9102bb", "src": "synth", "stratum": "colloquial", "query": "有沒有那種教國際投資稅怎麼弄的課啊", "gold": "1142353915001", "must": null, "must_not": null}
+{"qid": "1142204839001-oc-d0adfffb", "src": "synth", "stratum": "colloquial", "query": "有沒有那種讀布赫迪厄東西的社會學課啊", "gold": "1142204839001", "must": null, "must_not": null}
+{"qid": "1142351753001-oc-d311ef99", "src": "synth", "stratum": "colloquial", "query": "有沒有那種講農業跟環境貿易的課啊？", "gold": "1142351753001", "must": null, "must_not": null}
+{"qid": "1142031025001-oc-6c1fa783", "src": "synth", "stratum": "colloquial", "query": "有沒有那種英文上課的國文入門啊", "gold": "1142031025001", "must": null, "must_not": null}
+{"qid": "1142509018002-oc-d4b44a9d", "src": "synth", "stratum": "colloquial", "query": "有沒有德文文法比較難的課啊", "gold": "1142509018002", "must": null, "must_not": null}
+{"qid": "1142601946001-oc-25a47e40", "src": "synth", "stratum": "colloquial", "query": "有沒有教商標權那種課啦", "gold": "1142601946001", "must": null, "must_not": null}
+{"qid": "1142356346001-oc-f23b44c9", "src": "synth", "stratum": "colloquial", "query": "有沒有教怎麼查資安漏洞的課", "gold": "1142356346001", "must": null, "must_not": null}
+{"qid": "1142601389001-oc-c9dc0c97", "src": "synth", "stratum": "colloquial", "query": "有沒有那種講法律跟影片有關的課啊", "gold": "1142601389001", "must": null, "must_not": null}
+{"qid": "1142363018001-oc-728e6f58", "src": "synth", "stratum": "colloquial", "query": "有沒有跟網路數據還有品牌行銷有關的課", "gold": "1142363018001", "must": null, "must_not": null}
+{"qid": "1142306721001-oc-1f8f2a2c", "src": "synth", "stratum": "colloquial", "query": "有沒有哪些課可以學做資訊專案管理啊", "gold": "1142306721001", "must": null, "must_not": null}
+{"qid": "1142510032002-oc-ee21851e", "src": "synth", "stratum": "colloquial", "query": "有沒有那種入門印尼文課啊", "gold": "1142510032002", "must": null, "must_not": null}
+{"qid": "1142104225001-oc-4650d7b0", "src": "synth", "stratum": "colloquial", "query": "有沒有講Levinas那種哲學的課", "gold": "1142104225001", "must": null, "must_not": null}
+{"qid": "1142300745021-oc-8adb7654", "src": "synth", "stratum": "colloquial", "query": "有沒有英文上課那種商業寫作文的課", "gold": "1142300745021", "must": null, "must_not": null}
+{"qid": "1142010103042-oc-98fcd024", "src": "synth", "stratum": "colloquial", "query": "有沒有那種能講簡單日文的課啊", "gold": "1142010103042", "must": null, "must_not": null}
+{"qid": "1142651B97001-oc-639b477b", "src": "synth", "stratum": "colloquial", "query": "有沒有教怎麼用法律解決問題的課", "gold": "1142651B97001", "must": null, "must_not": null}
+{"qid": "1142403061001-oc-87785796", "src": "synth", "stratum": "colloquial", "query": "政大三年級有沒有教怎麼寫電影劇本的課", "gold": "1142403061001", "must": null, "must_not": null}
+{"qid": "1142101789001-oc-cc4f5953", "src": "synth", "stratum": "colloquial", "query": "有沒有那種講港澳那邊文學跟歷史的課啊", "gold": "1142101789001", "must": null, "must_not": null}
+{"qid": "1142070153001-oc-b40e1128", "src": "synth", "stratum": "colloquial", "query": "有沒有那種講錢怎麼管的課啊", "gold": "1142070153001", "must": null, "must_not": null}
+{"qid": "1142601158001-oc-62d36d9e", "src": "synth", "stratum": "colloquial", "query": "有沒有講債務問題的法律課啊", "gold": "1142601158001", "must": null, "must_not": null}
+{"qid": "1142010113012-oc-2eb11feb", "src": "synth", "stratum": "colloquial", "query": "有沒有那種可以學好日語句子跟閱讀的課啊", "gold": "1142010113012", "must": null, "must_not": null}
+{"qid": "1142356101001-oc-88a6f9d4", "src": "synth", "stratum": "colloquial", "query": "政大那種博士研究課有嗎", "gold": "1142356101001", "must": null, "must_not": null}
+{"qid": "1142002366001-oc-f54b3958", "src": "synth", "stratum": "colloquial", "query": "有沒有簡單教打羽球的課啊", "gold": "1142002366001", "must": null, "must_not": null}
+{"qid": "1142506077001-oc-01d4359d", "src": "synth", "stratum": "colloquial", "query": "有沒有教日本古典文學的課啊", "gold": "1142506077001", "must": null, "must_not": null}
+{"qid": "1142356389001-oc-b3a95951", "src": "synth", "stratum": "colloquial", "query": "有沒有什麼UX那種設計課啊？", "gold": "1142356389001", "must": null, "must_not": null}
+{"qid": "1142863876001-oc-f5b79913", "src": "synth", "stratum": "colloquial", "query": "有沒有關於日本以前殖民地的課啊", "gold": "1142863876001", "must": null, "must_not": null}
+{"qid": "1142088310051-oc-1d3e408f", "src": "synth", "stratum": "colloquial", "query": "有沒有讀中文的密集班啊？", "gold": "1142088310051", "must": null, "must_not": null}
+{"qid": "1142253780001-oc-fa53b779", "src": "synth", "stratum": "colloquial", "query": "有沒有講中國外交那種英文課啊", "gold": "1142253780001", "must": null, "must_not": null}
+{"qid": "1142031023021-oc-beefd9ff", "src": "synth", "stratum": "colloquial", "query": "有沒啥課是教台灣語言文化的啊？", "gold": "1142031023021", "must": null, "must_not": null}
+{"qid": "1142861831001-oc-39a69a4f", "src": "synth", "stratum": "colloquial", "query": "有沒有教日本買東西文化的課啊", "gold": "1142861831001", "must": null, "must_not": null}
+{"qid": "1142356016001-oc-7e1fa22b", "src": "synth", "stratum": "colloquial", "query": "有沒有那種教AI怎麼安全的課啊", "gold": "1142356016001", "must": null, "must_not": null}
+{"qid": "1142208018001-oc-78240941", "src": "synth", "stratum": "colloquial", "query": "有沒有講資本主義發展的經濟課", "gold": "1142208018001", "must": null, "must_not": null}
+{"qid": "1142257726001-oc-42adc9eb", "src": "synth", "stratum": "constraint", "query": "中文授課，地政系碩博士生可修", "gold": "1142257726001", "must": null, "must_not": null}
+{"qid": "1142207941001-oc-a23c8c50", "src": "synth", "stratum": "constraint", "query": "中文授課、地政系的三學分課", "gold": "1142207941001", "must": null, "must_not": null}
+{"qid": "1142358071001-oc-536c6bd2", "src": "synth", "stratum": "constraint", "query": "風管博一或博二中文授課的三學分課", "gold": "1142358071001", "must": null, "must_not": null}
+{"qid": "1142258722001-oc-2d9d1364", "src": "synth", "stratum": "constraint", "query": "經濟系中文授課兩學分課", "gold": "1142258722001", "must": null, "must_not": null}
+{"qid": "1142358053001-oc-d9c5cd03", "src": "synth", "stratum": "constraint", "query": "風管碩士課程中中文授課的三學分課", "gold": "1142358053001", "must": null, "must_not": null}
+{"qid": "1142351703001-oc-84621fe3", "src": "synth", "stratum": "constraint", "query": "中文授課，適合國貿碩一二學生的課", "gold": "1142351703001", "must": null, "must_not": null}
+{"qid": "1142900001001-oc-9470ab75", "src": "synth", "stratum": "constraint", "query": "教院碩士班中文授課的3學分課", "gold": "1142900001001", "must": null, "must_not": null}
+{"qid": "1142703044001-oc-731ea05c", "src": "synth", "stratum": "constraint", "query": "資訊系學生中文授課三學分課程", "gold": "1142703044001", "must": null, "must_not": null}
+{"qid": "1142364103001-oc-682ccc5d", "src": "synth", "stratum": "constraint", "query": "政大科博產系中文授課的研究課", "gold": "1142364103001", "must": null, "must_not": null}
+{"qid": "1142101856001-oc-9b9bbb44", "src": "synth", "stratum": "constraint", "query": "中文授課，中文系三甲或三乙學生可選", "gold": "1142101856001", "must": null, "must_not": null}
+{"qid": "1142032002461-oc-9194a196", "src": "synth", "stratum": "constraint", "query": "外文系英文授課的三學分課", "gold": "1142032002461", "must": null, "must_not": null}
+{"qid": "1142ZM1916001-oc-86114213", "src": "synth", "stratum": "constraint", "query": "有英文授課且適合碩士生的課", "gold": "1142ZM1916001", "must": null, "must_not": null}
+{"qid": "1142002301021-oc-bbb8dc45", "src": "synth", "stratum": "constraint", "query": "中文授課且1學分的體育課", "gold": "1142002301021", "must": null, "must_not": null}
+{"qid": "1142172944001-oc-04d6fc4a", "src": "synth", "stratum": "constraint", "query": "輔諮碩一中文授課三學分課程", "gold": "1142172944001", "must": null, "must_not": null}
+{"qid": "1142300745001-oc-e77997ba", "src": "synth", "stratum": "constraint", "query": "英文授課的商學院選修課", "gold": "1142300745001", "must": null, "must_not": null}
+{"qid": "1142267005001-oc-6cb1df27", "src": "synth", "stratum": "constraint", "query": "政大原住民專班中文授課三學分課", "gold": "1142267005001", "must": null, "must_not": null}
+{"qid": "1142000358021-oc-b9cea72d", "src": "synth", "stratum": "constraint", "query": "資管系的中文課，學三學分", "gold": "1142000358021", "must": null, "must_not": null}
+{"qid": "1142203077001-oc-0de9b9a4", "src": "synth", "stratum": "constraint", "query": "外交三院中文授課的貿易課程", "gold": "1142203077001", "must": null, "must_not": null}
+{"qid": "1142301867001-oc-f2207405", "src": "synth", "stratum": "constraint", "query": "英文授課的國貿系必修課", "gold": "1142301867001", "must": null, "must_not": null}
+{"qid": "1142032002631-oc-eba0bc24", "src": "synth", "stratum": "constraint", "query": "外文中英文授課三學分的課程", "gold": "1142032002631", "must": null, "must_not": null}
+{"qid": "1142510043002-oc-9a615679", "src": "synth", "stratum": "constraint", "query": "政大東南亞語系開的兩學分中文授課課程", "gold": "1142510043002", "must": null, "must_not": null}
+{"qid": "1142101698001-oc-94bbc5c9", "src": "synth", "stratum": "constraint", "query": "中文系三年級能修的中文課", "gold": "1142101698001", "must": null, "must_not": null}
+{"qid": "1142100826001-oc-90beb5b5", "src": "synth", "stratum": "constraint", "query": "文學院中文授課、3學分的課程", "gold": "1142100826001", "must": null, "must_not": null}
+{"qid": "1142506069001-oc-ea34b211", "src": "synth", "stratum": "constraint", "query": "日文授課、日文系四年級開的課", "gold": "1142506069001", "must": null, "must_not": null}
+{"qid": "1142155032001-oc-5f32be5c", "src": "synth", "stratum": "constraint", "query": "政大圖書資訊相關系，中文授課，週二下午", "gold": "1142155032001", "must": null, "must_not": null}
+{"qid": "1142753935001-oc-1576b35b", "src": "synth", "stratum": "constraint", "query": "資碩工、資碩計學分三的中文課", "gold": "1142753935001", "must": null, "must_not": null}
+{"qid": "1142357029001-oc-2b65cbec", "src": "synth", "stratum": "constraint", "query": "財管碩一下學期中文授課的投資課", "gold": "1142357029001", "must": null, "must_not": null}
+{"qid": "1142402108001-oc-932c377a", "src": "synth", "stratum": "constraint", "query": "政大廣告系三、四年級中文授課的科技相關課程", "gold": "1142402108001", "must": null, "must_not": null}
+{"qid": "1142032002041-oc-9469e91a", "src": "synth", "stratum": "constraint", "query": "外文中授課，英文能力提升為主的三學分課", "gold": "1142032002041", "must": null, "must_not": null}
+{"qid": "1142306050011-oc-1f32af41", "src": "synth", "stratum": "constraint", "query": "資管系英文授課的編程課有嗎？", "gold": "1142306050011", "must": null, "must_not": null}
+{"qid": "1142208764002-oc-e8917b36", "src": "synth", "stratum": "constraint", "query": "政大經濟系中文授課三學分課", "gold": "1142208764002", "must": null, "must_not": null}
+{"qid": "1142255834001-oc-7a898ffe", "src": "synth", "stratum": "constraint", "query": "財政系碩士班英文授課的課", "gold": "1142255834001", "must": null, "must_not": null}
+{"qid": "1142300745011-oc-f3a29985", "src": "synth", "stratum": "constraint", "query": "英文授課，商學院選修，三學分", "gold": "1142300745011", "must": null, "must_not": null}
+{"qid": "1142255029001-oc-0366d89b", "src": "synth", "stratum": "constraint", "query": "財政系中文授課的研討課", "gold": "1142255029001", "must": null, "must_not": null}
+{"qid": "1142510911001-oc-935cbd00", "src": "synth", "stratum": "constraint", "query": "東南亞語言系中文授課的課", "gold": "1142510911001", "must": null, "must_not": null}
+{"qid": "1142041116001-oc-ea6e9e89", "src": "synth", "stratum": "constraint", "query": "英文系開的中文授課文化課", "gold": "1142041116001", "must": null, "must_not": null}
+{"qid": "1142208799001-oc-d6a8af0a", "src": "synth", "stratum": "constraint", "query": "經濟系三四年級中文授課的兩學分課程", "gold": "1142208799001", "must": null, "must_not": null}
+{"qid": "1142102690001-oc-9934a85c", "src": "synth", "stratum": "constraint", "query": "中文授課，教育三系的2學分課", "gold": "1142102690001", "must": null, "must_not": null}
+{"qid": "1142981010001-oc-86c74dae", "src": "synth", "stratum": "constraint", "query": "國安碩一中文授課的課程推薦", "gold": "1142981010001", "must": null, "must_not": null}
+{"qid": "1142088110011-oc-1814e8df", "src": "synth", "stratum": "constraint", "query": "政大華語文中心三學分中文課", "gold": "1142088110011", "must": null, "must_not": null}
+{"qid": "1142101055001-ot-c7b08a2a", "src": "synth", "stratum": "topic", "query": "想學中國古典文學理論的課", "gold": "1142101055001", "must": null, "must_not": null}
+{"qid": "1142509878001-ot-650e90ed", "src": "synth", "stratum": "topic", "query": "想學法國戲劇和劇場運作", "gold": "1142509878001", "must": null, "must_not": null}
+{"qid": "1142510891001-ot-14e91900", "src": "synth", "stratum": "topic", "query": "想找能提升泰語閱讀能力的課程", "gold": "1142510891001", "must": null, "must_not": null}
+{"qid": "1142109035001-ot-21bb3e17", "src": "synth", "stratum": "topic", "query": "想學國中數學教學方法和教材設計", "gold": "1142109035001", "must": null, "must_not": null}
+{"qid": "1142032002291-ot-58757ff2", "src": "synth", "stratum": "topic", "query": "想找提升英文口說與聽力的課", "gold": "1142032002291", "must": null, "must_not": null}
+{"qid": "1142088100011-ot-5ecafcb2", "src": "synth", "stratum": "topic", "query": "想加強日常生活中文聽力與溝通", "gold": "1142088100011", "must": null, "must_not": null}
+{"qid": "1142702002002-ot-4daf3e47", "src": "synth", "stratum": "topic", "query": "想學心理統計跟教育數據分析的課", "gold": "1142702002002", "must": null, "must_not": null}
+{"qid": "1142043025011-ot-cc83d8dc", "src": "synth", "stratum": "topic", "query": "想了解大腦結構跟功能的課", "gold": "1142043025011", "must": null, "must_not": null}
+{"qid": "1142000360071-ot-d827aa47", "src": "synth", "stratum": "topic", "query": "想學基本統計分析方法的課程", "gold": "1142000360071", "must": null, "must_not": null}
+{"qid": "1142971004001-ot-869fe805", "src": "synth", "stratum": "topic", "query": "想找有專題討論跟報告的課", "gold": "1142971004001", "must": null, "must_not": null}
+{"qid": "1142862930001-ot-1740863b", "src": "synth", "stratum": "topic", "query": "想學俄羅斯國際關係和外交政策", "gold": "1142862930001", "must": null, "must_not": null}
+{"qid": "1142555728001-ot-eaf18fc6", "src": "synth", "stratum": "topic", "query": "想學語言結構分析與研究技巧", "gold": "1142555728001", "must": null, "must_not": null}
+{"qid": "1142204676001-ot-90649059", "src": "synth", "stratum": "topic", "query": "想了解科技與社會互動的課程", "gold": "1142204676001", "must": null, "must_not": null}
+{"qid": "1142159820001-ot-3568f337", "src": "synth", "stratum": "topic", "query": "想了解冷戰時期的文學與性別議題課程", "gold": "1142159820001", "must": null, "must_not": null}
+{"qid": "1142405937001-ot-cb855ab5", "src": "synth", "stratum": "topic", "query": "想學傳播相關法律和倫理規範", "gold": "1142405937001", "must": null, "must_not": null}
+{"qid": "1142010116001-ot-4ae1e1ef", "src": "synth", "stratum": "topic", "query": "想了解國際間組織和運作的課", "gold": "1142010116001", "must": null, "must_not": null}
+{"qid": "1142307857001-ot-516d1347", "src": "synth", "stratum": "topic", "query": "想了解房地產投資與理財課程", "gold": "1142307857001", "must": null, "must_not": null}
+{"qid": "1142263813001-ot-6d89fba6", "src": "synth", "stratum": "topic", "query": "想了解俄羅斯和歐盟政治外交的課程", "gold": "1142263813001", "must": null, "must_not": null}
+{"qid": "1142356813001-ot-df13e7a5", "src": "synth", "stratum": "topic", "query": "想學進階軟體設計與功能式程式", "gold": "1142356813001", "must": null, "must_not": null}
+{"qid": "1142358807001-ot-2482bfca", "src": "synth", "stratum": "topic", "query": "想了解產險業經營與管理相關課程", "gold": "1142358807001", "must": null, "must_not": null}
+{"qid": "1142109010001-ot-aaac00d4", "src": "synth", "stratum": "topic", "query": "想學輔導心理與諮商技巧的課", "gold": "1142109010001", "must": null, "must_not": null}
+{"qid": "1142260046001-ot-382104b7", "src": "synth", "stratum": "topic", "query": "想學國際政治理論", "gold": "1142260046001", "must": null, "must_not": null}
+{"qid": "1142304028011-ot-30d19884", "src": "synth", "stratum": "topic", "query": "想學時間序列分析方法", "gold": "1142304028011", "must": null, "must_not": null}
+{"qid": "1142002338001-ot-d7765da1", "src": "synth", "stratum": "topic", "query": "想學游泳技巧和水中安全", "gold": "1142002338001", "must": null, "must_not": null}
+{"qid": "1142601160011-ot-d2193656", "src": "synth", "stratum": "topic", "query": "想了解法律跟社會關係的課程", "gold": "1142601160011", "must": null, "must_not": null}
+{"qid": "1142352724001-ot-24dccada", "src": "synth", "stratum": "topic", "query": "想了解股票市場實務運作的課程", "gold": "1142352724001", "must": null, "must_not": null}
+{"qid": "1142070312001-ot-01399983", "src": "synth", "stratum": "topic", "query": "想了解原住民族法律與行政體系", "gold": "1142070312001", "must": null, "must_not": null}
+{"qid": "1142651025001-ot-841bc9df", "src": "synth", "stratum": "topic", "query": "想學民法債務與責任相關內容", "gold": "1142651025001", "must": null, "must_not": null}
+{"qid": "1142152751001-ot-905f811b", "src": "synth", "stratum": "topic", "query": "想學校園環境設計相關知識", "gold": "1142152751001", "must": null, "must_not": null}
+{"qid": "1142353742001-ot-c9701619", "src": "synth", "stratum": "topic", "query": "想學會看公司財務報告的課", "gold": "1142353742001", "must": null, "must_not": null}
+{"qid": "1142922029001-ot-33718031", "src": "synth", "stratum": "topic", "query": "想學國際合作與跨國組織運作", "gold": "1142922029001", "must": null, "must_not": null}
+{"qid": "1142353753001-ot-67b543d9", "src": "synth", "stratum": "topic", "query": "想了解企業永續與會計角色的課", "gold": "1142353753001", "must": null, "must_not": null}
+{"qid": "1142702892001-ot-38fae14c", "src": "synth", "stratum": "topic", "query": "想學心理測量和量化分析的課", "gold": "1142702892001", "must": null, "must_not": null}
+{"qid": "1142152802001-ot-d1229a32", "src": "synth", "stratum": "topic", "query": "想學教育與社會互動的理論課", "gold": "1142152802001", "must": null, "must_not": null}
+{"qid": "1142000218022-ot-99495f13", "src": "synth", "stratum": "topic", "query": "想學整體經濟運作原理", "gold": "1142000218022", "must": null, "must_not": null}
+{"qid": "1142402101001-ot-b7c9cd94", "src": "synth", "stratum": "topic", "query": "跨領域專題實作課程", "gold": "1142402101001", "must": null, "must_not": null}
+{"qid": "1142010105012-ot-1182430d", "src": "synth", "stratum": "topic", "query": "想加強日常日語口說能力", "gold": "1142010105012", "must": null, "must_not": null}
+{"qid": "1142152577001-ot-fa500259", "src": "synth", "stratum": "topic", "query": "想了解教育科技領導與創新方法的課", "gold": "1142152577001", "must": null, "must_not": null}
+{"qid": "1142507026002-ot-49e73d40", "src": "synth", "stratum": "topic", "query": "想學基礎韓文會話與書寫", "gold": "1142507026002", "must": null, "must_not": null}
+{"qid": "1142000358011-ot-a9217c99", "src": "synth", "stratum": "topic", "query": "想學資料分析和程式基礎", "gold": "1142000358011", "must": null, "must_not": null}
