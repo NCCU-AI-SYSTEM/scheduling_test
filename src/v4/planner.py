@@ -75,8 +75,10 @@ class Plan:
                    seconds=seconds, ok=ok)
 
 
-def plan(query: str, model: str) -> Plan:
-    res = chat(model, [{"role": "user", "content": PLAN_PROMPT.replace("{query}", query)}], fmt=PLAN_SCHEMA)
+def plan(query: str, model: str, options: dict | None = None) -> Plan:
+    """options pass through to Ollama, e.g. {"num_gpu": 0, "num_thread": 4} on a CPU-only server."""
+    res = chat(model, [{"role": "user", "content": PLAN_PROMPT.replace("{query}", query)}], fmt=PLAN_SCHEMA,
+               options=options)
     d = parse_json_object(res.content)
     base = Plan(need=query, seconds=res.seconds, ok=False) if d is None else Plan.from_dict(d, res.seconds)
     return with_assessment(base, query)

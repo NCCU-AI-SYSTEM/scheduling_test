@@ -37,6 +37,7 @@ SEVERITY = {
     "assigned": "warn",           # 必修灌檔, student is not the assigned class: self-select, few seats
     "assigned_target": "info",    # 必修灌檔 and the student is the assigned class
     "level_target": "warn",       # unit is another degree level, no explicit limit
+    "english_exempt": "exclude",  # 大英免修: the school does not assign 大學英文 to exempt students
     "allocated": "info",          # 分派
     "target": "info",             # unit is another department or year
 }
@@ -49,6 +50,9 @@ class StudentIdentity:
     level: str
     year: int
     statuses: frozenset = frozenset()   # self-declared: 僑生, 外籍生, 交換生, 國防 ...
+    other_depts: frozenset = frozenset()  # double major / minor department codes (全人 or form)
+    english_exempt: bool = False          # 大英免修 (全人 collegeEnglishExemption or form)
+    source: str = ""                      # 全人 / 自行輸入 / 學號, see src/v4/identity.py
 
 
 def from_student_id(sid: str, depts: dict[str, Dept], academic_year: int = 114,
@@ -100,9 +104,10 @@ def check_channel(ch: Channel, s: StudentIdentity) -> tuple[Flag, ...]:
     m = _GRADE_MIN.search(note)
     if m and s.level == "學士" and s.year < _CN[m.group(1) or m.group(2)]:
         out.append(_flag("grade_min", f"限大{m.group(1) or m.group(2)}以上"))
-    if "限本系" in note and s.dept_code != ch.dept_code:
-        out.append(_flag("dept_or_minor" if re.search(r"輔|雙", note) else "dept_only",
-                         "限本系" + ("及輔系、雙主修生" if re.search(r"輔|雙", note) else "學生")))
+    minor_ok = bool(re.search(r"輔|雙", note))
+    if "限本系" in note and s.dept_code != ch.dept_code and not (minor_ok and ch.dept_code in s.other_depts):
+        out.append(_flag("dept_or_minor" if minor_ok else "dept_only",
+                         "限本系" + ("及輔系、雙主修生" if minor_ok else "學生")))
     if ch.enroll_mode == "必修灌檔":
         if _is_target(ch, s):
             out.append(_flag("assigned_target", "必修灌檔：學校直接分發，不用自己選"))
@@ -113,7 +118,8 @@ def check_channel(ch: Channel, s: StudentIdentity) -> tuple[Flag, ...]:
     levels = {lv for lv, _ in ch.targets}
     if levels and s.level not in levels:
         out.append(_flag("level_target", f"開課對象為{'、'.join(sorted(levels))}班（{ch.unit}）"))
-    elif ch.targets and (s.dept_code != ch.dept_code or (s.level, s.year) not in ch.targets):
+    elif ch.targets and (s.dept_code != ch.dept_code or (s.level, s.year) not in ch.targets) \
+            and ch.dept_code not in s.other_depts:
         out.append(_flag("target", f"主要開給{ch.unit}"))
     return tuple(out)
 
@@ -134,7 +140,10 @@ def _rank(item: tuple[Channel, tuple[Flag, ...]], s: StudentIdentity) -> tuple:
 
 def judge(off: Offering, s: StudentIdentity) -> Access:
     """Pick the channel that suits the student best; excluded only if all channels exclude."""
-    items = sorted(((ch, check_channel(ch, s)) for ch in off.channels), key=lambda it: _rank(it, s))
+    extra: tuple[Flag, ...] = ()
+    if s.english_exempt and off.key[0].startswith("大學英文"):
+        extra = (_flag("english_exempt", "你已大英免修，不用修這門"),)
+    items = sorted(((ch, check_channel(ch, s) + extra) for ch in off.channels), key=lambda it: _rank(it, s))
     best_ch, best_flags = items[0]
     return Access(channel=best_ch, flags=best_flags,
                   excluded=any(f.level == "exclude" for f in best_flags), others=tuple(items[1:]))

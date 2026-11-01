@@ -48,10 +48,12 @@ def parse_json_object(text: str) -> dict | None:
 
 def chat(model: str, messages: list[dict], *, fmt: dict | str | None = None,
          tools: list[dict] | None = None, think: bool = False, temperature: float = 0.0,
-         num_ctx: int = 8192, timeout: int = 600, retries: int = 4) -> ChatResult:
+         num_ctx: int = 8192, timeout: int = 600, retries: int = 4,
+         options: dict | None = None) -> ChatResult:
+    """options: extra Ollama runtime options, e.g. {"num_gpu": 0, "num_thread": 4} for CPU-only."""
     body: dict = {"model": model, "messages": messages, "stream": False, "think": think,
                   "keep_alive": "30m",
-                  "options": {"temperature": temperature, "num_ctx": num_ctx}}
+                  "options": {"temperature": temperature, "num_ctx": num_ctx, **(options or {})}}
     if fmt is not None:
         body["format"] = fmt
     if tools:
