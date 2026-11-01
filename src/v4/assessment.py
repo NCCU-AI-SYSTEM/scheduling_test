@@ -54,6 +54,7 @@ def profile_from(labels: list[str], text: str) -> AssessmentProfile:
 # Rules, not the planner: adding this to the planner prompt cost 0.048 condition overlap
 # on the R-set (0.741 -> 0.693), and the wording is a closed vocabulary.
 _QUERY_ITEMS = [  # longest first; 上台報告 must win over 報告
+    ("SKIP", r"分組報告|小組報告|團體報告"),   # group work is a preference (group_work), not an assessment item
     ("口頭報告", r"上台報告|口頭報告|上台|簡報|presentation"),
     ("書面報告", r"書面報告|期末報告|寫報告|報告"),
     ("期中考", r"期中考|期中測驗|期中評量|期中(?![報作專])"),
@@ -71,7 +72,8 @@ _QUANT = re.compile(r"太多|很多|多|少|一點")
 def parse_query(query: str) -> tuple[tuple[str, ...], tuple[str, ...]]:
     """不要期中考 -> ((), ('期中考',)); 要有期中期末考 -> (('期中考','期末考'), ()).
     Amount words (作業不要太多, 少一點報告) are workload preferences, not conditions."""
-    q = re.sub(r"有沒有|有無|有些|有點|有趣|有用|沒有很", "  ", query or "")
+    # 有 inside these words is not 要有: 跟資料分析有關 must not read as 要有 (2026/11/02)
+    q = re.sub(r"有沒有|有無|有些|有點|有趣|有用|有關|有興趣|有名|具有|擁有|所有|沒有很", "  ", query or "")
     must: list[str] = []
     must_not: list[str] = []
     for m in _TRIGGER.finditer(q):
@@ -84,7 +86,7 @@ def parse_query(query: str) -> tuple[tuple[str, ...], tuple[str, ...]]:
             for hit in re.finditer(pat, rest, re.I):
                 found.append((hit.start(), item))
             rest = re.sub(pat, lambda x: " " * len(x.group()), rest, flags=re.I)
-        items = [it for _, it in sorted(found)]
+        items = [it for _, it in sorted(found) if it != "SKIP"]
         items = [x for it in items for x in (sorted(EXAM_ITEMS) if it == "ALL_EXAMS" else [it])]
         (must_not if m.group(1) else must).extend(items)
     return tuple(dict.fromkeys(must)), tuple(dict.fromkeys(i for i in must_not if i not in must))

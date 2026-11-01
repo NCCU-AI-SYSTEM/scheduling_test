@@ -18,7 +18,7 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-from src.eval.conditions import check as check_cond
+from src.eval.conditions import check as check_cond, satisfies
 from src.parsers.base import ConditionResult
 from src.retrievers.sparse import BM25, tokenize_all
 from src.v4.access import Access, StudentIdentity, judge
@@ -49,6 +49,15 @@ def doc_text(c: CatalogCourse) -> str:
 
 def _norm(s: str) -> str:
     return re.sub(r"[（(].*?[)）]|\s", "", s or "")
+
+
+_NUM = re.compile(r"[（(]\s*([一二三四五六七八九十]+|\d+|[上下])\s*[)）]")
+
+
+def _numbering(name: str | None) -> str | None:
+    """'初會(一)' -> '一'; '統計學（二）' -> '二'; no numbering -> None."""
+    m = _NUM.search(name or "")
+    return m.group(1) if m else None
 
 
 @dataclass
@@ -93,6 +102,7 @@ class V4Search:
         self.offerings = offerings or []
         self.off_of = {cid: o for o in self.offerings for cid in o.course_ids}
         self.ids = [c.course_id for c in catalog]
+        self.pos = {cid: i for i, cid in enumerate(self.ids)}
         self.texts = [doc_fn(c) for c in catalog]
         self.bm25 = BM25(tokenize_all(self.texts, "char12"))
         self.encoder = encoder
@@ -124,6 +134,10 @@ class V4Search:
         from src.v4.struct_store import expand_aliases
 
         return expand_aliases(text, self.aliases)
+
+    def _is_named(self, i: int, forms: list[str], num: str | None) -> bool:
+        """初會(一) matches 初級會計學(一), not 初級會計學(二)."""
+        return any(f in self.names[i] for f in forms) and (num is None or _numbering(self.cat[i].course.name) == num)
 
     def _named_forms(self, named: str) -> list[str]:
         """Normalised names a named course may appear as: itself plus its alias expansions."""
@@ -223,8 +237,9 @@ class V4Search:
                 runs.append(self._rank(self._per_course(self.q_emb @ qv), hm))
         fused = self._rrf(runs) if runs else [int(i) for i in np.flatnonzero(mask)][:50]
         named = self._named_forms(plan.named_course) if cfg.use_named and plan.named_course else []
+        num = _numbering(plan.named_course) if named else None
         if named:
-            exact = [i for i in np.flatnonzero(mask) if any(nc in self.names[i] for nc in named)]
+            exact = [i for i in np.flatnonzero(mask) if self._is_named(i, named, num)]
             fused = list(dict.fromkeys([int(i) for i in exact] + fused))
         self.timing["retrieve"] = time.time() - t1
 
@@ -236,7 +251,7 @@ class V4Search:
             for i, s in zip(head, rs):
                 scores[i] = 1.0 + s  # reranked head stays above the unreranked tail
             for i in head:
-                if any(nc in self.names[i] for nc in named):
+                if self._is_named(i, named, num):
                     scores[i] += 1.0
         self.timing["rerank"] = time.time() - t2
 
@@ -251,8 +266,13 @@ class V4Search:
             if i in unknown_assess:
                 flags.append(Flag("info", "assessment_unknown", "大綱未註明評分方式，無法確認是否符合"))
             hits.append(Hit(cid, scores[i] + cfg.pref_weight * p, matched, relaxed, flags, p))
+        # Courses meeting every condition the student gave rank first. They differ from the
+        # mask only after relaxation or a named lookup that skipped the filter: 禮拜五晚上 2 學分
+        # relaxes to 3-credit courses, and the two 2-credit ones must still come first (2026/11/02).
+        full = {h.course_id for h in hits if satisfies(self.cat[self.pos[h.course_id]].meta, plan.cond)}
         # syllabi that do not state the assessment rank after every clear match (user, 2026/10/19)
-        hits.sort(key=lambda h: (any(f.kind == "assessment_unknown" for f in h.flags), -h.score))
+        hits.sort(key=lambda h: (h.course_id not in full,
+                                 any(f.kind == "assessment_unknown" for f in h.flags), -h.score))
         if cfg.merge_offerings and self.off_of:
             hits = self._merge(hits, access)
         self.timing["total"] = time.time() - t0

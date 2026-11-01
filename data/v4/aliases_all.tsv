@@ -1,0 +1,816 @@
+alias	canonical	members	kind	source	evidence	confidence	in_1142	used_by_search	note
+初會	初級會計學	["初級會計學"]	abbr	rate	200	0.746	1	1	200/268 comments mentioning 初會 belong to 初級會計學
+中會	中級會計學	["中級會計學"]	abbr	rate	196	0.456	1	1	196/430 comments mentioning 中會 belong to 中級會計學
+財管	財務管理	["財務管理"]	abbr	rate	165	0.747	1	1	165/221 comments mentioning 財管 belong to 財務管理
+個經	個體經濟學	["個體經濟學"]	abbr	rate	142	0.717	1	1	142/198 comments mentioning 個經 belong to 個體經濟學
+民訴	民事訴訟法	["民事訴訟法"]	abbr	rate	119	0.826	1	1	119/144 comments mentioning 民訴 belong to 民事訴訟法
+成管	成本管理會計	["成本管理會計"]	abbr	rate	91	0.968	1	1	91/94 comments mentioning 成管 belong to 成本管理會計
+總經	總體經濟學	["總體經濟學"]	abbr	rate	86	0.642	1	1	86/134 comments mentioning 總經 belong to 總體經濟學
+刑訴	刑事訴訟法	["刑事訴訟法"]	abbr	rate	54	0.73	1	1	54/74 comments mentioning 刑訴 belong to 刑事訴訟法
+高會	高級會計學	["高級會計學"]	abbr	rate	54	0.771	1	1	54/70 comments mentioning 高會 belong to 高級會計學
+數統	數理統計學	["數理統計學"]	abbr	rate	47	0.671	1	1	47/70 comments mentioning 數統 belong to 數理統計學
+國際法	國際公法	["國際公法"]	abbr	rate	37	0.507	1	1	37/73 comments mentioning 國際法 belong to 國際公法
+成會	成本管理會計	["成本管理會計"]	abbr	rate	35	0.778	1	1	35/45 comments mentioning 成會 belong to 成本管理會計
+阿語	阿拉伯語	["阿拉伯語"]	abbr	rate	35	0.507	1	1	35/69 comments mentioning 阿語 belong to 阿拉伯語
+中憲	中華民國憲法及政府	["中華民國憲法及政府"]	abbr	rate	34	0.773	1	1	34/44 comments mentioning 中憲 belong to 中華民國憲法及政府
+基影	基礎影音製作	["基礎影音製作"]	abbr	rate	31	0.62	1	1	31/50 comments mentioning 基影 belong to 基礎影音製作
+民概	民法概要	["民法概要"]	abbr	rate	31	0.816	1	1	31/38 comments mentioning 民概 belong to 民法概要
+行管	行銷管理	["行銷管理"]	abbr	rate	31	0.721	1	1	31/43 comments mentioning 行管 belong to 行銷管理
+特教	特殊教育導論	["特殊教育導論"]	abbr	rate	30	0.938	1	1	30/32 comments mentioning 特教 belong to 特殊教育導論
+中韓	中級韓國語	["中級韓國語"]	abbr	rate	29	0.537	1	1	29/54 comments mentioning 中韓 belong to 中級韓國語
+線代	線性代數	["線性代數"]	abbr	rate	29	0.69	1	1	29/42 comments mentioning 線代 belong to 線性代數
+貨銀	貨幣銀行學	["貨幣銀行學"]	abbr	rate	28	0.651	1	1	28/43 comments mentioning 貨銀 belong to 貨幣銀行學
+資蒐	資訊蒐集與應用	["資訊蒐集與應用"]	abbr	rate	27	0.73	0	0	27/37 comments mentioning 資蒐 belong to 資訊蒐集與應用
+普心	普通心理學	["普通心理學"]	abbr	rate	25	0.735	1	1	25/34 comments mentioning 普心 belong to 普通心理學
+客語	客家語言與文化	["客家語言與文化"]	abbr	rate	24	0.828	1	1	24/29 comments mentioning 客語 belong to 客家語言與文化
+微甲	微積分甲	["微積分甲"]	abbr	rate	23	0.742	1	1	23/31 comments mentioning 微甲 belong to 微積分甲
+日會	日語會話	["日語會話"]	abbr	rate	23	0.639	1	1	23/36 comments mentioning 日會 belong to 日語會話
+寫閱	寫作與閱讀	["寫作與閱讀"]	abbr	rate	21	0.875	1	1	21/24 comments mentioning 寫閱 belong to 寫作與閱讀
+規實	規劃實務	["規劃實務"]	abbr	rate	21	0.6	1	1	21/35 comments mentioning 規實 belong to 規劃實務
+靜影	靜態影像設計	["靜態影像設計"]	abbr	rate	20	0.625	1	1	20/32 comments mentioning 靜影 belong to 靜態影像設計
+高微	高等微積分	["高等微積分"]	abbr	rate	20	0.8	1	1	20/25 comments mentioning 高微 belong to 高等微積分
+人管	人力資源管理	["人力資源管理"]	abbr	rate	19	0.826	1	1	19/23 comments mentioning 人管 belong to 人力資源管理
+傳概	傳播概論	["傳播概論"]	abbr	rate	19	0.731	0	0	19/26 comments mentioning 傳概 belong to 傳播概論
+社責	社會責任與倫理	["社會責任與倫理"]	abbr	rate	19	1.0	0	0	19/19 comments mentioning 社責 belong to 社會責任與倫理
+心統	心理及教育統計學	["心理及教育統計學"]	abbr	rate	18	0.75	1	1	18/24 comments mentioning 心統 belong to 心理及教育統計學
+基法	基礎法學導論	["基礎法學導論"]	abbr	rate	16	0.485	0	0	16/33 comments mentioning 基法 belong to 基礎法學導論
+中國法	中國大陸法制導論	["中國大陸法制導論"]	abbr	rate	15	0.682	0	0	15/22 comments mentioning 中國法 belong to 中國大陸法制導論
+國導	國學導讀	["國學導讀"]	abbr	rate	15	1.0	0	0	15/15 comments mentioning 國導 belong to 國學導讀
+客家文	客家語言與文化	["客家語言與文化"]	abbr	rate	15	1.0	1	1	15/15 comments mentioning 客家文 belong to 客家語言與文化
+政哲	政治哲學概論	["政治哲學概論"]	abbr	rate	15	0.882	1	1	15/17 comments mentioning 政哲 belong to 政治哲學概論
+傳社	傳播與社會	["傳播與社會"]	abbr	rate	14	0.824	1	1	14/17 comments mentioning 傳社 belong to 傳播與社會
+初韓	初級韓國語	["初級韓國語"]	abbr	rate	14	0.467	1	1	14/30 comments mentioning 初韓 belong to 初級韓國語
+金控	金融控股公司經營與策略	["金融控股公司經營與策略"]	abbr	rate	13	0.867	0	0	13/15 comments mentioning 金控 belong to 金融控股公司經營與策略
+作管	作業管理	["作業管理"]	abbr	rate	12	0.857	0	0	12/14 comments mentioning 作管 belong to 作業管理
+國公	國際公法	["國際公法"]	abbr	rate	12	0.706	1	1	12/17 comments mentioning 國公 belong to 國際公法
+社統	社會統計	["社會統計"]	abbr	rate	12	0.5	1	1	12/24 comments mentioning 社統 belong to 社會統計
+西哲	西洋哲學史	["西洋哲學史"]	abbr	rate	11	0.688	1	1	11/16 comments mentioning 西哲 belong to 西洋哲學史
+西概	西洋文學概論	["西洋文學概論"]	abbr	rate	11	0.846	0	0	11/13 comments mentioning 西概 belong to 西洋文學概論
+公關企	公關策略與企劃	["公關策略與企劃"]	abbr	rate	10	1.0	1	1	10/10 comments mentioning 公關企 belong to 公關策略與企劃
+日演	日語演習	["日語演習"]	abbr	rate	10	1.0	0	0	10/10 comments mentioning 日演 belong to 日語演習
+比政	比較政府與政治	["比較政府與政治"]	abbr	rate	10	0.667	1	1	10/15 comments mentioning 比政 belong to 比較政府與政治
+社理	社會學理論	["社會學理論"]	abbr	rate	10	0.833	1	1	10/12 comments mentioning 社理 belong to 社會學理論
+英美導	英美法導論	["英美法導論"]	abbr	rate	10	0.909	1	1	10/11 comments mentioning 英美導 belong to 英美法導論
+法服	法律服務	["法律服務"]	abbr	rate	9	0.818	1	1	9/11 comments mentioning 法服 belong to 法律服務
+看紀	看的方法(紀錄片)	["看的方法(紀錄片)"]	abbr	rate	9	0.474	1	1	9/19 comments mentioning 看紀 belong to 看的方法(紀錄片)
+管科	管理科學	["管理科學"]	abbr	rate	9	0.818	1	1	9/11 comments mentioning 管科 belong to 管理科學
+傳敘	傳播敘事	["傳播敘事"]	abbr	rate	8	1.0	1	1	8/8 comments mentioning 傳敘 belong to 傳播敘事
+圖編	圖文編輯	["圖文編輯"]	abbr	rate	8	0.8	0	0	8/10 comments mentioning 圖編 belong to 圖文編輯
+土經	土地經濟學	["土地經濟學"]	abbr	rate	8	1.0	1	1	8/8 comments mentioning 土經 belong to 土地經濟學
+法素	法學素養	["法學素養"]	abbr	rate	8	1.0	1	1	8/8 comments mentioning 法素 belong to 法學素養
+社運	社會運動	["社會運動"]	abbr	rate	8	0.533	0	0	8/15 comments mentioning 社運 belong to 社會運動
+高韓	高級韓國語	["高級韓國語"]	abbr	rate	8	0.533	1	1	8/15 comments mentioning 高韓 belong to 高級韓國語
+傳思	傳播與當代思潮	["傳播與當代思潮"]	abbr	rate	7	0.778	1	1	7/9 comments mentioning 傳思 belong to 傳播與當代思潮
+法緒	法學緒論	["法學緒論"]	abbr	rate	7	0.5	0	0	7/14 comments mentioning 法緒 belong to 法學緒論
+現代藝	現代視覺藝術與社會	["現代視覺藝術與社會"]	abbr	rate	7	0.636	0	0	7/11 comments mentioning 現代藝 belong to 現代視覺藝術與社會
+社心	社會心理學	["社會心理學"]	abbr	rate	7	0.7	0	0	7/10 comments mentioning 社心 belong to 社會心理學
+社群行	社群媒體行銷	["社群媒體行銷"]	abbr	rate	7	0.7	0	0	7/10 comments mentioning 社群行 belong to 社群媒體行銷
+行統	行政統計學	["行政統計學"]	abbr	rate	7	0.538	0	0	7/13 comments mentioning 行統 belong to 行政統計學
+長照	長期照護與健康產業發展	["長期照護與健康產業發展"]	abbr	rate	7	0.7	1	1	7/10 comments mentioning 長照 belong to 長期照護與健康產業發展
+國金	國際金融	["國際金融"]	abbr	rate	6	0.75	1	1	6/8 comments mentioning 國金 belong to 國際金融
+教心	教育心理學	["教育心理學"]	abbr	rate	6	0.545	0	0	6/11 comments mentioning 教心 belong to 教育心理學
+民調	民意與調查	["民意與調查"]	abbr	rate	6	0.6	1	1	6/10 comments mentioning 民調 belong to 民意與調查
+法倫	法律倫理	["法律倫理"]	abbr	rate	6	1.0	1	1	6/6 comments mentioning 法倫 belong to 法律倫理
+紀採	紀實採寫	["紀實採寫"]	abbr	rate	6	1.0	1	1	6/6 comments mentioning 紀採 belong to 紀實採寫
+西方經	西方文學經典與人文思維	["西方文學經典與人文思維"]	abbr	rate	6	0.857	1	1	6/7 comments mentioning 西方經 belong to 西方文學經典與人文思維
+西歐建	西歐歷史建築	["西歐歷史建築"]	abbr	rate	6	1.0	1	1	6/6 comments mentioning 西歐建 belong to 西歐歷史建築
+韓國民	韓國政治與民主化	["韓國政治與民主化"]	abbr	rate	6	0.667	0	0	6/9 comments mentioning 韓國民 belong to 韓國政治與民主化
+國組	國際組織	["國際組織"]	abbr	rate	5	0.556	1	1	5/9 comments mentioning 國組 belong to 國際組織
+媒素	媒體素養	["媒體素養"]	abbr	rate	5	1.0	0	0	5/5 comments mentioning 媒素 belong to 媒體素養
+廣告企	廣告策略與企劃	["廣告策略與企劃"]	abbr	rate	5	0.714	0	0	5/7 comments mentioning 廣告企 belong to 廣告策略與企劃
+戲概	戲劇概論	["戲劇概論"]	abbr	rate	5	0.833	1	1	5/6 comments mentioning 戲概 belong to 戲劇概論
+政方	政治學方法論	["政治學方法論"]	abbr	rate	5	0.5	1	1	5/10 comments mentioning 政方 belong to 政治學方法論
+諮商技	諮商與心理治療的理論與技術	["諮商與心理治療的理論與技術"]	abbr	rate	5	0.556	0	0	5/9 comments mentioning 諮商技 belong to 諮商與心理治療的理論與技術
+遙測	遙感探測	["遙感探測"]	abbr	rate	5	1.0	1	1	5/5 comments mentioning 遙測 belong to 遙感探測
+阿美語	阿美族語	["阿美族語"]	abbr	rate	5	1.0	1	1	5/5 comments mentioning 阿美語 belong to 阿美族語
+電商	電子商務實作研習	["電子商務實作研習"]	abbr	rate	5	0.625	1	1	5/8 comments mentioning 電商 belong to 電子商務實作研習
+韓國史	韓國近代史	["韓國近代史"]	abbr	rate	5	1.0	0	0	5/5 comments mentioning 韓國史 belong to 韓國近代史
+世界史	世界通史	["世界通史"]	abbr	rate	4	0.667	0	0	4/6 comments mentioning 世界史 belong to 世界通史
+中哲	中國哲學史	["中國哲學史"]	abbr	rate	4	0.5	1	1	4/8 comments mentioning 中哲 belong to 中國哲學史
+企概	企業概論	["企業概論"]	abbr	rate	4	0.667	0	0	4/6 comments mentioning 企概 belong to 企業概論
+國戲	國文-古典戲曲選讀	["國文-古典戲曲選讀"]	abbr	rate	4	0.444	0	0	4/9 comments mentioning 國戲 belong to 國文-古典戲曲選讀
+國文字	國文-中國語言文字名作選讀	["國文-中國語言文字名作選讀"]	abbr	rate	4	0.667	1	1	4/6 comments mentioning 國文字 belong to 國文-中國語言文字名作選讀
+投組	投資組合管理	["投資組合管理"]	abbr	rate	4	0.667	0	0	4/6 comments mentioning 投組 belong to 投資組合管理
+數位科	數位內容與科技導論	["數位內容與科技導論"]	abbr	rate	4	0.571	1	1	4/7 comments mentioning 數位科 belong to 數位內容與科技導論
+數學邏	數學、邏輯與人生	["數學、邏輯與人生"]	abbr	rate	4	0.444	1	1	4/9 comments mentioning 數學邏 belong to 數學、邏輯與人生
+日文作	日文寫作	["日文寫作"]	abbr	rate	4	0.667	1	1	4/6 comments mentioning 日文作 belong to 日文寫作
+經思	經濟思想史	["經濟思想史"]	abbr	rate	4	0.8	1	1	4/5 comments mentioning 經思 belong to 經濟思想史
+西外	西洋外交史	["西洋外交史"]	abbr	rate	4	0.571	1	1	4/7 comments mentioning 西外 belong to 西洋外交史
+貨幣政	貨幣理論與政策	["貨幣理論與政策"]	abbr	rate	4	0.571	1	1	4/7 comments mentioning 貨幣政 belong to 貨幣理論與政策
+輔導理	輔導原理與實務	["輔導原理與實務"]	abbr	rate	4	1.0	1	1	4/4 comments mentioning 輔導理 belong to 輔導原理與實務
+都計	都市計畫	["都市計畫"]	abbr	rate	4	0.4	0	0	4/10 comments mentioning 都計 belong to 都市計畫
+企資	企業資料通訊	["企業資料通訊"]	abbr	rate	3	1.0	0	0	3/3 comments mentioning 企資 belong to 企業資料通訊
+初俄	初級俄語	["初級俄語"]	abbr	rate	3	0.5	1	1	3/6 comments mentioning 初俄 belong to 初級俄語
+品管	品質管制系統	["品質管制系統"]	abbr	rate	3	0.429	0	0	3/7 comments mentioning 品管 belong to 品質管制系統
+多移	多元文化與移民政治	["多元文化與移民政治"]	abbr	rate	3	0.5	0	0	3/6 comments mentioning 多移 belong to 多元文化與移民政治
+強執	強制執行法與破產法	["強制執行法與破產法"]	abbr	rate	3	0.6	1	1	3/5 comments mentioning 強執 belong to 強制執行法與破產法
+性別文	性別與文學理論入門	["性別與文學理論入門"]	abbr	rate	3	1.0	1	1	3/3 comments mentioning 性別文 belong to 性別與文學理論入門
+應阿	應用阿拉伯語	["應用阿拉伯語"]	abbr	rate	3	0.6	1	1	3/5 comments mentioning 應阿 belong to 應用阿拉伯語
+所稅	所得稅理論與制度	["所得稅理論與制度"]	abbr	rate	3	0.6	1	1	3/5 comments mentioning 所稅 belong to 所得稅理論與制度
+普物	普通物理學	["普通物理學"]	abbr	rate	3	0.75	1	1	3/4 comments mentioning 普物 belong to 普通物理學
+歐盟導	歐盟法導論	["歐盟法導論"]	abbr	rate	3	1.0	0	0	3/3 comments mentioning 歐盟導 belong to 歐盟法導論
+歷史記	歷史與記憶專題	["歷史與記憶專題"]	abbr	rate	3	0.6	0	0	3/5 comments mentioning 歷史記 belong to 歷史與記憶專題
+測量實	測量學及實習	["測量學及實習"]	abbr	rate	3	0.75	1	1	3/4 comments mentioning 測量實 belong to 測量學及實習
+生活科	生活中的生命科學	["生活中的生命科學"]	abbr	rate	3	1.0	1	1	3/3 comments mentioning 生活科 belong to 生活中的生命科學
+生科	生活中的生命科學	["生活中的生命科學"]	abbr	rate	3	0.6	1	1	3/5 comments mentioning 生科 belong to 生活中的生命科學
+社研	社會研究方法	["社會研究方法"]	abbr	rate	3	0.5	1	1	3/6 comments mentioning 社研 belong to 社會研究方法
+行銷理	行銷管理	["行銷管理"]	abbr	rate	3	0.6	1	1	3/5 comments mentioning 行銷理 belong to 行銷管理
+資結	資料結構	["資料結構"]	abbr	rate	3	0.75	0	0	3/4 comments mentioning 資結 belong to 資料結構
+資處	資料處理	["資料處理"]	abbr	rate	3	0.429	0	0	3/7 comments mentioning 資處 belong to 資料處理
+進財	進階財務管理	["進階財務管理"]	abbr	rate	3	0.6	1	1	3/5 comments mentioning 進財 belong to 進階財務管理
+都計法	都市計畫法規	["都市計畫法規"]	abbr	rate	3	0.75	0	0	3/4 comments mentioning 都計法 belong to 都市計畫法規
+野保	野生動物保育行銷	["野生動物保育行銷"]	abbr	rate	3	0.75	1	1	3/4 comments mentioning 野保 belong to 野生動物保育行銷
+韓國電	韓國轉型正義電影評析	["韓國轉型正義電影評析"]	abbr	rate	3	0.5	1	1	3/6 comments mentioning 韓國電 belong to 韓國轉型正義電影評析
+一公養	一人公司養成術	["一人公司養成術"]	abbr	rule	0	0.5	1	0	initials of 一人公司養成術
+不估實	不動產估價實務	["不動產估價實務"]	abbr	rule	0	0.5	1	0	initials of 不動產估價實務
+不價研	不動產估價個案研習	["不動產估價個案研習"]	abbr	rule	0	0.5	1	0	initials of 不動產估價個案研習
+不產實	不動產產業實務	["不動產產業實務"]	abbr	rule	0	0.5	1	0	initials of 不動產產業實務
+不管實	不動產管理實務	["不動產管理實務"]	abbr	rule	0	0.5	1	0	initials of 不動產管理實務
+不經分	不動產經濟分析	["不動產經濟分析"]	abbr	rule	0	0.5	1	0	initials of 不動產經濟分析
+不經管	不動產經營管理	["不動產經營管理"]	abbr	rule	0	0.5	1	0	initials of 不動產經營管理
+不財	不動產財務	["不動產財務"]	abbr	rule	0	0.5	1	0	initials of 不動產財務
+不資處	不動產資料處理	["不動產資料處理"]	abbr	rule	0	0.5	1	0	initials of 不動產資料處理
+不量分	不動產量化分析	["不動產量化分析"]	abbr	rule	0	0.5	1	0	initials of 不動產量化分析
+世民誌	世界民族誌	["世界民族誌"]	abbr	rule	0	0.5	1	0	initials of 世界民族誌
+中俄語	中級俄語語法	["中級俄語語法"]	abbr	rule	0	0.5	1	0	initials of 中級俄語語法
+中印語	中級印尼語	["中級印尼語"]	abbr	rule	0	0.25	1	0	initials of 中級印尼語; 2 names share it
+中基宗	中世紀基督宗教史	["中世紀基督宗教史"]	abbr	rule	0	0.5	1	0	initials of 中世紀基督宗教史
+中專研	中亞專題研究	["中亞專題研究"]	abbr	rule	0	0.5	1	0	initials of 中亞專題研究
+中德作	中級德文作文	["中級德文作文"]	abbr	rule	0	0.5	1	0	initials of 中級德文作文
+中德語	中級德文語法	["中級德文語法"]	abbr	rule	0	0.5	1	0	initials of 中級德文語法
+中德閱	中級德文閱讀	["中級德文閱讀"]	abbr	rule	0	0.5	1	0	initials of 中級德文閱讀
+中思	中國思想史	["中國思想史"]	abbr	rule	0	0.5	1	0	initials of 中國思想史
+中政思	中國政治思想史	["中國政治思想史"]	abbr	rule	0	0.5	1	0	initials of 中國政治思想史
+中會計	中級會計學	["中級會計學"]	abbr	rule	0	0.5	1	0	initials of 中級會計學
+中概	中國大陸概論	["中國大陸概論"]	abbr	rule	0	0.5	1	0	initials of 中國大陸概論
+中民	中國民族史	["中國民族史"]	abbr	rule	0	0.5	1	0	initials of 中國民族史
+中民誌	中國民族誌	["中國民族誌"]	abbr	rule	0	0.5	1	0	initials of 中國民族誌
+中法作	中級法文作文	["中級法文作文"]	abbr	rule	0	0.5	1	0	initials of 中級法文作文
+中法語	中級法文語法	["中級法文語法"]	abbr	rule	0	0.5	1	0	initials of 中級法文語法
+中法閱	中級法文閱讀	["中級法文閱讀"]	abbr	rule	0	0.5	1	0	initials of 中級法文閱讀
+中社	中國社會史	["中國社會史"]	abbr	rule	0	0.5	1	0	initials of 中國社會史
+中西作	中級西文作文	["中級西文作文"]	abbr	rule	0	0.5	1	0	initials of 中級西文作文
+中西語	中級西文語法	["中級西文語法"]	abbr	rule	0	0.5	1	0	initials of 中級西文語法
+中西閱	中級西文閱讀	["中級西文閱讀"]	abbr	rule	0	0.5	1	0	initials of 中級西文閱讀
+中越語	中級越語會話	["中級越語會話"]	abbr	rule	0	0.5	1	0	initials of 中級越語會話
+互裝設	互動裝置設計	["互動裝置設計"]	abbr	rule	0	0.5	1	0	initials of 互動裝置設計
+亞研	亞太戰略研析	["亞太戰略研析"]	abbr	rule	0	0.25	1	0	initials of 亞太戰略研析; 2 names share it
+人保	人壽保險	["人壽保險"]	abbr	rule	0	0.5	1	0	initials of 人壽保險
+人倫	人工智慧倫理	["人工智慧倫理"]	abbr	rule	0	0.5	1	0	initials of 人工智慧倫理
+人機	人機倫理	["人機倫理"]	abbr	rule	0	0.5	1	0	initials of 人機倫理
+人生學	人體生物學	["人體生物學"]	abbr	rule	0	0.5	1	0	initials of 人體生物學
+人與法	人工智慧與法律	["人工智慧與法律"]	abbr	rule	0	0.5	1	0	initials of 人工智慧與法律
+人與社	人工智慧與社會	["人工智慧與社會"]	abbr	rule	0	0.5	1	0	initials of 人工智慧與社會
+人資管	人力資源管理	["人力資源管理"]	abbr	rule	0	0.5	1	0	initials of 人力資源管理
+人進	人工智慧進化史	["人工智慧進化史"]	abbr	rule	0	0.5	1	0	initials of 人工智慧進化史
+企併購	企業併購法	["企業併購法"]	abbr	rule	0	0.5	1	0	initials of 企業併購法
+企個研	企業個案研討	["企業個案研討"]	abbr	rule	0	0.5	1	0	initials of 企業個案研討
+企問研	企業問題研討	["企業問題研討"]	abbr	rule	0	0.5	1	0	initials of 企業問題研討
+企實	企業實習	["企業實習"]	abbr	rule	0	0.5	1	0	initials of 企業實習
+企專研	企業專案研討(A)	["企業專案研討(A)"]	abbr	rule	0	0.25	1	0	initials of 企業專案研討(A); 2 names share it
+企法	企業法律	["企業法律"]	abbr	rule	0	0.5	1	0	initials of 企業法律
+企流模	企業流程模式	["企業流程模式"]	abbr	rule	0	0.5	1	0	initials of 企業流程模式
+企競	企業競合	["企業競合"]	abbr	rule	0	0.5	1	0	initials of 企業競合
+企與社	企業倫理與社會責任	["企業倫理與社會責任"]	abbr	rule	0	0.5	1	0	initials of 企業倫理與社會責任
+作研	作業研究	["作業研究"]	abbr	rule	0	0.5	1	0	initials of 作業研究
+作系	作業系統	["作業系統"]	abbr	rule	0	0.5	1	0	initials of 作業系統
+使體設	使用者體驗設計	["使用者體驗設計"]	abbr	rule	0	0.5	1	0	initials of 使用者體驗設計
+俄外	俄羅斯外交政策	["俄羅斯外交政策"]	abbr	rule	0	0.25	1	0	initials of 俄羅斯外交政策; 2 names share it
+俄寫	俄語寫作	["俄語寫作"]	abbr	rule	0	0.5	1	0	initials of 俄語寫作
+俄發研	俄國區域發展研究	["俄國區域發展研究"]	abbr	rule	0	0.5	1	0	initials of 俄國區域發展研究
+俄與歐	俄羅斯與歐盟	["俄羅斯與歐盟"]	abbr	rule	0	0.5	1	0	initials of 俄羅斯與歐盟
+俄飲食	俄羅斯飲食文化	["俄羅斯飲食文化"]	abbr	rule	0	0.5	1	0	initials of 俄羅斯飲食文化
+保單專	保險單條款專題	["保險單條款專題"]	abbr	rule	0	0.5	1	0	initials of 保險單條款專題
+保專研	保險法專題研究	["保險法專題研究"]	abbr	rule	0	0.5	1	0	initials of 保險法專題研究
+保理	保險理論	["保險理論"]	abbr	rule	0	0.5	1	0	initials of 保險理論
+保理專	保險理論專題	["保險理論專題"]	abbr	rule	0	0.5	1	0	initials of 保險理論專題
+保產專	保險產業專題	["保險產業專題"]	abbr	rule	0	0.5	1	0	initials of 保險產業專題
+保財管	保險財務管理	["保險財務管理"]	abbr	rule	0	0.5	1	0	initials of 保險財務管理
+個人網	個人網絡	["個人網絡"]	abbr	rule	0	0.5	1	0	initials of 個人網絡
+個研	個案研究	["個案研究"]	abbr	rule	0	0.5	1	0	initials of 個案研究
+倫學	倫理學史	["倫理學史"]	abbr	rule	0	0.5	1	0	initials of 倫理學史
+健學	健康心理學	["健康心理學"]	abbr	rule	0	0.5	1	0	initials of 健康心理學
+健與媒	健康與媒體	["健康與媒體"]	abbr	rule	0	0.5	1	0	initials of 健康與媒體
+健與生	健康與生活	["健康與生活"]	abbr	rule	0	0.5	1	0	initials of 健康與生活
+傳政經	傳播政治經濟學	["傳播政治經濟學"]	abbr	rule	0	0.5	1	0	initials of 傳播政治經濟學
+傳統分	傳播統計分析	["傳播統計分析"]	abbr	rule	0	0.5	1	0	initials of 傳播統計分析
+傳與現	傳統與現代	["傳統與現代"]	abbr	rule	0	0.5	1	0	initials of 傳統與現代
+傳與社	傳播與社會	["傳播與社會"]	abbr	rule	0	0.5	1	0	initials of 傳播與社會
+儀研專	儀式研究專題	["儀式研究專題"]	abbr	rule	0	0.5	1	0	initials of 儀式研究專題
+元繪	元明清繪畫史	["元明清繪畫史"]	abbr	rule	0	0.5	1	0	initials of 元明清繪畫史
+兒文研	兒童文化研究	["兒童文化研究"]	abbr	rule	0	0.5	1	0	initials of 兒童文化研究
+入夏班	入門華語夏日班	["入門華語夏日班"]	abbr	rule	0	0.5	1	0	initials of 入門華語夏日班
+入研營	入學研究營	["入學研究營"]	abbr	rule	0	0.5	1	0	initials of 入學研究營
+內歐概	內陸歐亞概論	["內陸歐亞概論"]	abbr	rule	0	0.5	1	0	initials of 內陸歐亞概論
+全國	全民國防教育軍事訓練—全民國防	["全民國防教育軍事訓練—全民國防"]	abbr	rule	0	0.5	1	0	initials of 全民國防教育軍事訓練—全民國防
+全專	全真教專題	["全真教專題"]	abbr	rule	0	0.5	1	0	initials of 全真教專題
+全職競	全球職涯競爭力	["全球職涯競爭力"]	abbr	rule	0	0.5	1	0	initials of 全球職涯競爭力
+全諮商	全職諮商實習	["全職諮商實習"]	abbr	rule	0	0.5	1	0	initials of 全職諮商實習
+全議	全球議題	["全球議題"]	abbr	rule	0	0.5	1	0	initials of 全球議題
+兩係概	兩岸關係概論	["兩岸關係概論"]	abbr	rule	0	0.5	1	0	initials of 兩岸關係概論
+公寫	公共報導與公關寫作	["公共報導與公關寫作"]	abbr	rule	0	0.5	1	0	initials of 公共報導與公關寫作
+公新議	公共行政新興議題	["公共行政新興議題"]	abbr	rule	0	0.5	1	0	initials of 公共行政新興議題
+公治	公司治理	["公司治理"]	abbr	rule	0	0.5	1	0	initials of 公司治理
+公理研	公司理財研討	["公司理財研討"]	abbr	rule	0	0.5	1	0	initials of 公司理財研討
+公與分	公共政策與分析	["公共政策與分析"]	abbr	rule	0	0.5	1	0	initials of 公共政策與分析
+公財決	公司財務決策	["公司財務決策"]	abbr	rule	0	0.5	1	0	initials of 公司財務決策
+公選理	公共選擇理論	["公共選擇理論"]	abbr	rule	0	0.5	1	0	initials of 公共選擇理論
+分系	分散式系統	["分散式系統"]	abbr	rule	0	0.5	1	0	initials of 分散式系統
+分過	分支過程	["分支過程"]	abbr	rule	0	0.5	1	0	initials of 分支過程
+刑分	刑法分則	["刑法分則"]	abbr	rule	0	0.5	1	0	initials of 刑法分則
+刑立學	刑事立法學專題	["刑事立法學專題"]	abbr	rule	0	0.5	1	0	initials of 刑事立法學專題
+刑綜研	刑事法綜合研習	["刑事法綜合研習"]	abbr	rule	0	0.5	1	0	initials of 刑事法綜合研習
+列象	列維納斯現象學	["列維納斯現象學"]	abbr	rule	0	0.5	1	0	initials of 列維納斯現象學
+初俄語	初級俄語語法	["初級俄語語法"]	abbr	rule	0	0.5	1	0	initials of 初級俄語語法
+初印語	初級印尼語	["初級印尼語"]	abbr	rule	0	0.25	1	0	initials of 初級印尼語; 2 names share it
+初土語	初級土耳其語	["初級土耳其語"]	abbr	rule	0	0.5	1	0	initials of 初級土耳其語
+初德應	初級德文應用	["初級德文應用"]	abbr	rule	0	0.5	1	0	initials of 初級德文應用
+初德語	初級德文語法	["初級德文語法"]	abbr	rule	0	0.25	1	0	initials of 初級德文語法; 2 names share it
+初德閱	初級德文閱讀	["初級德文閱讀"]	abbr	rule	0	0.5	1	0	initials of 初級德文閱讀
+初會計	初級會計學	["初級會計學"]	abbr	rule	0	0.5	1	0	initials of 初級會計學
+初法應	初級法文應用	["初級法文應用"]	abbr	rule	0	0.5	1	0	initials of 初級法文應用
+初法語	初級法文語法	["初級法文語法"]	abbr	rule	0	0.5	1	0	initials of 初級法文語法
+初法閱	初級法文閱讀	["初級法文閱讀"]	abbr	rule	0	0.5	1	0	initials of 初級法文閱讀
+初泰	初級泰語	["初級泰語"]	abbr	rule	0	0.5	1	0	initials of 初級泰語
+初烏閱	初級烏克蘭語閱讀	["初級烏克蘭語閱讀"]	abbr	rule	0	0.5	1	0	initials of 初級烏克蘭語閱讀
+初西應	初級西文應用	["初級西文應用"]	abbr	rule	0	0.5	1	0	initials of 初級西文應用
+初西語	初級西文語法	["初級西文語法"]	abbr	rule	0	0.5	1	0	initials of 初級西文語法
+初西閱	初級西文閱讀	["初級西文閱讀"]	abbr	rule	0	0.5	1	0	initials of 初級西文閱讀
+初越	初級越語	["初級越語"]	abbr	rule	0	0.5	1	0	initials of 初級越語
+初越語	初級越語會話	["初級越語會話"]	abbr	rule	0	0.25	1	0	initials of 初級越語會話; 2 names share it
+創做	創新創業講做堂	["創新創業講做堂"]	abbr	rule	0	0.5	1	0	initials of 創新創業講做堂
+創創做	創新創業講做堂	["創新創業講做堂"]	abbr	rule	0	0.5	1	0	initials of 創新創業講做堂
+創研	創意研討B	["創意研討B"]	abbr	rule	0	0.25	1	0	initials of 創意研討B; 2 names share it
+創與設	創意與設計	["創意與設計"]	abbr	rule	0	0.5	1	0	initials of 創意與設計
+勞事實	勞動事務實習	["勞動事務實習"]	abbr	rule	0	0.5	1	0	initials of 勞動事務實習
+勞經	勞動經濟學	["勞動經濟學"]	abbr	rule	0	0.5	1	0	initials of 勞動經濟學
+北研	北韓研究	["北韓研究"]	abbr	rule	0	0.5	1	0	initials of 北韓研究
+博館實	博物館實習	["博物館實習"]	abbr	rule	0	0.5	1	0	initials of 博物館實習
+博館歷	博物館歷史學	["博物館歷史學"]	abbr	rule	0	0.5	1	0	initials of 博物館歷史學
+印語讀	印尼語閱讀	["印尼語閱讀"]	abbr	rule	0	0.5	1	0	initials of 印尼語閱讀
+危理	危險理論	["危險理論"]	abbr	rule	0	0.5	1	0	initials of 危險理論
+危處	危機處理	["危機處理"]	abbr	rule	0	0.5	1	0	initials of 危機處理
+古德哲	古典德國哲學	["古典德國哲學"]	abbr	rule	0	0.5	1	0	initials of 古典德國哲學
+台新專	台灣新聞史專題	["台灣新聞史專題"]	abbr	rule	0	0.5	1	0	initials of 台灣新聞史專題
+台現選	台灣現代文學選讀	["台灣現代文學選讀"]	abbr	rule	0	0.5	1	0	initials of 台灣現代文學選讀
+史多實	史學多元實踐	["史學多元實踐"]	abbr	rule	0	0.5	1	0	initials of 史學多元實踐
+吉吉語	吉爾吉斯語	["吉爾吉斯語"]	abbr	rule	0	0.5	1	0	initials of 吉爾吉斯語
+吉語	吉爾吉斯語	["吉爾吉斯語"]	abbr	rule	0	0.5	1	0	initials of 吉爾吉斯語
+呂專	呂格爾專題	["呂格爾專題"]	abbr	rule	0	0.5	1	0	initials of 呂格爾專題
+周研	周易研究	["周易研究"]	abbr	rule	0	0.5	1	0	initials of 周易研究
+品與實	品牌策略與實務	["品牌策略與實務"]	abbr	rule	0	0.5	1	0	initials of 品牌策略與實務
+商分	商業分析	["商業分析"]	abbr	rule	0	0.5	1	0	initials of 商業分析
+商日	商務日語2	["商務日語2"]	abbr	rule	0	0.5	1	0	initials of 商務日語2
+商日書	商用日文書信	["商用日文書信"]	abbr	rule	0	0.5	1	0	initials of 商用日文書信
+商決分	商業決策分析	["商業決策分析"]	abbr	rule	0	0.5	1	0	initials of 商業決策分析
+商泰	商用泰語	["商用泰語"]	abbr	rule	0	0.5	1	0	initials of 商用泰語
+商英寫	商務英文寫作	["商務英文寫作"]	abbr	rule	0	0.5	1	0	initials of 商務英文寫作
+商資分	商業資料分析	["商業資料分析"]	abbr	rule	0	0.5	1	0	initials of 商業資料分析
+商預	商情預測	["商情預測"]	abbr	rule	0	0.5	1	0	initials of 商情預測
+因推	因果推論	["因果推論"]	abbr	rule	0	0.5	1	0	initials of 因果推論
+固收證	固定收益證券	["固定收益證券"]	abbr	rule	0	0.5	1	0	initials of 固定收益證券
+固物	固態物理	["固態物理"]	abbr	rule	0	0.5	1	0	initials of 固態物理
+國人倡	國際人權倡議	["國際人權倡議"]	abbr	rule	0	0.5	1	0	initials of 國際人權倡議
+國企理	國際企業理論	["國際企業理論"]	abbr	rule	0	0.5	1	0	initials of 國際企業理論
+國企管	國際企業管理	["國際企業管理"]	abbr	rule	0	0.5	1	0	initials of 國際企業管理
+國係	國際關係	["國際關係"]	abbr	rule	0	0.25	1	0	initials of 國際關係; 2 names share it
+國係理	國際關係理論	["國際關係理論"]	abbr	rule	0	0.5	1	0	initials of 國際關係理論
+國傳	國際傳播	["國際傳播"]	abbr	rule	0	0.5	1	0	initials of 國際傳播
+國入	國文-入門班	["國文-入門班"]	abbr	rule	0	0.5	1	0	initials of 國文-入門班
+國創管	國際創新管理	["國際創新管理"]	abbr	rule	0	0.5	1	0	initials of 國際創新管理
+國古詩	國文-古典詩選讀	["國文-古典詩選讀"]	abbr	rule	0	0.5	1	0	initials of 國文-古典詩選讀
+國基班	國文-基礎班	["國文-基礎班"]	abbr	rule	0	0.5	1	0	initials of 國文-基礎班
+國安	國際安全	["國際安全"]	abbr	rule	0	0.5	1	0	initials of 國際安全
+國安專	國際安全專題	["國際安全專題"]	abbr	rule	0	0.5	1	0	initials of 國際安全專題
+國實	國際法實習	["國際法實習"]	abbr	rule	0	0.25	1	0	initials of 國際法實習; 2 names share it
+國投	國際投資	["國際投資"]	abbr	rule	0	0.25	1	0	initials of 國際投資; 2 names share it
+國政學	國防政治學	["國防政治學"]	abbr	rule	0	0.5	1	0	initials of 國防政治學
+國政經	國際政治經濟學	["國際政治經濟學"]	abbr	rule	0	0.5	1	0	initials of 國際政治經濟學
+國法	國際法導論	["國際法導論"]	abbr	rule	0	0.5	1	0	initials of 國際法導論
+國法成	國際法院成案	["國際法院成案"]	abbr	rule	0	0.5	1	0	initials of 國際法院成案
+國溝	國際形象與國際溝通	["國際形象與國際溝通"]	abbr	rule	0	0.5	1	0	initials of 國際形象與國際溝通
+國環	國際環境法	["國際環境法"]	abbr	rule	0	0.5	1	0	initials of 國際環境法
+國環治	國際環境治理	["國際環境治理"]	abbr	rule	0	0.5	1	0	initials of 國際環境治理
+國發專	國際永續發展專題	["國際永續發展專題"]	abbr	rule	0	0.5	1	0	initials of 國際永續發展專題
+國發經	國際發展經濟學	["國際發展經濟學"]	abbr	rule	0	0.5	1	0	initials of 國際發展經濟學
+國租研	國際租稅研究	["國際租稅研究"]	abbr	rule	0	0.5	1	0	initials of 國際租稅研究
+國秩	國際司法與國際秩序	["國際司法與國際秩序"]	abbr	rule	0	0.5	1	0	initials of 國際司法與國際秩序
+國經	國際經貿法	["國際經貿法"]	abbr	rule	0	0.25	1	0	initials of 國際經貿法; 2 names share it
+國經專	國際經貿法專題	["國際經貿法專題"]	abbr	rule	0	0.5	1	0	initials of 國際經貿法專題
+國行管	國際行銷管理	["國際行銷管理"]	abbr	rule	0	0.5	1	0	initials of 國際行銷管理
+國見	國外見習	["國外見習"]	abbr	rule	0	0.5	1	0	initials of 國外見習
+國規	國土規劃	["國土規劃"]	abbr	rule	0	0.5	1	0	initials of 國土規劃
+國規專	國土規劃專題	["國土規劃專題"]	abbr	rule	0	0.5	1	0	initials of 國土規劃專題
+國財管	國際財務管理	["國際財務管理"]	abbr	rule	0	0.5	1	0	initials of 國際財務管理
+國財評	國際間財產評價	["國際間財產評價"]	abbr	rule	0	0.5	1	0	initials of 國際間財產評價
+國買賣	國際買賣法	["國際買賣法"]	abbr	rule	0	0.5	1	0	initials of 國際買賣法
+國貿	國際貿易	["國際貿易"]	abbr	rule	0	0.5	1	0	initials of 國際貿易
+國進	國文-進階班	["國文-進階班"]	abbr	rule	0	0.5	1	0	initials of 國文-進階班
+園與生	園藝與生活	["園藝與生活"]	abbr	rule	0	0.5	1	0	initials of 園藝與生活
+圖網	圖神經網路	["圖神經網路"]	abbr	rule	0	0.5	1	0	initials of 圖神經網路
+圖資統	圖書資訊學統計	["圖書資訊學統計"]	abbr	rule	0	0.5	1	0	initials of 圖書資訊學統計
+團動	團體動力學	["團體動力學"]	abbr	rule	0	0.5	1	0	initials of 團體動力學
+土政	土地政策	["土地政策"]	abbr	rule	0	0.5	1	0	initials of 土地政策
+土文專	土耳其文史專題	["土耳其文史專題"]	abbr	rule	0	0.5	1	0	initials of 土耳其文史專題
+土行	土地行政	["土地行政"]	abbr	rule	0	0.5	1	0	initials of 土地行政
+土語	土耳其語翻譯	["土耳其語翻譯"]	abbr	rule	0	0.5	1	0	initials of 土耳其語翻譯
+地創入	地方創生入門	["地方創生入門"]	abbr	rule	0	0.5	1	0	initials of 地方創生入門
+地與地	地價與地稅	["地價與地稅"]	abbr	rule	0	0.5	1	0	initials of 地價與地稅
+地財	地方財政	["地方財政"]	abbr	rule	0	0.5	1	0	initials of 地方財政
+地資科	地理資訊科學	["地理資訊科學"]	abbr	rule	0	0.5	1	0	initials of 地理資訊科學
+地資總	地理資訊系統總論	["地理資訊系統總論"]	abbr	rule	0	0.5	1	0	initials of 地理資訊系統總論
+基創寫	基礎創意寫作	["基礎創意寫作"]	abbr	rule	0	0.5	1	0	initials of 基礎創意寫作
+基動設	基礎動畫設計	["基礎動畫設計"]	abbr	rule	0	0.5	1	0	initials of 基礎動畫設計
+基數專	基礎數學專題II	["基礎數學專題II"]	abbr	rule	0	0.5	1	0	initials of 基礎數學專題II
+基與社	基督教與社會	["基督教與社會"]	abbr	rule	0	0.5	1	0	initials of 基督教與社會
+報文	報導文學	["報導文學"]	abbr	rule	0	0.5	1	0	initials of 報導文學
+外實	外交實務	["外交實務"]	abbr	rule	0	0.5	1	0	initials of 外交實務
+外能檢	外語能力檢定	["外語能力檢定"]	abbr	rule	0	0.5	1	0	initials of 外語能力檢定
+多態檢	多模態資訊檢索	["多模態資訊檢索"]	abbr	rule	0	0.5	1	0	initials of 多模態資訊檢索
+大品行	大數據品牌行銷	["大數據品牌行銷"]	abbr	rule	0	0.5	1	0	initials of 大數據品牌行銷
+大土語	大一土耳其語	["大一土耳其語"]	abbr	rule	0	0.25	1	0	initials of 大一土耳其語; 2 names share it
+大外	大學外文	["大學外文"]	abbr	rule	0	0.5	1	0	initials of 大學外文
+大當選	大陸當代小說選讀	["大陸當代小說選讀"]	abbr	rule	0	0.5	1	0	initials of 大陸當代小說選讀
+大與我	大腦與我	["大腦與我"]	abbr	rule	0	0.5	1	0	initials of 大腦與我
+奈科導	奈米科技導論	["奈米科技導論"]	abbr	rule	0	0.5	1	0	initials of 奈米科技導論
+媒內企	媒體內容企劃	["媒體內容企劃"]	abbr	rule	0	0.5	1	0	initials of 媒體內容企劃
+媒生專	媒介生態專題	["媒介生態專題"]	abbr	rule	0	0.5	1	0	initials of 媒介生態專題
+媒社	媒介社會學	["媒介社會學"]	abbr	rule	0	0.5	1	0	initials of 媒介社會學
+學行研	學校行政研究	["學校行政研究"]	abbr	rule	0	0.5	1	0	initials of 學校行政研究
+學評	學習評量	["學習評量"]	abbr	rule	0	0.5	1	0	initials of 學習評量
+學輔	學習輔導	["學習輔導"]	abbr	rule	0	0.5	1	0	initials of 學習輔導
+宋理	宋明理學	["宋明理學"]	abbr	rule	0	0.5	1	0	initials of 宋明理學
+實函	實變函數論	["實變函數論"]	abbr	rule	0	0.5	1	0	initials of 實變函數論
+實台閩	實用台灣閩南語	["實用台灣閩南語"]	abbr	rule	0	0.5	1	0	initials of 實用台灣閩南語
+實教研	實驗教育研究	["實驗教育研究"]	abbr	rule	0	0.5	1	0	initials of 實驗教育研究
+實見	實驗室見習	["實驗室見習"]	abbr	rule	0	0.5	1	0	initials of 實驗室見習
+實設	實驗設計	["實驗設計"]	abbr	rule	0	0.5	1	0	initials of 實驗設計
+實語	實驗語言學	["實驗語言學"]	abbr	rule	0	0.5	1	0	initials of 實驗語言學
+審實實	審計實務實習	["審計實務實習"]	abbr	rule	0	0.5	1	0	initials of 審計實務實習
+寫與閱	寫作與閱讀	["寫作與閱讀"]	abbr	rule	0	0.5	1	0	initials of 寫作與閱讀
+專實	專業實習	["專業實習"]	abbr	rule	0	0.25	1	0	initials of 專業實習; 2 names share it
+專德	專業德文	["專業德文"]	abbr	rule	0	0.5	1	0	initials of 專業德文
+專德翻	專業德文翻譯	["專業德文翻譯"]	abbr	rule	0	0.5	1	0	initials of 專業德文翻譯
+專指	專題指導	["專題指導"]	abbr	rule	0	0.5	1	0	initials of 專題指導
+專法	專業法文	["專業法文"]	abbr	rule	0	0.5	1	0	initials of 專業法文
+專法翻	專業法文翻譯	["專業法文翻譯"]	abbr	rule	0	0.5	1	0	initials of 專業法文翻譯
+專研	專題研討	["專題研討"]	abbr	rule	0	0.167	1	0	initials of 專題研討; 3 names share it
+專管	專案管理	["專案管理"]	abbr	rule	0	0.5	1	0	initials of 專案管理
+專西	專業西文	["專業西文"]	abbr	rule	0	0.5	1	0	initials of 專業西文
+專討	專題討論	["專題討論"]	abbr	rule	0	0.5	1	0	initials of 專題討論
+導方	導演方法	["導演方法"]	abbr	rule	0	0.5	1	0	initials of 導演方法
+小表研	小鼠表型研究	["小鼠表型研究"]	abbr	rule	0	0.5	1	0	initials of 小鼠表型研究
+小選	小說選讀	["小說選讀"]	abbr	rule	0	0.5	1	0	initials of 小說選讀
+工數	工程數學	["工程數學"]	abbr	rule	0	0.5	1	0	initials of 工程數學
+廣原	廣告原理	["廣告原理"]	abbr	rule	0	0.5	1	0	initials of 廣告原理
+影剪	影視剪接	["影視剪接"]	abbr	rule	0	0.5	1	0	initials of 影視剪接
+影寫	影視寫作	["影視寫作"]	abbr	rule	0	0.5	1	0	initials of 影視寫作
+影編實	影視編導實務	["影視編導實務"]	abbr	rule	0	0.5	1	0	initials of 影視編導實務
+影處	影像處理	["影像處理"]	abbr	rule	0	0.5	1	0	initials of 影像處理
+影製作	影像製作	["影像製作"]	abbr	rule	0	0.5	1	0	initials of 影像製作
+後量密	後量子密碼學	["後量子密碼學"]	abbr	rule	0	0.5	1	0	initials of 後量子密碼學
+從看日	從漫畫看日本	["從漫畫看日本"]	abbr	rule	0	0.5	1	0	initials of 從漫畫看日本
+從資學	從資料學習	["從資料學習"]	abbr	rule	0	0.5	1	0	initials of 從資料學習
+循商模	循環商業模式	["循環商業模式"]	abbr	rule	0	0.5	1	0	initials of 循環商業模式
+微實	微積分實習	["微積分實習"]	abbr	rule	0	0.5	1	0	initials of 微積分實習
+微式	微分方程式	["微分方程式"]	abbr	rule	0	0.5	1	0	initials of 微分方程式
+微應	微分方程應用	["微分方程應用"]	abbr	rule	0	0.5	1	0	initials of 微分方程應用
+德文概	德國文學概論	["德國文學概論"]	abbr	rule	0	0.25	1	0	initials of 德國文學概論; 2 names share it
+德語入	德語語言學入門	["德語語言學入門"]	abbr	rule	0	0.5	1	0	initials of 德語語言學入門
+心哲	心靈哲學	["心靈哲學"]	abbr	rule	0	0.5	1	0	initials of 心靈哲學
+心學總	心理學專業總整	["心理學專業總整"]	abbr	rule	0	0.5	1	0	initials of 心理學專業總整
+心實	心理實驗法	["心理實驗法"]	abbr	rule	0	0.5	1	0	initials of 心理實驗法
+心實實	心理實驗法實驗	["心理實驗法實驗"]	abbr	rule	0	0.5	1	0	initials of 心理實驗法實驗
+心治總	心理治療總論	["心理治療總論"]	abbr	rule	0	0.5	1	0	initials of 心理治療總論
+心與生	心理與生活	["心理與生活"]	abbr	rule	0	0.5	1	0	initials of 心理與生活
+心計入	心理計量入門	["心理計量入門"]	abbr	rule	0	0.5	1	0	initials of 心理計量入門
+心語	心理語言學	["心理語言學"]	abbr	rule	0	0.5	1	0	initials of 心理語言學
+性心學	性格心理學	["性格心理學"]	abbr	rule	0	0.5	1	0	initials of 性格心理學
+性教	性別教育	["性別教育"]	abbr	rule	0	0.5	1	0	initials of 性別教育
+性研	性別研究	["性別研究"]	abbr	rule	0	0.5	1	0	initials of 性別研究
+恐主	恐怖主義專題	["恐怖主義專題"]	abbr	rule	0	0.5	1	0	initials of 恐怖主義專題
+意態	意識型態理論	["意識型態理論"]	abbr	rule	0	0.5	1	0	initials of 意識型態理論
+憤小說	憤怒小說	["憤怒小說"]	abbr	rule	0	0.5	1	0	initials of 憤怒小說
+憲政專	憲政史專題	["憲政史專題"]	abbr	rule	0	0.5	1	0	initials of 憲政史專題
+應印語	應用印尼語	["應用印尼語"]	abbr	rule	0	0.5	1	0	initials of 應用印尼語
+應日語	應用日語會話2	["應用日語會話2"]	abbr	rule	0	0.5	1	0	initials of 應用日語會話2
+應機學	應用機器學習	["應用機器學習"]	abbr	rule	0	0.5	1	0	initials of 應用機器學習
+應泰	應用泰語	["應用泰語"]	abbr	rule	0	0.5	1	0	initials of 應用泰語
+應總經	應用總體經濟	["應用總體經濟"]	abbr	rule	0	0.5	1	0	initials of 應用總體經濟
+應計	應用計量	["應用計量"]	abbr	rule	0	0.5	1	0	initials of 應用計量
+應越	應用越語	["應用越語"]	abbr	rule	0	0.5	1	0	initials of 應用越語
+應阿語	應用阿拉伯語	["應用阿拉伯語"]	abbr	rule	0	0.5	1	0	initials of 應用阿拉伯語
+成管會	成本管理會計	["成本管理會計"]	abbr	rule	0	0.5	1	0	initials of 成本管理會計
+戰研	戰略研究	["戰略研究"]	abbr	rule	0	0.5	1	0	initials of 戰略研究
+戰經專	戰後台灣經濟史專題	["戰後台灣經濟史專題"]	abbr	rule	0	0.5	1	0	initials of 戰後台灣經濟史專題
+戲音	戲劇音樂	["戲劇音樂"]	abbr	rule	0	0.5	1	0	initials of 戲劇音樂
+投分	投資分析	["投資分析"]	abbr	rule	0	0.5	1	0	initials of 投資分析
+捷國概	捷克國情概論	["捷克國情概論"]	abbr	rule	0	0.5	1	0	initials of 捷克國情概論
+捷會話	捷語會話	["捷語會話"]	abbr	rule	0	0.5	1	0	initials of 捷語會話
+探遺特	探索遺傳特性	["探索遺傳特性"]	abbr	rule	0	0.5	1	0	initials of 探索遺傳特性
+政傳	政治傳播	["政治傳播"]	abbr	rule	0	0.5	1	0	initials of 政治傳播
+政傳專	政治傳播專題	["政治傳播專題"]	abbr	rule	0	0.5	1	0	initials of 政治傳播專題
+政分	政策分析	["政策分析"]	abbr	rule	0	0.5	1	0	initials of 政策分析
+政哲概	政治哲學概論	["政治哲學概論"]	abbr	rule	0	0.5	1	0	initials of 政治哲學概論
+政心學	政治心理學專題	["政治心理學專題"]	abbr	rule	0	0.5	1	0	initials of 政治心理學專題
+政採	政府採購法	["政府採購法"]	abbr	rule	0	0.5	1	0	initials of 政府採購法
+政政	政黨政治	["政黨政治"]	abbr	rule	0	0.5	1	0	initials of 政黨政治
+政發理	政治發展理論	["政治發展理論"]	abbr	rule	0	0.5	1	0	initials of 政治發展理論
+政經	政治經濟學	["政治經濟學"]	abbr	rule	0	0.5	1	0	initials of 政治經濟學
+政財報	政府財務報導	["政府財務報導"]	abbr	rule	0	0.5	1	0	initials of 政府財務報導
+敘的實	敘事的實務	["敘事的實務"]	abbr	rule	0	0.5	1	0	initials of 敘事的實務
+教原	教學原理	["教學原理"]	abbr	rule	0	0.5	1	0	initials of 教學原理
+教學研	教育學傳記研究	["教育學傳記研究"]	abbr	rule	0	0.5	1	0	initials of 教育學傳記研究
+教改研	教育改革研究	["教育改革研究"]	abbr	rule	0	0.5	1	0	initials of 教育改革研究
+教會	教育社會學	["教育社會學"]	abbr	rule	0	0.5	1	0	initials of 教育社會學
+教行	教育行政	["教育行政"]	abbr	rule	0	0.5	1	0	initials of 教育行政
+教行專	教育行政專題	["教育行政專題"]	abbr	rule	0	0.5	1	0	initials of 教育行政專題
+教議專	教育議題專題	["教育議題專題"]	abbr	rule	0	0.5	1	0	initials of 教育議題專題
+敷計	敷地計畫	["敷地計畫"]	abbr	rule	0	0.5	1	0	initials of 敷地計畫
+數人與	數位人文與AI	["數位人文與AI"]	abbr	rule	0	0.5	1	0	initials of 數位人文與AI
+數分	數值分析	["數值分析"]	abbr	rule	0	0.5	1	0	initials of 數值分析
+數學	數位學習	["數位學習"]	abbr	rule	0	0.5	1	0	initials of 數位學習
+數專總	數學專業總整	["數學專業總整"]	abbr	rule	0	0.5	1	0	initials of 數學專業總整
+數文	數位文明	["數位文明"]	abbr	rule	0	0.5	1	0	initials of 數位文明
+數方	數值方法	["數值方法"]	abbr	rule	0	0.5	1	0	initials of 數值方法
+數系實	數位系統實驗	["數位系統實驗"]	abbr	rule	0	0.5	1	0	initials of 數位系統實驗
+數系導	數位系統導論	["數位系統導論"]	abbr	rule	0	0.5	1	0	initials of 數位系統導論
+數統專	數理統計專題	["數理統計專題"]	abbr	rule	0	0.5	1	0	initials of 數理統計專題
+數行	數位行銷	["數位行銷"]	abbr	rule	0	0.5	1	0	initials of 數位行銷
+文作讀	文學作品讀法	["文學作品讀法"]	abbr	rule	0	0.5	1	0	initials of 文學作品讀法
+文概	文學概論	["文學概論"]	abbr	rule	0	0.5	1	0	initials of 文學概論
+文與批	文學理論與批評	["文學理論與批評"]	abbr	rule	0	0.5	1	0	initials of 文學理論與批評
+文與電	文學與電影	["文學與電影"]	abbr	rule	0	0.5	1	0	initials of 文學與電影
+文評	文學與文化評論	["文學與文化評論"]	abbr	rule	0	0.5	1	0	initials of 文學與文化評論
+文龍	文心雕龍	["文心雕龍"]	abbr	rule	0	0.5	1	0	initials of 文心雕龍
+新創思	新媒體創作思考	["新媒體創作思考"]	abbr	rule	0	0.5	1	0	initials of 新媒體創作思考
+新媒實	新聞媒體實驗	["新聞媒體實驗"]	abbr	rule	0	0.5	1	0	initials of 新聞媒體實驗
+新實	新媒體實務	["新媒體實務"]	abbr	rule	0	0.5	1	0	initials of 新媒體實務
+新德	新聞德文	["新聞德文"]	abbr	rule	0	0.5	1	0	initials of 新聞德文
+新攝	新聞攝影	["新聞攝影"]	abbr	rule	0	0.5	1	0	initials of 新聞攝影
+新社思	新社會思想史	["新社會思想史"]	abbr	rule	0	0.5	1	0	initials of 新社會思想史
+新與創	新媒體與創業	["新媒體與創業"]	abbr	rule	0	0.5	1	0	initials of 新媒體與創業
+族教教	族語教材教法	["族語教材教法"]	abbr	rule	0	0.5	1	0	initials of 族語教材教法
+族關係	族群關係	["族群關係"]	abbr	rule	0	0.5	1	0	initials of 族群關係
+日係史	日美關係史	["日美關係史"]	abbr	rule	0	0.5	1	0	initials of 日美關係史
+日名選	日本名著選讀A2	["日本名著選讀A2"]	abbr	rule	0	0.167	1	0	initials of 日本名著選讀A2; 3 names share it
+日寫	日文寫作	["日文寫作"]	abbr	rule	0	0.5	1	0	initials of 日文寫作
+日專研	日本專題研究A2	["日本專題研究A2"]	abbr	rule	0	0.167	1	0	initials of 日本專題研究A2; 3 names share it
+日文研	日語文法研究	["日語文法研究"]	abbr	rule	0	0.5	1	0	initials of 日語文法研究
+日會演	日語會話演習	["日語會話演習"]	abbr	rule	0	0.5	1	0	initials of 日語會話演習
+日會話	日語會話	["日語會話"]	abbr	rule	0	0.5	1	0	initials of 日語會話
+日歷	日本歷史2	["日本歷史2"]	abbr	rule	0	0.5	1	0	initials of 日本歷史2
+日研專	日本研究專論II	["日本研究專論II"]	abbr	rule	0	0.5	1	0	initials of 日本研究專論II
+日習	日文習作	["日文習作"]	abbr	rule	0	0.5	1	0	initials of 日文習作
+日聽練	日語聽力練習	["日語聽力練習"]	abbr	rule	0	0.5	1	0	initials of 日語聽力練習
+日語	日語語法2	["日語語法2"]	abbr	rule	0	0.5	1	0	initials of 日語語法2
+日語研	日本語學研究	["日本語學研究"]	abbr	rule	0	0.5	1	0	initials of 日本語學研究
+日讀	日語讀本	["日語讀本"]	abbr	rule	0	0.5	1	0	initials of 日語讀本
+時數分	時間數列分析	["時間數列分析"]	abbr	rule	0	0.5	1	0	initials of 時間數列分析
+普心學	普通心理學	["普通心理學"]	abbr	rule	0	0.5	1	0	initials of 普通心理學
+普物學	普通物理學	["普通物理學"]	abbr	rule	0	0.5	1	0	initials of 普通物理學
+景設	景觀設計	["景觀設計"]	abbr	rule	0	0.5	1	0	initials of 景觀設計
+智供鏈	智能供應鏈	["智能供應鏈"]	abbr	rule	0	0.5	1	0	initials of 智能供應鏈
+智財管	智慧財產管理	["智慧財產管理"]	abbr	rule	0	0.5	1	0	initials of 智慧財產管理
+智運系	智慧運輸系統	["智慧運輸系統"]	abbr	rule	0	0.5	1	0	initials of 智慧運輸系統
+書討	書報討論	["書報討論"]	abbr	rule	0	0.167	1	0	initials of 書報討論; 3 names share it
+會審法	會計審計法規	["會計審計法規"]	abbr	rule	0	0.5	1	0	initials of 會計審計法規
+會研專	會計研究專題	["會計研究專題"]	abbr	rule	0	0.5	1	0	initials of 會計研究專題
+會資	會計資訊系統	["會計資訊系統"]	abbr	rule	0	0.5	1	0	initials of 會計資訊系統
+東佛文	東亞佛教文化史	["東亞佛教文化史"]	abbr	rule	0	0.5	1	0	initials of 東亞佛教文化史
+東國係	東南亞國際關係	["東南亞國際關係"]	abbr	rule	0	0.5	1	0	initials of 東南亞國際關係
+東專	東南亞專題	["東南亞專題"]	abbr	rule	0	0.5	1	0	initials of 東南亞專題
+東政	東南亞政治	["東南亞政治"]	abbr	rule	0	0.5	1	0	initials of 東南亞政治
+東文	東南亞華人文化	["東南亞華人文化"]	abbr	rule	0	0.5	1	0	initials of 東南亞華人文化
+東族發	東南亞族群發展	["東南亞族群發展"]	abbr	rule	0	0.5	1	0	initials of 東南亞族群發展
+東現專	東亞現代史專題	["東亞現代史專題"]	abbr	rule	0	0.5	1	0	initials of 東亞現代史專題
+構句專	構式句法專題	["構式句法專題"]	abbr	rule	0	0.5	1	0	initials of 構式句法專題
+機學	機器學習	["機器學習"]	abbr	rule	0	0.5	1	0	initials of 機器學習
+機實	機構實習	["機構實習"]	abbr	rule	0	0.5	1	0	initials of 機構實習
+機與統	機率與統計	["機率與統計"]	abbr	rule	0	0.5	1	0	initials of 機率與統計
+檔管專	檔案館管理專題	["檔案館管理專題"]	abbr	rule	0	0.5	1	0	initials of 檔案館管理專題
+檢實研	檢察實務研究	["檢察實務研究"]	abbr	rule	0	0.5	1	0	initials of 檢察實務研究
+歷社	歷史社會學	["歷史社會學"]	abbr	rule	0	0.5	1	0	initials of 歷史社會學
+歷英	歷史英文	["歷史英文"]	abbr	rule	0	0.5	1	0	initials of 歷史英文
+歷語	歷史語言學	["歷史語言學"]	abbr	rule	0	0.5	1	0	initials of 歷史語言學
+歷選習	歷代文選及習作	["歷代文選及習作"]	abbr	rule	0	0.5	1	0	initials of 歷代文選及習作
+比宗	比較宗教	["比較宗教"]	abbr	rule	0	0.5	1	0	initials of 比較宗教
+比社政	比較社會政策	["比較社會政策"]	abbr	rule	0	0.5	1	0	initials of 比較社會政策
+民債各	民法債編各論	["民法債編各論"]	abbr	rule	0	0.5	1	0	initials of 民法債編各論
+民債總	民法債編總論	["民法債編總論"]	abbr	rule	0	0.5	1	0	initials of 民法債編總論
+民問	民族問題	["民族問題"]	abbr	rule	0	0.5	1	0	initials of 民族問題
+民地	民族地理	["民族地理"]	abbr	rule	0	0.5	1	0	initials of 民族地理
+民學方	民族學方法	["民族學方法"]	abbr	rule	0	0.5	1	0	initials of 民族學方法
+民專研	民族史專題研究	["民族史專題研究"]	abbr	rule	0	0.5	1	0	initials of 民族史專題研究
+民文專	民國文學專題	["民國文學專題"]	abbr	rule	0	0.5	1	0	initials of 民國文學專題
+民發專	民族發展專題	["民族發展專題"]	abbr	rule	0	0.5	1	0	initials of 民族發展專題
+民與調	民意與調查	["民意與調查"]	abbr	rule	0	0.5	1	0	initials of 民意與調查
+民證	民事證據法	["民事證據法"]	abbr	rule	0	0.5	1	0	initials of 民事證據法
+永發研	永續發展研究	["永續發展研究"]	abbr	rule	0	0.5	1	0	initials of 永續發展研究
+治方	治學方法	["治學方法"]	abbr	rule	0	0.5	1	0	initials of 治學方法
+法哲	法家哲學	["法家哲學"]	abbr	rule	0	0.5	1	0	initials of 法家哲學
+法學研	法理學專題研究	["法理學專題研究"]	abbr	rule	0	0.5	1	0	initials of 法理學專題研究
+法專研	法制史專題研究	["法制史專題研究"]	abbr	rule	0	0.25	1	0	initials of 法制史專題研究; 2 names share it
+法文概	法國文學概論	["法國文學概論"]	abbr	rule	0	0.25	1	0	initials of 法國文學概論; 2 names share it
+法經分	法律經濟分析	["法律經濟分析"]	abbr	rule	0	0.5	1	0	initials of 法律經濟分析
+法與行	法治與行政	["法治與行政"]	abbr	rule	0	0.5	1	0	initials of 法治與行政
+波會話	波語會話	["波語會話"]	abbr	rule	0	0.5	1	0	initials of 波語會話
+泰口	泰語口譯	["泰語口譯"]	abbr	rule	0	0.5	1	0	initials of 泰語口譯
+泰語	泰雅族語	["泰雅族語"]	abbr	rule	0	0.5	1	0	initials of 泰雅族語
+泰閱	泰文閱讀	["泰文閱讀"]	abbr	rule	0	0.5	1	0	initials of 泰文閱讀
+海保	海上保險	["海上保險"]	abbr	rule	0	0.5	1	0	initials of 海上保險
+海學	海外學習	["海外學習"]	abbr	rule	0	0.5	1	0	initials of 海外學習
+海方	海灣方言	["海灣方言"]	abbr	rule	0	0.5	1	0	initials of 海灣方言
+消洞分	消費者洞察分析	["消費者洞察分析"]	abbr	rule	0	0.5	1	0	initials of 消費者洞察分析
+消行	消費者行為	["消費者行為"]	abbr	rule	0	0.5	1	0	initials of 消費者行為
+深學	深度學習	["深度學習"]	abbr	rule	0	0.5	1	0	initials of 深度學習
+深訪	深度訪談法	["深度訪談法"]	abbr	rule	0	0.5	1	0	initials of 深度訪談法
+混方研	混合方法研究	["混合方法研究"]	abbr	rule	0	0.5	1	0	initials of 混合方法研究
+清學思	清代學術思想	["清代學術思想"]	abbr	rule	0	0.5	1	0	initials of 清代學術思想
+測學實	測量學及實習	["測量學及實習"]	abbr	rule	0	0.5	1	0	initials of 測量學及實習
+測平	測量平差法	["測量平差法"]	abbr	rule	0	0.5	1	0	initials of 測量平差法
+港文選	港澳文學選讀	["港澳文學選讀"]	abbr	rule	0	0.5	1	0	initials of 港澳文學選讀
+激與領	激勵與領導	["激勵與領導"]	abbr	rule	0	0.5	1	0	initials of 激勵與領導
+物實研	物權法實例研習	["物權法實例研習"]	abbr	rule	0	0.5	1	0	initials of 物權法實例研習
+特導	特殊教育導論	["特殊教育導論"]	abbr	rule	0	0.5	1	0	initials of 特殊教育導論
+獨專	獨立專題	["獨立專題"]	abbr	rule	0	0.25	1	0	initials of 獨立專題; 2 names share it
+獨研	獨立研究	["獨立研究"]	abbr	rule	0	0.5	1	0	initials of 獨立研究
+現思	現當代文藝思潮	["現當代文藝思潮"]	abbr	rule	0	0.5	1	0	initials of 現當代文藝思潮
+現碼	現代密碼學	["現代密碼學"]	abbr	rule	0	0.5	1	0	initials of 現代密碼學
+現財	現代財政理論	["現代財政理論"]	abbr	rule	0	0.5	1	0	initials of 現代財政理論
+環保	環境科學與環境保護	["環境科學與環境保護"]	abbr	rule	0	0.5	1	0	initials of 環境科學與環境保護
+環外	環境外交	["環境外交"]	abbr	rule	0	0.5	1	0	initials of 環境外交
+環永論	環境永續論壇	["環境永續論壇"]	abbr	rule	0	0.5	1	0	initials of 環境永續論壇
+環治專	環境治理專題	["環境治理專題"]	abbr	rule	0	0.5	1	0	initials of 環境治理專題
+生實	生成式AI實作	["生成式AI實作"]	abbr	rule	0	0.5	1	0	initials of 生成式AI實作
+生技導	生物技術導論	["生物技術導論"]	abbr	rule	0	0.5	1	0	initials of 生物技術導論
+生管個	生物科技管理個案	["生物科技管理個案"]	abbr	rule	0	0.5	1	0	initials of 生物科技管理個案
+生紀	生成式人工智慧時代的生活紀實	["生成式人工智慧時代的生活紀實"]	abbr	rule	0	0.5	1	0	initials of 生成式人工智慧時代的生活紀實
+生阿語	生活阿拉伯語	["生活阿拉伯語"]	abbr	rule	0	0.5	1	0	initials of 生活阿拉伯語
+產競分	產業競爭分析	["產業競爭分析"]	abbr	rule	0	0.5	1	0	initials of 產業競爭分析
+產經	產業經濟學	["產業經濟學"]	abbr	rule	0	0.5	1	0	initials of 產業經濟學
+產經研	產業經濟學研討	["產業經濟學研討"]	abbr	rule	0	0.5	1	0	initials of 產業經濟學研討
+用學計	用Python學財務計量	["用Python學財務計量"]	abbr	rule	0	0.5	1	0	initials of 用Python學財務計量
+界重	界限重繪	["界限重繪"]	abbr	rule	0	0.5	1	0	initials of 界限重繪
+當係史	當代國際關係史	["當代國際關係史"]	abbr	rule	0	0.5	1	0	initials of 當代國際關係史
+發心學	發展心理學	["發展心理學"]	abbr	rule	0	0.5	1	0	initials of 發展心理學
+發與政	發展與政策	["發展與政策"]	abbr	rule	0	0.5	1	0	initials of 發展與政策
+睡與健	睡眠與健康	["睡眠與健康"]	abbr	rule	0	0.5	1	0	initials of 睡眠與健康
+睡醫	睡眠醫學	["睡眠醫學"]	abbr	rule	0	0.5	1	0	initials of 睡眠醫學
+知心學	知覺心理學	["知覺心理學"]	abbr	rule	0	0.5	1	0	initials of 知覺心理學
+知組專	知識組織專題	["知識組織專題"]	abbr	rule	0	0.5	1	0	initials of 知識組織專題
+矩理	矩陣理論	["矩陣理論"]	abbr	rule	0	0.5	1	0	initials of 矩陣理論
+研創	研究創意坊	["研究創意坊"]	abbr	rule	0	0.5	1	0	initials of 研究創意坊
+研方	研究方法	["研究方法"]	abbr	rule	0	0.25	1	0	initials of 研究方法; 2 names share it
+研方專	研究方法專題	["研究方法專題"]	abbr	rule	0	0.5	1	0	initials of 研究方法專題
+研發	研究發表營	["研究發表營"]	abbr	rule	0	0.5	1	0	initials of 研究發表營
+社學	社會學動動腦	["社會學動動腦"]	abbr	rule	0	0.25	1	0	initials of 社會學動動腦; 2 names share it
+社實專	社會實踐專題	["社會實踐專題"]	abbr	rule	0	0.5	1	0	initials of 社會實踐專題
+社專研	社會法專題研究	["社會法專題研究"]	abbr	rule	0	0.5	1	0	initials of 社會法專題研究
+社研方	社會研究方法	["社會研究方法"]	abbr	rule	0	0.25	1	0	initials of 社會研究方法; 2 names share it
+社科哲	社會科學哲學	["社會科學哲學"]	abbr	rule	0	0.5	1	0	initials of 社會科學哲學
+神藥	神經藥理學	["神經藥理學"]	abbr	rule	0	0.5	1	0	initials of 神經藥理學
+福經	福利經濟學	["福利經濟學"]	abbr	rule	0	0.5	1	0	initials of 福利經濟學
+科與政	科技與政府	["科技與政府"]	abbr	rule	0	0.5	1	0	initials of 科技與政府
+租個實	租稅個案實習	["租稅個案實習"]	abbr	rule	0	0.5	1	0	initials of 租稅個案實習
+租專	租稅法專題	["租稅法專題"]	abbr	rule	0	0.5	1	0	initials of 租稅法專題
+移與全	移民與全球化	["移民與全球化"]	abbr	rule	0	0.5	1	0	initials of 移民與全球化
+程能檢	程式能力檢定	["程式能力檢定"]	abbr	rule	0	0.5	1	0	initials of 程式能力檢定
+程設	程式設計	["程式設計"]	abbr	rule	0	0.5	1	0	initials of 程式設計
+程設概	程式設計概論	["程式設計概論"]	abbr	rule	0	0.5	1	0	initials of 程式設計概論
+空與文	空間與文學	["空間與文學"]	abbr	rule	0	0.5	1	0	initials of 空間與文學
+空資模	空間資料模型	["空間資料模型"]	abbr	rule	0	0.5	1	0	initials of 空間資料模型
+競與合	競爭與合作	["競爭與合作"]	abbr	rule	0	0.5	1	0	initials of 競爭與合作
+第語得	第二語言習得	["第二語言習得"]	abbr	rule	0	0.5	1	0	initials of 第二語言習得
+等理	等候理論	["等候理論"]	abbr	rule	0	0.5	1	0	initials of 等候理論
+策專研	策略管理專題研討	["策略管理專題研討"]	abbr	rule	0	0.5	1	0	initials of 策略管理專題研討
+策理	策略管理理論	["策略管理理論"]	abbr	rule	0	0.5	1	0	initials of 策略管理理論
+策經	策略經濟學	["策略經濟學"]	abbr	rule	0	0.5	1	0	initials of 策略經濟學
+策資管	策略資訊管理	["策略資訊管理"]	abbr	rule	0	0.5	1	0	initials of 策略資訊管理
+管學	管理科學	["管理科學"]	abbr	rule	0	0.5	1	0	initials of 管理科學
+管模分	管理模型分析	["管理模型分析"]	abbr	rule	0	0.5	1	0	initials of 管理模型分析
+管經	管理經濟學	["管理經濟學"]	abbr	rule	0	0.5	1	0	initials of 管理經濟學
+精健實	精準健康實務	["精準健康實務"]	abbr	rule	0	0.5	1	0	initials of 精準健康實務
+精數專	精算數學專題	["精算數學專題"]	abbr	rule	0	0.5	1	0	initials of 精算數學專題
+細傳	細胞訊息傳遞	["細胞訊息傳遞"]	abbr	rule	0	0.5	1	0	initials of 細胞訊息傳遞
+組心學	組織心理學專題	["組織心理學專題"]	abbr	rule	0	0.25	1	0	initials of 組織心理學專題; 2 names share it
+統機學	統計機器學習	["統計機器學習"]	abbr	rule	0	0.5	1	0	initials of 統計機器學習
+經數	經濟數學	["經濟數學"]	abbr	rule	0	0.5	1	0	initials of 經濟數學
+經數分	經貿數據分析	["經貿數據分析"]	abbr	rule	0	0.5	1	0	initials of 經貿數據分析
+經發理	經濟發展理論	["經濟發展理論"]	abbr	rule	0	0.5	1	0	initials of 經濟發展理論
+綠科創	綠色科技創新	["綠色科技創新"]	abbr	rule	0	0.5	1	0	initials of 綠色科技創新
+網安實	網頁安全實務	["網頁安全實務"]	abbr	rule	0	0.5	1	0	initials of 網頁安全實務
+網與組	網絡與組織	["網絡與組織"]	abbr	rule	0	0.5	1	0	initials of 網絡與組織
+線模專	線性模式專題	["線性模式專題"]	abbr	rule	0	0.5	1	0	initials of 線性模式專題
+縣國計	縣市國土計畫	["縣市國土計畫"]	abbr	rule	0	0.5	1	0	initials of 縣市國土計畫
+總經分	總體經濟分析	["總體經濟分析"]	abbr	rule	0	0.5	1	0	initials of 總體經濟分析
+績管	績效管理	["績效管理"]	abbr	rule	0	0.5	1	0	initials of 績效管理
+美概	美學概論	["美學概論"]	abbr	rule	0	0.5	1	0	initials of 美學概論
+美運	美國運動史	["美國運動史"]	abbr	rule	0	0.5	1	0	initials of 美國運動史
+翻專	翻譯專題	["翻譯專題"]	abbr	rule	0	0.5	1	0	initials of 翻譯專題
+老醫	老年醫學	["老年醫學"]	abbr	rule	0	0.5	1	0	initials of 老年醫學
+聲基	聲音基礎	["聲音基礎"]	abbr	rule	0	0.5	1	0	initials of 聲音基礎
+臨心學	臨床心理學專題	["臨床心理學專題"]	abbr	rule	0	0.5	1	0	initials of 臨床心理學專題
+自實學	自主實踐學習2	["自主實踐學習2"]	abbr	rule	0	0.167	1	0	initials of 自主實踐學習2; 3 names share it
+自語處	自然語言處理	["自然語言處理"]	abbr	rule	0	0.5	1	0	initials of 自然語言處理
+臺灣	臺灣文學史	["臺灣文學史"]	abbr	rule	0	0.5	1	0	initials of 臺灣文學史
+臺灣政	臺灣政治	["臺灣政治"]	abbr	rule	0	0.5	1	0	initials of 臺灣政治
+舞鑑	舞蹈鑑賞	["舞蹈鑑賞"]	abbr	rule	0	0.5	1	0	initials of 舞蹈鑑賞
+英作	英文作文	["英文作文"]	abbr	rule	0	0.5	1	0	initials of 英文作文
+英口訓	英語口語訓練	["英語口語訓練"]	abbr	rule	0	0.5	1	0	initials of 英語口語訓練
+英導	英美法導論	["英美法導論"]	abbr	rule	0	0.5	1	0	initials of 英美法導論
+英教	英語教學理論	["英語教學理論"]	abbr	rule	0	0.5	1	0	initials of 英語教學理論
+英語	英語語音學	["英語語音學"]	abbr	rule	0	0.5	1	0	initials of 英語語音學
+英語概	英語語言學概論	["英語語言學概論"]	abbr	rule	0	0.5	1	0	initials of 英語語言學概論
+英語發	英語語言發展史	["英語語言發展史"]	abbr	rule	0	0.5	1	0	initials of 英語語言發展史
+菁商英	菁英商務英語	["菁英商務英語"]	abbr	rule	0	0.5	1	0	initials of 菁英商務英語
+菁政	菁英政治	["菁英政治"]	abbr	rule	0	0.5	1	0	initials of 菁英政治
+華基班	華語基礎班	["華語基礎班"]	abbr	rule	0	0.5	1	0	initials of 華語基礎班
+華宗	華人宗教	["華人宗教"]	abbr	rule	0	0.5	1	0	initials of 華人宗教
+華應班	華語應用班	["華語應用班"]	abbr	rule	0	0.5	1	0	initials of 華語應用班
+華語	華語語法學	["華語語法學"]	abbr	rule	0	0.5	1	0	initials of 華語語法學
+著權	著作權法	["著作權法"]	abbr	rule	0	0.5	1	0	initials of 著作權法
+藏類	藏學人類學	["藏學人類學"]	abbr	rule	0	0.5	1	0	initials of 藏學人類學
+藝專	藝術表達專題	["藝術表達專題"]	abbr	rule	0	0.5	1	0	initials of 藝術表達專題
+藝社	藝術社會學	["藝術社會學"]	abbr	rule	0	0.5	1	0	initials of 藝術社會學
+蘇當俄	蘇聯及當代俄羅斯	["蘇聯及當代俄羅斯"]	abbr	rule	0	0.5	1	0	initials of 蘇聯及當代俄羅斯
+行原	行銷原理	["行銷原理"]	abbr	rule	0	0.5	1	0	initials of 行銷原理
+行投	行為投資學	["行為投資學"]	abbr	rule	0	0.5	1	0	initials of 行為投資學
+行救	行政救濟法	["行政救濟法"]	abbr	rule	0	0.5	1	0	initials of 行政救濟法
+行研	行銷研究	["行銷研究"]	abbr	rule	0	0.25	1	0	initials of 行銷研究; 2 names share it
+行管專	行銷管理專題	["行銷管理專題"]	abbr	rule	0	0.5	1	0	initials of 行銷管理專題
+行進	行政法進階	["行政法進階"]	abbr	rule	0	0.5	1	0	initials of 行政法進階
+衛保	衛生保健	["衛生保健"]	abbr	rule	0	0.5	1	0	initials of 衛生保健
+衛定測	衛星定位測量	["衛星定位測量"]	abbr	rule	0	0.5	1	0	initials of 衛星定位測量
+衝管	衝突管理	["衝突管理"]	abbr	rule	0	0.5	1	0	initials of 衝突管理
+複變數	複變函數論	["複變函數論"]	abbr	rule	0	0.5	1	0	initials of 複變函數論
+西學論	西班牙文學概論	["西班牙文學概論"]	abbr	rule	0	0.5	1	0	initials of 西班牙文學概論
+西政思	西洋政治思想史	["西洋政治思想史"]	abbr	rule	0	0.5	1	0	initials of 西洋政治思想史
+西文概	西班牙文化概論	["西班牙文化概論"]	abbr	rule	0	0.5	1	0	initials of 西班牙文化概論
+西歷建	西歐歷史建築	["西歐歷史建築"]	abbr	rule	0	0.5	1	0	initials of 西歐歷史建築
+親專研	親子法專題研究	["親子法專題研究"]	abbr	rule	0	0.5	1	0	initials of 親子法專題研究
+親教	親職教育	["親職教育"]	abbr	rule	0	0.5	1	0	initials of 親職教育
+觀韓	觀光韓語	["觀光韓語"]	abbr	rule	0	0.5	1	0	initials of 觀光韓語
+解生樹	解密生命樹	["解密生命樹"]	abbr	rule	0	0.5	1	0	initials of 解密生命樹
+計程設	計算機程式設計	["計算機程式設計"]	abbr	rule	0	0.5	1	0	initials of 計算機程式設計
+計經	計量經濟學	["計量經濟學"]	abbr	rule	0	0.5	1	0	initials of 計量經濟學
+計與人	計算思維與人工智慧	["計算思維與人工智慧"]	abbr	rule	0	0.5	1	0	initials of 計算思維與人工智慧
+計評	計畫評估	["計畫評估"]	abbr	rule	0	0.5	1	0	initials of 計畫評估
+計語	計量語言學	["計量語言學"]	abbr	rule	0	0.5	1	0	initials of 計量語言學
+認中醫	認識中醫藥	["認識中醫藥"]	abbr	rule	0	0.5	1	0	initials of 認識中醫藥
+認故名	認識故宮名畫	["認識故宮名畫"]	abbr	rule	0	0.5	1	0	initials of 認識故宮名畫
+認智財	認識智慧財產權	["認識智慧財產權"]	abbr	rule	0	0.5	1	0	initials of 認識智慧財產權
+語概	語言學概論	["語言學概論"]	abbr	rule	0	0.5	1	0	initials of 語言學概論
+語與實	語言學理論與實踐	["語言學理論與實踐"]	abbr	rule	0	0.5	1	0	initials of 語言學理論與實踐
+語與文	語言與文化	["語言與文化"]	abbr	rule	0	0.5	1	0	initials of 語言與文化
+語與社	語言與社會	["語言與社會"]	abbr	rule	0	0.5	1	0	initials of 語言與社會
+論寫	論文寫作	["論文寫作"]	abbr	rule	0	0.5	1	0	initials of 論文寫作
+論寫策	論文寫作策略	["論文寫作策略"]	abbr	rule	0	0.5	1	0	initials of 論文寫作策略
+論指	論文指導	["論文指導"]	abbr	rule	0	0.5	1	0	initials of 論文指導
+論研	論文研究	["論文研究"]	abbr	rule	0	0.5	1	0	initials of 論文研究
+論表習	論文發表演習	["論文發表演習"]	abbr	rule	0	0.5	1	0	initials of 論文發表演習
+諮商研	諮商倫理研究	["諮商倫理研究"]	abbr	rule	0	0.5	1	0	initials of 諮商倫理研究
+證交	證券交易法	["證券交易法"]	abbr	rule	0	0.5	1	0	initials of 證券交易法
+貝資分	貝氏資料分析	["貝氏資料分析"]	abbr	rule	0	0.5	1	0	initials of 貝氏資料分析
+財保	財產保險	["財產保險"]	abbr	rule	0	0.5	1	0	initials of 財產保險
+財報分	財務報表分析	["財務報表分析"]	abbr	rule	0	0.5	1	0	initials of 財務報表分析
+財實研	財產法實例研習	["財產法實例研習"]	abbr	rule	0	0.5	1	0	initials of 財產法實例研習
+財專研	財產法專題研究	["財產法專題研究"]	abbr	rule	0	0.5	1	0	initials of 財產法專題研究
+財政	財政政策	["財政政策"]	abbr	rule	0	0.5	1	0	initials of 財政政策
+財數	財務數學	["財務數學"]	abbr	rule	0	0.5	1	0	initials of 財務數學
+財研	財務學術研討	["財務學術研討"]	abbr	rule	0	0.167	1	0	initials of 財務學術研討; 3 names share it
+財經	財務經濟學	["財務經濟學"]	abbr	rule	0	0.25	1	0	initials of 財務經濟學; 2 names share it
+財經專	財務經濟專題	["財務經濟專題"]	abbr	rule	0	0.5	1	0	initials of 財務經濟專題
+貧經專	貧窮經濟學專題	["貧窮經濟學專題"]	abbr	rule	0	0.5	1	0	initials of 貧窮經濟學專題
+資價研	資產定價專題研討	["資產定價專題研討"]	abbr	rule	0	0.5	1	0	initials of 資產定價專題研討
+資安管	資訊安全管理	["資訊安全管理"]	abbr	rule	0	0.5	1	0	initials of 資訊安全管理
+資專	資訊專題(A)	["資訊專題(A)"]	abbr	rule	0	0.5	1	0	initials of 資訊專題(A)
+資專管	資訊系統專案管理	["資訊系統專案管理"]	abbr	rule	0	0.5	1	0	initials of 資訊系統專案管理
+資專設	資訊系統專案設計	["資訊系統專案設計"]	abbr	rule	0	0.5	1	0	initials of 資訊系統專案設計
+資導決	資料導向決策	["資料導向決策"]	abbr	rule	0	0.5	1	0	initials of 資料導向決策
+資庫	資料庫系統	["資料庫系統"]	abbr	rule	0	0.5	1	0	initials of 資料庫系統
+資庫管	資料庫管理	["資料庫管理"]	abbr	rule	0	0.5	1	0	initials of 資料庫管理
+資採	資料採掘	["資料採掘"]	abbr	rule	0	0.5	1	0	initials of 資料採掘
+資政研	資訊政策研究	["資訊政策研究"]	abbr	rule	0	0.5	1	0	initials of 資訊政策研究
+資新	資料新聞學	["資料新聞學"]	abbr	rule	0	0.5	1	0	initials of 資料新聞學
+資服	資訊行為與資訊服務	["資訊行為與資訊服務"]	abbr	rule	0	0.5	1	0	initials of 資訊行為與資訊服務
+資研	資訊系統研發	["資訊系統研發"]	abbr	rule	0	0.5	1	0	initials of 資訊系統研發
+資社	資訊社會學	["資訊社會學"]	abbr	rule	0	0.5	1	0	initials of 資訊社會學
+資科	資料科學	["資料科學"]	abbr	rule	0	0.5	1	0	initials of 資料科學
+資科創	資訊科技創新	["資訊科技創新"]	abbr	rule	0	0.5	1	0	initials of 資訊科技創新
+資科基	資料科學基礎	["資料科學基礎"]	abbr	rule	0	0.5	1	0	initials of 資料科學基礎
+資管	資訊管理	["資訊管理"]	abbr	rule	0	0.5	1	0	initials of 資訊管理
+資融教	資訊融入教與學	["資訊融入教與學"]	abbr	rule	0	0.5	1	0	initials of 資訊融入教與學
+質研	質性研究	["質性研究"]	abbr	rule	0	0.25	1	0	initials of 質性研究; 2 names share it
+質研方	質性研究方法	["質性研究方法"]	abbr	rule	0	0.5	1	0	initials of 質性研究方法
+賽夏語	賽夏族語	["賽夏族語"]	abbr	rule	0	0.5	1	0	initials of 賽夏族語
+賽理入	賽局理論入門	["賽局理論入門"]	abbr	rule	0	0.5	1	0	initials of 賽局理論入門
+越口	越語口譯	["越語口譯"]	abbr	rule	0	0.5	1	0	initials of 越語口譯
+越聽	越語聽力	["越語聽力"]	abbr	rule	0	0.5	1	0	initials of 越語聽力
+跨專計	跨界專題-X計畫	["跨界專題-X計畫"]	abbr	rule	0	0.5	1	0	initials of 跨界專題-X計畫
+跨體	跨媒體識讀	["跨媒體識讀"]	abbr	rule	0	0.5	1	0	initials of 跨媒體識讀
+軟工概	軟體工程概論	["軟體工程概論"]	abbr	rule	0	0.5	1	0	initials of 軟體工程概論
+近中女	近代中國婦女史	["近代中國婦女史"]	abbr	rule	0	0.5	1	0	initials of 近代中國婦女史
+迴歸分	迴歸分析	["迴歸分析"]	abbr	rule	0	0.5	1	0	initials of 迴歸分析
+逐同口	逐/同步口譯	["逐/同步口譯"]	abbr	rule	0	0.5	1	0	initials of 逐/同步口譯
+進光	進階觀光日語	["進階觀光日語"]	abbr	rule	0	0.5	1	0	initials of 進階觀光日語
+進刑	進階刑法	["進階刑法"]	abbr	rule	0	0.5	1	0	initials of 進階刑法
+進專研	進階國際法專題研究	["進階國際法專題研究"]	abbr	rule	0	0.5	1	0	initials of 進階國際法專題研究
+進德	進階德文	["進階德文"]	abbr	rule	0	0.5	1	0	initials of 進階德文
+進德寫	進階德文寫作	["進階德文寫作"]	abbr	rule	0	0.5	1	0	initials of 進階德文寫作
+進採	進階紀實採寫	["進階紀實採寫"]	abbr	rule	0	0.5	1	0	initials of 進階紀實採寫
+進攝專	進階攝影專題	["進階攝影專題"]	abbr	rule	0	0.5	1	0	initials of 進階攝影專題
+進會話	進階俄語會話	["進階俄語會話"]	abbr	rule	0	0.5	1	0	initials of 進階俄語會話
+進法寫	進階法文寫作	["進階法文寫作"]	abbr	rule	0	0.5	1	0	initials of 進階法文寫作
+進理計	進階數理統計學	["進階數理統計學"]	abbr	rule	0	0.5	1	0	initials of 進階數理統計學
+進田課	進階田野課程	["進階田野課程"]	abbr	rule	0	0.5	1	0	initials of 進階田野課程
+進研方	進階質性研究方法	["進階質性研究方法"]	abbr	rule	0	0.5	1	0	initials of 進階質性研究方法
+進程設	進階程式設計	["進階程式設計"]	abbr	rule	0	0.5	1	0	initials of 進階程式設計
+進管	進階財務管理	["進階財務管理"]	abbr	rule	0	0.5	1	0	initials of 進階財務管理
+進系研	進階資訊系統研發	["進階資訊系統研發"]	abbr	rule	0	0.5	1	0	initials of 進階資訊系統研發
+進聽練	進階日語聽力練習	["進階日語聽力練習"]	abbr	rule	0	0.5	1	0	initials of 進階日語聽力練習
+進英寫	進階英文寫作	["進階英文寫作"]	abbr	rule	0	0.5	1	0	initials of 進階英文寫作
+進西寫	進階西文寫作	["進階西文寫作"]	abbr	rule	0	0.5	1	0	initials of 進階西文寫作
+進計學	進階經濟計量學	["進階經濟計量學"]	abbr	rule	0	0.5	1	0	initials of 進階經濟計量學
+進語	進階俄語語法	["進階俄語語法"]	abbr	rule	0	0.5	1	0	initials of 進階俄語語法
+進語訓	進階英語口語訓練	["進階英語口語訓練"]	abbr	rule	0	0.5	1	0	initials of 進階英語口語訓練
+進通網	進階行動通訊網路	["進階行動通訊網路"]	abbr	rule	0	0.5	1	0	initials of 進階行動通訊網路
+進體	進階個體經濟學	["進階個體經濟學"]	abbr	rule	0	0.5	1	0	initials of 進階個體經濟學
+道經文	道教經典文獻導讀	["道教經典文獻導讀"]	abbr	rule	0	0.5	1	0	initials of 道教經典文獻導讀
+遙探	遙感探測	["遙感探測"]	abbr	rule	0	0.5	1	0	initials of 遙感探測
+選英	選修英文	["選修英文"]	abbr	rule	0	0.5	1	0	initials of 選修英文
+都媒研	都市媒介研究	["都市媒介研究"]	abbr	rule	0	0.5	1	0	initials of 都市媒介研究
+都更	都市更新	["都市更新"]	abbr	rule	0	0.5	1	0	initials of 都市更新
+鄂哲	鄂蘭哲學導論	["鄂蘭哲學導論"]	abbr	rule	0	0.5	1	0	initials of 鄂蘭哲學導論
+醫與哲	醫學與哲學	["醫學與哲學"]	abbr	rule	0	0.5	1	0	initials of 醫學與哲學
+醫與生	醫療與生活	["醫療與生活"]	abbr	rule	0	0.5	1	0	initials of 醫療與生活
+量投專	量化投資專題	["量化投資專題"]	abbr	rule	0	0.5	1	0	initials of 量化投資專題
+量研	量化研究法	["量化研究法"]	abbr	rule	0	0.5	1	0	initials of 量化研究法
+量計	量子計算	["量子計算"]	abbr	rule	0	0.5	1	0	initials of 量子計算
+金中	金融中介	["金融中介"]	abbr	rule	0	0.5	1	0	initials of 金融中介
+金專研	金融專題研討	["金融專題研討"]	abbr	rule	0	0.5	1	0	initials of 金融專題研討
+金市	金融市場	["金融市場"]	abbr	rule	0	0.5	1	0	initials of 金融市場
+金監專	金融監理專題	["金融監理專題"]	abbr	rule	0	0.5	1	0	initials of 金融監理專題
+金科概	金融科技概論	["金融科技概論"]	abbr	rule	0	0.5	1	0	initials of 金融科技概論
+開創	開放創新	["開放創新"]	abbr	rule	0	0.5	1	0	initials of 開放創新
+開政	開放資料與開放政府	["開放資料與開放政府"]	abbr	rule	0	0.5	1	0	initials of 開放資料與開放政府
+閱人分	閱聽人分析	["閱聽人分析"]	abbr	rule	0	0.5	1	0	initials of 閱聽人分析
+閱人專	閱聽人專題	["閱聽人專題"]	abbr	rule	0	0.5	1	0	initials of 閱聽人專題
+閱指	閱讀指導	["閱讀指導"]	abbr	rule	0	0.5	1	0	initials of 閱讀指導
+閱與圖	閱讀與圖書館	["閱讀與圖書館"]	abbr	rule	0	0.5	1	0	initials of 閱讀與圖書館
+關的話	關於藝術的話題	["關於藝術的話題"]	abbr	rule	0	0.5	1	0	initials of 關於藝術的話題
+阿世概	阿拉伯世界概論	["阿拉伯世界概論"]	abbr	rule	0	0.5	1	0	initials of 阿拉伯世界概論
+阿語法	阿拉伯語詞法學	["阿拉伯語詞法學"]	abbr	rule	0	0.5	1	0	initials of 阿拉伯語詞法學
+阿語結	阿美語語法結構	["阿美語語法結構"]	abbr	rule	0	0.5	1	0	initials of 阿美語語法結構
+隨模運	隨機模型運用	["隨機模型運用"]	abbr	rule	0	0.5	1	0	initials of 隨機模型運用
+隨過	隨機過程	["隨機過程"]	abbr	rule	0	0.5	1	0	initials of 隨機過程
+隱保計	隱私保護計算	["隱私保護計算"]	abbr	rule	0	0.5	1	0	initials of 隱私保護計算
+雄專	雄鷹專題	["雄鷹專題"]	abbr	rule	0	0.5	1	0	initials of 雄鷹專題
+雙教實	雙語教學實習	["雙語教學實習"]	abbr	rule	0	0.5	1	0	initials of 雙語教學實習
+離數	離散數學	["離散數學"]	abbr	rule	0	0.5	1	0	initials of 離散數學
+電動	電腦動畫	["電腦動畫"]	abbr	rule	0	0.5	1	0	initials of 電腦動畫
+電圖	電腦圖學	["電腦圖學"]	abbr	rule	0	0.5	1	0	initials of 電腦圖學
+電審	電腦審計	["電腦審計"]	abbr	rule	0	0.5	1	0	initials of 電腦審計
+電文	電影文學	["電影文學"]	abbr	rule	0	0.5	1	0	initials of 電影文學
+電文研	電視文化研究	["電視文化研究"]	abbr	rule	0	0.5	1	0	initials of 電視文化研究
+電繪	電腦繪圖	["電腦繪圖"]	abbr	rule	0	0.5	1	0	initials of 電腦繪圖
+電與政	電影與政治	["電影與政治"]	abbr	rule	0	0.5	1	0	initials of 電影與政治
+電配概	電影配樂概論	["電影配樂概論"]	abbr	rule	0	0.5	1	0	initials of 電影配樂概論
+電電	電子電路學	["電子電路學"]	abbr	rule	0	0.5	1	0	initials of 電子電路學
+靜影設	靜態影像設計	["靜態影像設計"]	abbr	rule	0	0.5	1	0	initials of 靜態影像設計
+非物	非線性物理	["非線性物理"]	abbr	rule	0	0.5	1	0	initials of 非線性物理
+非組管	非營利組織管理	["非營利組織管理"]	abbr	rule	0	0.5	1	0	initials of 非營利組織管理
+韓寫	韓文寫作	["韓文寫作"]	abbr	rule	0	0.5	1	0	initials of 韓文寫作
+韓政	韓國政治	["韓國政治"]	abbr	rule	0	0.5	1	0	initials of 韓國政治
+韓教	韓國學研究課題(語學與教育)─語言學與韓語教育	["韓國學研究課題(語學與教育)─語言學與韓語教育"]	abbr	rule	0	0.5	1	0	initials of 韓國學研究課題(語學與教育)─語言學與韓語教育
+韓文學	韓文教學實習	["韓文教學實習"]	abbr	rule	0	0.5	1	0	initials of 韓文教學實習
+韓文理	韓國文化理解	["韓國文化理解"]	abbr	rule	0	0.5	1	0	initials of 韓國文化理解
+韓現	韓國現勢	["韓國現勢"]	abbr	rule	0	0.5	1	0	initials of 韓國現勢
+韓經成	韓國經濟成長	["韓國經濟成長"]	abbr	rule	0	0.5	1	0	initials of 韓國經濟成長
+韓語	韓語語法	["韓語語法"]	abbr	rule	0	0.5	1	0	initials of 韓語語法
+音學	音韻學導論	["音韻學導論"]	abbr	rule	0	0.5	1	0	initials of 音韻學導論
+類語	類型語言學	["類型語言學"]	abbr	rule	0	0.5	1	0	initials of 類型語言學
+類電研	類型電影研究	["類型電影研究"]	abbr	rule	0	0.5	1	0	initials of 類型電影研究
+風管	風險管理	["風險管理"]	abbr	rule	0	0.5	1	0	initials of 風險管理
+體能	體育[男女合班]—健康體適能	["體育[男女合班]—健康體適能"]	abbr	rule	0	0.5	1	0	initials of 體育[男女合班]—健康體適能
+高個經	高等個體經濟學	["高等個體經濟學"]	abbr	rule	0	0.5	1	0	initials of 高等個體經濟學
+高印語	高級印尼語	["高級印尼語"]	abbr	rule	0	0.25	1	0	initials of 高級印尼語; 2 names share it
+高品管	高等品質管理	["高等品質管理"]	abbr	rule	0	0.5	1	0	initials of 高等品質管理
+高審	高等審計學	["高等審計學"]	abbr	rule	0	0.5	1	0	initials of 高等審計學
+高數方	高等數量方法	["高等數量方法"]	abbr	rule	0	0.5	1	0	initials of 高等數量方法
+高數統	高等數理統計	["高等數理統計"]	abbr	rule	0	0.5	1	0	initials of 高等數理統計
+高日	高級日語	["高級日語"]	abbr	rule	0	0.5	1	0	initials of 高級日語
+高會計	高級會計學	["高級會計學"]	abbr	rule	0	0.5	1	0	initials of 高級會計學
+高會話	高階俄語會話	["高階俄語會話"]	abbr	rule	0	0.5	1	0	initials of 高階俄語會話
+高機論	高等機率論	["高等機率論"]	abbr	rule	0	0.5	1	0	initials of 高等機率論
+高泰	高級泰語	["高級泰語"]	abbr	rule	0	0.5	1	0	initials of 高級泰語
+高統	高等教育統計	["高等教育統計"]	abbr	rule	0	0.5	1	0	initials of 高等教育統計
+高質研	高等質性研究	["高等質性研究"]	abbr	rule	0	0.5	1	0	initials of 高等質性研究
+高越	高級越語	["高級越語"]	abbr	rule	0	0.5	1	0	initials of 高級越語
+高越語	高級越語會話	["高級越語會話"]	abbr	rule	0	0.5	1	0	initials of 高級越語會話
+五管	五管	["營運與供應鏈管理", "行銷管理", "人力資源管理", "財務管理"]	group	seed	0	0.7	1	1	企管五大管理（生產、行銷、人資、研發、財務）；note 先修五管 5 門、RATE 4 則
+大英	大學英文	["大學英文"]	abbr	seed	0	0.9	1	1	RATE 5 則；學生慣用
+經原	經濟學	["經濟學"]	abbr	seed	0	0.9	1	1	政大的課名是 經濟學；RATE 提到 經濟學原理 的 22 則有 19 則在 經濟學
+經濟學原理	經濟學	["經濟學"]	abbr	seed	0	0.9	1	1	同上；forum 查詢 沒修過經濟學原理可以直接修個經嗎
+計概	計算機概論	["計算機概論"]	abbr	seed	0	0.9	0	0	RATE 73 則
+計程	計算機程式設計	["計算機程式設計"]	abbr	seed	0	0.9	1	1	forum 程式設計 or 計程；RATE 11 則

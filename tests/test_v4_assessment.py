@@ -60,6 +60,15 @@ def test_parse_query():
         "有沒有期中考": ((), ()),
         "有趣的哲學課": ((), ()),
         "不想寫期末報告": ((), ("書面報告",)),
+        "想找跟資料分析有關、不用分組報告的課": ((), ()),   # 有關 is not 要有; 分組報告 is a preference
+        "對行銷有興趣，不要期中考": ((), ("期中考",)),
     }
     for q, want in cases.items():
         assert parse_query(q) == want, q
+
+
+def test_numbering():
+    from src.v4.pipeline import _numbering
+
+    assert _numbering("初會(一)") == "一" and _numbering("統計學（二）") == "二"
+    assert _numbering("個經") is None and _numbering("財政學(上)") == "上"
