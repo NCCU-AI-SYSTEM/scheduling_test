@@ -1,0 +1,248 @@
+{"qid": "r000", "query": "有人修過黃奕彥的藏語嗎？想知道大概怎麼樣", "template": "有人修過{老師}的{課}嗎？想知道大概怎麼樣", "need_tags": ["overall_review"], "school": "NTU", "target": {"name": "藏語", "teacher": "黃奕彥", "ids": ["1142209058002"], "n_reviews": 86}}
+{"qid": "r001", "query": "湛可南 財務管理 評價？考慮下學期修", "template": "{老師} {課} 評價？考慮下學期修", "need_tags": ["overall_review"], "school": "NTU", "target": {"name": "財務管理", "teacher": "湛可南", "ids": ["1142000347021"], "n_reviews": 314}}
+{"qid": "r002", "query": "電影配樂概論這堂值得修嗎", "template": "{課}這堂值得修嗎", "need_tags": ["overall_review"], "school": "NCCU", "target": {"name": "電影配樂概論", "teacher": null, "ids": ["1142403087001"], "n_reviews": 41}}
+{"qid": "r003", "query": "求鄭士卿的風險管理心得，甜涼收穫都想知道", "template": "求{老師}的{課}心得，甜涼收穫都想知道", "need_tags": ["overall_review", "grading", "workload", "career"], "school": "NCCU", "target": {"name": "風險管理", "teacher": "鄭士卿", "ids": ["1142300922001"], "n_reviews": 247}, "ref": {"need": "風險管理", "named_course": null, "named_teacher": "鄭士卿", "must": {}, "must_not": {}, "prefs": [], "intents": ["lookup", "review", "out_of_scope"]}}
+{"qid": "r004", "query": "林進山的課雷不雷", "template": "{老師}的課雷不雷", "need_tags": ["overall_review", "teacher_style"], "school": "NCCU", "target": {"name": "戶外探索設計與實施", "teacher": "林進山", "ids": ["1142102690001"], "n_reviews": 39}, "ref": {"need": "", "named_course": null, "named_teacher": "林進山", "must": {}, "must_not": {}, "prefs": [], "intents": ["review", "lookup"]}}
+{"qid": "r005", "query": "英語語言發展史有人推嗎？還是踩雷", "template": "{課}有人推嗎？還是踩雷", "need_tags": ["overall_review"], "school": "NCCU", "target": {"name": "英語語言發展史", "teacher": null, "ids": ["1142501059011"], "n_reviews": 40}}
+{"qid": "r006", "query": "想知道張惠珍教大陸當代小說選讀的風評，最近一兩年的", "template": "想知道{老師}教{課}的風評，最近一兩年的", "need_tags": ["overall_review", "teacher_style"], "school": "NTU", "target": {"name": "大陸當代小說選讀", "teacher": "張惠珍", "ids": ["1142101023001"], "n_reviews": 38}}
+{"qid": "r007", "query": "原住民族行政及法規換老師之後還一樣好嗎", "template": "{課}換老師之後還一樣好嗎", "need_tags": ["overall_review", "comparison"], "school": "NCCU", "target": {"name": "原住民族行政及法規", "teacher": "吳秦雯", "ids": ["1142601399001", "1142070312001", "1142651A98001"], "n_reviews": 14}}
+{"qid": "r008", "query": "有沒有俞振華新開那門課的評價，去年才開的", "template": "有沒有{老師}新開那門課的評價，去年才開的", "need_tags": ["overall_review"], "school": "NTU", "target": {"name": "美國政府與政治", "teacher": "俞振華", "ids": ["1142252922001"], "n_reviews": 16}}
+{"qid": "r009", "query": "研究所的民法債編總論(一)有學長姐修過嗎", "template": "研究所的{課}有學長姐修過嗎", "need_tags": ["overall_review"], "school": "NTU", "target": {"name": "民法債編總論(一)", "teacher": null, "ids": ["1142601158001"], "n_reviews": 178}}
+{"qid": "r010", "query": "想修跟行銷有關的課，有推薦的嗎", "template": "想修跟行銷有關的課，有推薦的嗎", "need_tags": ["content"], "school": "NCCU", "target": null}
+{"qid": "r011", "query": "有沒有教 Python 資料分析的課，文組也修得來那種", "template": "有沒有教 Python 資料分析的課，文組也修得來那種", "need_tags": ["content", "difficulty", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r012", "query": "政大有開機器學習的課嗎？最好不要太硬", "template": "政大有開機器學習的課嗎？最好不要太硬", "need_tags": ["content", "difficulty"], "school": "NCCU", "target": null}
+{"qid": "r013", "query": "想學投資理財，有沒有不是只給商院的入門課", "template": "想學投資理財，有沒有不是只給商院的入門課", "need_tags": ["content", "eligibility"], "school": "NTU", "target": null}
+{"qid": "r014", "query": "有沒有在講台灣史的通識", "template": "有沒有在講台灣史的通識", "need_tags": ["content", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r015", "query": "想找能練簡報跟口條的課", "template": "想找能練簡報跟口條的課", "need_tags": ["content"], "school": "general", "target": null}
+{"qid": "r016", "query": "想修心理學相關的通識，外院可以選的", "template": "想修心理學相關的通識，外院可以選的", "need_tags": ["content", "credit_req", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r017", "query": "有沒有教 Excel 或 SPSS 這種之後工作用得到的工具課", "template": "有沒有教 Excel 或 SPSS 這種之後工作用得到的工具課", "need_tags": ["content", "career"], "school": "general", "target": null}
+{"qid": "r018", "query": "想修電影相關的課，看片寫心得那種", "template": "想修電影相關的課，看片寫心得那種", "need_tags": ["content", "workload"], "school": "NCCU", "target": null}
+{"qid": "r019", "query": "有沒有跟 AI、生成式 AI 應用有關的課", "template": "有沒有跟 AI、生成式 AI 應用有關的課", "need_tags": ["content"], "school": "NCCU", "target": null}
+{"qid": "r020", "query": "非法律系想懂一點民法，有沒有適合的入門課", "template": "非法律系想懂一點民法，有沒有適合的入門課", "need_tags": ["content", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r021", "query": "零基礎想學日文，該選哪一門", "template": "零基礎想學日文，該選哪一門", "need_tags": ["content", "eligibility", "difficulty"], "school": "NTU", "target": null}
+{"qid": "r022", "query": "有沒有講 ESG 永續或氣候變遷的課", "template": "有沒有講 ESG 永續或氣候變遷的課", "need_tags": ["content"], "school": "general", "target": null, "ref": {"need": "ESG 永續或氣候變遷", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["search"]}}
+{"qid": "r023", "query": "想找偏實作、期末要做專題的資料科學課", "template": "想找偏實作、期末要做專題的資料科學課", "need_tags": ["content", "teacher_style"], "school": "NCCU", "target": null}
+{"qid": "r024", "query": "外系能修的新聞寫作課有哪些", "template": "外系能修的新聞寫作課有哪些", "need_tags": ["content", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r025", "query": "有沒有教設計思考或使用者研究的課", "template": "有沒有教設計思考或使用者研究的課", "need_tags": ["content"], "school": "NCCU", "target": null}
+{"qid": "r026", "query": "想修哲學但怕聽不懂，有比較入門的嗎", "template": "想修哲學但怕聽不懂，有比較入門的嗎", "need_tags": ["content", "difficulty"], "school": "NCCU", "target": null}
+{"qid": "r027", "query": "推薦數學系以外也能修的數學課", "template": "推薦數學系以外也能修的數學課", "need_tags": ["content", "eligibility"], "school": "NTU", "target": null, "ref": {"need": "數學課", "named_course": null, "named_teacher": null, "must": {"unit": ["數學系"]}, "must_not": {}, "prefs": [], "intents": ["search"]}}
+{"qid": "r028", "query": "有沒有跟運動科學或健身有關的通識", "template": "有沒有跟運動科學或健身有關的通識", "need_tags": ["content", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r029", "query": "租稅法(二)實際上都在教什麼？跟大綱寫的差多少", "template": "{課}實際上都在教什麼？跟大綱寫的差多少", "need_tags": ["content"], "school": "NTU", "target": {"name": "租稅法(二)", "teacher": null, "ids": ["1142205063011"], "n_reviews": 259}}
+{"qid": "r030", "query": "想學統計但數學很爛，有沒有不用推公式的統計課", "template": "想學統計但數學很爛，有沒有不用推公式的統計課", "need_tags": ["content", "difficulty"], "school": "NCCU", "target": null}
+{"qid": "r031", "query": "有沒有講國際關係但不用讀一堆英文文獻的課", "template": "有沒有講國際關係但不用讀一堆英文文獻的課", "need_tags": ["content", "workload", "language"], "school": "NCCU", "target": null}
+{"qid": "r032", "query": "想了解宗教或神話的課", "template": "想了解宗教或神話的課", "need_tags": ["content"], "school": "general", "target": null}
+{"qid": "r033", "query": "有沒有教寫程式做網站的，給完全沒碰過的人", "template": "有沒有教寫程式做網站的，給完全沒碰過的人", "need_tags": ["content", "difficulty"], "school": "general", "target": null}
+{"qid": "r034", "query": "想修跟博物館、策展有關的課", "template": "想修跟博物館、策展有關的課", "need_tags": ["content"], "school": "NCCU", "target": null}
+{"qid": "r035", "query": "有沒有東南亞語或少見語言的課可以修", "template": "有沒有東南亞語或少見語言的課可以修", "need_tags": ["content", "language"], "school": "NTU", "target": null}
+{"qid": "r036", "query": "想學財報怎麼看，有沒有非會計系的財報分析課", "template": "想學財報怎麼看，有沒有非會計系的財報分析課", "need_tags": ["content", "eligibility"], "school": "NTU", "target": null, "ref": {"need": "財報分析", "named_course": null, "named_teacher": null, "must": {}, "must_not": {"unit": ["會計系"]}, "prefs": [], "intents": ["search"]}}
+{"qid": "r037", "query": "有沒有教怎麼做田野調查或訪談的課", "template": "有沒有教怎麼做田野調查或訪談的課", "need_tags": ["content"], "school": "NCCU", "target": null, "ref": {"need": "田野調查或訪談", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["search"]}}
+{"qid": "r038", "query": "想找講性別議題的通識", "template": "想找講性別議題的通識", "need_tags": ["content", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r039", "query": "有沒有跟音樂欣賞有關，期末不用考試的", "template": "有沒有跟音樂欣賞有關，期末不用考試的", "need_tags": ["content", "workload"], "school": "NCCU", "target": null, "ref": {"need": "音樂欣賞", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["search"]}}
+{"qid": "r040", "query": "想上可以去校外參訪或實作的課", "template": "想上可以去校外參訪或實作的課", "need_tags": ["content", "format"], "school": "general", "target": null}
+{"qid": "r041", "query": "有教量化研究方法、會用 R 的課嗎", "template": "有教量化研究方法、會用 R 的課嗎", "need_tags": ["content"], "school": "NCCU", "target": null}
+{"qid": "r042", "query": "想修跟創業有關的課，最好有業師", "template": "想修跟創業有關的課，最好有業師", "need_tags": ["content", "teacher_style"], "school": "NTU", "target": null}
+{"qid": "r043", "query": "想找能補政治學基礎的課，準備轉系用", "template": "想找能補政治學基礎的課，準備轉系用", "need_tags": ["content", "career"], "school": "NCCU", "target": null}
+{"qid": "r044", "query": "中文系以外的人可以修的文學課有推薦嗎", "template": "中文系以外的人可以修的文學課有推薦嗎", "need_tags": ["content", "eligibility"], "school": "NCCU", "target": null, "ref": {"need": "文學", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["search"]}}
+{"qid": "r045", "query": "有沒有幫助了解中國大陸政治的課", "template": "有沒有幫助了解中國大陸政治的課", "need_tags": ["content"], "school": "NCCU", "target": null}
+{"qid": "r046", "query": "想修醫療或健康相關的通識，自然通識", "template": "想修醫療或健康相關的通識，自然通識", "need_tags": ["content", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r047", "query": "後來覺得最實用的課是哪些？想先修起來", "template": "後來覺得最實用的課是哪些？想先修起來", "need_tags": ["content", "career"], "school": "NTU", "target": null}
+{"qid": "r048", "query": "有沒有不用分組報告的通識", "template": "有沒有不用分組報告的通識", "need_tags": ["workload", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r049", "query": "專業法文檢定訓練(B2)會點名嗎？點名佔多少", "template": "{課}會點名嗎？點名佔多少", "need_tags": ["workload", "grading"], "school": "NCCU", "target": {"name": "專業法文檢定訓練(B2)", "teacher": null, "ids": ["1142509887001"], "n_reviews": 16}, "ref": {"need": "", "named_course": "專業法文檢定訓練(B2)", "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["lookup"]}}
+{"qid": "r050", "query": "求不點名、只交期末報告的課", "template": "求不點名、只交期末報告的課", "need_tags": ["workload"], "school": "general", "target": null}
+{"qid": "r051", "query": "蔡炎龍的課 loading 重嗎？是不是每週都有作業", "template": "{老師}的課 loading 重嗎？是不是每週都有作業", "need_tags": ["workload", "teacher_style"], "school": "NCCU", "target": {"name": "深度學習的原理與實務上的應用", "teacher": "蔡炎龍", "ids": ["1142701908001"], "n_reviews": 87}}
+{"qid": "r052", "query": "有沒有沒期中期末考、只交報告的選修", "template": "有沒有沒期中期末考、只交報告的選修", "need_tags": ["workload"], "school": "NCCU", "target": null}
+{"qid": "r053", "query": "想找涼一點的課塞學分，週四下午最好", "template": "想找涼一點的課塞學分，週四下午最好", "need_tags": ["workload", "time", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r054", "query": "這學期必修很重，想找一門輕鬆的 2 學分課平衡", "template": "這學期必修很重，想找一門輕鬆的 2 學分課平衡", "need_tags": ["workload", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r055", "query": "分組是老師分還是自己找？很怕遇到雷組員", "template": "分組是老師分還是自己找？很怕遇到雷組員", "need_tags": ["workload", "teacher_style"], "school": "general", "target": null}
+{"qid": "r056", "query": "戲劇概論閱讀量大嗎？每週要讀幾篇", "template": "{課}閱讀量大嗎？每週要讀幾篇", "need_tags": ["workload"], "school": "NCCU", "target": {"name": "戲劇概論", "teacher": null, "ids": ["1142405949001"], "n_reviews": 73}}
+{"qid": "r057", "query": "期末是考試還是交報告？", "template": "期末是考試還是交報告？", "need_tags": ["workload", "grading"], "school": "NCCU", "target": null, "ref": {"need": "", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["out_of_scope"]}}
+{"qid": "r058", "query": "會不會常常隨堂小考", "template": "會不會常常隨堂小考", "need_tags": ["workload"], "school": "NCCU", "target": null}
+{"qid": "r059", "query": "推薦全線上、不在意出席和分組的課", "template": "推薦全線上、不在意出席和分組的課", "need_tags": ["workload", "format"], "school": "NTU", "target": null}
+{"qid": "r060", "query": "有沒有作業可以上課當場做完、回家不用碰的課", "template": "有沒有作業可以上課當場做完、回家不用碰的課", "need_tags": ["workload"], "school": "general", "target": null}
+{"qid": "r061", "query": "這堂需要課外時間很多嗎？我有打工", "template": "這堂需要課外時間很多嗎？我有打工", "need_tags": ["workload"], "school": "general", "target": null}
+{"qid": "r062", "query": "商事法要上台報告幾次", "template": "{課}要上台報告幾次", "need_tags": ["workload"], "school": "NCCU", "target": {"name": "商事法", "teacher": null, "ids": ["1142000604001"], "n_reviews": 36}}
+{"qid": "r063", "query": "找一門不用買課本、講義老師會給的", "template": "找一門不用買課本、講義老師會給的", "need_tags": ["workload", "logistics"], "school": "general", "target": null}
+{"qid": "r064", "query": "有沒有那種去上課聽聽就好的營養學分", "template": "有沒有那種去上課聽聽就好的營養學分", "need_tags": ["workload", "grading"], "school": "NCCU", "target": null}
+{"qid": "r065", "query": "求水課，這學期真的太累", "template": "求水課，這學期真的太累", "need_tags": ["workload"], "school": "NCCU", "target": null}
+{"qid": "r066", "query": "不想要每週交心得的通識，有嗎", "template": "不想要每週交心得的通識，有嗎", "need_tags": ["workload", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r067", "query": "古如君會不會用大頭照私下點名", "template": "{老師}會不會用大頭照私下點名", "need_tags": ["workload", "teacher_style"], "school": "general", "target": {"name": "菁英商務英語: 團隊領導與商務社交技巧", "teacher": "古如君", "ids": ["1142301779001"], "n_reviews": 42}}
+{"qid": "r068", "query": "有沒有不用上台、只要寫書面報告的課", "template": "有沒有不用上台、只要寫書面報告的課", "need_tags": ["workload"], "school": "general", "target": null}
+{"qid": "r069", "query": "這門要不要自己做實驗或收資料？", "template": "這門要不要自己做實驗或收資料？", "need_tags": ["workload"], "school": "general", "target": null, "ref": {"need": "", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["lookup"]}}
+{"qid": "r070", "query": "有沒有甜一點的通識，大部分人 A 以上的那種", "template": "有沒有甜一點的通識，大部分人 A 以上的那種", "need_tags": ["grading", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r071", "query": "求甜涼課，不要點名", "template": "求甜涼課，不要點名", "need_tags": ["grading", "workload"], "school": "general", "target": null}
+{"qid": "r072", "query": "林碧炤給分甜嗎？會不會當人", "template": "{老師}給分甜嗎？會不會當人", "need_tags": ["grading", "teacher_style"], "school": "NCCU", "target": {"name": "國際企業與國際關係", "teacher": "林碧炤", "ids": ["1142203928001", "1142922910001"], "n_reviews": 47}}
+{"qid": "r073", "query": "預防醫學與校園健康大概多少比例拿 A", "template": "{課}大概多少比例拿 A", "need_tags": ["grading"], "school": "NTU", "target": {"name": "預防醫學與校園健康", "teacher": null, "ids": ["1142090088001"], "n_reviews": 742}}
+{"qid": "r074", "query": "想拉 GPA，有沒有分數好拿但還是學得到東西的", "template": "想拉 GPA，有沒有分數好拿但還是學得到東西的", "need_tags": ["grading", "content"], "school": "NCCU", "target": null}
+{"qid": "r075", "query": "有沒有 Pass/Fail 又有趣的課", "template": "有沒有 Pass/Fail 又有趣的課", "need_tags": ["grading", "content"], "school": "NTU", "target": null}
+{"qid": "r076", "query": "期中考爛掉還救得回來嗎？李珮玲會調分嗎", "template": "期中考爛掉還救得回來嗎？{老師}會調分嗎", "need_tags": ["grading", "teacher_style"], "school": "NTU", "target": {"name": "土耳其語語法與寫作", "teacher": "李珮玲", "ids": ["1142508082002"], "n_reviews": 15}}
+{"qid": "r077", "query": "高級日語評分方式怎麼算？出席佔幾趴", "template": "{課}評分方式怎麼算？出席佔幾趴", "need_tags": ["grading", "workload"], "school": "NCCU", "target": {"name": "高級日語", "teacher": null, "ids": ["1142506008002"], "n_reviews": 48}}
+{"qid": "r078", "query": "這門算紮實分還是很甜", "template": "這門算紮實分還是很甜", "need_tags": ["grading"], "school": "NTU", "target": null, "ref": {"need": "", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["review"]}}
+{"qid": "r079", "query": "廖元豪是不是大刀？聽說會當三分之一", "template": "{老師}是不是大刀？聽說會當三分之一", "need_tags": ["grading", "teacher_style"], "school": "NCCU", "target": {"name": "基本權", "teacher": "廖元豪", "ids": ["1142601373001"], "n_reviews": 66}}
+{"qid": "r080", "query": "推薦涼甜的課，不一定要通識", "template": "推薦涼甜的課，不一定要通識", "need_tags": ["grading", "workload"], "school": "NTU", "target": null}
+{"qid": "r081", "query": "有沒有可以歐趴的選修", "template": "有沒有可以歐趴的選修", "need_tags": ["grading"], "school": "general", "target": null}
+{"qid": "r082", "query": "要拿 A+ 難嗎", "template": "要拿 A+ 難嗎", "need_tags": ["grading", "difficulty"], "school": "NCCU", "target": null}
+{"qid": "r083", "query": "這門有沒有開根號之類的調分", "template": "這門有沒有開根號之類的調分", "need_tags": ["grading"], "school": "general", "target": null}
+{"qid": "r084", "query": "給分好的體育課有哪些", "template": "給分好的體育課有哪些", "need_tags": ["grading", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r085", "query": "經濟學平均大概落在 B+ 還是 A-", "template": "{課}平均大概落在 B+ 還是 A-", "need_tags": ["grading"], "school": "NTU", "target": {"name": "經濟學", "teacher": null, "ids": ["1142000219022"], "n_reviews": 1380}}
+{"qid": "r086", "query": "有沒有期末只要有交就給過的課", "template": "有沒有期末只要有交就給過的課", "need_tags": ["grading", "workload"], "school": "general", "target": null}
+{"qid": "r087", "query": "李佳玲給分是看排名還是看絕對分數", "template": "{老師}給分是看排名還是看絕對分數", "need_tags": ["grading", "teacher_style"], "school": "NCCU", "target": {"name": "成本管理會計(二)", "teacher": "李佳玲", "ids": ["1142000346011"], "n_reviews": 135}}
+{"qid": "r088", "query": "想要穩拿 A 的 2 學分選修，什麼領域都可以", "template": "想要穩拿 A 的 2 學分選修，什麼領域都可以", "need_tags": ["grading", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r089", "query": "聽說語用學很甜但最近變硬了，是真的嗎", "template": "聽說{課}很甜但最近變硬了，是真的嗎", "need_tags": ["grading", "difficulty", "overall_review"], "school": "NCCU", "target": {"name": "語用學", "teacher": null, "ids": ["1142070257001"], "n_reviews": 10}}
+{"qid": "r090", "query": "佛系給分的老師有哪些", "template": "佛系給分的老師有哪些", "need_tags": ["grading", "teacher_style"], "school": "NCCU", "target": null, "ref": {"need": "", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [{"aspect": "grading", "want": "high"}], "intents": ["lookup"]}}
+{"qid": "r091", "query": "找一門分數穩的英文授課課拉平均", "template": "找一門分數穩的英文授課課拉平均", "need_tags": ["grading", "language"], "school": "NCCU", "target": null}
+{"qid": "r092", "query": "趙世偉人好嗎？上課會不會很無聊", "template": "{老師}人好嗎？上課會不會很無聊", "need_tags": ["teacher_style"], "school": "NCCU", "target": {"name": "貨幣理論與政策", "teacher": "趙世偉", "ids": ["1142302043001"], "n_reviews": 16}}
+{"qid": "r093", "query": "這個老師是唸投影片型還是會互動討論", "template": "這個老師是唸投影片型還是會互動討論", "need_tags": ["teacher_style"], "school": "NTU", "target": null}
+{"qid": "r094", "query": "想找老師很佛、不太為難學生的課", "template": "想找老師很佛、不太為難學生的課", "need_tags": ["teacher_style", "grading"], "school": "NCCU", "target": null}
+{"qid": "r095", "query": "蔡莫妮很電嗎？聽說期中電很多人", "template": "{老師}很電嗎？聽說期中電很多人", "need_tags": ["teacher_style", "grading", "difficulty"], "school": "NCCU", "target": {"name": "初級德文聽力會話", "teacher": "蔡莫妮", "ids": ["1142509005002"], "n_reviews": 95}}
+{"qid": "r096", "query": "上課可以用平板看電子課本嗎？怕老師覺得在做別的事", "template": "上課可以用平板看電子課本嗎？怕老師覺得在做別的事", "need_tags": ["teacher_style", "logistics"], "school": "NCCU", "target": null}
+{"qid": "r097", "query": "廖文宏會不會常點人回答問題", "template": "{老師}會不會常點人回答問題", "need_tags": ["teacher_style"], "school": "NCCU", "target": {"name": "數位系統導論", "teacher": "廖文宏", "ids": ["1142703014001"], "n_reviews": 76}, "ref": {"need": "", "named_course": null, "named_teacher": "廖文宏", "must": {}, "must_not": {}, "prefs": [], "intents": ["lookup", "review"]}}
+{"qid": "r098", "query": "陳信木嚴禁遲到嗎", "template": "{老師}嚴禁遲到嗎", "need_tags": ["teacher_style", "workload"], "school": "NTU", "target": {"name": "社會統計(一)", "teacher": "陳信木", "ids": ["1142204045001"], "n_reviews": 275}}
+{"qid": "r099", "query": "想找講課清楚、適合自學差的人的老師", "template": "想找講課清楚、適合自學差的人的老師", "need_tags": ["teacher_style"], "school": "NCCU", "target": null, "ref": {"need": "", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [{"aspect": "teaching", "want": "high"}, {"aspect": "difficulty", "want": "low"}], "intents": ["search"]}}
+{"qid": "r100", "query": "邱淑怡是板書派還是 PPT 派？我比較喜歡板書", "template": "{老師}是板書派還是 PPT 派？我比較喜歡板書", "need_tags": ["teacher_style"], "school": "NTU", "target": {"name": "程式設計概論", "teacher": "邱淑怡", "ids": ["1142046001001", "1142046001021", "1142046001011", "1142046001031"], "n_reviews": 603}}
+{"qid": "r101", "query": "老師上課會不會一直離題講自己的事", "template": "老師上課會不會一直離題講自己的事", "need_tags": ["teacher_style"], "school": "general", "target": null}
+{"qid": "r102", "query": "有沒有老師很願意回答問題、office hour 找得到人的", "template": "有沒有老師很願意回答問題、office hour 找得到人的", "need_tags": ["teacher_style"], "school": "general", "target": null}
+{"qid": "r103", "query": "李慧琳對 AI 工具的態度？作業可以用 ChatGPT 嗎", "template": "{老師}對 AI 工具的態度？作業可以用 ChatGPT 嗎", "need_tags": ["teacher_style", "workload"], "school": "NCCU", "target": {"name": "國際貿易", "teacher": "李慧琳", "ids": ["1142208020011", "1142266909001"], "n_reviews": 22}}
+{"qid": "r104", "query": "這門是業師上還是本人上？聽說常請助教代課", "template": "這門是業師上還是本人上？聽說常請助教代課", "need_tags": ["teacher_style"], "school": "general", "target": null}
+{"qid": "r105", "query": "鄭霈絨會很在意出席嗎還是看表現", "template": "{老師}會很在意出席嗎還是看表現", "need_tags": ["teacher_style", "workload"], "school": "NTU", "target": {"name": "創意與設計", "teacher": "鄭霈絨", "ids": ["1142405944001"], "n_reviews": 48}, "ref": {"need": "", "named_course": null, "named_teacher": "鄭霈絨", "must": {}, "must_not": {}, "prefs": [{"aspect": "attendance", "want": "high"}], "intents": ["lookup"]}}
+{"qid": "r106", "query": "聽說某群的兩位老師風評都不好，那要選誰", "template": "聽說某群的兩位老師風評都不好，那要選誰", "need_tags": ["teacher_style", "comparison"], "school": "NCCU", "target": null}
+{"qid": "r107", "query": "週三下午有什麼通識可以修", "template": "週三下午有什麼通識可以修", "need_tags": ["time", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r108", "query": "不要早八，有沒有下午的體育課", "template": "不要早八，有沒有下午的體育課", "need_tags": ["time", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r109", "query": "我週五想放假，有哪些選修不在週五", "template": "我週五想放假，有哪些選修不在週五", "need_tags": ["time"], "school": "NCCU", "target": null, "ref": {"need": "", "named_course": null, "named_teacher": null, "must": {"kind": ["選修"]}, "must_not": {"weekday": [5]}, "prefs": [], "intents": ["search"]}}
+{"qid": "r110", "query": "一 D56 這個時段有沒有外院可以修的課", "template": "一 D56 這個時段有沒有外院可以修的課", "need_tags": ["time", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r111", "query": "微積分甲跟我的必修衝堂，有別的時段的班嗎", "template": "{課}跟我的必修衝堂，有別的時段的班嗎", "need_tags": ["time", "comparison"], "school": "NTU", "target": {"name": "微積分甲", "teacher": null, "ids": ["1142000713012"], "n_reviews": 15}}
+{"qid": "r112", "query": "晚上 EFG 有開什麼有趣的課", "template": "晚上 EFG 有開什麼有趣的課", "need_tags": ["time", "content"], "school": "NCCU", "target": null}
+{"qid": "r113", "query": "二 34 跟四 34 都空著，可以填什麼", "template": "二 34 跟四 34 都空著，可以填什麼", "need_tags": ["time"], "school": "NCCU", "target": null}
+{"qid": "r114", "query": "想找連三節、不要拆成兩天的課", "template": "想找連三節、不要拆成兩天的課", "need_tags": ["time"], "school": "NCCU", "target": null}
+{"qid": "r115", "query": "中午 56 有沒有不錯的通識", "template": "中午 56 有沒有不錯的通識", "need_tags": ["time", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r116", "query": "我只有週二跟週四有空，幫我找 2 學分的課", "template": "我只有週二跟週四有空，幫我找 2 學分的課", "need_tags": ["time", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r117", "query": "兩門衝堂的課可以都選嗎？", "template": "兩門衝堂的課可以都選嗎？", "need_tags": ["time", "logistics"], "school": "NTU", "target": null}
+{"qid": "r118", "query": "早上 12 節的課有比較不擠的嗎", "template": "早上 12 節的課有比較不擠的嗎", "need_tags": ["time", "popularity"], "school": "NCCU", "target": null}
+{"qid": "r119", "query": "一整天都在山下比較好，有沒有山下教室的選修", "template": "一整天都在山下比較好，有沒有山下教室的選修", "need_tags": ["time", "logistics"], "school": "NCCU", "target": null}
+{"qid": "r120", "query": "週一到週三下午都滿了，剩週四週五能排什麼", "template": "週一到週三下午都滿了，剩週四週五能排什麼", "need_tags": ["time"], "school": "NCCU", "target": null}
+{"qid": "r121", "query": "我還差 4 學分社會通識，有推薦的嗎", "template": "我還差 4 學分社會通識，有推薦的嗎", "need_tags": ["credit_req"], "school": "NCCU", "target": null}
+{"qid": "r122", "query": "中級法文閱讀算人文通識還是跨領域？", "template": "{課}算人文通識還是跨領域？", "need_tags": ["credit_req"], "school": "NCCU", "target": {"name": "中級法文閱讀", "teacher": null, "ids": ["1142509062002"], "n_reviews": 43}}
+{"qid": "r123", "query": "外系選修算不算進畢業學分", "template": "外系選修算不算進畢業學分", "need_tags": ["credit_req", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r124", "query": "大學英文抵免之後要補什麼課", "template": "大學英文抵免之後要補什麼課", "need_tags": ["credit_req", "language"], "school": "NCCU", "target": null}
+{"qid": "r125", "query": "核心通識跟一般通識差在哪？我該修哪種", "template": "核心通識跟一般通識差在哪？我該修哪種", "need_tags": ["credit_req"], "school": "NCCU", "target": null}
+{"qid": "r126", "query": "輔系要修的課可以跟本系選修重複認列嗎", "template": "輔系要修的課可以跟本系選修重複認列嗎", "need_tags": ["credit_req"], "school": "NCCU", "target": null}
+{"qid": "r127", "query": "學分學程的課可以順便算通識嗎", "template": "學分學程的課可以順便算通識嗎", "need_tags": ["credit_req"], "school": "NCCU", "target": null}
+{"qid": "r128", "query": "還差一門體育，有沒有比較好選上的", "template": "還差一門體育，有沒有比較好選上的", "need_tags": ["credit_req", "popularity"], "school": "NCCU", "target": null}
+{"qid": "r129", "query": "大四最後一學期還差 3 學分自然通識，選什麼最保險", "template": "大四最後一學期還差 3 學分自然通識，選什麼最保險", "need_tags": ["credit_req", "popularity", "grading"], "school": "NCCU", "target": null}
+{"qid": "r130", "query": "通識學分怎麼採計，修超過會算自由學分嗎", "template": "通識學分怎麼採計，修超過會算自由學分嗎", "need_tags": ["credit_req"], "school": "NTU", "target": null}
+{"qid": "r131", "query": "數學系新生微積分可以免修嗎", "template": "數學系新生微積分可以免修嗎", "need_tags": ["credit_req", "eligibility"], "school": "NTU", "target": null}
+{"qid": "r132", "query": "依我目前修過的課，畢業還缺哪些？", "template": "依我目前修過的課，畢業還缺哪些？", "need_tags": ["credit_req"], "school": "NCCU", "target": null}
+{"qid": "r133", "query": "想修統計碩士學程，大學部要先修哪幾門", "template": "想修統計碩士學程，大學部要先修哪幾門", "need_tags": ["credit_req", "career"], "school": "NTU", "target": null}
+{"qid": "r134", "query": "微學分的課怎麼算？可以累積成一學分嗎", "template": "微學分的課怎麼算？可以累積成一學分嗎", "need_tags": ["credit_req"], "school": "NCCU", "target": null}
+{"qid": "r135", "query": "我是 112 入學的，通識架構跟學長姐一樣嗎", "template": "我是 112 入學的，通識架構跟學長姐一樣嗎", "need_tags": ["credit_req"], "school": "NCCU", "target": null}
+{"qid": "r136", "query": "中文通識還差 2 學分，有沒有寫作負擔小的", "template": "中文通識還差 2 學分，有沒有寫作負擔小的", "need_tags": ["credit_req", "workload"], "school": "NCCU", "target": null, "ref": {"need": "中文通識", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [{"aspect": "workload", "want": "low"}], "intents": ["search"]}}
+{"qid": "r137", "query": "外院可以修會計系的中級會計嗎？還是限本系", "template": "外院可以修會計系的中級會計嗎？還是限本系", "need_tags": ["eligibility"], "school": "NCCU", "target": null}
+{"qid": "r138", "query": "大一可以修大三的選修嗎", "template": "大一可以修大三的選修嗎", "need_tags": ["eligibility"], "school": "NCCU", "target": null}
+{"qid": "r139", "query": "電視文化研究一定要先修過統計學嗎？沒修過能選嗎", "template": "{課}一定要先修過統計學嗎？沒修過能選嗎", "need_tags": ["eligibility", "difficulty"], "school": "NTU", "target": {"name": "電視文化研究", "teacher": null, "ids": ["1142401118001"], "n_reviews": 12}}
+{"qid": "r140", "query": "我是雙主修，選得到奈米科技導論嗎還是名額都給本系", "template": "我是雙主修，選得到{課}嗎還是名額都給本系", "need_tags": ["eligibility", "popularity"], "school": "NCCU", "target": {"name": "奈米科技導論", "teacher": null, "ids": ["1142782024001"], "n_reviews": 11}}
+{"qid": "r141", "query": "非本院可以選 EMI 的政治學概論嗎", "template": "非本院可以選 EMI 的政治學概論嗎", "need_tags": ["eligibility", "language"], "school": "NCCU", "target": null}
+{"qid": "r142", "query": "大學部可以修研究所的課嗎", "template": "大學部可以修研究所的課嗎", "need_tags": ["eligibility"], "school": "NCCU", "target": null}
+{"qid": "r143", "query": "外系可以加簽西方文學經典與人文思維嗎", "template": "外系可以加簽{課}嗎", "need_tags": ["eligibility", "popularity"], "school": "NTU", "target": {"name": "西方文學經典與人文思維", "teacher": null, "ids": ["1142041135011"], "n_reviews": 112}}
+{"qid": "r144", "query": "經濟全球化與台商大陸投資備註寫限大二以上，大一真的完全不行嗎", "template": "{課}備註寫限大二以上，大一真的完全不行嗎", "need_tags": ["eligibility"], "school": "NCCU", "target": {"name": "經濟全球化與台商大陸投資", "teacher": null, "ids": ["1142042051001"], "n_reviews": 130}}
+{"qid": "r145", "query": "輔系生修這門算本系還是外系身分", "template": "輔系生修這門算本系還是外系身分", "need_tags": ["eligibility", "popularity"], "school": "NCCU", "target": null}
+{"qid": "r146", "query": "碩士生要選大學部日文課，先修是大學修的可以嗎", "template": "碩士生要選大學部日文課，先修是大學修的可以嗎", "need_tags": ["eligibility"], "school": "NTU", "target": null, "ref": {"need": "日文", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["eligibility"]}}
+{"qid": "r147", "query": "這門課有限男生或女生班嗎", "template": "這門課有限男生或女生班嗎", "need_tags": ["eligibility"], "school": "NCCU", "target": null}
+{"qid": "r148", "query": "沒修過經濟學原理可以直接修個經嗎", "template": "沒修過經濟學原理可以直接修個經嗎", "need_tags": ["eligibility", "difficulty"], "school": "NCCU", "target": null}
+{"qid": "r149", "query": "計量經濟學很硬嗎？數學要多好", "template": "計量經濟學很硬嗎？數學要多好", "need_tags": ["difficulty"], "school": "NCCU", "target": null}
+{"qid": "r150", "query": "這門對沒程式底子的人會不會太難", "template": "這門對沒程式底子的人會不會太難", "need_tags": ["difficulty", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r151", "query": "民法總則好過嗎？聽說很容易被當", "template": "民法總則好過嗎？聽說很容易被當", "need_tags": ["difficulty", "grading"], "school": "NCCU", "target": null, "ref": {"need": "", "named_course": "民法總則", "named_teacher": null, "must": {}, "must_not": {}, "prefs": [{"aspect": "difficulty", "want": "low"}], "intents": ["review"]}}
+{"qid": "r152", "query": "想挑戰硬一點但真的學得到東西的課", "template": "想挑戰硬一點但真的學得到東西的課", "need_tags": ["difficulty", "content"], "school": "NCCU", "target": null}
+{"qid": "r153", "query": "個經哪個老師比較不硬", "template": "個經哪個老師比較不硬", "need_tags": ["difficulty", "comparison"], "school": "NCCU", "target": null}
+{"qid": "r154", "query": "行銷管理考試難度怎樣？考古題有用嗎", "template": "{課}考試難度怎樣？考古題有用嗎", "need_tags": ["difficulty", "logistics"], "school": "NTU", "target": {"name": "行銷管理", "teacher": null, "ids": ["1142000350001"], "n_reviews": 555}}
+{"qid": "r155", "query": "財務管理難度如何", "template": "財務管理難度如何", "need_tags": ["difficulty"], "school": "NTU", "target": null, "ref": {"need": "", "named_course": "財務管理", "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["lookup", "review"]}}
+{"qid": "r156", "query": "歐洲社會與歐盟政經問題跟高中數學比難多少", "template": "{課}跟高中數學比難多少", "need_tags": ["difficulty"], "school": "general", "target": {"name": "歐洲社會與歐盟政經問題", "teacher": null, "ids": ["1142509932001", "1142070250001"], "n_reviews": 105}}
+{"qid": "r157", "query": "如果數學只有學測程度，國際組織跟得上嗎", "template": "如果數學只有學測程度，{課}跟得上嗎", "need_tags": ["difficulty", "eligibility"], "school": "NCCU", "target": {"name": "國際組織", "teacher": null, "ids": ["1142010116001"], "n_reviews": 13}}
+{"qid": "r158", "query": "聽說英語語言學概論是系上大魔王，真的嗎", "template": "聽說{課}是系上大魔王，真的嗎", "need_tags": ["difficulty", "overall_review"], "school": "NCCU", "target": {"name": "英語語言學概論", "teacher": null, "ids": ["1142501009002"], "n_reviews": 116}}
+{"qid": "r159", "query": "有沒有英文授課但不會太難的通識", "template": "有沒有英文授課但不會太難的通識", "need_tags": ["language", "difficulty", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r160", "query": "日語聽力練習寫 EMI，是全英文還是中英夾雜？考試可以寫中文嗎", "template": "{課}寫 EMI，是全英文還是中英夾雜？考試可以寫中文嗎", "need_tags": ["language"], "school": "NTU", "target": {"name": "日語聽力練習", "teacher": null, "ids": ["1142010059002"], "n_reviews": 42}}
+{"qid": "r161", "query": "不想修英文授課的，有中文班的國際金融嗎", "template": "不想修英文授課的，有中文班的國際金融嗎", "need_tags": ["language", "comparison"], "school": "NCCU", "target": null, "ref": {"need": "國際金融", "named_course": null, "named_teacher": null, "must": {"course_lang": ["中文"]}, "must_not": {"course_lang": ["英文"]}, "prefs": [], "intents": ["search"]}}
+{"qid": "r162", "query": "想練英文口說，有沒有討論很多的全英課", "template": "想練英文口說，有沒有討論很多的全英課", "need_tags": ["language", "teacher_style"], "school": "NCCU", "target": null, "ref": {"need": "英文口說", "named_course": null, "named_teacher": null, "must": {"course_lang": ["English"]}, "must_not": {}, "prefs": [{"aspect": "group_work", "want": "high"}], "intents": ["search"]}}
+{"qid": "r163", "query": "有沒有外籍老師上的課但聽得懂的那種", "template": "有沒有外籍老師上的課但聽得懂的那種", "need_tags": ["language", "teacher_style"], "school": "NCCU", "target": null}
+{"qid": "r164", "query": "修完日文二大概有 N 幾的程度", "template": "修完日文二大概有 N 幾的程度", "need_tags": ["language", "career"], "school": "NTU", "target": null}
+{"qid": "r165", "query": "AI、性別與勞動排第幾比較有機會上？", "template": "{課}排第幾比較有機會上？", "need_tags": ["popularity"], "school": "NCCU", "target": {"name": "AI、性別與勞動", "teacher": null, "ids": ["1142042217001"], "n_reviews": 11}, "ref": {"need": "", "named_course": ["AI", "性別與勞動"], "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["enroll_chance", "compare"]}}
+{"qid": "r166", "query": "這門通識好搶嗎？一階排 3 會上嗎", "template": "這門通識好搶嗎？一階排 3 會上嗎", "need_tags": ["popularity", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r167", "query": "外院排第 5 有可能上海商法嗎", "template": "外院排第 5 有可能上{課}嗎", "need_tags": ["popularity", "eligibility"], "school": "NCCU", "target": {"name": "海商法", "teacher": null, "ids": ["1142601357001", "1142652166011"], "n_reviews": 154}}
+{"qid": "r168", "query": "有沒有冷門但不錯、一階通常不會滿的通識", "template": "有沒有冷門但不錯、一階通常不會滿的通識", "need_tags": ["popularity", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r169", "query": "體育羽球是不是很難選，要排第一嗎", "template": "體育羽球是不是很難選，要排第一嗎", "need_tags": ["popularity", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r170", "query": "潘振宇加簽好加嗎？抽籤還是全簽", "template": "{老師}加簽好加嗎？抽籤還是全簽", "need_tags": ["popularity", "teacher_style"], "school": "NCCU", "target": {"name": "進階個體經濟學", "teacher": "潘振宇", "ids": ["1142300901001"], "n_reviews": 22}}
+{"qid": "r171", "query": "二階還有剩名額的課有哪些", "template": "二階還有剩名額的課有哪些", "need_tags": ["popularity"], "school": "NCCU", "target": null}
+{"qid": "r172", "query": "去年媒介生態專題最後錄取到第幾志願", "template": "去年{課}最後錄取到第幾志願", "need_tags": ["popularity"], "school": "NCCU", "target": {"name": "媒介生態專題", "teacher": null, "ids": ["1142941003001"], "n_reviews": 28}}
+{"qid": "r173", "query": "志願序怎麼排比較不會全滅", "template": "志願序怎麼排比較不會全滅", "need_tags": ["popularity"], "school": "NCCU", "target": null}
+{"qid": "r174", "query": "初級會計學(二)本系本班排 2 沒上，正常嗎", "template": "{課}本系本班排 2 沒上，正常嗎", "need_tags": ["popularity", "eligibility"], "school": "NCCU", "target": {"name": "初級會計學(二)", "teacher": null, "ids": ["1142000318081"], "n_reviews": 203}}
+{"qid": "r175", "query": "大四有優先嗎？想補修一門熱門通識", "template": "大四有優先嗎？想補修一門熱門通識", "need_tags": ["popularity", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r176", "query": "這門每年都爆滿嗎？要不要直接放第一", "template": "這門每年都爆滿嗎？要不要直接放第一", "need_tags": ["popularity"], "school": "NCCU", "target": null}
+{"qid": "r177", "query": "行政法(二)加簽機率高嗎", "template": "{課}加簽機率高嗎", "need_tags": ["popularity"], "school": "NTU", "target": {"name": "行政法(二)", "teacher": null, "ids": ["1142601136021"], "n_reviews": 265}}
+{"qid": "r178", "query": "朱詩倩的加簽習慣？要寄信還是現場", "template": "{老師}的加簽習慣？要寄信還是現場", "need_tags": ["popularity", "teacher_style"], "school": "NTU", "target": {"name": "看的方法(紀錄片)", "teacher": "朱詩倩", "ids": ["1142090066001"], "n_reviews": 44}}
+{"qid": "r179", "query": "同一門有兩個時段，哪個比較好選上", "template": "同一門有兩個時段，哪個比較好選上", "need_tags": ["popularity", "comparison", "time"], "school": "NCCU", "target": null}
+{"qid": "r180", "query": "學程生排這門會比較優先嗎", "template": "學程生排這門會比較優先嗎", "need_tags": ["popularity", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r181", "query": "資料庫管理一階排 1 不一定上？那是看什麼", "template": "{課}一階排 1 不一定上？那是看什麼", "need_tags": ["popularity"], "school": "NCCU", "target": {"name": "資料庫管理", "teacher": null, "ids": ["1142306008001", "1142306008011"], "n_reviews": 148}}
+{"qid": "r182", "query": "通識去年初選排序前段的是哪幾門", "template": "通識去年初選排序前段的是哪幾門", "need_tags": ["popularity", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r183", "query": "想避開大家都在搶的熱門課，有替代的嗎", "template": "想避開大家都在搶的熱門課，有替代的嗎", "need_tags": ["popularity", "comparison"], "school": "NCCU", "target": null}
+{"qid": "r184", "query": "想考經濟所，大學部先修哪些課比較有幫助", "template": "想考經濟所，大學部先修哪些課比較有幫助", "need_tags": ["career", "content"], "school": "NCCU", "target": null}
+{"qid": "r185", "query": "以後想當資料分析師，有什麼課推薦", "template": "以後想當資料分析師，有什麼課推薦", "need_tags": ["career", "content"], "school": "general", "target": null, "ref": {"need": "資料分析", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["search"]}}
+{"qid": "r186", "query": "對找實習有幫助的課有哪些", "template": "對找實習有幫助的課有哪些", "need_tags": ["career"], "school": "general", "target": null}
+{"qid": "r187", "query": "想考公職，有沒有相關的課可以先修", "template": "想考公職，有沒有相關的課可以先修", "need_tags": ["career", "content"], "school": "NCCU", "target": null, "ref": {"need": "公職考試", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["search"]}}
+{"qid": "r188", "query": "這個學程對找工作有用嗎，還是只是多修學分", "template": "這個學程對找工作有用嗎，還是只是多修學分", "need_tags": ["career", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r189", "query": "數學系必修除了微積分，哪些之後真的實用", "template": "數學系必修除了微積分，哪些之後真的實用", "need_tags": ["career", "content"], "school": "NTU", "target": null}
+{"qid": "r190", "query": "要推甄研究所，修這種甜課會不會被扣印象", "template": "要推甄研究所，修這種甜課會不會被扣印象", "need_tags": ["career", "grading"], "school": "general", "target": null}
+{"qid": "r191", "query": "想往行銷業走，商院外的人要修什麼", "template": "想往行銷業走，商院外的人要修什麼", "need_tags": ["career", "content", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r192", "query": "資工準大一，修課方向該怎麼規劃", "template": "資工準大一，修課方向該怎麼規劃", "need_tags": ["career", "credit_req"], "school": "NTU", "target": null}
+{"qid": "r193", "query": "統計學黃琴唐跟徐漢陽選誰？一個甜一個紮實", "template": "統計學{老師A}跟{老師B}選誰？一個甜一個紮實", "need_tags": ["comparison", "grading", "content"], "school": "NCCU", "target": {"name": "法制史", "teacher": "黃琴唐", "ids": ["1142601381001"], "n_reviews": 70}, "ref": {"need": "統計學", "named_course": "統計學", "named_teacher": "黃琴唐、徐漢陽", "must": {}, "must_not": {}, "prefs": [{"aspect": "grading", "want": "high"}, {"aspect": "difficulty", "want": "low"}], "intents": ["compare", "lookup"]}}
+{"qid": "r194", "query": "投資學跟財務管理哪個比較好修", "template": "投資學跟財務管理哪個比較好修", "need_tags": ["comparison", "difficulty"], "school": "NCCU", "target": null}
+{"qid": "r195", "query": "同一門會計學開四個班，差在哪", "template": "同一門會計學開四個班，差在哪", "need_tags": ["comparison"], "school": "NCCU", "target": null}
+{"qid": "r196", "query": "程式設計跟計算機概論內容重複嗎？選哪個", "template": "程式設計跟計算機概論內容重複嗎？選哪個", "need_tags": ["comparison", "content"], "school": "NTU", "target": null}
+{"qid": "r197", "query": "演算法各個老師的評價比較", "template": "演算法各個老師的評價比較", "need_tags": ["comparison", "overall_review"], "school": "NTU", "target": null, "ref": {"need": "演算法", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["compare", "review"]}}
+{"qid": "r198", "query": "大學英文哪個老師比較好？想要不太點名的", "template": "大學英文哪個老師比較好？想要不太點名的", "need_tags": ["comparison", "workload"], "school": "NTU", "target": null}
+{"qid": "r199", "query": "必修沒抽到想要的老師，另一位會很慘嗎", "template": "必修沒抽到想要的老師，另一位會很慘嗎", "need_tags": ["comparison", "teacher_style"], "school": "general", "target": null}
+{"qid": "r200", "query": "密碼學導論跟資訊安全那門哪個適合入門", "template": "密碼學導論跟資訊安全那門哪個適合入門", "need_tags": ["comparison", "content", "difficulty"], "school": "NTU", "target": null}
+{"qid": "r201", "query": "總經老師推薦？三個班不知道怎麼選", "template": "總經老師推薦？三個班不知道怎麼選", "need_tags": ["comparison"], "school": "NTU", "target": null}
+{"qid": "r202", "query": "微積分兩個老師，一個比較涼一個分數好拿，怎麼選", "template": "微積分兩個老師，一個比較涼一個分數好拿，怎麼選", "need_tags": ["comparison", "workload", "grading"], "school": "general", "target": null}
+{"qid": "r203", "query": "有沒有內容很像但比較輕鬆的替代課", "template": "有沒有內容很像但比較輕鬆的替代課", "need_tags": ["comparison", "workload"], "school": "NTU", "target": null}
+{"qid": "r204", "query": "有沒有遠距或非同步的課", "template": "有沒有遠距或非同步的課", "need_tags": ["format"], "school": "NTU", "target": null, "ref": {"need": "", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["search"]}}
+{"qid": "r205", "query": "不要線上課，想要實體上課的", "template": "不要線上課，想要實體上課的", "need_tags": ["format"], "school": "NCCU", "target": null}
+{"qid": "r206", "query": "有沒有一學期只上半學期的課", "template": "有沒有一學期只上半學期的課", "need_tags": ["format", "time"], "school": "NCCU", "target": null}
+{"qid": "r207", "query": "有沒有暑修可以修的通識", "template": "有沒有暑修可以修的通識", "need_tags": ["format", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r208", "query": "可以旁聽嗎？不想拿學分只想聽", "template": "可以旁聽嗎？不想拿學分只想聽", "need_tags": ["format", "eligibility"], "school": "NTU", "target": null}
+{"qid": "r209", "query": "SAS/R商業資料分析要買哪本課本？有沒有中文版推薦", "template": "{課}要買哪本課本？有沒有中文版推薦", "need_tags": ["logistics"], "school": "NTU", "target": {"name": "SAS/R商業資料分析", "teacher": null, "ids": ["1142300804001"], "n_reviews": 85}, "ref": {"need": "SAS/R商業資料分析", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["out_of_scope"]}}
+{"qid": "r210", "query": "民法債編各論期中考是哪一週", "template": "{課}期中考是哪一週", "need_tags": ["logistics"], "school": "NTU", "target": {"name": "民法債編各論", "teacher": null, "ids": ["1142601359011"], "n_reviews": 63}, "ref": {"need": "", "named_course": "民法債編各論", "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["lookup"]}}
+{"qid": "r211", "query": "土地法(二)有考古題嗎", "template": "{課}有考古題嗎", "need_tags": ["logistics", "difficulty"], "school": "NTU", "target": {"name": "土地法(二)", "teacher": null, "ids": ["1142207095001"], "n_reviews": 675}}
+{"qid": "r212", "query": "日語讀本(一)這學期有異動嗎？教室或時間改了沒", "template": "{課}這學期有異動嗎？教室或時間改了沒", "need_tags": ["logistics", "time"], "school": "NTU", "target": {"name": "日語讀本(一)", "teacher": null, "ids": ["1142010056012"], "n_reviews": 14}}
+{"qid": "r213", "query": "想找週二或週四下午、外院能修、跟行銷有關的 3 學分課", "template": "想找週二或週四下午、外院能修、跟行銷有關的 3 學分課", "need_tags": ["content", "time", "eligibility", "credit_req"], "school": "NCCU", "target": null, "ref": {"need": "行銷", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["search"]}}
+{"qid": "r214", "query": "有沒有甜涼又不用分組、而且不是早八的社會通識", "template": "有沒有甜涼又不用分組、而且不是早八的社會通識", "need_tags": ["grading", "workload", "time", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r215", "query": "不要週一、不要分組、不要期末考，有什麼通識", "template": "不要週一、不要分組、不要期末考，有什麼通識", "need_tags": ["time", "workload", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r216", "query": "英文授課、給分不錯、跟數據分析有關，最好在週三", "template": "英文授課、給分不錯、跟數據分析有關，最好在週三", "need_tags": ["language", "grading", "content", "time"], "school": "NCCU", "target": null}
+{"qid": "r217", "query": "想修有寫程式但不要太硬的課，排第幾比較有機會", "template": "想修有寫程式但不要太硬的課，排第幾比較有機會", "need_tags": ["content", "difficulty", "popularity"], "school": "NCCU", "target": null}
+{"qid": "r218", "query": "週五沒課、loading 輕、自然通識 2 學分", "template": "週五沒課、loading 輕、自然通識 2 學分", "need_tags": ["time", "workload", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r219", "query": "找一門不點名、期末交報告就好、跟心理有關的課", "template": "找一門不點名、期末交報告就好、跟心理有關的課", "need_tags": ["workload", "content"], "school": "NCCU", "target": null, "ref": {"need": "心理", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [{"aspect": "attendance", "want": "low"}, {"aspect": "workload", "want": "low"}], "intents": ["search"]}}
+{"qid": "r220", "query": "外院大二，想修法律系的課但不要太硬、不要早八", "template": "外院大二，想修法律系的課但不要太硬、不要早八", "need_tags": ["eligibility", "difficulty", "time", "content"], "school": "NCCU", "target": null}
+{"qid": "r221", "query": "下午的課、老師很佛、可以學到東西的，不限領域", "template": "下午的課、老師很佛、可以學到東西的，不限領域", "need_tags": ["time", "teacher_style", "content"], "school": "NCCU", "target": null}
+{"qid": "r222", "query": "不想再修英文授課了，有沒有中文的經濟相關選修，週四以外", "template": "不想再修英文授課了，有沒有中文的經濟相關選修，週四以外", "need_tags": ["language", "content", "time"], "school": "NCCU", "target": null}
+{"qid": "r223", "query": "雙主修身分、週三下午、跟財金有關、一階比較好上的", "template": "雙主修身分、週三下午、跟財金有關、一階比較好上的", "need_tags": ["eligibility", "time", "content", "popularity"], "school": "NCCU", "target": null}
+{"qid": "r224", "query": "我還差人文通識 2 學分，想要甜、不點名、晚上的", "template": "我還差人文通識 2 學分，想要甜、不點名、晚上的", "need_tags": ["credit_req", "grading", "workload", "time"], "school": "NCCU", "target": null}
+{"qid": "r225", "query": "有沒有跟 AI 有關但不用會寫程式的課", "template": "有沒有跟 AI 有關但不用會寫程式的課", "need_tags": ["content", "difficulty"], "school": "NCCU", "target": null}
+{"qid": "r226", "query": "想找跟統計學同性質、但老師不電的班", "template": "想找跟統計學同性質、但老師不電的班", "need_tags": ["comparison", "teacher_style"], "school": "NCCU", "target": null}
+{"qid": "r227", "query": "找一堂可以學 Python、對找實習有幫助、外院也選得到的課", "template": "找一堂可以學 Python、對找實習有幫助、外院也選得到的課", "need_tags": ["content", "career", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r228", "query": "不要純講授的，想要有討論或實作，最好英文授課", "template": "不要純講授的，想要有討論或實作，最好英文授課", "need_tags": ["teacher_style", "format", "language"], "school": "NCCU", "target": null}
+{"qid": "r229", "query": "排除已經修過的課，幫我推三門社會通識", "template": "排除已經修過的課，幫我推三門社會通識", "need_tags": ["credit_req"], "school": "NCCU", "target": null}
+{"qid": "r230", "query": "早上不要有課、週五不要有課，還要湊到 18 學分", "template": "早上不要有課、週五不要有課，還要湊到 18 學分", "need_tags": ["time", "credit_req"], "school": "NCCU", "target": null, "ref": {"need": "", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [], "intents": ["search"]}}
+{"qid": "r231", "query": "跟伴侶與婚姻諮商研究衝堂但內容類似的替代課有嗎", "template": "跟{課}衝堂但內容類似的替代課有嗎", "need_tags": ["time", "comparison", "content"], "school": "NCCU", "target": {"name": "伴侶與婚姻諮商研究", "teacher": null, "ids": ["1142102820001"], "n_reviews": 16}}
+{"qid": "r232", "query": "不想要期末考也不想要上台報告，有這種課嗎", "template": "不想要期末考也不想要上台報告，有這種課嗎", "need_tags": ["workload"], "school": "general", "target": null}
+{"qid": "r233", "query": "有沒有甜但不是水課、真的學得到東西的通識", "template": "有沒有甜但不是水課、真的學得到東西的通識", "need_tags": ["grading", "content", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r234", "query": "不要分組、不要點名、不要早八、給分甜", "template": "不要分組、不要點名、不要早八、給分甜", "need_tags": ["workload", "time", "grading"], "school": "general", "target": null}
+{"qid": "r235", "query": "非本院、大三、週一晚上有空，有什麼社科院的選修", "template": "非本院、大三、週一晚上有空，有什麼社科院的選修", "need_tags": ["eligibility", "time", "content"], "school": "NCCU", "target": null}
+{"qid": "r236", "query": "想修 loading 重一點但能寫進推甄資料的專題課", "template": "想修 loading 重一點但能寫進推甄資料的專題課", "need_tags": ["workload", "career", "content"], "school": "NCCU", "target": null, "ref": {"need": "專題課", "named_course": null, "named_teacher": null, "must": {}, "must_not": {}, "prefs": [{"aspect": "workload", "want": "high"}, {"aspect": "usefulness", "want": "high"}], "intents": ["search"]}}
+{"qid": "r237", "query": "老師不要太嚴格、不要每週交作業，跟歷史有關", "template": "老師不要太嚴格、不要每週交作業，跟歷史有關", "need_tags": ["teacher_style", "workload", "content"], "school": "NCCU", "target": null}
+{"qid": "r238", "query": "甜涼通識", "template": "甜涼通識", "need_tags": ["grading", "workload", "credit_req"], "school": "general", "target": null}
+{"qid": "r239", "query": "統計學 哪個老師", "template": "統計學 哪個老師", "need_tags": ["comparison"], "school": "NCCU", "target": null}
+{"qid": "r240", "query": "早八 不要 體育", "template": "早八 不要 體育", "need_tags": ["time", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r241", "query": "英文授課 好過", "template": "英文授課 好過", "need_tags": ["language", "grading"], "school": "NCCU", "target": null}
+{"qid": "r242", "query": "楊慧芳 加簽", "template": "{老師} 加簽", "need_tags": ["popularity", "teacher_style"], "school": "NCCU", "target": {"name": "日語聽力練習", "teacher": "楊慧芳", "ids": ["1142010059022"], "n_reviews": 34}}
+{"qid": "r243", "query": "通識 不點名", "template": "通識 不點名", "need_tags": ["workload", "credit_req"], "school": "NCCU", "target": null}
+{"qid": "r244", "query": "行銷 外院可修", "template": "行銷 外院可修", "need_tags": ["content", "eligibility"], "school": "NCCU", "target": null}
+{"qid": "r245", "query": "週三下午 涼課", "template": "週三下午 涼課", "need_tags": ["time", "workload"], "school": "NCCU", "target": null}
+{"qid": "r246", "query": "機器學細 課程", "template": "機器學細 課程", "need_tags": ["content"], "school": "general", "target": null}
+{"qid": "r247", "query": "會計 好上的班", "template": "會計 好上的班", "need_tags": ["popularity", "comparison"], "school": "NCCU", "target": null}

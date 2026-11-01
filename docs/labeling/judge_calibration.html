@@ -1,0 +1,211 @@
+<title>選課相關度校準</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one judging card at a time, sticky progress strip on top, grade keys pinned under the card */
+:root {
+  --bg: #f3f5f4;
+  --surface: #ffffff;
+  --ink: #1d2523;
+  --muted: #5d6a66;
+  --line: #d6dddb;
+  --accent: #1f6f5c;
+  --accent-soft: #e2efeb;
+  --g0: #9a4b3f; --g1: #a07a2c; --g2: #3e7a5e; --g3: #1f6f5c;
+  --font-display: "Noto Serif TC", "Songti TC", serif;
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141917; --surface: #1c2321; --ink: #e5ebe9; --muted: #9aa8a3; --line: #33403c;
+    --accent: #6cc2a8; --accent-soft: #23362f;
+    --g0: #d98a7c; --g1: #d8b46a; --g2: #8cc6a6; --g3: #6cc2a8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141917; --surface: #1c2321; --ink: #e5ebe9; --muted: #9aa8a3; --line: #33403c;
+  --accent: #6cc2a8; --accent-soft: #23362f;
+  --g0: #d98a7c; --g1: #d8b46a; --g2: #8cc6a6; --g3: #6cc2a8;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.7 var(--font-body); }
+.wrap { max-width: 760px; margin: 0 auto; padding-inline: 16px; padding-block: 0 48px; display: grid; gap: 16px; }
+header.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+  padding-block: 12px; display: grid; gap: 8px;
+}
+.bar-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; }
+h1 { font: 600 1.15rem/1.3 var(--font-display); margin: 0; text-wrap: balance; }
+.count { font: 500 0.9rem var(--font-data); color: var(--muted); font-variant-numeric: tabular-nums; }
+.track { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.track > i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+button {
+  font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 6px; padding: 6px 12px; cursor: pointer;
+}
+button:hover { border-color: var(--accent); }
+button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button:disabled { opacity: .45; cursor: default; }
+.need {
+  background: var(--accent-soft); border-radius: 8px; padding: 14px 16px;
+  display: grid; gap: 4px;
+}
+.label { font-size: .75rem; letter-spacing: .08em; color: var(--muted); }
+.need p { margin: 0; font-size: 1.2rem; font-weight: 500; }
+.course { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.course h2 { font: 600 1.2rem/1.4 var(--font-display); margin: 0; text-wrap: balance; }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 16px; color: var(--muted); font-size: .9rem; }
+.field { display: grid; gap: 2px; min-width: 0; }
+.field p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.grades { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.grade { display: grid; gap: 2px; text-align: left; padding: 10px 12px; border-left: 4px solid var(--line); }
+.grade b { font: 500 1.1rem var(--font-data); }
+.grade span { font-size: .8rem; color: var(--muted); line-height: 1.4; }
+.grade[data-g="0"] { border-left-color: var(--g0); }
+.grade[data-g="1"] { border-left-color: var(--g1); }
+.grade[data-g="2"] { border-left-color: var(--g2); }
+.grade[data-g="3"] { border-left-color: var(--g3); }
+.grade[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); border-left-width: 4px; }
+textarea { width: 100%; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 8px; min-height: 2.6em; resize: vertical; }
+.hint { color: var(--muted); font-size: .85rem; }
+.status { font-size: .85rem; color: var(--muted); min-height: 1.4em; }
+.empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 8px; padding: 24px; display: grid; gap: 8px; }
+@media (max-width: 520px) { .grades { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (prefers-reduced-motion: reduce) { .track > i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="bar">
+    <div class="bar-row">
+      <h1>選課相關度校準</h1>
+      <span class="count" id="count">0 / 0 已標</span>
+    </div>
+    <div class="track" aria-hidden="true"><i id="fill"></i></div>
+    <div class="nav">
+      <button id="prev" type="button">← 上一題</button>
+      <button id="next" type="button">下一題 →</button>
+      <button id="skip" type="button">跳到下一個未標</button>
+      <span class="count" id="pos"></span>
+    </div>
+  </header>
+
+  <section class="empty" id="empty">
+    <strong>題目還沒載入</strong>
+    <span class="hint">這頁會列出 100 組「學生需求 × 課程」，請依課程內容是否符合需求打 0–3 分。題目由研究流程寫入後會自動出現。</span>
+  </section>
+
+  <main id="card" hidden>
+    <div class="wrap" style="padding:0">
+      <div class="need">
+        <span class="label">學生想學的內容</span>
+        <p id="need"></p>
+      </div>
+      <article class="course">
+        <h2 id="cname"></h2>
+        <div class="meta"><span id="unit"></span><span id="teacher"></span></div>
+        <div class="field"><span class="label">課程目標</span><p id="objective"></p></div>
+        <div class="field"><span class="label">週次主題</span><p id="topics"></p></div>
+      </article>
+      <div class="grades" role="group" aria-label="相關度">
+        <button class="grade" data-g="0" type="button" id="g0"><b>0</b><span>無關</span></button>
+        <button class="grade" data-g="1" type="button" id="g1"><b>1</b><span>沾邊，但不會選來滿足此需求</span></button>
+        <button class="grade" data-g="2" type="button" id="g2"><b>2</b><span>相關，會列入考慮</span></button>
+        <button class="grade" data-g="3" type="button" id="g3"><b>3</b><span>完全切題</span></button>
+      </div>
+      <textarea id="note" placeholder="備註（選填）：例如「需求太模糊」「課名對但內容不符」"></textarea>
+      <div class="status" id="status"></div>
+      <p class="hint">只看主題是否符合，不考慮時間、語言、學分。鍵盤：0–3 打分，← → 換題。</p>
+    </div>
+  </main>
+</div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  let items = [];           // [{id, need, name, unit, teacher, objective, topics}]
+  const labels = new Map(); // itemId -> {grade, note}
+  let idx = 0;
+  let db = null;
+
+  function firstUnlabeled(from) {
+    for (let k = 0; k < items.length; k++) {
+      const i = (from + k) % items.length;
+      if (!labels.has(items[i].id)) return i;
+    }
+    return from;
+  }
+
+  function render() {
+    const done = items.filter((it) => labels.has(it.id)).length;
+    $("count").textContent = `${done} / ${items.length} 已標`;
+    $("fill").style.width = items.length ? `${(done / items.length) * 100}%` : "0";
+    $("empty").hidden = items.length > 0;
+    $("card").hidden = items.length === 0;
+    if (!items.length) return;
+    const it = items[idx];
+    $("pos").textContent = `第 ${idx + 1} 題`;
+    $("need").textContent = it.need;
+    $("cname").textContent = it.name;
+    $("unit").textContent = it.unit ? `開課：${it.unit}` : "";
+    $("teacher").textContent = it.teacher ? `教師：${it.teacher}` : "";
+    $("objective").textContent = it.objective || "（無）";
+    $("topics").textContent = it.topics || "（無）";
+    const cur = labels.get(it.id);
+    for (let g = 0; g < 4; g++) $("g" + g).setAttribute("aria-pressed", String(cur?.grade === g));
+    if (document.activeElement !== $("note")) $("note").value = cur?.note || "";
+    $("prev").disabled = idx === 0;
+    $("next").disabled = idx === items.length - 1;
+  }
+
+  async function save(grade) {
+    const it = items[idx];
+    const note = $("note").value.trim();
+    labels.set(it.id, { grade, note });
+    render();
+    if (!db) { $("status").textContent = "無法儲存：這個檢視沒有資料庫權限。"; return; }
+    try {
+      await db.doc("labels/" + it.id).set({ grade, note, at: new Date().toISOString() });
+      $("status").textContent = `已儲存：第 ${idx + 1} 題 = ${grade}`;
+      setTimeout(() => { idx = firstUnlabeled(idx); render(); }, 180);
+    } catch (e) {
+      $("status").textContent = e?.code === "invalid_argument"
+        ? "無法儲存：你對這頁只有檢視權限。"
+        : "儲存失敗，請再按一次分數。";
+    }
+  }
+
+  for (let g = 0; g < 4; g++) $("g" + g).addEventListener("click", () => save(g));
+  $("prev").addEventListener("click", () => { idx = Math.max(0, idx - 1); render(); });
+  $("next").addEventListener("click", () => { idx = Math.min(items.length - 1, idx + 1); render(); });
+  $("skip").addEventListener("click", () => { idx = firstUnlabeled(idx + 1); render(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.target === $("note") || !items.length) return;
+    if (/^[0-3]$/.test(e.key)) { e.preventDefault(); save(Number(e.key)); }
+    else if (e.key === "ArrowLeft") $("prev").click();
+    else if (e.key === "ArrowRight") $("next").click();
+  });
+
+  (async () => {
+    db = window.claude ? await window.claude.use("db") : null;
+    if (!db) { $("status").textContent = "這個檢視無法讀取題目。"; return; }
+    db.collection("items").limit(500).onSnapshot((snap) => {
+      items = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+      idx = Math.min(idx, Math.max(0, items.length - 1));
+      if (labels.size === 0) idx = firstUnlabeled(0);
+      render();
+    }, () => { $("status").textContent = "題目讀取中斷，請重新整理頁面。"; });
+    db.collection("labels").limit(500).onSnapshot((snap) => {
+      labels.clear();
+      snap.docs.forEach((d) => labels.set(d.id, d.data()));
+      render();
+    }, () => {});
+  })();
+  render();
+})();
+</script>

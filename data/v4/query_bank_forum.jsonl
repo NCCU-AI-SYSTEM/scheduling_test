@@ -1,0 +1,248 @@
+{"query": "有人修過{老師}的{課}嗎？想知道大概怎麼樣", "need": ["overall_review"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 最常見標題型：老師+課名+評價"}
+{"query": "{老師} {課} 評價？考慮下學期修", "need": ["overall_review"], "source": "forum-paraphrase", "school": "NTU", "notes": "短句、只丟老師與課名"}
+{"query": "{課}這堂值得修嗎", "need": ["overall_review"], "source": "forum-paraphrase", "school": "NCCU", "notes": ""}
+{"query": "求{老師}的{課}心得，甜涼收穫都想知道", "need": ["overall_review", "grading", "workload", "career"], "source": "forum-paraphrase", "school": "NCCU", "notes": "甜/涼/收穫三指標"}
+{"query": "{老師}的課雷不雷", "need": ["overall_review", "teacher_style"], "source": "forum-pattern", "school": "NCCU", "notes": "slang 雷"}
+{"query": "{課}有人推嗎？還是踩雷", "need": ["overall_review"], "source": "forum-pattern", "school": "NCCU", "notes": "slang 踩雷"}
+{"query": "想知道{老師}教{課}的風評，最近一兩年的", "need": ["overall_review", "teacher_style"], "source": "forum-paraphrase", "school": "NTU", "notes": "要求近期評價"}
+{"query": "{課}換老師之後還一樣好嗎", "need": ["overall_review", "comparison"], "source": "forum-pattern", "school": "NCCU", "notes": "課程/老師異動"}
+{"query": "有沒有{老師}新開那門課的評價，去年才開的", "need": ["overall_review"], "source": "forum-paraphrase", "school": "NTU", "notes": "新課無歷史評價"}
+{"query": "研究所的{課}有學長姐修過嗎", "need": ["overall_review"], "source": "forum-paraphrase", "school": "NTU", "notes": ""}
+{"query": "想修跟行銷有關的課，有推薦的嗎", "need": ["content"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "有沒有教 Python 資料分析的課，文組也修得來那種", "need": ["content", "difficulty", "eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "政大有開機器學習的課嗎？最好不要太硬", "need": ["content", "difficulty"], "source": "forum-pattern", "school": "NCCU", "notes": "negation-soft"}
+{"query": "想學投資理財，有沒有不是只給商院的入門課", "need": ["content", "eligibility"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 推薦理財課程"}
+{"query": "有沒有在講台灣史的通識", "need": ["content", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "想找能練簡報跟口條的課", "need": ["content"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "想修心理學相關的通識，外院可以選的", "need": ["content", "credit_req", "eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "有沒有教 Excel 或 SPSS 這種之後工作用得到的工具課", "need": ["content", "career"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "想修電影相關的課，看片寫心得那種", "need": ["content", "workload"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "有沒有跟 AI、生成式 AI 應用有關的課", "need": ["content"], "source": "forum-pattern", "school": "NCCU", "notes": "時事型"}
+{"query": "非法律系想懂一點民法，有沒有適合的入門課", "need": ["content", "eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "零基礎想學日文，該選哪一門", "need": ["content", "eligibility", "difficulty"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 日文一請益"}
+{"query": "有沒有講 ESG 永續或氣候變遷的課", "need": ["content"], "source": "forum-pattern", "school": "general", "notes": "時事型"}
+{"query": "想找偏實作、期末要做專題的資料科學課", "need": ["content", "teacher_style"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "外系能修的新聞寫作課有哪些", "need": ["content", "eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "有沒有教設計思考或使用者研究的課", "need": ["content"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "想修哲學但怕聽不懂，有比較入門的嗎", "need": ["content", "difficulty"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "推薦數學系以外也能修的數學課", "need": ["content", "eligibility"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 大家推薦的數學課"}
+{"query": "有沒有跟運動科學或健身有關的通識", "need": ["content", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "{課}實際上都在教什麼？跟大綱寫的差多少", "need": ["content"], "source": "forum-paraphrase", "school": "NTU", "notes": "大綱 vs 實際"}
+{"query": "想學統計但數學很爛，有沒有不用推公式的統計課", "need": ["content", "difficulty"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "有沒有講國際關係但不用讀一堆英文文獻的課", "need": ["content", "workload", "language"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "想了解宗教或神話的課", "need": ["content"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "有沒有教寫程式做網站的，給完全沒碰過的人", "need": ["content", "difficulty"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "想修跟博物館、策展有關的課", "need": ["content"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "有沒有東南亞語或少見語言的課可以修", "need": ["content", "language"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 新課推薦語言課"}
+{"query": "想學財報怎麼看，有沒有非會計系的財報分析課", "need": ["content", "eligibility"], "source": "forum-paraphrase", "school": "NTU", "notes": ""}
+{"query": "有沒有教怎麼做田野調查或訪談的課", "need": ["content"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "想找講性別議題的通識", "need": ["content", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "有沒有跟音樂欣賞有關，期末不用考試的", "need": ["content", "workload"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "想上可以去校外參訪或實作的課", "need": ["content", "format"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "有教量化研究方法、會用 R 的課嗎", "need": ["content"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "想修跟創業有關的課，最好有業師", "need": ["content", "teacher_style"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 創新創業課程推薦"}
+{"query": "想找能補政治學基礎的課，準備轉系用", "need": ["content", "career"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "中文系以外的人可以修的文學課有推薦嗎", "need": ["content", "eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "有沒有幫助了解中國大陸政治的課", "need": ["content"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "想修醫療或健康相關的通識，自然通識", "need": ["content", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "後來覺得最實用的課是哪些？想先修起來", "need": ["content", "career"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 後來才發現最實用的課"}
+{"query": "有沒有不用分組報告的通識", "need": ["workload", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "{課}會點名嗎？點名佔多少", "need": ["workload", "grading"], "source": "forum-paraphrase", "school": "NCCU", "notes": ""}
+{"query": "求不點名、只交期末報告的課", "need": ["workload"], "source": "forum-paraphrase", "school": "general", "notes": "negation"}
+{"query": "{老師}的課 loading 重嗎？是不是每週都有作業", "need": ["workload", "teacher_style"], "source": "forum-paraphrase", "school": "NCCU", "notes": "slang loading"}
+{"query": "有沒有沒期中期末考、只交報告的選修", "need": ["workload"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "想找涼一點的課塞學分，週四下午最好", "need": ["workload", "time", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "slang 涼"}
+{"query": "這學期必修很重，想找一門輕鬆的 2 學分課平衡", "need": ["workload", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "分組是老師分還是自己找？很怕遇到雷組員", "need": ["workload", "teacher_style"], "source": "forum-paraphrase", "school": "general", "notes": "slang 雷組員"}
+{"query": "{課}閱讀量大嗎？每週要讀幾篇", "need": ["workload"], "source": "forum-paraphrase", "school": "NCCU", "notes": ""}
+{"query": "期末是考試還是交報告？", "need": ["workload", "grading"], "source": "forum-paraphrase", "school": "NCCU", "notes": ""}
+{"query": "會不會常常隨堂小考", "need": ["workload"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "推薦全線上、不在意出席和分組的課", "need": ["workload", "format"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "有沒有作業可以上課當場做完、回家不用碰的課", "need": ["workload"], "source": "forum-paraphrase", "school": "general", "notes": ""}
+{"query": "這堂需要課外時間很多嗎？我有打工", "need": ["workload"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "{課}要上台報告幾次", "need": ["workload"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "找一門不用買課本、講義老師會給的", "need": ["workload", "logistics"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "有沒有那種去上課聽聽就好的營養學分", "need": ["workload", "grading"], "source": "forum-pattern", "school": "NCCU", "notes": "slang 營養學分"}
+{"query": "求水課，這學期真的太累", "need": ["workload"], "source": "forum-pattern", "school": "NCCU", "notes": "slang 水課"}
+{"query": "不想要每週交心得的通識，有嗎", "need": ["workload", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "{老師}會不會用大頭照私下點名", "need": ["workload", "teacher_style"], "source": "forum-paraphrase", "school": "general", "notes": "Dcard 點名方式討論"}
+{"query": "有沒有不用上台、只要寫書面報告的課", "need": ["workload"], "source": "forum-pattern", "school": "general", "notes": "negation"}
+{"query": "這門要不要自己做實驗或收資料？", "need": ["workload"], "source": "forum-paraphrase", "school": "general", "notes": "Dcard 分組設計實驗"}
+{"query": "有沒有甜一點的通識，大部分人 A 以上的那種", "need": ["grading", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "slang 甜"}
+{"query": "求甜涼課，不要點名", "need": ["grading", "workload"], "source": "forum-paraphrase", "school": "general", "notes": "slang 甜涼；negation"}
+{"query": "{老師}給分甜嗎？會不會當人", "need": ["grading", "teacher_style"], "source": "forum-paraphrase", "school": "NCCU", "notes": ""}
+{"query": "{課}大概多少比例拿 A", "need": ["grading"], "source": "forum-paraphrase", "school": "NTU", "notes": "成績分布需求"}
+{"query": "想拉 GPA，有沒有分數好拿但還是學得到東西的", "need": ["grading", "content"], "source": "forum-pattern", "school": "NCCU", "notes": "甜 vs 收穫"}
+{"query": "有沒有 Pass/Fail 又有趣的課", "need": ["grading", "content"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "期中考爛掉還救得回來嗎？{老師}會調分嗎", "need": ["grading", "teacher_style"], "source": "forum-paraphrase", "school": "NTU", "notes": ""}
+{"query": "{課}評分方式怎麼算？出席佔幾趴", "need": ["grading", "workload"], "source": "forum-paraphrase", "school": "NCCU", "notes": ""}
+{"query": "這門算紮實分還是很甜", "need": ["grading"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 評價模板用語"}
+{"query": "{老師}是不是大刀？聽說會當三分之一", "need": ["grading", "teacher_style"], "source": "forum-pattern", "school": "NCCU", "notes": "slang 大刀"}
+{"query": "推薦涼甜的課，不一定要通識", "need": ["grading", "workload"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "有沒有可以歐趴的選修", "need": ["grading"], "source": "forum-pattern", "school": "general", "notes": "slang 歐趴"}
+{"query": "要拿 A+ 難嗎", "need": ["grading", "difficulty"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "這門有沒有開根號之類的調分", "need": ["grading"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "給分好的體育課有哪些", "need": ["grading", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "{課}平均大概落在 B+ 還是 A-", "need": ["grading"], "source": "forum-paraphrase", "school": "NTU", "notes": "成績分布需求"}
+{"query": "有沒有期末只要有交就給過的課", "need": ["grading", "workload"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "{老師}給分是看排名還是看絕對分數", "need": ["grading", "teacher_style"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "想要穩拿 A 的 2 學分選修，什麼領域都可以", "need": ["grading", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "聽說{課}很甜但最近變硬了，是真的嗎", "need": ["grading", "difficulty", "overall_review"], "source": "forum-paraphrase", "school": "NCCU", "notes": "評價時效性"}
+{"query": "佛系給分的老師有哪些", "need": ["grading", "teacher_style"], "source": "forum-pattern", "school": "NCCU", "notes": "slang 佛系"}
+{"query": "找一門分數穩的英文授課課拉平均", "need": ["grading", "language"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "{老師}人好嗎？上課會不會很無聊", "need": ["teacher_style"], "source": "forum-paraphrase", "school": "NCCU", "notes": ""}
+{"query": "這個老師是唸投影片型還是會互動討論", "need": ["teacher_style"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 上課方式"}
+{"query": "想找老師很佛、不太為難學生的課", "need": ["teacher_style", "grading"], "source": "forum-pattern", "school": "NCCU", "notes": "slang 佛"}
+{"query": "{老師}很電嗎？聽說期中電很多人", "need": ["teacher_style", "grading", "difficulty"], "source": "forum-pattern", "school": "NCCU", "notes": "slang 電"}
+{"query": "上課可以用平板看電子課本嗎？怕老師覺得在做別的事", "need": ["teacher_style", "logistics"], "source": "forum-paraphrase", "school": "NCCU", "notes": "Dcard 114-1 心得留言型"}
+{"query": "{老師}會不會常點人回答問題", "need": ["teacher_style"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "{老師}嚴禁遲到嗎", "need": ["teacher_style", "workload"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 評價模板其它欄"}
+{"query": "想找講課清楚、適合自學差的人的老師", "need": ["teacher_style"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "{老師}是板書派還是 PPT 派？我比較喜歡板書", "need": ["teacher_style"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 微積分評價"}
+{"query": "老師上課會不會一直離題講自己的事", "need": ["teacher_style"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "有沒有老師很願意回答問題、office hour 找得到人的", "need": ["teacher_style"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "{老師}對 AI 工具的態度？作業可以用 ChatGPT 嗎", "need": ["teacher_style", "workload"], "source": "forum-pattern", "school": "NCCU", "notes": "對應 ai_policy 欄"}
+{"query": "這門是業師上還是本人上？聽說常請助教代課", "need": ["teacher_style"], "source": "forum-paraphrase", "school": "general", "notes": "Dcard ncnu 評價"}
+{"query": "{老師}會很在意出席嗎還是看表現", "need": ["teacher_style", "workload"], "source": "forum-paraphrase", "school": "NTU", "notes": ""}
+{"query": "聽說某群的兩位老師風評都不好，那要選誰", "need": ["teacher_style", "comparison"], "source": "forum-paraphrase", "school": "NCCU", "notes": "Dcard nccu 留言型"}
+{"query": "週三下午有什麼通識可以修", "need": ["time", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "不要早八，有沒有下午的體育課", "need": ["time", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "negation 早八"}
+{"query": "我週五想放假，有哪些選修不在週五", "need": ["time"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "一 D56 這個時段有沒有外院可以修的課", "need": ["time", "eligibility"], "source": "forum-paraphrase", "school": "NCCU", "notes": "NCCU 節次代碼"}
+{"query": "{課}跟我的必修衝堂，有別的時段的班嗎", "need": ["time", "comparison"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 衝堂請益"}
+{"query": "晚上 EFG 有開什麼有趣的課", "need": ["time", "content"], "source": "forum-pattern", "school": "NCCU", "notes": "NCCU 節次代碼"}
+{"query": "二 34 跟四 34 都空著，可以填什麼", "need": ["time"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "想找連三節、不要拆成兩天的課", "need": ["time"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "中午 56 有沒有不錯的通識", "need": ["time", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "我只有週二跟週四有空，幫我找 2 學分的課", "need": ["time", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "兩門衝堂的課可以都選嗎？", "need": ["time", "logistics"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "早上 12 節的課有比較不擠的嗎", "need": ["time", "popularity"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "一整天都在山下比較好，有沒有山下教室的選修", "need": ["time", "logistics"], "source": "forum-pattern", "school": "NCCU", "notes": "校園地理：山上/山下"}
+{"query": "週一到週三下午都滿了，剩週四週五能排什麼", "need": ["time"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "我還差 4 學分社會通識，有推薦的嗎", "need": ["credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "{課}算人文通識還是跨領域？", "need": ["credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "外系選修算不算進畢業學分", "need": ["credit_req", "eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "大學英文抵免之後要補什麼課", "need": ["credit_req", "language"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "核心通識跟一般通識差在哪？我該修哪種", "need": ["credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "輔系要修的課可以跟本系選修重複認列嗎", "need": ["credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "學分學程的課可以順便算通識嗎", "need": ["credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "還差一門體育，有沒有比較好選上的", "need": ["credit_req", "popularity"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "大四最後一學期還差 3 學分自然通識，選什麼最保險", "need": ["credit_req", "popularity", "grading"], "source": "forum-pattern", "school": "NCCU", "notes": "compound"}
+{"query": "通識學分怎麼採計，修超過會算自由學分嗎", "need": ["credit_req"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 通識學分採計"}
+{"query": "數學系新生微積分可以免修嗎", "need": ["credit_req", "eligibility"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "依我目前修過的課，畢業還缺哪些？", "need": ["credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "需要學生成績單"}
+{"query": "想修統計碩士學程，大學部要先修哪幾門", "need": ["credit_req", "career"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 統計碩士學程"}
+{"query": "微學分的課怎麼算？可以累積成一學分嗎", "need": ["credit_req"], "source": "forum-paraphrase", "school": "NCCU", "notes": "Dcard 回報有微學分課"}
+{"query": "我是 112 入學的，通識架構跟學長姐一樣嗎", "need": ["credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "依入學年度不同"}
+{"query": "中文通識還差 2 學分，有沒有寫作負擔小的", "need": ["credit_req", "workload"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "外院可以修會計系的中級會計嗎？還是限本系", "need": ["eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "大一可以修大三的選修嗎", "need": ["eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "{課}一定要先修過統計學嗎？沒修過能選嗎", "need": ["eligibility", "difficulty"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 先修科目請益"}
+{"query": "我是雙主修，選得到{課}嗎還是名額都給本系", "need": ["eligibility", "popularity"], "source": "forum-paraphrase", "school": "NCCU", "notes": "志願序串身分別"}
+{"query": "非本院可以選 EMI 的政治學概論嗎", "need": ["eligibility", "language"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "大學部可以修研究所的課嗎", "need": ["eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "外系可以加簽{課}嗎", "need": ["eligibility", "popularity"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 外系加簽"}
+{"query": "{課}備註寫限大二以上，大一真的完全不行嗎", "need": ["eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": "對應 note/lmtKind"}
+{"query": "輔系生修這門算本系還是外系身分", "need": ["eligibility", "popularity"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "碩士生要選大學部日文課，先修是大學修的可以嗎", "need": ["eligibility"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "這門課有限男生或女生班嗎", "need": ["eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": "體育男女合班"}
+{"query": "沒修過經濟學原理可以直接修個經嗎", "need": ["eligibility", "difficulty"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "計量經濟學很硬嗎？數學要多好", "need": ["difficulty"], "source": "forum-pattern", "school": "NCCU", "notes": "slang 硬"}
+{"query": "這門對沒程式底子的人會不會太難", "need": ["difficulty", "eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "民法總則好過嗎？聽說很容易被當", "need": ["difficulty", "grading"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "想挑戰硬一點但真的學得到東西的課", "need": ["difficulty", "content"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "個經哪個老師比較不硬", "need": ["difficulty", "comparison"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "{課}考試難度怎樣？考古題有用嗎", "need": ["difficulty", "logistics"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 考題型式"}
+{"query": "財務管理難度如何", "need": ["difficulty"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "{課}跟高中數學比難多少", "need": ["difficulty"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "如果數學只有學測程度，{課}跟得上嗎", "need": ["difficulty", "eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "聽說{課}是系上大魔王，真的嗎", "need": ["difficulty", "overall_review"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "有沒有英文授課但不會太難的通識", "need": ["language", "difficulty", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "{課}寫 EMI，是全英文還是中英夾雜？考試可以寫中文嗎", "need": ["language"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 英文授課請益"}
+{"query": "不想修英文授課的，有中文班的國際金融嗎", "need": ["language", "comparison"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "想練英文口說，有沒有討論很多的全英課", "need": ["language", "teacher_style"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "有沒有外籍老師上的課但聽得懂的那種", "need": ["language", "teacher_style"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "修完日文二大概有 N 幾的程度", "need": ["language", "career"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "{課}排第幾比較有機會上？", "need": ["popularity"], "source": "forum-paraphrase", "school": "NCCU", "notes": "NCCU 志願序回報串核心問題"}
+{"query": "這門通識好搶嗎？一階排 3 會上嗎", "need": ["popularity", "credit_req"], "source": "forum-paraphrase", "school": "NCCU", "notes": ""}
+{"query": "外院排第 5 有可能上{課}嗎", "need": ["popularity", "eligibility"], "source": "forum-paraphrase", "school": "NCCU", "notes": "身分別+志願序"}
+{"query": "有沒有冷門但不錯、一階通常不會滿的通識", "need": ["popularity", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "一階未滿"}
+{"query": "體育羽球是不是很難選，要排第一嗎", "need": ["popularity", "credit_req"], "source": "forum-paraphrase", "school": "NCCU", "notes": "體育佔回報約一成"}
+{"query": "{老師}加簽好加嗎？抽籤還是全簽", "need": ["popularity", "teacher_style"], "source": "forum-paraphrase", "school": "NCCU", "notes": "Dcard 加簽集中串"}
+{"query": "二階還有剩名額的課有哪些", "need": ["popularity"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "去年{課}最後錄取到第幾志願", "need": ["popularity"], "source": "forum-pattern", "school": "NCCU", "notes": "對應 RESULT.lastEnroll"}
+{"query": "志願序怎麼排比較不會全滅", "need": ["popularity"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "{課}本系本班排 2 沒上，正常嗎", "need": ["popularity", "eligibility"], "source": "forum-paraphrase", "school": "NCCU", "notes": "Dcard 回報矛盾案例"}
+{"query": "大四有優先嗎？想補修一門熱門通識", "need": ["popularity", "eligibility"], "source": "forum-paraphrase", "school": "NCCU", "notes": ""}
+{"query": "這門每年都爆滿嗎？要不要直接放第一", "need": ["popularity"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "{課}加簽機率高嗎", "need": ["popularity"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 加簽機率"}
+{"query": "{老師}的加簽習慣？要寄信還是現場", "need": ["popularity", "teacher_style"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 加簽習慣"}
+{"query": "同一門有兩個時段，哪個比較好選上", "need": ["popularity", "comparison", "time"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "學程生排這門會比較優先嗎", "need": ["popularity", "eligibility"], "source": "forum-paraphrase", "school": "NCCU", "notes": "回報中有學分學程身分"}
+{"query": "{課}一階排 1 不一定上？那是看什麼", "need": ["popularity"], "source": "forum-paraphrase", "school": "NCCU", "notes": "回報中「排1不一定上」"}
+{"query": "通識去年初選排序前段的是哪幾門", "need": ["popularity", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "對應 Course Rate Tool 通識初選排序"}
+{"query": "想避開大家都在搶的熱門課，有替代的嗎", "need": ["popularity", "comparison"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "想考經濟所，大學部先修哪些課比較有幫助", "need": ["career", "content"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "以後想當資料分析師，有什麼課推薦", "need": ["career", "content"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "對找實習有幫助的課有哪些", "need": ["career"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "想考公職，有沒有相關的課可以先修", "need": ["career", "content"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "這個學程對找工作有用嗎，還是只是多修學分", "need": ["career", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "數學系必修除了微積分，哪些之後真的實用", "need": ["career", "content"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "要推甄研究所，修這種甜課會不會被扣印象", "need": ["career", "grading"], "source": "forum-pattern", "school": "general", "notes": ""}
+{"query": "想往行銷業走，商院外的人要修什麼", "need": ["career", "content", "eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "資工準大一，修課方向該怎麼規劃", "need": ["career", "credit_req"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "統計學{老師A}跟{老師B}選誰？一個甜一個紮實", "need": ["comparison", "grading", "content"], "source": "forum-paraphrase", "school": "NCCU", "notes": ""}
+{"query": "投資學跟財務管理哪個比較好修", "need": ["comparison", "difficulty"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "同一門會計學開四個班，差在哪", "need": ["comparison"], "source": "forum-paraphrase", "school": "NCCU", "notes": ""}
+{"query": "程式設計跟計算機概論內容重複嗎？選哪個", "need": ["comparison", "content"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 程式設計 or 計程"}
+{"query": "演算法各個老師的評價比較", "need": ["comparison", "overall_review"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "大學英文哪個老師比較好？想要不太點名的", "need": ["comparison", "workload"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 英文二老師評價"}
+{"query": "必修沒抽到想要的老師，另一位會很慘嗎", "need": ["comparison", "teacher_style"], "source": "forum-paraphrase", "school": "general", "notes": "Dcard 必修抽籤"}
+{"query": "密碼學導論跟資訊安全那門哪個適合入門", "need": ["comparison", "content", "difficulty"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 原題型"}
+{"query": "總經老師推薦？三個班不知道怎麼選", "need": ["comparison"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 總體經濟老師推薦"}
+{"query": "微積分兩個老師，一個比較涼一個分數好拿，怎麼選", "need": ["comparison", "workload", "grading"], "source": "forum-paraphrase", "school": "general", "notes": "Dcard 比較型"}
+{"query": "有沒有內容很像但比較輕鬆的替代課", "need": ["comparison", "workload"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 相似課程請益"}
+{"query": "有沒有遠距或非同步的課", "need": ["format"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 遠距教學"}
+{"query": "不要線上課，想要實體上課的", "need": ["format"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "有沒有一學期只上半學期的課", "need": ["format", "time"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "有沒有暑修可以修的通識", "need": ["format", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": ""}
+{"query": "可以旁聽嗎？不想拿學分只想聽", "need": ["format", "eligibility"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 旁聽"}
+{"query": "{課}要買哪本課本？有沒有中文版推薦", "need": ["logistics"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 教科書請益"}
+{"query": "{課}期中考是哪一週", "need": ["logistics"], "source": "forum-paraphrase", "school": "NTU", "notes": "課務瑣事，部分可由大綱 schedule 回答"}
+{"query": "{課}有考古題嗎", "need": ["logistics", "difficulty"], "source": "forum-paraphrase", "school": "NTU", "notes": ""}
+{"query": "{課}這學期有異動嗎？教室或時間改了沒", "need": ["logistics", "time"], "source": "forum-paraphrase", "school": "NTU", "notes": "PTT 課程異動"}
+{"query": "想找週二或週四下午、外院能修、跟行銷有關的 3 學分課", "need": ["content", "time", "eligibility", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "compound"}
+{"query": "有沒有甜涼又不用分組、而且不是早八的社會通識", "need": ["grading", "workload", "time", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "compound, negation x2"}
+{"query": "不要週一、不要分組、不要期末考，有什麼通識", "need": ["time", "workload", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "compound, negation x3"}
+{"query": "英文授課、給分不錯、跟數據分析有關，最好在週三", "need": ["language", "grading", "content", "time"], "source": "forum-pattern", "school": "NCCU", "notes": "compound"}
+{"query": "想修有寫程式但不要太硬的課，排第幾比較有機會", "need": ["content", "difficulty", "popularity"], "source": "forum-pattern", "school": "NCCU", "notes": "compound"}
+{"query": "週五沒課、loading 輕、自然通識 2 學分", "need": ["time", "workload", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "compound 短句"}
+{"query": "找一門不點名、期末交報告就好、跟心理有關的課", "need": ["workload", "content"], "source": "forum-pattern", "school": "NCCU", "notes": "compound, negation"}
+{"query": "外院大二，想修法律系的課但不要太硬、不要早八", "need": ["eligibility", "difficulty", "time", "content"], "source": "forum-pattern", "school": "NCCU", "notes": "compound, negation x2"}
+{"query": "下午的課、老師很佛、可以學到東西的，不限領域", "need": ["time", "teacher_style", "content"], "source": "forum-pattern", "school": "NCCU", "notes": "compound"}
+{"query": "不想再修英文授課了，有沒有中文的經濟相關選修，週四以外", "need": ["language", "content", "time"], "source": "forum-pattern", "school": "NCCU", "notes": "compound, negation x2"}
+{"query": "雙主修身分、週三下午、跟財金有關、一階比較好上的", "need": ["eligibility", "time", "content", "popularity"], "source": "forum-pattern", "school": "NCCU", "notes": "compound"}
+{"query": "我還差人文通識 2 學分，想要甜、不點名、晚上的", "need": ["credit_req", "grading", "workload", "time"], "source": "forum-pattern", "school": "NCCU", "notes": "compound, negation"}
+{"query": "有沒有跟 AI 有關但不用會寫程式的課", "need": ["content", "difficulty"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "想找跟統計學同性質、但老師不電的班", "need": ["comparison", "teacher_style"], "source": "forum-pattern", "school": "NCCU", "notes": "negation, slang 電"}
+{"query": "找一堂可以學 Python、對找實習有幫助、外院也選得到的課", "need": ["content", "career", "eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": "compound"}
+{"query": "不要純講授的，想要有討論或實作，最好英文授課", "need": ["teacher_style", "format", "language"], "source": "forum-pattern", "school": "NCCU", "notes": "negation"}
+{"query": "排除已經修過的課，幫我推三門社會通識", "need": ["credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "需要學生成績單"}
+{"query": "早上不要有課、週五不要有課，還要湊到 18 學分", "need": ["time", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "compound, negation x2, 排課型"}
+{"query": "跟{課}衝堂但內容類似的替代課有嗎", "need": ["time", "comparison", "content"], "source": "forum-pattern", "school": "NCCU", "notes": "compound"}
+{"query": "不想要期末考也不想要上台報告，有這種課嗎", "need": ["workload"], "source": "forum-pattern", "school": "general", "notes": "negation x2"}
+{"query": "有沒有甜但不是水課、真的學得到東西的通識", "need": ["grading", "content", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "negation, slang 水課"}
+{"query": "不要分組、不要點名、不要早八、給分甜", "need": ["workload", "time", "grading"], "source": "forum-pattern", "school": "general", "notes": "negation x3，關鍵字串式"}
+{"query": "非本院、大三、週一晚上有空，有什麼社科院的選修", "need": ["eligibility", "time", "content"], "source": "forum-pattern", "school": "NCCU", "notes": "compound"}
+{"query": "想修 loading 重一點但能寫進推甄資料的專題課", "need": ["workload", "career", "content"], "source": "forum-pattern", "school": "NCCU", "notes": "compound"}
+{"query": "老師不要太嚴格、不要每週交作業，跟歷史有關", "need": ["teacher_style", "workload", "content"], "source": "forum-pattern", "school": "NCCU", "notes": "compound, negation x2"}
+{"query": "甜涼通識", "need": ["grading", "workload", "credit_req"], "source": "forum-pattern", "school": "general", "notes": "關鍵字式"}
+{"query": "統計學 哪個老師", "need": ["comparison"], "source": "forum-pattern", "school": "NCCU", "notes": "關鍵字式"}
+{"query": "早八 不要 體育", "need": ["time", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "關鍵字式 negation"}
+{"query": "英文授課 好過", "need": ["language", "grading"], "source": "forum-pattern", "school": "NCCU", "notes": "關鍵字式"}
+{"query": "{老師} 加簽", "need": ["popularity", "teacher_style"], "source": "forum-pattern", "school": "NCCU", "notes": "關鍵字式"}
+{"query": "通識 不點名", "need": ["workload", "credit_req"], "source": "forum-pattern", "school": "NCCU", "notes": "關鍵字式 negation"}
+{"query": "行銷 外院可修", "need": ["content", "eligibility"], "source": "forum-pattern", "school": "NCCU", "notes": "關鍵字式"}
+{"query": "週三下午 涼課", "need": ["time", "workload"], "source": "forum-pattern", "school": "NCCU", "notes": "關鍵字式"}
+{"query": "機器學細 課程", "need": ["content"], "source": "forum-pattern", "school": "general", "notes": "錯字：學習→學細"}
+{"query": "會計 好上的班", "need": ["popularity", "comparison"], "source": "forum-pattern", "school": "NCCU", "notes": "關鍵字式"}
