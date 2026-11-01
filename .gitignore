@@ -40,3 +40,10 @@ data/*.db
 # personal data: 全人 transcript exports must never be committed
 data/exportStudentData.json
 data/**/exportStudentData*.json
+# local symlinks to shared data (worktree)
+data/processed
+data/raw
+
+# v4 structured DB: 26 MB, rebuilt in ~20 s from data/1142.db + data/v4/structured_cache
+data/v4/course_struct.db
+data/v4/course_struct.tmp
