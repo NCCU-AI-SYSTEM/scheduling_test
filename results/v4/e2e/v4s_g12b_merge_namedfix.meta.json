@@ -22,7 +22,7 @@
     "use_assessment": true
   },
   "raw_query": false,
-  "search_ms_p50": 283.5,
-  "search_ms_p95": 379.4,
+  "search_ms_p50": 280.7,
+  "search_ms_p95": 381.8,
   "plan_s_p50": 0.438
 }

@@ -1,0 +1,42 @@
+[
+  {
+    "planner": "gemma4:e4b",
+    "threads": 12,
+    "n": 20,
+    "plan_s_p50": 1.31,
+    "plan_s_p95": 1.64,
+    "search_ms_p50": 119,
+    "search_ms_p95": 151,
+    "same_plan_as_gpu": 0.95
+  },
+  {
+    "planner": "gemma4:12b",
+    "threads": 12,
+    "n": 20,
+    "plan_s_p50": 8.43,
+    "plan_s_p95": 9.35,
+    "search_ms_p50": 117,
+    "search_ms_p95": 154,
+    "same_plan_as_gpu": 0.95
+  },
+  {
+    "planner": "gemma4:e4b",
+    "threads": 4,
+    "n": 20,
+    "plan_s_p50": 1.73,
+    "plan_s_p95": 2.12,
+    "search_ms_p50": 87,
+    "search_ms_p95": 114,
+    "same_plan_as_gpu": 0.95
+  },
+  {
+    "planner": "gemma4:12b",
+    "threads": 4,
+    "n": 20,
+    "plan_s_p50": 16.41,
+    "plan_s_p95": 17.83,
+    "search_ms_p50": 86,
+    "search_ms_p95": 111,
+    "same_plan_as_gpu": 0.95
+  }
+]
