@@ -17,8 +17,8 @@ logger = logging.getLogger(__name__)
 KIND_TO_INT: dict[str, int] = {
     "必修": 1,
     "選修": 2,
-    "通識": 3,
-    "體育": 4,
+    "群修": 3,
+    "通識": 4,  # 體育 has no kind code (PE sections are kind 1); see src/eval/conditions.py
 }
 
 

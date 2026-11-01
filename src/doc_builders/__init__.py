@@ -52,11 +52,11 @@ def _course_metadata(c: Course) -> dict:
     }
 
 
-_KIND_ZH = {1: "必修課", 2: "選修課", 3: "通識課", 4: "體育課"}
+_KIND_ZH = {0: "通識課", 1: "必修課", 2: "選修課", 3: "群修課", 4: "通識課"}
 
 
 def _kind_str(c: Course) -> str:
-    base = _KIND_ZH.get(c.kind, "其他")
+    base = "體育課" if "體育" in c.name else _KIND_ZH.get(c.kind, "其他")
     if c.lmt_kind:
         return f"{base}（{c.lmt_kind}）"
     return base
@@ -156,8 +156,25 @@ def build_d_v2(courses: list[Course]) -> list[RetrievalDoc]:
     return out
 
 
+def build_d_raw(courses: list[Course]) -> list[RetrievalDoc]:
+    """Catalogue text only, no LLM-generated meta: the fair base for comparing
+    encoders and tokenizers (D-V2's meta came from two different LLMs)."""
+    out: list[RetrievalDoc] = []
+    for c in courses:
+        lines = [f"課名: {c.name}" + (f"（{c.name_en}）" if c.name_en else ""),
+                 f"教師: {c.teacher}", f"開課單位: {c.unit}　課程類別: {_kind_str(c)}",
+                 f"語言: {c.lang}　學分: {c.point}"]
+        if c.objective:
+            lines.append(f"課程目標: {c.objective.strip()[:600]}")
+        if c.weekly_topics:
+            lines.append(f"週次主題: {'、'.join(c.weekly_topics)[:500]}")
+        out.append(RetrievalDoc(course_id=c.course_id, text="\n".join(lines), metadata=_course_metadata(c)))
+    return out
+
+
 # multi-field (D-V3) builder will arrive in W6
 BUILDERS = {
+    "d-raw": build_d_raw,
     "d-base": build_d_base,
     "d-obj": build_d_obj,
     "d-v2": build_d_v2,
