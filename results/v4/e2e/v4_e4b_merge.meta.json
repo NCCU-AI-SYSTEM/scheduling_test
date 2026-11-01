@@ -1,0 +1,26 @@
+{
+  "system": "v4",
+  "planner": "gemma4:e4b",
+  "encoder": "e5-large-instruct",
+  "reranker": "qwen3-rerank-0.6b",
+  "hype": false,
+  "cfg": {
+    "use_conditions": true,
+    "relax_min": 10,
+    "use_named": true,
+    "use_dense": true,
+    "use_bm25": true,
+    "rerank": true,
+    "rerank_k": 20,
+    "use_prefs": true,
+    "pref_weight": 0.3,
+    "use_eligibility": true,
+    "use_hype": false,
+    "merge_offerings": true,
+    "named_skips_conditions": false
+  },
+  "raw_query": false,
+  "search_ms_p50": 426.2,
+  "search_ms_p95": 535.8,
+  "plan_s_p50": 0.185
+}
