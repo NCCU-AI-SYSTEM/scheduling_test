@@ -1,0 +1,40 @@
+{"i": 0, "alias": "藝社", "canonical": "藝術社會學", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 藝術社會學"}
+{"i": 1, "alias": "戲音", "canonical": "戲劇音樂", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 戲劇音樂"}
+{"i": 2, "alias": "量研", "canonical": "量化研究法", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 量化研究法"}
+{"i": 3, "alias": "初德語", "canonical": "初級德文語法", "source": "rule", "evidence": 0, "confidence": 0.25, "note": "initials of 初級德文語法; 2 names share it"}
+{"i": 4, "alias": "圖資統", "canonical": "圖書資訊學統計", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 圖書資訊學統計"}
+{"i": 5, "alias": "激與領", "canonical": "激勵與領導", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 激勵與領導"}
+{"i": 6, "alias": "管科", "canonical": "管理科學", "source": "rate", "evidence": 9, "confidence": 0.818, "note": "9/11 comments mentioning 管科 belong to 管理科學"}
+{"i": 7, "alias": "心學總", "canonical": "心理學專業總整", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 心理學專業總整"}
+{"i": 8, "alias": "專管", "canonical": "專案管理", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 專案管理"}
+{"i": 9, "alias": "都計", "canonical": "都市計畫", "source": "rate", "evidence": 4, "confidence": 0.4, "note": "4/10 comments mentioning 都計 belong to 都市計畫"}
+{"i": 10, "alias": "中民誌", "canonical": "中國民族誌", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 中國民族誌"}
+{"i": 11, "alias": "教議專", "canonical": "教育議題專題", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 教育議題專題"}
+{"i": 12, "alias": "創與設", "canonical": "創意與設計", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 創意與設計"}
+{"i": 13, "alias": "不經分", "canonical": "不動產經濟分析", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 不動產經濟分析"}
+{"i": 14, "alias": "金專研", "canonical": "金融專題研討", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 金融專題研討"}
+{"i": 15, "alias": "組心學", "canonical": "組織心理學專題", "source": "rule", "evidence": 0, "confidence": 0.25, "note": "initials of 組織心理學專題; 2 names share it"}
+{"i": 16, "alias": "心實實", "canonical": "心理實驗法實驗", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 心理實驗法實驗"}
+{"i": 17, "alias": "民調", "canonical": "民意與調查", "source": "rate", "evidence": 6, "confidence": 0.6, "note": "6/10 comments mentioning 民調 belong to 民意與調查"}
+{"i": 18, "alias": "財專研", "canonical": "財產法專題研究", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 財產法專題研究"}
+{"i": 19, "alias": "小表研", "canonical": "小鼠表型研究", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 小鼠表型研究"}
+{"i": 20, "alias": "線代", "canonical": "線性代數", "source": "rate", "evidence": 29, "confidence": 0.69, "note": "29/42 comments mentioning 線代 belong to 線性代數"}
+{"i": 21, "alias": "應阿語", "canonical": "應用阿拉伯語", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 應用阿拉伯語"}
+{"i": 22, "alias": "倫學", "canonical": "倫理學史", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 倫理學史"}
+{"i": 23, "alias": "健學", "canonical": "健康心理學", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 健康心理學"}
+{"i": 24, "alias": "日會演", "canonical": "日語會話演習", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 日語會話演習"}
+{"i": 25, "alias": "實教研", "canonical": "實驗教育研究", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 實驗教育研究"}
+{"i": 26, "alias": "報文", "canonical": "報導文學", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 報導文學"}
+{"i": 27, "alias": "法緒", "canonical": "法學緒論", "source": "rate", "evidence": 7, "confidence": 0.5, "note": "7/14 comments mentioning 法緒 belong to 法學緒論"}
+{"i": 28, "alias": "健與生", "canonical": "健康與生活", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 健康與生活"}
+{"i": 29, "alias": "國法", "canonical": "國際法導論", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 國際法導論"}
+{"i": 30, "alias": "智運系", "canonical": "智慧運輸系統", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 智慧運輸系統"}
+{"i": 31, "alias": "政經", "canonical": "政治經濟學", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 政治經濟學"}
+{"i": 32, "alias": "中德閱", "canonical": "中級德文閱讀", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 中級德文閱讀"}
+{"i": 33, "alias": "網安實", "canonical": "網頁安全實務", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 網頁安全實務"}
+{"i": 34, "alias": "資研", "canonical": "資訊系統研發", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 資訊系統研發"}
+{"i": 35, "alias": "政採", "canonical": "政府採購法", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 政府採購法"}
+{"i": 36, "alias": "專討", "canonical": "專題討論", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 專題討論"}
+{"i": 37, "alias": "國政經", "canonical": "國際政治經濟學", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 國際政治經濟學"}
+{"i": 38, "alias": "英口訓", "canonical": "英語口語訓練", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 英語口語訓練"}
+{"i": 39, "alias": "全諮商", "canonical": "全職諮商實習", "source": "rule", "evidence": 0, "confidence": 0.5, "note": "initials of 全職諮商實習"}

@@ -1,0 +1,40 @@
+{"i": 0, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 1, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 2, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 3, "ok": false, "why": "初德語 reads as 初級德語, mapped to 初級德文語法", "alias_source": "rule"}
+{"i": 4, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 5, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 6, "ok": true, "why": "", "alias_source": "rate"}
+{"i": 7, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 8, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 9, "ok": true, "why": "", "alias_source": "rate"}
+{"i": 10, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 11, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 12, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 13, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 14, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 15, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 16, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 17, "ok": true, "why": "", "alias_source": "rate"}
+{"i": 18, "ok": false, "why": "財專研 is ambiguous (財務/財政/財產)", "alias_source": "rule"}
+{"i": 19, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 20, "ok": true, "why": "", "alias_source": "rate"}
+{"i": 21, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 22, "ok": false, "why": "倫學 reads as 倫理學, mapped to 倫理學史", "alias_source": "rule"}
+{"i": 23, "ok": false, "why": "健學 reads as 健康學, mapped to 健康心理學", "alias_source": "rule"}
+{"i": 24, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 25, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 26, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 27, "ok": true, "why": "", "alias_source": "rate"}
+{"i": 28, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 29, "ok": false, "why": "國法 usually means state law, mapped to 國際法導論", "alias_source": "rule"}
+{"i": 30, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 31, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 32, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 33, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 34, "ok": false, "why": "資研 is ambiguous, mapped to 資訊系統研發", "alias_source": "rule"}
+{"i": 35, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 36, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 37, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 38, "ok": true, "why": "", "alias_source": "rule"}
+{"i": 39, "ok": true, "why": "", "alias_source": "rule"}

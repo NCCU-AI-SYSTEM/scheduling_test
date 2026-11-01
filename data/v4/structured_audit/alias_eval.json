@@ -1,0 +1,2381 @@
+{
+ "summary": {
+  "user": {
+   "n": 8,
+   "resolved": 8,
+   "in_1142": 8,
+   "unresolved": []
+  },
+  "forum": {
+   "n": 14,
+   "resolved": 14,
+   "in_1142": 11,
+   "unresolved": []
+  },
+  "note": {
+   "n": 259,
+   "resolved": 252,
+   "in_1142": 190,
+   "unresolved": [
+    "上學期本班",
+    "不提供擋修單",
+    "日文語文",
+    "智慧財產法",
+    "決策科學與企業流程模式",
+    "社科統計(上)"
+   ]
+  },
+  "note_non_exact": {
+   "n": 45,
+   "resolved": 38,
+   "in_1142": 38,
+   "unresolved": [
+    "上學期本班",
+    "不提供擋修單",
+    "日文語文",
+    "智慧財產法",
+    "決策科學與企業流程模式",
+    "社科統計(上)"
+   ]
+  }
+ },
+ "user": [
+  {
+   "mention": "個經",
+   "origin": "user",
+   "base": "個體經濟學",
+   "method": "alias:rate",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "個體經濟學"
+   ]
+  },
+  {
+   "mention": "總經",
+   "origin": "user",
+   "base": "總體經濟學",
+   "method": "alias:rate",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "總體經濟學"
+   ]
+  },
+  {
+   "mention": "初會",
+   "origin": "user",
+   "base": "初級會計學",
+   "method": "alias:rate",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "初級會計學(一)",
+    "初級會計學(二)"
+   ]
+  },
+  {
+   "mention": "中會",
+   "origin": "user",
+   "base": "中級會計學",
+   "method": "alias:rate",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "中級會計學(一)",
+    "中級會計學(三)",
+    "中級會計學(二)"
+   ]
+  },
+  {
+   "mention": "五管",
+   "origin": "user",
+   "base": "五管",
+   "method": "alias:seed",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "人力資源管理",
+    "營運與供應鏈管理",
+    "行銷管理",
+    "財務管理"
+   ]
+  },
+  {
+   "mention": "大英",
+   "origin": "user",
+   "base": "大學英文",
+   "method": "alias:seed",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "大學英文(一)",
+    "大學英文(三):兒童文學賞析",
+    "大學英文(三):口語訓練一(ETP專班)",
+    "大學英文(三):口語訓練二(ETP專班)"
+   ]
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "user",
+   "base": "初級會計學",
+   "method": "alias:rate",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "初級會計學(一)"
+   ]
+  },
+  {
+   "mention": "五管",
+   "origin": "user",
+   "base": "五管",
+   "method": "alias:seed",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "人力資源管理",
+    "營運與供應鏈管理",
+    "行銷管理",
+    "財務管理"
+   ]
+  }
+ ],
+ "forum": [
+  {
+   "mention": "個經",
+   "origin": "沒修過經濟學原理可以直接修個經嗎",
+   "base": "個體經濟學",
+   "method": "alias:rate",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "個體經濟學"
+   ]
+  },
+  {
+   "mention": "個經",
+   "origin": "個經哪個老師比較不硬",
+   "base": "個體經濟學",
+   "method": "alias:rate",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "個體經濟學"
+   ]
+  },
+  {
+   "mention": "總經",
+   "origin": "總經老師推薦？三個班不知道怎麼選",
+   "base": "總體經濟學",
+   "method": "alias:rate",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "總體經濟學"
+   ]
+  },
+  {
+   "mention": "中級會計",
+   "origin": "外院可以修會計系的中級會計嗎？還是限本系",
+   "base": "中級會計學",
+   "method": "substring",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "中級會計學(一)",
+    "中級會計學(三)",
+    "中級會計學(二)"
+   ]
+  },
+  {
+   "mention": "日文二",
+   "origin": "修完日文二大概有 N 幾的程度",
+   "base": "日文",
+   "method": "base",
+   "resolved": true,
+   "in_1142": false,
+   "names": [
+    "日文(二)"
+   ]
+  },
+  {
+   "mention": "計程",
+   "origin": "程式設計跟計算機概論內容重複嗎？選哪個（notes: PTT 程式設計 or 計程）",
+   "base": "計算機程式設計",
+   "method": "alias:seed",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "計算機程式設計",
+    "計算機程式設計(一)",
+    "計算機程式設計(二)"
+   ]
+  },
+  {
+   "mention": "大學英文",
+   "origin": "大學英文哪個老師比較好？想要不太點名的",
+   "base": "大學英文",
+   "method": "base",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "大學英文(一)",
+    "大學英文(三):兒童文學賞析",
+    "大學英文(三):口語訓練一(ETP專班)",
+    "大學英文(三):口語訓練二(ETP專班)"
+   ]
+  },
+  {
+   "mention": "微積分",
+   "origin": "微積分兩個老師，一個比較涼一個分數好拿，怎麼選",
+   "base": "微積分",
+   "method": "exact",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "微積分"
+   ]
+  },
+  {
+   "mention": "統計學",
+   "origin": "統計學 哪個老師",
+   "base": "統計學",
+   "method": "exact",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "統計學"
+   ]
+  },
+  {
+   "mention": "經濟學原理",
+   "origin": "沒修過經濟學原理可以直接修個經嗎",
+   "base": "經濟學",
+   "method": "alias:seed",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "經濟學"
+   ]
+  },
+  {
+   "mention": "民法總則",
+   "origin": "民法總則好過嗎？聽說很容易被當",
+   "base": "民法總則",
+   "method": "exact",
+   "resolved": true,
+   "in_1142": false,
+   "names": [
+    "民法總則"
+   ]
+  },
+  {
+   "mention": "政治學概論",
+   "origin": "非本院可以選 EMI 的政治學概論嗎",
+   "base": "政治學概論",
+   "method": "exact",
+   "resolved": true,
+   "in_1142": false,
+   "names": [
+    "政治學概論"
+   ]
+  },
+  {
+   "mention": "國際金融",
+   "origin": "不想修英文授課的，有中文班的國際金融嗎",
+   "base": "國際金融",
+   "method": "exact",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "國際金融"
+   ]
+  },
+  {
+   "mention": "計量經濟學",
+   "origin": "計量經濟學很硬嗎？數學要多好",
+   "base": "計量經濟學",
+   "method": "exact",
+   "resolved": true,
+   "in_1142": true,
+   "names": [
+    "計量經濟學"
+   ]
+  }
+ ],
+ "note": [
+  {
+   "mention": "經濟學",
+   "origin": "先修科目為經濟學",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "微積分",
+   "origin": "且建議修畢微積分再選課",
+   "base": "微積分",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "微積分",
+   "origin": "建議先修過微積分",
+   "base": "微積分",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(一)",
+   "origin": "擋修初會(一)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "中會(一)",
+   "origin": "擋修中會(一)、初會(二)",
+   "base": "中級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會(二)",
+   "origin": "擋修中會(一)、初會(二)",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "中會(一)",
+   "origin": "擋修中會(一)",
+   "base": "中級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "中會(一)",
+   "origin": "擋修中會(一)",
+   "base": "中級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "中會(一)",
+   "origin": "擋修中會(一)",
+   "base": "中級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "中會(一)",
+   "origin": "擋修中會(一)、中會(二)",
+   "base": "中級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "中會(二)",
+   "origin": "擋修中會(一)、中會(二)",
+   "base": "中級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "成會(一)",
+   "origin": "擋修成會(一)",
+   "base": "成本管理會計",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "成會(一)",
+   "origin": "擋修成會(一)",
+   "base": "成本管理會計",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟",
+   "origin": "先修經濟、初會一年",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會一年",
+   "origin": "先修經濟、初會一年",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學及初級會計學一學年",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初級會計學一學年",
+   "origin": "先修經濟學及初級會計學一學年",
+   "base": "初級會計學",
+   "method": "rule/base",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學及初級會計學一學年",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初級會計學一學年",
+   "origin": "先修經濟學及初級會計學一學年",
+   "base": "初級會計學",
+   "method": "rule/base",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "管理學",
+   "origin": "先修管理學與經濟學",
+   "base": "管理學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修管理學與經濟學",
+   "base": "經濟學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "管理學",
+   "origin": "先修管理學與經濟學",
+   "base": "管理學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修管理學與經濟學",
+   "base": "經濟學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學和管理學",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "管理學",
+   "origin": "先修經濟學和管理學",
+   "base": "管理學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學和管理學",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "管理學",
+   "origin": "先修經濟學和管理學",
+   "base": "管理學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學和管理學",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "管理學",
+   "origin": "先修經濟學和管理學",
+   "base": "管理學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學及初級會計學一學年",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初級會計學一學年",
+   "origin": "先修經濟學及初級會計學一學年",
+   "base": "初級會計學",
+   "method": "rule/base",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學及初級會計學一學年",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初級會計學一學年",
+   "origin": "先修經濟學及初級會計學一學年",
+   "base": "初級會計學",
+   "method": "rule/base",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學及初級會計學一學年",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初級會計學一學年",
+   "origin": "先修經濟學及初級會計學一學年",
+   "base": "初級會計學",
+   "method": "rule/base",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "中會(一)",
+   "origin": "擋修中會(一)",
+   "base": "中級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "審計學(一)",
+   "origin": "擋修審計學(一)",
+   "base": "審計學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "國文",
+   "origin": "修習及格「國文」3學分後",
+   "base": "國文",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "經濟",
+   "origin": "先修經濟、初會一學年",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初會一學年",
+   "origin": "先修經濟、初會一學年",
+   "base": "初級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "跨界實驗室",
+   "origin": "需先修過入門課「跨界實驗室」",
+   "base": "跨界實驗室",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "Python",
+   "origin": "建議過Python、影像處理、深度學習相關課程",
+   "base": "用Python學財務計量",
+   "method": "rule/substring",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "影像處理",
+   "origin": "建議過Python、影像處理、深度學習相關課程",
+   "base": "影像處理",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "深度學習",
+   "origin": "建議過Python、影像處理、深度學習相關課程",
+   "base": "深度學習",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "諮商理論與技術",
+   "origin": "先修諮商理論與技術",
+   "base": "諮商理論與技術",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "政治學",
+   "origin": "宜先修「政治學」及「比較政府與政治」",
+   "base": "政治學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "比較政府與政治",
+   "origin": "宜先修「政治學」及「比較政府與政治」",
+   "base": "比較政府與政治",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "國際關係",
+   "origin": "需先修國際關係",
+   "base": "國際關係",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "國際關係",
+   "origin": "限曾修習外交系開設之「國際關係」課程(三學分(含)以上)且平均成績達75分以上者選修",
+   "base": "國際關係",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "上學期本班",
+   "origin": "下學期不可修本班",
+   "base": null,
+   "method": "rule/unresolved",
+   "resolved": false,
+   "in_1142": false
+  },
+  {
+   "mention": "租稅法(一)",
+   "origin": "需先修過租稅法(一)",
+   "base": "租稅法",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "微積分",
+   "origin": "修課學生需修過一學期微積分",
+   "base": "微積分",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "個體經濟學",
+   "origin": "宜修過個體經濟學和微積分",
+   "base": "個體經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "微積分",
+   "origin": "宜修過個體經濟學和微積分",
+   "base": "微積分",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "土地制度史",
+   "origin": "建議先修土地制度史",
+   "base": "土地制度史",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "土地法(一)",
+   "origin": "先修科目土地法(一)(二)",
+   "base": "土地法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "土地法(二)",
+   "origin": "先修科目土地法(一)(二)",
+   "base": "土地法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "規劃實務(一)",
+   "origin": "先修科目規劃實務(一)",
+   "base": "規劃實務",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "都市計畫",
+   "origin": "先修科目都市計畫",
+   "base": "都市計畫",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "電腦繪圖與地理資訊系統",
+   "origin": "並建議先修電腦繪圖與地理資訊系統",
+   "base": "電腦繪圖與地理資訊系統",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "測量學及實習",
+   "origin": "先修科目「測量學及實習」",
+   "base": "測量學及實習",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "不動產財務分析",
+   "origin": "建議先修不動產財務分析",
+   "base": "不動產財務分析",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "地理資訊科學",
+   "origin": "建議先修地理資訊科學",
+   "base": "地理資訊科學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "民法(一)",
+   "origin": "建議先修民法(一)(二)",
+   "base": "民法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "民法(二)",
+   "origin": "建議先修民法(一)(二)",
+   "base": "民法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "不動產估價理論",
+   "origin": "建議先修不動產估價理論",
+   "base": "不動產估價理論",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "社會科學統計方法實習",
+   "origin": "務必同時選修「社會科學統計方法實習」",
+   "base": "社會科學統計方法實習",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "社科統計(上)",
+   "origin": "需修畢社科統計(上)或類似的課程",
+   "base": null,
+   "method": "llm/unresolved",
+   "resolved": false,
+   "in_1142": false
+  },
+  {
+   "mention": "社會科學統計方法",
+   "origin": "本課需同時選修「社會科學統計方法」",
+   "base": "社會科學統計方法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "微積分",
+   "origin": "宜修過微積分",
+   "base": "微積分",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "商用寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "商用寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "商用寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "商用寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "商用寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "商用寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "商用寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "商用寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "商用寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "商用寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "商用寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "商用寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "商用寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "商用寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "商用寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "商用寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "商用寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "商用寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "商用寫作與口語訓練(一)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "商用寫作與口語訓練(二)",
+   "origin": "先修:寫作與口語訓練(一)(二)或商用寫作與口語訓練(一)(二)",
+   "base": "商用寫作與口語訓練",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "指南服務團(一)",
+   "origin": "此課程必須先修習指南服務團(一)或曾參加社會服務志工並領有認證時數20小時(含)以上者方得修習",
+   "base": "服務學習專業課程-指南服務團-社會服務與學習",
+   "method": "llm/substring",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "個體經濟學",
+   "origin": "先修個體經濟學",
+   "base": "個體經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "微積分",
+   "origin": "先修微積分及經濟學",
+   "base": "微積分",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修微積分及經濟學",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "需先修習經濟學與初級會計學",
+   "base": "經濟學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "初級會計學",
+   "origin": "需先修習經濟學與初級會計學",
+   "base": "初級會計學",
+   "method": "llm/base",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "國際經貿法",
+   "origin": "先修國際經貿法",
+   "base": "國際經貿法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "管理學",
+   "origin": "先修管理學",
+   "base": "管理學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "國際經貿法",
+   "origin": "先修國際經貿法",
+   "base": "國際經貿法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "先修經濟學",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "(大學部)經濟學",
+   "origin": "預修科目:三學分之(大學部)經濟學以及三學分之(大學部)財務管理或者是經由老師同意選修",
+   "base": "經濟學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "(大學部)財務管理",
+   "origin": "預修科目:三學分之(大學部)經濟學以及三學分之(大學部)財務管理或者是經由老師同意選修",
+   "base": "財務管理",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "(大學部)經濟學",
+   "origin": "預修科目:三學分之(大學部)經濟學或者是三學分之(大學部)統計學或者是經由老師同意選修",
+   "base": "經濟學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "(大學部)統計學",
+   "origin": "預修科目:三學分之(大學部)經濟學或者是三學分之(大學部)統計學或者是經由老師同意選修",
+   "base": "統計學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "統計學",
+   "origin": "先修統計學",
+   "base": "統計學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "(大學部)經濟學",
+   "origin": "預修科目:三學分之(大學部)經濟學以及三學分之(大學部)投資學或者是經由老師同意選修",
+   "base": "經濟學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "(大學部)投資學",
+   "origin": "預修科目:三學分之(大學部)經濟學以及三學分之(大學部)投資學或者是經由老師同意選修",
+   "base": "投資學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "財務管理",
+   "origin": "先修「財務管理」",
+   "base": "財務管理",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "貨幣銀行學",
+   "origin": "先修「貨幣銀行學」",
+   "base": "貨幣銀行學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "財務管理",
+   "origin": "先修「財務管理」或「投資學」",
+   "base": "財務管理",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "投資學",
+   "origin": "先修「財務管理」或「投資學」",
+   "base": "投資學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "金融機構管理",
+   "origin": "學士班請選課號302809001(需先修金融機構管理或銀行經營管理)",
+   "base": "金融機構管理",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "銀行經營管理",
+   "origin": "學士班請選課號302809001(需先修金融機構管理或銀行經營管理)",
+   "base": "銀行經營管理",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "中會(二)",
+   "origin": "擋修中會(二)",
+   "base": "中級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "中級會計學(二)",
+   "origin": "先修中級會計學(二)、以系統遞補名單為主",
+   "base": "中級會計學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "中級會計學(二)",
+   "origin": "先修中級會計學(二)、以系統遞補名單為主",
+   "base": "中級會計學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "高會(一)",
+   "origin": "擋修高會(一)",
+   "base": "高級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "高會(一)",
+   "origin": "擋修高會(一)",
+   "base": "高級會計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "會計資訊系統(一)",
+   "origin": "有意修課同學請先完成「會計資訊系統(一)」課程後",
+   "base": "會計資訊系統",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "不提供擋修單",
+   "origin": "不另提供擋修單",
+   "base": null,
+   "method": "rule/unresolved",
+   "resolved": false,
+   "in_1142": false
+  },
+  {
+   "mention": "會計資訊系統(一)",
+   "origin": "有意修課同學請先完成「會計資訊系統(一)」課程後",
+   "base": "會計資訊系統",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "不提供擋修單",
+   "origin": "不另提供擋修單",
+   "base": null,
+   "method": "rule/unresolved",
+   "resolved": false,
+   "in_1142": false
+  },
+  {
+   "mention": "成管會",
+   "origin": "需先修成管會",
+   "base": "成本管理會計",
+   "method": "rule/alias:rule",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "統計學",
+   "origin": "先修科目:統計學",
+   "base": "統計學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "微積分",
+   "origin": "應先修「微積分」",
+   "base": "微積分",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "機率論",
+   "origin": "且應先修習本系所開之「機率論」",
+   "base": "機率論",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "微積分",
+   "origin": "惟不設定修習及格之檔修",
+   "base": "微積分",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "機率論",
+   "origin": "無論「機率論」修習通過與否",
+   "base": "機率論",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "數理統計學",
+   "origin": "應先修過數理統計學及程式設計與統計軟體(R語言)二門課",
+   "base": "數理統計學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "程式設計與統計軟體(R語言)",
+   "origin": "應先修過數理統計學及程式設計與統計軟體(R語言)二門課",
+   "base": "程式設計與統計軟體",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "管理學",
+   "origin": "先修管理學與組織行為",
+   "base": "管理學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "組織行為",
+   "origin": "先修管理學與組織行為",
+   "base": "組織行為",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "管理學",
+   "origin": "先修管理學與組織行為",
+   "base": "管理學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "組織行為",
+   "origin": "先修管理學與組織行為",
+   "base": "組織行為",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "五管",
+   "origin": "先修五管",
+   "base": "五管",
+   "method": "rule/alias:seed",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "五管",
+   "origin": "需先修五管",
+   "base": "五管",
+   "method": "rule/alias:seed",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "行銷管理",
+   "origin": "先修行銷管理",
+   "base": "行銷管理",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "行銷管理",
+   "origin": "先修行銷管理",
+   "base": "行銷管理",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "營運與供應鏈管理",
+   "origin": "先修營運與供應鏈管理",
+   "base": "營運與供應鏈管理",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "行銷管理",
+   "origin": "先修行銷管理",
+   "base": "行銷管理",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "行銷管理",
+   "origin": "先修行銷管理",
+   "base": "行銷管理",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "系統分析與設計",
+   "origin": "先先修科目為1.系統分析與設計",
+   "base": "系統分析與設計",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "資料庫管理",
+   "origin": "資料庫管理",
+   "base": "資料庫管理",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "程式設計一",
+   "origin": "先修科目為程式設計一",
+   "base": "程式設計",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "程式設計一",
+   "origin": "先修科目為程式設計一",
+   "base": "程式設計",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "資料科學的商業應用",
+   "origin": "先修科目為「資料科學的商業應用」",
+   "base": "資料科學的商業應用",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "財務管理",
+   "origin": "先修財務管理及投資學",
+   "base": "財務管理",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "投資學",
+   "origin": "先修財務管理及投資學",
+   "base": "投資學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "統計學(一)",
+   "origin": "先修科目:統計學(一)、統計學(二)",
+   "base": "統計學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "統計學(二)",
+   "origin": "先修科目:統計學(一)、統計學(二)",
+   "base": "統計學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "財務管理",
+   "origin": "先修財務管理",
+   "base": "財務管理",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "風險管理",
+   "origin": "建議學生須先修過「風險管理」與「保險學」",
+   "base": "風險管理",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "保險學",
+   "origin": "建議學生須先修過「風險管理」與「保險學」",
+   "base": "保險學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "保險學",
+   "origin": "先修保險學",
+   "base": "保險學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "民法概要",
+   "origin": "本課程為「民法概要」上學期內容的延伸課程",
+   "base": "民法概要",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "國際經貿法",
+   "origin": "先修國際經貿法或國際經濟法",
+   "base": "國際經貿法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "國際經濟法",
+   "origin": "先修國際經貿法或國際經濟法",
+   "base": "國際經濟法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "(大學部)經濟學",
+   "origin": "預修科目:三學分之(大學部)經濟學以及三學分之(大學部)財務管理或者是經由老師同意選修",
+   "base": "經濟學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "(大學部)財務管理",
+   "origin": "預修科目:三學分之(大學部)經濟學以及三學分之(大學部)財務管理或者是經由老師同意選修",
+   "base": "財務管理",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "(大學部)經濟學",
+   "origin": "預修科目:三學分之(大學部)經濟學以及三學分之(大學部)投資學或者是經由老師同意選修",
+   "base": "經濟學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "(大學部)投資學",
+   "origin": "預修科目:三學分之(大學部)經濟學以及三學分之(大學部)投資學或者是經由老師同意選修",
+   "base": "投資學",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "金融機構管理",
+   "origin": "學士班請選課號302809001(需先修金融機構管理或銀行經營管理)",
+   "base": "金融機構管理",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "銀行經營管理",
+   "origin": "學士班請選課號302809001(需先修金融機構管理或銀行經營管理)",
+   "base": "銀行經營管理",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "決策科學與企業流程模式",
+   "origin": "先修科目為決策科學與企業流程模式",
+   "base": null,
+   "method": "llm/unresolved",
+   "resolved": false,
+   "in_1142": false
+  },
+  {
+   "mention": "資訊系統研發",
+   "origin": "先修科目為資訊系統研發",
+   "base": "資訊系統研發",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "系統分析與設計",
+   "origin": "先修科目為系統分析與設計",
+   "base": "系統分析與設計",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "駭客攻防實戰基礎",
+   "origin": "先修科目為「駭客攻防實戰基礎」",
+   "base": "駭客攻防實戰基礎",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "資料科學的商業應用",
+   "origin": "先修科目為「資料科學的商業應用」",
+   "base": "資料科學的商業應用",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "資訊系統研發",
+   "origin": "先修科目為資訊系統研發",
+   "base": "資訊系統研發",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "風險管理",
+   "origin": "限本系碩士生(且先修風險管理)人數上限 35人",
+   "base": "風險管理",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "五管",
+   "origin": "須修畢或同學期修畢五管",
+   "base": "五管",
+   "method": "rule/alias:seed",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "五管",
+   "origin": "須修畢或同學期修畢五管",
+   "base": "五管",
+   "method": "rule/alias:seed",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "五管",
+   "origin": "須修畢或同學期修畢五管",
+   "base": "五管",
+   "method": "rule/alias:seed",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "財務管理",
+   "origin": "需修過「財務管理」才能選修",
+   "base": "財務管理",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "經濟學",
+   "origin": "建議免修或修過「經濟學」後再選修",
+   "base": "經濟學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "跨界實驗室",
+   "origin": "且須先修過入門課「跨界實驗室」",
+   "base": "跨界實驗室",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "人機互動設計",
+   "origin": "修課的同學必須滿足下列條件之一:曾修習過《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》",
+   "base": "人機互動設計",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "進階使用者經驗設計",
+   "origin": "修課的同學必須滿足下列條件之一:曾修習過《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》",
+   "base": "進階使用者經驗設計",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "多媒體網路",
+   "origin": "修課的同學必須滿足下列條件之一:曾修習過《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》",
+   "base": "多媒體網路",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "數位內容技術實作",
+   "origin": "修課的同學必須滿足下列條件之一:曾修習過《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》",
+   "base": "數位內容技術實作",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "電腦動畫",
+   "origin": "修課的同學必須滿足下列條件之一:曾修習過《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》",
+   "base": "電腦動畫",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "人機互動設計",
+   "origin": "必須修過陳宜秀老師開設的「人機互動設計」課程",
+   "base": "人機互動設計",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "法文翻譯實務",
+   "origin": "具備法文B1(或以上程度)或修畢「法文翻譯實務」且及格者",
+   "base": "法文翻譯實務",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "德文翻譯實務",
+   "origin": "具備德文B1(或以上程度)或修畢「德文翻譯實務」且及格者",
+   "base": "德文翻譯實務",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "政治學",
+   "origin": "建議先修「政治學」及「比較政府與政治」",
+   "base": "政治學",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "比較政府與政治",
+   "origin": "建議先修「政治學」及「比較政府與政治」",
+   "base": "比較政府與政治",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "大學部語意學導論",
+   "origin": "語言、認知與大腦學分學程學生需先修大學部「語意學導論」方能選課",
+   "base": "語意學導論",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "日文(一)",
+   "origin": "須先修習學士班日文(一)、(二)其中一門",
+   "base": "日文",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "日文(二)",
+   "origin": "須先修習學士班日文(一)、(二)其中一門",
+   "base": "日文",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "日文語文",
+   "origin": "或曾在大學修習日文語文 4 學分以上",
+   "base": null,
+   "method": "llm/unresolved",
+   "resolved": false,
+   "in_1142": false
+  },
+  {
+   "mention": "民法總則",
+   "origin": "須修過「民法總則」以及「民法債編總論」課程",
+   "base": "民法總則",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "民法債編總論",
+   "origin": "須修過「民法總則」以及「民法債編總論」課程",
+   "base": "民法債編總論",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "行政法",
+   "origin": "須修過「行政法」課程",
+   "base": "行政法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "行政法",
+   "origin": "須修過「行政法」課程",
+   "base": "行政法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "刑法",
+   "origin": "須修過「刑法」以及「刑事訴訟法」課程",
+   "base": "刑法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "刑事訴訟法",
+   "origin": "須修過「刑法」以及「刑事訴訟法」課程",
+   "base": "刑事訴訟法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "憲法",
+   "origin": "須修過「憲法」以及「行政法」課程",
+   "base": "憲法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "行政法",
+   "origin": "須修過「憲法」以及「行政法」課程",
+   "base": "行政法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "智慧財產法",
+   "origin": "限修習過任一門「智慧財產法」或「公平交易法」課程的同學選課",
+   "base": null,
+   "method": "llm/unresolved",
+   "resolved": false,
+   "in_1142": false
+  },
+  {
+   "mention": "公平交易法",
+   "origin": "限修習過任一門「智慧財產法」或「公平交易法」課程的同學選課",
+   "base": "公平交易法",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "行政法",
+   "origin": "須修過「行政法」課程",
+   "base": "行政法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "行政法",
+   "origin": "須修過「行政法」課程",
+   "base": "行政法",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "心統",
+   "origin": "先修:心統",
+   "base": "心理及教育統計學",
+   "method": "rule/alias:rate",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "程式設計基礎",
+   "origin": "建議有程式設計基礎之同學修習",
+   "base": "程式設計基礎",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "114-1專案實作C",
+   "origin": "限修過114-1專案實作C同學修習",
+   "base": "專案實作C",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "人機互動設計",
+   "origin": "必須修過陳宜秀老師開設的「人機互動設計」課程",
+   "base": "人機互動設計",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "機器人與 AI 互動專題:理論與研究",
+   "origin": "修課的同學必須修習過下列課程其中之一:《 機器人與 AI 互動專題:理論與研究 》、《 電腦中介傳播專題》、《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》、《基礎動畫設計》、《數位內容與科技導論》",
+   "base": "機器人與AI互動專題",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "電腦中介傳播專題",
+   "origin": "修課的同學必須修習過下列課程其中之一:《 機器人與 AI 互動專題:理論與研究 》、《 電腦中介傳播專題》、《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》、《基礎動畫設計》、《數位內容與科技導論》",
+   "base": "電腦中介傳播專題",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "人機互動設計",
+   "origin": "修課的同學必須修習過下列課程其中之一:《 機器人與 AI 互動專題:理論與研究 》、《 電腦中介傳播專題》、《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》、《基礎動畫設計》、《數位內容與科技導論》",
+   "base": "人機互動設計",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "進階使用者經驗設計",
+   "origin": "修課的同學必須修習過下列課程其中之一:《 機器人與 AI 互動專題:理論與研究 》、《 電腦中介傳播專題》、《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》、《基礎動畫設計》、《數位內容與科技導論》",
+   "base": "進階使用者經驗設計",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "多媒體網路",
+   "origin": "修課的同學必須修習過下列課程其中之一:《 機器人與 AI 互動專題:理論與研究 》、《 電腦中介傳播專題》、《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》、《基礎動畫設計》、《數位內容與科技導論》",
+   "base": "多媒體網路",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "數位內容技術實作",
+   "origin": "修課的同學必須修習過下列課程其中之一:《 機器人與 AI 互動專題:理論與研究 》、《 電腦中介傳播專題》、《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》、《基礎動畫設計》、《數位內容與科技導論》",
+   "base": "數位內容技術實作",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "電腦動畫",
+   "origin": "修課的同學必須修習過下列課程其中之一:《 機器人與 AI 互動專題:理論與研究 》、《 電腦中介傳播專題》、《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》、《基礎動畫設計》、《數位內容與科技導論》",
+   "base": "電腦動畫",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "基礎動畫設計",
+   "origin": "修課的同學必須修習過下列課程其中之一:《 機器人與 AI 互動專題:理論與研究 》、《 電腦中介傳播專題》、《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》、《基礎動畫設計》、《數位內容與科技導論》",
+   "base": "基礎動畫設計",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "數位內容與科技導論",
+   "origin": "修課的同學必須修習過下列課程其中之一:《 機器人與 AI 互動專題:理論與研究 》、《 電腦中介傳播專題》、《人機互動設計》、《進階使用者經驗設計》、《多媒體網路》、《數位內容技術實作》、《電腦動畫》、《基礎動畫設計》、《數位內容與科技導論》",
+   "base": "數位內容與科技導論",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "線性代數",
+   "origin": "建議先修科目線性代數、計算機概論",
+   "base": "線性代數",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  },
+  {
+   "mention": "計算機概論",
+   "origin": "建議先修科目線性代數、計算機概論",
+   "base": "計算機概論",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "駭客攻防實戰基礎",
+   "origin": "先修科目為「駭客攻防實戰基礎」",
+   "base": "駭客攻防實戰基礎",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "跨界實驗室",
+   "origin": "先修科目:跨界實驗室",
+   "base": "跨界實驗室",
+   "method": "rule/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "跨界實驗室",
+   "origin": "需先修過入門課「跨界實驗室」",
+   "base": "跨界實驗室",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "跨界實驗室",
+   "origin": "需先修過入門課「跨界實驗室」",
+   "base": "跨界實驗室",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": false
+  },
+  {
+   "mention": "國際公法",
+   "origin": "先修課程:限大學或碩士期間已完成修習三學分(含)以上「國際公法」課程者選修",
+   "base": "國際公法",
+   "method": "llm/exact",
+   "resolved": true,
+   "in_1142": true
+  }
+ ]
+}

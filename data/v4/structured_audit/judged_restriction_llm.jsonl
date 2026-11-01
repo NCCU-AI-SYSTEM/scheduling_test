@@ -1,0 +1,30 @@
+{"i": 0, "ok": false, "why": "不含選讀生/交換生 is about auto-assignment (灌檔), not a status limit on the course"}
+{"i": 1, "ok": true, "why": ""}
+{"i": 2, "ok": true, "why": ""}
+{"i": 3, "ok": true, "why": ""}
+{"i": 4, "ok": true, "why": ""}
+{"i": 5, "ok": true, "why": ""}
+{"i": 6, "ok": true, "why": ""}
+{"i": 7, "ok": true, "why": ""}
+{"i": 8, "ok": true, "why": ""}
+{"i": 9, "ok": true, "why": ""}
+{"i": 10, "ok": false, "why": "國貿一甲 is the assigned target class, not a dept_only limit"}
+{"i": 11, "ok": true, "why": ""}
+{"i": 12, "ok": true, "why": ""}
+{"i": 13, "ok": false, "why": "115提前入學新生 is a cohort rule, typed dept_only"}
+{"i": 14, "ok": true, "why": ""}
+{"i": 15, "ok": false, "why": "詳閱教學大綱 is advice, typed add_permit"}
+{"i": 16, "ok": false, "why": "value invents 用Python學財務計量; note only says Python、影像處理、深度學習相關課程"}
+{"i": 17, "ok": true, "why": ""}
+{"i": 18, "ok": true, "why": ""}
+{"i": 19, "ok": true, "why": ""}
+{"i": 20, "ok": true, "why": ""}
+{"i": 21, "ok": false, "why": "same as 15 (another course, same note)"}
+{"i": 22, "ok": true, "why": ""}
+{"i": 23, "ok": false, "why": "雙輔生請修習該系課程 is a redirect, typed priority"}
+{"i": 24, "ok": true, "why": ""}
+{"i": 25, "ok": true, "why": ""}
+{"i": 26, "ok": true, "why": ""}
+{"i": 27, "ok": true, "why": ""}
+{"i": 28, "ok": true, "why": ""}
+{"i": 29, "ok": true, "why": ""}

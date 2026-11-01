@@ -1,0 +1,1908 @@
+[
+  {
+    "utCodL1": "0",
+    "utL1Text": "----- 請選擇 Choose unit -----",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "01",
+    "utL1Text": "整開 / 通識課程 / 校級選修 Integrated Courses/General Education/Selective Courses, NCCU",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "A1",
+        "utL2Text": "整開 / Integrated Courses",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "105",
+            "utL3Text": "管理學 / Management"
+          },
+          {
+            "utCodL3": "106",
+            "utL3Text": "統計學 / Statistics"
+          },
+          {
+            "utCodL3": "107",
+            "utL3Text": "經濟學 / Economics"
+          },
+          {
+            "utCodL3": "108",
+            "utL3Text": "行政學 / Public Administrastion"
+          },
+          {
+            "utCodL3": "109",
+            "utL3Text": "行銷管理 / Marketing Management"
+          },
+          {
+            "utCodL3": "110",
+            "utL3Text": "投資學 / Investments"
+          },
+          {
+            "utCodL3": "111",
+            "utL3Text": "社會學 / Sociology"
+          },
+          {
+            "utCodL3": "112",
+            "utL3Text": "政治學 / Political science"
+          },
+          {
+            "utCodL3": "113",
+            "utL3Text": "初級會計學（一） / Fundamental Accounting I"
+          },
+          {
+            "utCodL3": "114",
+            "utL3Text": "初級會計學（二） / Fundamental Accounting II"
+          },
+          {
+            "utCodL3": "115",
+            "utL3Text": "中級會計學（一） / Intermediate Accounting I"
+          },
+          {
+            "utCodL3": "116",
+            "utL3Text": "中級會計學（二） / Intermediate AccountingII"
+          },
+          {
+            "utCodL3": "117",
+            "utL3Text": "中級會計學（三） / Intermediate Accounting（III）"
+          },
+          {
+            "utCodL3": "118",
+            "utL3Text": "成本管理會計（一） / Cost and Management AccountingI"
+          },
+          {
+            "utCodL3": "119",
+            "utL3Text": "民法概要 / Civil Law"
+          },
+          {
+            "utCodL3": "120",
+            "utL3Text": "個體經濟學 / Microeconomics"
+          },
+          {
+            "utCodL3": "121",
+            "utL3Text": "財政學 / Public Finance"
+          },
+          {
+            "utCodL3": "122",
+            "utL3Text": "財務管理 / Financial Management"
+          },
+          {
+            "utCodL3": "123",
+            "utL3Text": "國際關係 / International Relations"
+          },
+          {
+            "utCodL3": "124",
+            "utL3Text": "貨幣銀行學 / Money and Banking"
+          },
+          {
+            "utCodL3": "125",
+            "utL3Text": "軟體應用導論 / Software Application Introduction"
+          },
+          {
+            "utCodL3": "126",
+            "utL3Text": "普通心理學 / Psychology"
+          },
+          {
+            "utCodL3": "127",
+            "utL3Text": "資訊管理 / Management Information System"
+          },
+          {
+            "utCodL3": "128",
+            "utL3Text": "數理統計學 / Mathematical Statistics"
+          },
+          {
+            "utCodL3": "129",
+            "utL3Text": "總體經濟學 / Macroeconomics"
+          },
+          {
+            "utCodL3": "130",
+            "utL3Text": "商事法 / Commercial Law"
+          },
+          {
+            "utCodL3": "131",
+            "utL3Text": "資料處理 / Data Processing"
+          },
+          {
+            "utCodL3": "132",
+            "utL3Text": "稅務會計 / Tax Accounting"
+          },
+          {
+            "utCodL3": "133",
+            "utL3Text": "審計學（一） / Auditing I"
+          },
+          {
+            "utCodL3": "134",
+            "utL3Text": "審計學（二） / Auditing II"
+          },
+          {
+            "utCodL3": "135",
+            "utL3Text": "成本管理會計（二） / Cost and Management Accounting（II）"
+          },
+          {
+            "utCodL3": "136",
+            "utL3Text": "社會責任與倫理 / "
+          },
+          {
+            "utCodL3": "137",
+            "utL3Text": "微積分 / Calculus"
+          },
+          {
+            "utCodL3": "138",
+            "utL3Text": "華語特別班 / Mandarin Course"
+          },
+          {
+            "utCodL3": "139",
+            "utL3Text": "學術英文 / Academic English"
+          }
+        ]
+      },
+      {
+        "utCodL2": "A2",
+        "utL2Text": "通識 / General Education",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "2S1",
+            "utL3Text": "中國語文類通識 / General Course/Chinese"
+          },
+          {
+            "utCodL3": "2S2",
+            "utL3Text": "外國語文類通識 / General Course/Foreign Languages"
+          },
+          {
+            "utCodL3": "2S3",
+            "utL3Text": "人文學類通識 / General Course/Humanities"
+          },
+          {
+            "utCodL3": "2S4",
+            "utL3Text": "社會科學類通識 / General Course/Social Sciences"
+          },
+          {
+            "utCodL3": "2S5",
+            "utL3Text": "自然科學類通識 / General Course/Natural Sciences"
+          },
+          {
+            "utCodL3": "2S6",
+            "utL3Text": "跨領域類通識 / General Course/Cross-Discipline"
+          },
+          {
+            "utCodL3": "2S7",
+            "utL3Text": "書院通識 / Residential College General Education"
+          },
+          {
+            "utCodL3": "2S8",
+            "utL3Text": "資訊通識 / General Course / Informatics and Computing"
+          }
+        ]
+      },
+      {
+        "utCodL2": "A9",
+        "utL2Text": "校級選修 / Selective Courses, NCCU",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "9S1",
+            "utL3Text": "校級選修課程 / Selective Courses, NCCU"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "02",
+    "utL1Text": "輔系專班 / 學分學程專班 Minor/Credited Program",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "A3",
+        "utL2Text": "輔系專班 / Minor",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "3S1",
+            "utL3Text": "中輔 / Dept. of Chinese Literature Course Schedule for Minor Students"
+          },
+          {
+            "utCodL3": "3S2",
+            "utL3Text": "外輔 / Dept. of Diplomacy Course Schedule for Minor Students"
+          },
+          {
+            "utCodL3": "3S3",
+            "utL3Text": "貿輔 / Dept. of International Trade Course Schedule for Minor Students"
+          },
+          {
+            "utCodL3": "3S4",
+            "utL3Text": "會輔 / Dept. of Accounting Course Schedule for Minor Students"
+          },
+          {
+            "utCodL3": "3S5",
+            "utL3Text": "英輔 / Dept. of English Course Schedule for Minor Students"
+          },
+          {
+            "utCodL3": "3S6",
+            "utL3Text": "日輔 / Dept. of Japanese Course Schedule for Minor Students"
+          },
+          {
+            "utCodL3": "3S7",
+            "utL3Text": "韓輔 / Dept. of Korean Course Schedule for Minor Students"
+          },
+          {
+            "utCodL3": "3S8",
+            "utL3Text": "法輔 / Dept. of Law Course Schedule for Minor Students"
+          }
+        ]
+      },
+      {
+        "utCodL2": "A4",
+        "utL2Text": "學分學程專班 / Credited Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "P01",
+            "utL3Text": "台灣與近代世界學程 / Taiwan and Modern World Multi-Fields Program"
+          },
+          {
+            "utCodL3": "P04",
+            "utL3Text": "創意學程 / Creativity Program"
+          },
+          {
+            "utCodL3": "P05",
+            "utL3Text": "華語文教學學分學程 / Teaching Chinese as Second Language Program"
+          },
+          {
+            "utCodL3": "P09",
+            "utL3Text": "斯拉夫語文學程 / Slavic Languages and Literatures Program"
+          },
+          {
+            "utCodL3": "P15",
+            "utL3Text": "外語傳播第二專長學程 / Foreign Languages and Communication Program"
+          },
+          {
+            "utCodL3": "P19",
+            "utL3Text": "法律與會計碩士學程 / Law and Accounting Joint Program"
+          },
+          {
+            "utCodL3": "P21",
+            "utL3Text": "生物科技管理學程 / Biotechnology Management Program"
+          },
+          {
+            "utCodL3": "P26",
+            "utL3Text": "專利學分學程 / "
+          },
+          {
+            "utCodL3": "P29",
+            "utL3Text": "翻譯與跨文化學分學程 / Program in Translation and Cross-cultural Studies"
+          },
+          {
+            "utCodL3": "P30",
+            "utL3Text": "供應鏈管理學分學程 / Supply Chain Management Program"
+          },
+          {
+            "utCodL3": "P31",
+            "utL3Text": "數理財務學分學程 / Mathematical Finance Program"
+          },
+          {
+            "utCodL3": "P32",
+            "utL3Text": "語言、認知與大腦 / Language, Cognition and Brain"
+          },
+          {
+            "utCodL3": "P35",
+            "utL3Text": "外語專長商管學分學程 / Foreign Language Students Business Primer Program"
+          },
+          {
+            "utCodL3": "P37",
+            "utL3Text": "電子物理學分學程 / Electrophysics Program"
+          },
+          {
+            "utCodL3": "P39",
+            "utL3Text": "國際事務學院英語授課學分學程 / College of International Affairs' English Taught Program"
+          },
+          {
+            "utCodL3": "P40",
+            "utL3Text": "傳播學院國際傳播英語學分學程 / College of Communication English Taught Program"
+          },
+          {
+            "utCodL3": "P41",
+            "utL3Text": "社會科學學院英語授課學分學程 / College of Social Sciences - English Taught Program"
+          },
+          {
+            "utCodL3": "P42",
+            "utL3Text": "法學院英語授課學分學程 / College of Law English-Taught Program"
+          },
+          {
+            "utCodL3": "P43",
+            "utL3Text": "理學院英語授課學分學程 / The College of Science English Taught Program"
+          },
+          {
+            "utCodL3": "P44",
+            "utL3Text": "教育學院英語授課學分學程 / College of Education-English Taught Program"
+          },
+          {
+            "utCodL3": "P45",
+            "utL3Text": "外國語文學院世界文化英語學分學程 / English Taught Program in World Cultures"
+          },
+          {
+            "utCodL3": "P46",
+            "utL3Text": "文學院英語學分學程 / College of Liberal Arts-English Taught Program"
+          },
+          {
+            "utCodL3": "P47",
+            "utL3Text": "大腦科學學分學程 / Brain science Program"
+          },
+          {
+            "utCodL3": "P49",
+            "utL3Text": "人文創新學程 / X Program"
+          },
+          {
+            "utCodL3": "P51",
+            "utL3Text": "人文領袖榮譽學分學程 / Philosophy, Politics, Economics, Sociology and Arts, PPESA"
+          },
+          {
+            "utCodL3": "P52",
+            "utL3Text": "台灣文學與東亞學分學程 / Taiwanese Literature and East Asia Program"
+          },
+          {
+            "utCodL3": "P53",
+            "utL3Text": "金融科技專長學分學程 / Fintech Program"
+          },
+          {
+            "utCodL3": "P54",
+            "utL3Text": "創新與創造力學分學程 / Creativity and Innovation Program"
+          },
+          {
+            "utCodL3": "P55",
+            "utL3Text": "中國大陸與兩岸關係研究跨領域學分學程 / China Studies and Cross-Strait Relations Program"
+          },
+          {
+            "utCodL3": "P56",
+            "utL3Text": "數位人文技術與應用學分學程 / The Technology and Application of Digital Humanities Program"
+          },
+          {
+            "utCodL3": "P57",
+            "utL3Text": "東南亞文化與宗教跨領域學分學程 / Southeast Asian Cultures and Religions Interdisciplinary Program"
+          },
+          {
+            "utCodL3": "P58",
+            "utL3Text": "台灣與近代東亞跨領域學分學程 / Cross-Disciplinary Program in Taiwan and Modern Asia"
+          },
+          {
+            "utCodL3": "P59",
+            "utL3Text": "近代東亞歷史文化跨國學分學程（跨國跨校） / International Studies Program in Modern East Asian History"
+          },
+          {
+            "utCodL3": "P60",
+            "utL3Text": "科技與社會跨國學分學程 / Technology and Social Innovations Program"
+          },
+          {
+            "utCodL3": "P61",
+            "utL3Text": "社會實踐與社區共善學分學程 / Social Practices and Co-Prosperity of Communities Program"
+          },
+          {
+            "utCodL3": "P62",
+            "utL3Text": "發展研究學分學程 / Development Studies"
+          },
+          {
+            "utCodL3": "P63",
+            "utL3Text": "歐洲聯盟研究國際學分學程 / International Programme in European Union Studies"
+          },
+          {
+            "utCodL3": "P64",
+            "utL3Text": "近代社會的身體與性別跨領域學分學程 / Body and Gender in Modern Society Program"
+          },
+          {
+            "utCodL3": "P65",
+            "utL3Text": "臺灣原住民族發展學分學程 / Certificate in Taiwan Indigenous Development Program"
+          },
+          {
+            "utCodL3": "P66",
+            "utL3Text": "STEAM學分學程 / STEAM Program"
+          },
+          {
+            "utCodL3": "P67",
+            "utL3Text": "全球治理雙語學分學程 / Global Governance Certified Program"
+          },
+          {
+            "utCodL3": "P68",
+            "utL3Text": "南島國際學分學程 / International Program of Austronesian Studies"
+          },
+          {
+            "utCodL3": "P69",
+            "utL3Text": "東亞頂尖教育家國際學分學程 / Excellent Educators in East-Asia (EEE) Program"
+          },
+          {
+            "utCodL3": "P70",
+            "utL3Text": "照顧哲學學分學程 / Philosophy of Care Program"
+          },
+          {
+            "utCodL3": "P71",
+            "utL3Text": "資料科學與輿情分析學分學程 / Data Science and Public Opinion Analysis Program"
+          },
+          {
+            "utCodL3": "P72",
+            "utL3Text": "跨域、創新、實踐─應用中文學分學程 / Applied Chinese Program"
+          },
+          {
+            "utCodL3": "P73",
+            "utL3Text": "博物館學分學程 / Museum Program"
+          },
+          {
+            "utCodL3": "P33",
+            "utL3Text": "社會創新領袖學分學程 / The Social Innovation Leadership Program(停招)"
+          },
+          {
+            "utCodL3": "P36",
+            "utL3Text": "創意設計實務學分學程 / Creative Design Practices Program(停招)"
+          },
+          {
+            "utCodL3": "P48",
+            "utL3Text": "日本文化與經濟學分學程 / Japanese culture and economy Program(停招)"
+          },
+          {
+            "utCodL3": "P02",
+            "utL3Text": "文化、傳播與現代社會學程 / Culture、Communication and Modern Society Program(停辦)"
+          },
+          {
+            "utCodL3": "P03",
+            "utL3Text": "勞動與社會政策學程 / Labor and Social Policy Program(停辦)"
+          },
+          {
+            "utCodL3": "P06",
+            "utL3Text": "人文學程 / Humanity Program(停辦)"
+          },
+          {
+            "utCodL3": "P07",
+            "utL3Text": "中國大陸研究跨領域學程 / China Studies Program(停辦)"
+          },
+          {
+            "utCodL3": "P08",
+            "utL3Text": "東北亞語言與文化學程 / Language and Literature of Northereastern Asia Program(停辦)"
+          },
+          {
+            "utCodL3": "P10",
+            "utL3Text": "中東語言與文化學程 / Program of Middle Eastern Languages and Cultures(停辦)"
+          },
+          {
+            "utCodL3": "P11",
+            "utL3Text": "調查研究方法菁英學分學程 / Program in Social Scientific Research Method of Inquiry(停辦)"
+          },
+          {
+            "utCodL3": "P12",
+            "utL3Text": "社會科學榮譽學程 / Honors Program in Social Sciences(停辦)"
+          },
+          {
+            "utCodL3": "P13",
+            "utL3Text": "外語學院歐洲語言與文化學程 / European Studies Program(停辦)"
+          },
+          {
+            "utCodL3": "P14",
+            "utL3Text": "涉外事務與談判學程 / Foreign Affairs and Negociation Program(停辦)"
+          },
+          {
+            "utCodL3": "P16",
+            "utL3Text": "英語商管學程 / English Taught Program(停辦)"
+          },
+          {
+            "utCodL3": "P17",
+            "utL3Text": "英語文榮譽學程 / Honors English Program(停辦)"
+          },
+          {
+            "utCodL3": "P18",
+            "utL3Text": "人文榮譽學程 / The Humanistic Honor Courses(停辦)"
+          },
+          {
+            "utCodL3": "P20",
+            "utL3Text": "藝術產業經營學程 / Program on the Management of Art Industry(停辦)"
+          },
+          {
+            "utCodL3": "P22",
+            "utL3Text": "台灣人文數位典藏與應用學程 / Taiwan Humanities Digital Library and Application Program(停辦)"
+          },
+          {
+            "utCodL3": "P23",
+            "utL3Text": "東南亞語文學分學程 / Southeastern Studies Program(停辦)"
+          },
+          {
+            "utCodL3": "P24",
+            "utL3Text": "性別研究跨領域學程 / Interdiciplinary Program for Gernder Study(停辦)"
+          },
+          {
+            "utCodL3": "P25",
+            "utL3Text": "日本研究碩士學分學程 / Japan Study Program(停辦)"
+          },
+          {
+            "utCodL3": "P27",
+            "utL3Text": "歐洲聯盟研究碩士學分學程 / (停辦)"
+          },
+          {
+            "utCodL3": "P28",
+            "utL3Text": "全球政府採購學分學程 / Global Government Procurement Credit Program(停辦)"
+          },
+          {
+            "utCodL3": "P34",
+            "utL3Text": "博雅榮譽學分學程 / Boya Honor Program(停辦)"
+          },
+          {
+            "utCodL3": "P38",
+            "utL3Text": "國際經貿談判人才培育跨校學分學程 / Personnel Training Credit Program for International Trade and Negotiation(停辦)"
+          },
+          {
+            "utCodL3": "P50",
+            "utL3Text": "全球治理英語學分學程 / Global Governance Program(停辦)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "03",
+    "utL1Text": "體育 / 全民國防課程 Physical Education/All-out Defense Education Military Training",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "A6",
+        "utL2Text": "體育課程 / Physical Education",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "6S1",
+            "utL3Text": "體育必修 / Physical Education-Required"
+          },
+          {
+            "utCodL3": "6S2",
+            "utL3Text": "體育選修 / Physical Education-Elective"
+          },
+          {
+            "utCodL3": "6S3",
+            "utL3Text": "適應體育(原特別班) / Adapted Physical Education"
+          }
+        ]
+      },
+      {
+        "utCodL2": "A7",
+        "utL2Text": "全民國防課程 / All-out Defense Education Military Training",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "7S1",
+            "utL3Text": "全民國防課程 / All-out Defense Education Military Training"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "ZC0",
+    "utL1Text": "校級不分院 Cross-College Program",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "NU1",
+            "utL3Text": "運動產業與文化學士學位學程 / Bachelor Program in Sport Industry and Culture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "100",
+    "utL1Text": "文學院 Liberal Arts",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "101",
+            "utL3Text": "中國文學系 / Chinese Literature"
+          },
+          {
+            "utCodL3": "103",
+            "utL3Text": "歷史學系 / History"
+          },
+          {
+            "utCodL3": "104",
+            "utL3Text": "哲學系 / Philosophy"
+          },
+          {
+            "utCodL3": "100",
+            "utL3Text": "人文榮譽學程 / Humanities honor  program"
+          }
+        ]
+      },
+      {
+        "utCodL2": "2",
+        "utL2Text": "碩士班 / MA Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "151",
+            "utL3Text": "中國文學系 / Chinese Literature"
+          },
+          {
+            "utCodL3": "153",
+            "utL3Text": "歷史學系 / History"
+          },
+          {
+            "utCodL3": "154",
+            "utL3Text": "哲學系 / Philosophy"
+          },
+          {
+            "utCodL3": "155",
+            "utL3Text": "圖書資訊與檔案學研究所 / Graduate Institute of Library, Information and Archival Studies"
+          },
+          {
+            "utCodL3": "156",
+            "utL3Text": "宗教研究所 / Religious Studies"
+          },
+          {
+            "utCodL3": "158",
+            "utL3Text": "台灣史研究所 / Graduate Institute of Taiwan History"
+          },
+          {
+            "utCodL3": "159",
+            "utL3Text": "台灣文學研究所 / Graduate Institute of Taiwanese Literature"
+          },
+          {
+            "utCodL3": "161",
+            "utL3Text": "華語文教學碩士學位學程 / Master's Program in Teaching Chinese as a Second Language"
+          },
+          {
+            "utCodL3": "912",
+            "utL3Text": "國文教學碩士在職專班 / Master of Chinese Teaching"
+          },
+          {
+            "utCodL3": "913",
+            "utL3Text": "圖書資訊學數位碩士在職專班 / E-learning Master Program of Library and Information Studies"
+          }
+        ]
+      },
+      {
+        "utCodL2": "3",
+        "utL2Text": "博士班 / Ph.D Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "151",
+            "utL3Text": "中國文學系 / Chinese Literature"
+          },
+          {
+            "utCodL3": "153",
+            "utL3Text": "歷史學系 / History"
+          },
+          {
+            "utCodL3": "154",
+            "utL3Text": "哲學系 / Philosophy"
+          },
+          {
+            "utCodL3": "155",
+            "utL3Text": "圖書資訊與檔案學研究所 / Graduate Institute of Library, Information and Archival Studies"
+          },
+          {
+            "utCodL3": "156",
+            "utL3Text": "宗教研究所 / Religious Studies"
+          },
+          {
+            "utCodL3": "158",
+            "utL3Text": "台灣史研究所 / Graduate Institute of Taiwan History"
+          },
+          {
+            "utCodL3": "159",
+            "utL3Text": "台灣文學研究所 / Graduate Institute of Taiwanese Literature"
+          },
+          {
+            "utCodL3": "160",
+            "utL3Text": "華語文教學博士學位學程 / Doctor's Program in Teaching Chinese as a Second Language"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "200",
+    "utL1Text": "社會科學學院 Social Sciences",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "202",
+            "utL3Text": "政治學系 / Political Science"
+          },
+          {
+            "utCodL3": "204",
+            "utL3Text": "社會學系 / Sociology"
+          },
+          {
+            "utCodL3": "205",
+            "utL3Text": "財政學系 / Public Finance"
+          },
+          {
+            "utCodL3": "206",
+            "utL3Text": "公共行政學系 / Public Administration"
+          },
+          {
+            "utCodL3": "207",
+            "utL3Text": "地政學系 / Land Economics"
+          },
+          {
+            "utCodL3": "208",
+            "utL3Text": "經濟學系 / Economics"
+          },
+          {
+            "utCodL3": "209",
+            "utL3Text": "民族學系 / Ethnology"
+          }
+        ]
+      },
+      {
+        "utCodL2": "2",
+        "utL2Text": "碩士班 / MA Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "252",
+            "utL3Text": "政治學系 / Political Science"
+          },
+          {
+            "utCodL3": "254",
+            "utL3Text": "社會學系 / Sociology"
+          },
+          {
+            "utCodL3": "255",
+            "utL3Text": "財政學系 / Public Finance"
+          },
+          {
+            "utCodL3": "256",
+            "utL3Text": "公共行政學系 / Public Administration"
+          },
+          {
+            "utCodL3": "257",
+            "utL3Text": "地政學系 / Land Economics"
+          },
+          {
+            "utCodL3": "258",
+            "utL3Text": "經濟學系 / Economics"
+          },
+          {
+            "utCodL3": "259",
+            "utL3Text": "民族學系 / Ethnology"
+          },
+          {
+            "utCodL3": "261",
+            "utL3Text": "國家發展研究所 / Graduate Institute of Development Studies"
+          },
+          {
+            "utCodL3": "262",
+            "utL3Text": "勞工研究所 / Labor Research"
+          },
+          {
+            "utCodL3": "264",
+            "utL3Text": "社會工作研究所 / Graduate Institute of Social Work"
+          },
+          {
+            "utCodL3": "266",
+            "utL3Text": "應用經濟與社會發展英語碩士學位學程 / International Master's Program of Applied Economics and Social Development"
+          },
+          {
+            "utCodL3": "267",
+            "utL3Text": "土地政策與環境規劃碩士原住民專班 / Masters Program in Land Policy and Environmental Planning for Indigenous Peoples"
+          },
+          {
+            "utCodL3": "921",
+            "utL3Text": "行政管理碩士學程 / Master of Eminent Public Administrators"
+          },
+          {
+            "utCodL3": "923",
+            "utL3Text": "地政學系碩士在職專班 / The Master Program of Land Economics"
+          },
+          {
+            "utCodL3": "926",
+            "utL3Text": "亞太研究英語碩士學程 / International Master's Program in Asia Pacific Studies"
+          }
+        ]
+      },
+      {
+        "utCodL2": "3",
+        "utL2Text": "博士班 / Ph.D Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "252",
+            "utL3Text": "政治學系 / Political Science"
+          },
+          {
+            "utCodL3": "254",
+            "utL3Text": "社會學系 / Sociology"
+          },
+          {
+            "utCodL3": "255",
+            "utL3Text": "財政學系 / Public Finance"
+          },
+          {
+            "utCodL3": "256",
+            "utL3Text": "公共行政學系 / Public Administration"
+          },
+          {
+            "utCodL3": "257",
+            "utL3Text": "地政學系 / Land Economics"
+          },
+          {
+            "utCodL3": "258",
+            "utL3Text": "經濟學系 / Economics"
+          },
+          {
+            "utCodL3": "259",
+            "utL3Text": "民族學系 / Ethnology"
+          },
+          {
+            "utCodL3": "261",
+            "utL3Text": "國家發展研究所 / Graduate Institute of Development Studies"
+          },
+          {
+            "utCodL3": "264",
+            "utL3Text": "社會工作研究所 / Graduate Institute of Social Work"
+          },
+          {
+            "utCodL3": "265",
+            "utL3Text": "亞太研究英語博士學位學程 / International Doctor Program in Asia-Pacific Studies"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "300",
+    "utL1Text": "商學院 Commerce",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "300",
+            "utL3Text": "商學院 / Commerce"
+          },
+          {
+            "utCodL3": "301",
+            "utL3Text": "國際經營與貿易學系 / International Business"
+          },
+          {
+            "utCodL3": "302",
+            "utL3Text": "金融學系 / Money and Banking"
+          },
+          {
+            "utCodL3": "303",
+            "utL3Text": "會計學系 / Accounting"
+          },
+          {
+            "utCodL3": "304",
+            "utL3Text": "統計學系 / Statistics"
+          },
+          {
+            "utCodL3": "305",
+            "utL3Text": "企業管理學系 / Business Administration"
+          },
+          {
+            "utCodL3": "306",
+            "utL3Text": "資訊管理學系 / Management Information Systems"
+          },
+          {
+            "utCodL3": "307",
+            "utL3Text": "財務管理學系 / Finance"
+          },
+          {
+            "utCodL3": "308",
+            "utL3Text": "風險管理與保險學系 / Risk Management and Insurance"
+          }
+        ]
+      },
+      {
+        "utCodL2": "2",
+        "utL2Text": "碩士班 / MA Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "351",
+            "utL3Text": "國際經營與貿易學系 / International Business"
+          },
+          {
+            "utCodL3": "352",
+            "utL3Text": "金融學系 / Money and Banking"
+          },
+          {
+            "utCodL3": "353",
+            "utL3Text": "會計學系 / Accounting"
+          },
+          {
+            "utCodL3": "354",
+            "utL3Text": "統計學系 / Statistics"
+          },
+          {
+            "utCodL3": "355",
+            "utL3Text": "企業管理學系 / Business Administration"
+          },
+          {
+            "utCodL3": "356",
+            "utL3Text": "資訊管理學系 / Management Information Systems"
+          },
+          {
+            "utCodL3": "357",
+            "utL3Text": "財務管理學系 / Finance"
+          },
+          {
+            "utCodL3": "358",
+            "utL3Text": "風險管理與保險學系 / Risk Management and Insurance"
+          },
+          {
+            "utCodL3": "359",
+            "utL3Text": "科技管理研究所 / Technology and Innovation Management"
+          },
+          {
+            "utCodL3": "360",
+            "utL3Text": "經營管理碩士學程甲班 / Executive Master of Business Administration Program"
+          },
+          {
+            "utCodL3": "361",
+            "utL3Text": "智慧財產研究所 / the Graduate Institute of Intellectual Property"
+          },
+          {
+            "utCodL3": "362",
+            "utL3Text": "管理碩士學程 / Advanced Master of Business Administration Program"
+          },
+          {
+            "utCodL3": "363",
+            "utL3Text": "企業管理研究所MBA學位學程  / Master of Business Administration Program"
+          },
+          {
+            "utCodL3": "364",
+            "utL3Text": "科技管理與智慧財產研究所  / Graduate Institute of Technology, Innovation and Intellectual Property Management"
+          },
+          {
+            "utCodL3": "380",
+            "utL3Text": "商管專業學院碩士學位學程 / Advanced Master of Business Administration Program"
+          },
+          {
+            "utCodL3": "932",
+            "utL3Text": "經營管理碩士學程 / Executive Master of Business Administration Program"
+          },
+          {
+            "utCodL3": "933",
+            "utL3Text": "國際經營管理英語碩士學位學程 / International Master of Business Administration"
+          },
+          {
+            "utCodL3": "934",
+            "utL3Text": "生物科技管理學程 / Program in Bio-technology Management"
+          }
+        ]
+      },
+      {
+        "utCodL2": "3",
+        "utL2Text": "博士班 / Ph.D Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "351",
+            "utL3Text": "國際經營與貿易學系 / International Business"
+          },
+          {
+            "utCodL3": "352",
+            "utL3Text": "金融學系 / Money and Banking"
+          },
+          {
+            "utCodL3": "353",
+            "utL3Text": "會計學系 / Accounting"
+          },
+          {
+            "utCodL3": "354",
+            "utL3Text": "統計學系 / Statistics"
+          },
+          {
+            "utCodL3": "355",
+            "utL3Text": "企業管理學系 / Business Administration"
+          },
+          {
+            "utCodL3": "356",
+            "utL3Text": "資訊管理學系 / Management Information Systems"
+          },
+          {
+            "utCodL3": "357",
+            "utL3Text": "財務管理學系 / Finance"
+          },
+          {
+            "utCodL3": "358",
+            "utL3Text": "風險管理與保險學系 / Risk Management and Insurance"
+          },
+          {
+            "utCodL3": "359",
+            "utL3Text": "科技管理研究所 / Technology and Innovation Management"
+          },
+          {
+            "utCodL3": "364",
+            "utL3Text": "科技管理與智慧財產研究所  / Graduate Institute of Technology, Innovation and Intellectual Property Management"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "400",
+    "utL1Text": "傳播學院 Communication",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "400",
+            "utL3Text": "傳播學院 前段不分班課程  / Communication"
+          },
+          {
+            "utCodL3": "405",
+            "utL3Text": "傳播學院大一大二不分系 / Undeclared Major in College of Communication"
+          },
+          {
+            "utCodL3": "401",
+            "utL3Text": "新聞學系 / Journalism"
+          },
+          {
+            "utCodL3": "402",
+            "utL3Text": "廣告學系 / Advertising"
+          },
+          {
+            "utCodL3": "403",
+            "utL3Text": "廣播電視學系 / Radio & Television"
+          },
+          {
+            "utCodL3": "404",
+            "utL3Text": "傳播學院傳播學士學位學程 / College of Communication Undergraduate Degree Program"
+          }
+        ]
+      },
+      {
+        "utCodL2": "2",
+        "utL2Text": "碩士班 / MA Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "400",
+            "utL3Text": "傳播學院 前段不分班課程  / Communication"
+          },
+          {
+            "utCodL3": "464",
+            "utL3Text": "傳播學院碩士學位學程 / Master Program in Communication"
+          },
+          {
+            "utCodL3": "451",
+            "utL3Text": "新聞學系 / Journalism"
+          },
+          {
+            "utCodL3": "452",
+            "utL3Text": "廣告學系 / Advertising"
+          },
+          {
+            "utCodL3": "453",
+            "utL3Text": "廣播電視學系 / Radio & Television"
+          },
+          {
+            "utCodL3": "461",
+            "utL3Text": "國際傳播英語碩士學位學程 / International Master's Program in International Communication Studies"
+          },
+          {
+            "utCodL3": "462",
+            "utL3Text": "數位內容碩士學位學程 / Digital Contents and Technologies"
+          },
+          {
+            "utCodL3": "941",
+            "utL3Text": "傳播學院碩士在職專班 / M.A. Program in Communication"
+          },
+          {
+            "utCodL3": "465",
+            "utL3Text": "亞際文化研究國際碩士學位學程 / International Master's Program in Inter-Asia Cultural Studies"
+          }
+        ]
+      },
+      {
+        "utCodL2": "3",
+        "utL2Text": "博士班 / Ph.D Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "451",
+            "utL3Text": "新聞學系 / Journalism"
+          },
+          {
+            "utCodL3": "463",
+            "utL3Text": "傳播學院博士班 / Ph.D Program in Communication"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "500",
+    "utL1Text": "外國語文學院 Foreign Languages",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "501",
+            "utL3Text": "英國語文學系 / English"
+          },
+          {
+            "utCodL3": "502",
+            "utL3Text": "阿拉伯語文學系 / Arabic Language and Literature"
+          },
+          {
+            "utCodL3": "504",
+            "utL3Text": "斯拉夫語文學系 / Slavic Languages and Literatures"
+          },
+          {
+            "utCodL3": "506",
+            "utL3Text": "日本語文學系 / Japanese"
+          },
+          {
+            "utCodL3": "507",
+            "utL3Text": "韓國語文學系 / Korean Language and Culture"
+          },
+          {
+            "utCodL3": "508",
+            "utL3Text": "土耳其語文學系 / Turkish Language and Culture"
+          },
+          {
+            "utCodL3": "509",
+            "utL3Text": "歐洲語文學系 / Department of European Languages and Cultures"
+          },
+          {
+            "utCodL3": "510",
+            "utL3Text": "東南亞語文學系 / Department of Southeast Asian Languages and Cultures"
+          },
+          {
+            "utCodL3": "5T1",
+            "utL3Text": "外文中心 / Foreign Languages Center"
+          }
+        ]
+      },
+      {
+        "utCodL2": "2",
+        "utL2Text": "碩士班 / MA Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "551",
+            "utL3Text": "英國語文學系 / English"
+          },
+          {
+            "utCodL3": "554",
+            "utL3Text": "斯拉夫語文學系 / Slavic Languages and Literatures"
+          },
+          {
+            "utCodL3": "555",
+            "utL3Text": "語言學研究所 / Institute of Linguistics"
+          },
+          {
+            "utCodL3": "556",
+            "utL3Text": "日本語文學系 / Japanese"
+          },
+          {
+            "utCodL3": "557",
+            "utL3Text": "韓國語文學系 / Korean Language and Culture"
+          },
+          {
+            "utCodL3": "560",
+            "utL3Text": "中東與中亞研究碩士學位學程 / Master Program in Middle Eastern and Central Asian Studies"
+          },
+          {
+            "utCodL3": "951",
+            "utL3Text": "英國語文學系英語教學碩士在職專班 / M.A.Program in TESOL for In-Service Teachers"
+          },
+          {
+            "utCodL3": "952",
+            "utL3Text": "歐洲語言文化學程碩士在職專班 / Master Program in European Studies"
+          }
+        ]
+      },
+      {
+        "utCodL2": "3",
+        "utL2Text": "博士班 / Ph.D Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "551",
+            "utL3Text": "英國語文學系 / English"
+          },
+          {
+            "utCodL3": "555",
+            "utL3Text": "語言學研究所 / Institute of Linguistics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "600",
+    "utL1Text": "法學院 College of Law",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "601",
+            "utL3Text": "法律學系 / Law"
+          }
+        ]
+      },
+      {
+        "utCodL2": "2",
+        "utL2Text": "碩士班 / MA Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "651",
+            "utL3Text": "法律學系 / Law"
+          },
+          {
+            "utCodL3": "652",
+            "utL3Text": "法律科際整合研究所 / The Institute of Law and Inter-discipline"
+          },
+          {
+            "utCodL3": "961",
+            "utL3Text": "法學院碩士在職專班 / Master of Law Special Program"
+          },
+          {
+            "utCodL3": "962",
+            "utL3Text": "生物科技法律學程 / Biotechnology Law program"
+          }
+        ]
+      },
+      {
+        "utCodL2": "3",
+        "utL2Text": "博士班 / Ph.D Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "651",
+            "utL3Text": "法律學系 / Law"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "700",
+    "utL1Text": "理學院 Science",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "701",
+            "utL3Text": "應用數學系 / Mathematical Sciences"
+          },
+          {
+            "utCodL3": "702",
+            "utL3Text": "心理學系 / Psychology"
+          },
+          {
+            "utCodL3": "703",
+            "utL3Text": "資訊科學系 / Computer Science (至109-2學期止)"
+          },
+          {
+            "utCodL3": "781",
+            "utL3Text": "數位內容與科技學士學位學程 / Digital Technologies and Contents Undergraduate Degree Program (至109-2學期止)"
+          },
+          {
+            "utCodL3": "782",
+            "utL3Text": "電子物理學士學位學程 / Bachelor of Science (B.S.) Program in Electrophysics"
+          }
+        ]
+      },
+      {
+        "utCodL2": "2",
+        "utL2Text": "碩士班 / MA Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "751",
+            "utL3Text": "應用數學系 / Mathematical Sciences"
+          },
+          {
+            "utCodL3": "752",
+            "utL3Text": "心理學系 / Psychology"
+          },
+          {
+            "utCodL3": "753",
+            "utL3Text": "資訊科學系 / Computer Science  (至109-2學期止)"
+          },
+          {
+            "utCodL3": "754",
+            "utL3Text": "神經科學研究所 / Graduate Institute of Neuroscience"
+          },
+          {
+            "utCodL3": "755",
+            "utL3Text": "應用物理研究所 / Graduate Institute of Applied Physics"
+          },
+          {
+            "utCodL3": "971",
+            "utL3Text": "資訊科學系碩士在職專班 / Master Program in Computer Science (至109-2學期止)"
+          },
+          {
+            "utCodL3": "972",
+            "utL3Text": "數學教學碩士在職專班 / Master Program in Mathematics Teaching"
+          }
+        ]
+      },
+      {
+        "utCodL2": "3",
+        "utL2Text": "博士班 / Ph.D Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "751",
+            "utL3Text": "應用數學系 / Mathematical Sciences"
+          },
+          {
+            "utCodL3": "752",
+            "utL3Text": "心理學系 / Psychology"
+          },
+          {
+            "utCodL3": "753",
+            "utL3Text": "資訊科學系 / Computer Science (至109-2學期止)"
+          },
+          {
+            "utCodL3": "761",
+            "utL3Text": "社群網路與人智計算國際研究生博士學位學程 / Social Networks and Human-Centered Computing SNHCC (至109-2學期止)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "800",
+    "utL1Text": "國際事務學院 International Affairs",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "203",
+            "utL3Text": "外交學系 / Diplomacy"
+          }
+        ]
+      },
+      {
+        "utCodL2": "2",
+        "utL2Text": "碩士班 / MA Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "253",
+            "utL3Text": "外交學系 / Diplomacy"
+          },
+          {
+            "utCodL3": "260",
+            "utL3Text": "東亞研究所 / East Asia Studies"
+          },
+          {
+            "utCodL3": "263",
+            "utL3Text": "俄羅斯研究所 / Russian Studies"
+          },
+          {
+            "utCodL3": "861",
+            "utL3Text": "日本研究碩士學位學程 / Master Program in Japan Studie"
+          },
+          {
+            "utCodL3": "862",
+            "utL3Text": "國際研究英語碩士學位學程 / International Master's Program in International studies"
+          },
+          {
+            "utCodL3": "922",
+            "utL3Text": "外交學系戰略與國際事務碩士在職專班 / Master Program in Strategic and International Studies"
+          },
+          {
+            "utCodL3": "981",
+            "utL3Text": "國家安全與大陸研究碩士在職專班 / Master Program in National Security and Mainland China Studies"
+          }
+        ]
+      },
+      {
+        "utCodL2": "3",
+        "utL2Text": "博士班 / Ph.D Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "253",
+            "utL3Text": "外交學系 / Diplomacy"
+          },
+          {
+            "utCodL3": "260",
+            "utL3Text": "東亞研究所 / East Asia Studies"
+          },
+          {
+            "utCodL3": "863",
+            "utL3Text": "日本研究博士學位學程 / Doctoral Program in Japan Studies"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "900",
+    "utL1Text": "教育學院 Education",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "102",
+            "utL3Text": "教育學系 / Education"
+          },
+          {
+            "utCodL3": "1T3",
+            "utL3Text": "師資培育中心 / Center for Teacher Education"
+          }
+        ]
+      },
+      {
+        "utCodL2": "2",
+        "utL2Text": "碩士班 / MA Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "900",
+            "utL3Text": "教育學院 / Education"
+          },
+          {
+            "utCodL3": "152",
+            "utL3Text": "教育學系 / Education"
+          },
+          {
+            "utCodL3": "157",
+            "utL3Text": "幼兒教育研究所 / Early Childhood Education"
+          },
+          {
+            "utCodL3": "171",
+            "utL3Text": "教育行政與政策研究所 / Graduate Institute of Educational Administration and Policy"
+          },
+          {
+            "utCodL3": "172",
+            "utL3Text": "輔導與諮商碩士學位學程 / MA Program of Counseling and Guidance"
+          },
+          {
+            "utCodL3": "911",
+            "utL3Text": "學校行政碩士在職專班 / Master of Education in School Administration"
+          }
+        ]
+      },
+      {
+        "utCodL2": "3",
+        "utL2Text": "博士班 / Ph.D Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "900",
+            "utL3Text": "教育學院 / Education"
+          },
+          {
+            "utCodL3": "152",
+            "utL3Text": "教育學系 / Education"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "Z23",
+    "utL1Text": "創新國際學院 International College of Innovation",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "ZU1",
+            "utL3Text": "創新國際學院學士班 / ICI Global Studies/B"
+          }
+        ]
+      },
+      {
+        "utCodL2": "2",
+        "utL2Text": "碩士班 / MA Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "ZM1",
+            "utL3Text": "全球傳播與創新科技碩士學位學程 / Master's Program in Global Communication and Innovation Technology"
+          }
+        ]
+      },
+      {
+        "utCodL2": "3",
+        "utL2Text": "博士班 / Ph.D Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utCodL1": "ZA0",
+    "utL1Text": "資訊學院 College of Informatics",
+    "utL2": [
+      {
+        "utCodL2": "0",
+        "utL2Text": "----- 請選擇 Choose unit -----",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          }
+        ]
+      },
+      {
+        "utCodL2": "1",
+        "utL2Text": "學士班 / Undergraduate",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "703",
+            "utL3Text": "資訊科學系 / Computer Science"
+          },
+          {
+            "utCodL3": "781",
+            "utL3Text": "數位內容與科技學士學位學程 / Digital Technologies and Contents Undergraduate Degree Program"
+          },
+          {
+            "utCodL3": "783",
+            "utL3Text": "人工智慧應用學士學位學程 / Bachelor Program in Artificial Intelligence Applications"
+          }
+        ]
+      },
+      {
+        "utCodL2": "2",
+        "utL2Text": "碩士班 / MA Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "753",
+            "utL3Text": "資訊科學系 / Computer Science"
+          },
+          {
+            "utCodL3": "971",
+            "utL3Text": "資訊科學系碩士在職專班 / Master Program in Computer Science"
+          },
+          {
+            "utCodL3": "791",
+            "utL3Text": "資訊安全碩士學位學程 / Master Program in Information Security"
+          }
+        ]
+      },
+      {
+        "utCodL2": "3",
+        "utL2Text": "博士班 / Ph.D Program",
+        "utL3": [
+          {
+            "utCodL3": "0",
+            "utL3Text": "----- 請選擇 Choose unit -----"
+          },
+          {
+            "utCodL3": "753",
+            "utL3Text": "資訊科學系 / Computer Science"
+          },
+          {
+            "utCodL3": "761",
+            "utL3Text": "社群網路與人智計算國際研究生博士學位學程 / Social Networks and Human-Centered Computing SNHCC"
+          }
+        ]
+      }
+    ]
+  }
+]
