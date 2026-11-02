@@ -684,3 +684,29 @@
 
 - 同一個模型在 CPU 和 GPU 上的規劃結果有 95% 完全相同。
 - CPU 預設用 e4b：12b 太慢，不適合即時互動。
+
+## 2026/11/02 下午　CPU 重排加速、v4 放進 PostgreSQL
+
+**CPU 重排**（`scripts/v4/phase7_cpu_rerank.sh`，e4b 規劃器，12 執行緒）
+- 截到 512 token、只排前 10：Qwen3-Reranker 從 15.1 秒降到 8.0 秒，nDCG 0.808 到 0.828，MRR 0.875 到 0.863。bge-reranker-v2-m3 類似，8.8 秒。
+- int8 動態量化 2.5 秒，MRR 掉到 0.783，比不重排差。bge-reranker-base（2.0 秒）和 mMiniLM（0.9 秒）和不重排差不到 0.004。
+- 決定：CPU 版維持不重排。
+
+**v4 放進 PostgreSQL**（使用者問：其他功能都靠 PostgreSQL，v4 要不要全改、改了準確度變多少）
+- 在 hopelab 開 ParadeDB 容器 `v4-paradedb`，只綁 127.0.0.1:5434，沒有動到其他人的容器。
+- 硬條件寫成 SQL：346 組條件選出的課和 Python 完全相同。
+- 向量：一開始用 pgvector cosine，前 10 名只有 24% 和 numpy 相同。查單一題發現存進去的向量長度是 1.0000x（fp16 正規化），cosine 把它除掉，相近的分數換了位置。改用內積 `<#>` 後 89% 完全相同，前 50 名重疊 0.999。
+- BM25：同一組字元 n-gram，pg_search 和 rank_bm25 前 10 名重疊 0.766，公式參數不同。
+- 端到端（176 題，以課程計，重排）：SQLite 0.862，pg_search 字元 n-gram 0.863、內建 ngram 0.860、jieba 0.865。不重排 0.840、0.841、0.834、0.837。全部在 0.006 內。
+- 第一次評分被另一個用 Ollama 的實驗（v5）擋住，連線中斷；等它結束後用 `scripts/v4/rejudge.sh` 重評。
+- 建議：全部改用 PostgreSQL，SQLite 只留在爬蟲輸出與建置中間檔。理由和每學期流程寫在 `docs/v4/PG_MIGRATION.md`。
+
+## 2026/11/02 晚上　CourseDataPrep 的 prep.release 與 prep.load_v4
+
+使用者要求開始實作。CourseDataPrep 原本只有暫存的 clone，改 clone 到 `NCCU-AI-SYSTEM/CourseDataPrep/`，在分支 `feat/v4-release` 上開發。
+- build_runtime 多寫 search_doc、search_session 兩張表與 embedding 的 Hugging Face 模型 id。load_v4 只讀這個檔，不 import v4 程式，資料庫裡的欄位和實驗量到的是同一份。
+- contract.yaml 升到第 9 版，加 v4 的向量模型、維度、斷詞方式；load_v4 遇到學期、模型或維度不符的檔案會拒絕。
+- prep.release 以子命令 build、promote、rollback、list 管理 `releases/`，每次建置一個資料夾，`current`、`previous` 用 symlink 切換。
+- docker-compose 的 postgres 原本開在所有網卡、預設密碼，改成只綁 127.0.0.1。
+- hopelab 試跑 114-2 抓到三個問題（舊爬蟲檔 smtQty 型別、pgloader 記憶體、paradedb schema 衝突），細節在 PG_MIGRATION.md。修好後成品還原到全新容器，搜尋分數和實驗表相同（0.864 / 0.918）。
+- 使用者另外問自動上線：資料庫容器只在第一次啟動匯入 `db/init/`，換版要另外處理，建議匯入新資料庫再改名切換，寫在 PG_MIGRATION.md，還沒實作。
