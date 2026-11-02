@@ -109,11 +109,15 @@ def stage_run(a) -> None:
     if a.encoder:
         from src.retrievers.encoders import SPECS, Encoder
 
-        enc = Encoder(SPECS[a.encoder])
+        enc = Encoder(SPECS[a.encoder], device=a.device)
+    if a.device == "cpu" and a.threads:
+        import torch
+
+        torch.set_num_threads(a.threads)
     if a.reranker:
         from src.rerankers.models import load
 
-        rr = load(a.reranker)
+        rr = load(a.reranker, device=a.device, max_len=a.rerank_maxlen or None, int8=a.rerank_int8)
     bundle = None
     if a.struct:  # runtime path: everything from course_struct.db, nothing from 1142.db
         from src.v4.struct_store import load_struct
@@ -129,29 +133,48 @@ def stage_run(a) -> None:
         from src.v4.offering import group_offerings
 
         offerings = bundle.offerings if bundle else group_offerings(cat)
+    pg = pg_cond = None
+    if a.pg:  # BM25, dense and (with --pg-conditions) the condition mask run in PostgreSQL
+        from src.v4.pg_backend import PgRanker, cond_ids, connect
+
+        conn = connect()
+        pg = PgRanker(conn, [c.course_id for c in cat], sparse=a.pg)
+        if a.pg_conditions:
+            pg_cond = lambda cond: cond_ids(conn, cond)  # noqa: E731
     search = V4Search(cat, enc, rr, aspects, hype=hype, offerings=offerings,
                       doc_emb=bundle.embeddings.get(a.encoder) if bundle else None,
-                      aliases=bundle.aliases if bundle else None, assess=bundle.assess if bundle else None)
+                      aliases=bundle.aliases if bundle else None, assess=bundle.assess if bundle else None,
+                      pg=pg, pg_conditions=pg_cond)
     cfg = Config(use_conditions=not a.no_cond, use_named=not a.no_named, use_dense=enc is not None,
                  rerank=rr is not None, use_prefs=not a.no_prefs, use_hype=hype is not None,
-                 use_bm25=not a.no_bm25, merge_offerings=a.merge, named_skips_conditions=a.named_fix)
+                 use_bm25=not a.no_bm25, merge_offerings=a.merge, named_skips_conditions=a.named_fix,
+                 rerank_k=a.rerank_k)
     plans = {r["qid"]: ref_plan(r) for r in rows} if a.planner == "reference" else load_plans(a.planner)
     if a.raw_query:  # baseline: no planning at all, the sentence goes straight to retrieval
         plans = {r["qid"]: Plan(need=r["query"]) for r in rows}
     if a.text_raw:  # ablation: keep the plan's conditions, but retrieve with the full sentence
         for r in rows:
             plans[r["qid"]].need = r["query"]
-    runs, times, plan_s = {}, [], []
+    runs, times, plan_s, rr_times, f_times, r_times = {}, [], [], [], [], []
     for r in tqdm(rows):
         p = plans[r["qid"]]
         hits = search.search(p, r["query"], 10, cfg)
         runs[r["qid"]] = [h.course_id for h in hits]
         times.append(search.timing["total"])
+        rr_times.append(search.timing.get("rerank", 0.0))
+        f_times.append(search.timing.get("filter", 0.0))
+        r_times.append(search.timing.get("retrieve", 0.0))
         plan_s.append(p.seconds)
     _save(a.name, runs, {"system": "v4", "struct": a.struct, "planner": a.planner, "encoder": a.encoder, "reranker": a.reranker,
                          "hype": bool(hype), "cfg": cfg.__dict__, "raw_query": a.raw_query,
                          "search_ms_p50": round(float(np.median(times)) * 1000, 1),
                          "search_ms_p95": round(float(np.percentile(times, 95)) * 1000, 1),
+                         "rerank_ms_p50": round(float(np.median(rr_times)) * 1000, 1),
+                         "device": a.device, "threads": a.threads, "rerank_k": a.rerank_k,
+                         "rerank_maxlen": a.rerank_maxlen, "rerank_int8": a.rerank_int8,
+                         "pg": a.pg, "pg_conditions": a.pg_conditions,
+                         "filter_ms_p50": round(float(np.median(f_times)) * 1000, 1),
+                         "retrieve_ms_p50": round(float(np.median(r_times)) * 1000, 1),
                          "plan_s_p50": round(float(np.median(plan_s)), 3) if plan_s else 0})
 
 
@@ -345,6 +368,14 @@ def main() -> None:
     p.add_argument("--system", default="v4", choices=["v4", "prod"])
     p.add_argument("--encoder", default="")
     p.add_argument("--reranker", default="")
+    p.add_argument("--device", default="cuda", help="encoder and reranker device")
+    p.add_argument("--threads", type=int, default=0, help="torch CPU threads when --device cpu")
+    p.add_argument("--rerank-k", type=int, default=20)
+    p.add_argument("--rerank-maxlen", type=int, default=0, help="truncate each (query, course) pair")
+    p.add_argument("--rerank-int8", action="store_true", help="dynamic int8 quantisation (CPU)")
+    p.add_argument("--pg", choices=["", "whitespace", "ngram", "jieba"], default="",
+                   help="rank in PostgreSQL (V4_PG_DSN) with this pg_search tokenizer")
+    p.add_argument("--pg-conditions", action="store_true", help="hard conditions as SQL WHERE")
     p.add_argument("--hype", default="")
     p.add_argument("--aspects", default="")
     p.add_argument("--no-cond", action="store_true")

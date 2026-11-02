@@ -95,10 +95,14 @@ class V4Search:
                  aspects: dict[str, dict] | None = None, doc_fn=doc_text,
                  hype: dict[str, list[str]] | None = None, offerings: list[Offering] | None = None,
                  doc_emb: np.ndarray | None = None, aliases: dict[str, tuple[str, ...]] | None = None,
-                 assess: dict[str, AssessmentProfile] | None = None):
+                 assess: dict[str, AssessmentProfile] | None = None, pg=None, pg_conditions=None):
         """doc_emb, aliases and assess come from course_struct.db (src.v4.struct_store); without
-        them the documents are encoded here and assessment falls back to the keyword scan."""
+        them the documents are encoded here and assessment falls back to the keyword scan.
+        pg (a pg_backend.PgRanker) moves BM25 and dense ranking into PostgreSQL; pg_conditions
+        (ConditionResult -> set of course ids) moves the hard-condition mask into SQL."""
         self.cat = catalog
+        self.pg = pg
+        self.pg_conditions = pg_conditions
         self.offerings = offerings or []
         self.off_of = {cid: o for o in self.offerings for cid in o.course_ids}
         self.ids = [c.course_id for c in catalog]
@@ -157,7 +161,11 @@ class V4Search:
         relaxed: list[str] = []
         while True:
             c = ConditionResult(must=must, must_not=must_not)
-            mask = np.array([all(check_cond(x.meta, c).values()) for x in self.cat])
+            if self.pg_conditions is not None:   # the same conditions as SQL WHERE (pg_backend.where)
+                ok = self.pg_conditions(c)
+                mask = np.array([cid in ok for cid in self.ids])
+            else:
+                mask = np.array([all(check_cond(x.meta, c).values()) for x in self.cat])
             if mask.sum() >= min_pool or not (must or must_not):
                 return mask, relaxed
             dim = next((d for d in RELAX_ORDER if d in must or d in must_not), None)
@@ -224,12 +232,15 @@ class V4Search:
         t1 = time.time()
         runs = []
         if cfg.use_bm25:
-            s = self.bm25.scores(tokenize_all([text], "char12")[0])
-            runs.append(self._rank(s, mask))
+            if self.pg is not None:      # pg_search BM25 (src/v4/pg_backend.py)
+                runs.append(self.pg.sparse(text, mask))
+            else:
+                s = self.bm25.scores(tokenize_all([text], "char12")[0])
+                runs.append(self._rank(s, mask))
         qv = None
         if cfg.use_dense and self.encoder is not None:
             qv = self.encoder.encode_queries([text])[0]
-            runs.append(self._rank(self.demb @ qv, mask))
+            runs.append(self.pg.dense(qv, mask) if self.pg is not None else self._rank(self.demb @ qv, mask))
         if cfg.use_hype and len(self.q_owner):
             hm = mask & np.isin(np.arange(n), self.q_owner)
             runs.append(self._rank(self._per_course(self.q_bm25.scores(tokenize_all([text], "char12")[0])), hm))

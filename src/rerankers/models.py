@@ -19,9 +19,10 @@ class BGEReranker:
         from FlagEmbedding import FlagReranker
 
         self.model = FlagReranker("BAAI/bge-reranker-v2-m3", use_fp16=device == "cuda", devices=device)
+        self.max_len = 1024
 
     def score(self, query: str, docs: list[str]) -> list[float]:
-        s = self.model.compute_score([[query, d] for d in docs], normalize=True, max_length=1024)
+        s = self.model.compute_score([[query, d] for d in docs], normalize=True, max_length=self.max_len)
         return [s] if isinstance(s, float) else list(s)
 
 
@@ -69,14 +70,59 @@ class QwenReranker:
         return out
 
 
-def load(name: str, device: str = "cuda"):
+class CrossEncoderReranker:
+    """Small multilingual cross-encoders for CPU serving (sentence-transformers CrossEncoder)."""
+
+    def __init__(self, hf_id: str, name: str, max_len: int = 512, device: str = "cuda", batch_size: int = 16):
+        from sentence_transformers import CrossEncoder
+
+        self.name = name
+        self.model = CrossEncoder(hf_id, max_length=max_len, device=device)
+        self.batch_size = batch_size
+
+    def score(self, query: str, docs: list[str]) -> list[float]:
+        import math
+
+        raw = [float(x) for x in self.model.predict([(query, d) for d in docs], batch_size=self.batch_size,
+                                                   show_progress_bar=False)]
+        # the pipeline places reranked courses at 1 + score, so scores must lie in [0, 1];
+        # mMiniLM returns raw logits (-4.1 ...), bge-reranker-base already returns sigmoid outputs
+        if any(x < 0 or x > 1 for x in raw):
+            raw = [1 / (1 + math.exp(-x)) for x in raw]
+        return raw
+
+
+SMALL = {"bge-reranker-base": "BAAI/bge-reranker-base",
+         "mminilm-l12": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"}
+
+
+def _int8(model):
+    """Dynamic int8 quantisation of every Linear layer (CPU only, x86 fbgemm)."""
+    import torch
+
+    return torch.ao.quantization.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)
+
+
+def load(name: str, device: str = "cuda", max_len: int | None = None, int8: bool = False):
+    """max_len truncates each (query, course) pair; int8 quantises Linear layers (CPU)."""
+    if int8 and device != "cpu":
+        raise ValueError("int8 quantisation runs on CPU only")
     if name == "bge-reranker-v2-m3":
-        return BGEReranker(device)
-    if name == "qwen3-rerank-0.6b":
-        return QwenReranker("0.6B", device=device)
-    if name == "qwen3-rerank-4b":
-        return QwenReranker("4B", batch_size=4, device=device)
-    raise ValueError(name)
+        rr = BGEReranker(device)
+        if max_len:
+            rr.max_len = max_len
+    elif name in ("qwen3-rerank-0.6b", "qwen3-rerank-4b"):
+        size = "0.6B" if name.endswith("0.6b") else "4B"
+        rr = QwenReranker(size, max_len=max_len or 1536, batch_size=8 if size == "0.6B" else 4, device=device)
+        if int8:
+            rr.model = _int8(rr.model)
+    elif name in SMALL:
+        rr = CrossEncoderReranker(SMALL[name], name, max_len or 512, device)
+        if int8:
+            rr.model.model = _int8(rr.model.model)
+    else:
+        raise ValueError(name)
+    return rr
 
 
 def timed_score(model, query: str, docs: list[str]) -> tuple[list[float], float]:
