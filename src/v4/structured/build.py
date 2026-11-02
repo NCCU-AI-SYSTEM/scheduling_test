@@ -14,10 +14,11 @@ from src.v4.structured.aipolicy import LABEL_ZH
 from src.v4.structured.aliases import Resolver, build_aliases, load_catalogue
 from src.v4.structured.assemble import Parsed, load_raw, load_result, parse_course, path_rows
 from src.v4.structured.card import render_card
+from src.v4.semester import Semester, current, source_db, struct_db
 
 ROOT = Path(__file__).resolve().parents[3]
-SRC_DB = ROOT / "data" / "1142.db"
-OUT_DB = ROOT / "data" / "v4" / "course_struct.db"
+SRC_DB = source_db()     # V4_SOURCE_DB, default data/1142.db
+OUT_DB = struct_db()     # V4_STRUCT_DB, default data/v4/course_struct.db
 
 
 def _session_rows(p: Parsed) -> list[dict]:
@@ -57,12 +58,14 @@ def _restriction_rows(parsed: list[Parsed], resolver: Resolver, cache) -> tuple[
     return restr, prereq
 
 
-def _offering_rows(depts) -> tuple[list[dict], list[dict]]:
-    offs = group_offerings(load_catalog(with_reviews=False), depts)
+def _offering_rows(depts, sem: Semester, src: Path) -> tuple[list[dict], list[dict]]:
+    cat = load_catalog(sem.year, sem.term, with_reviews=False, db=src)
+    offs = group_offerings(cat, depts, src)
     o_rows, c_rows = [], []
     for i, o in enumerate(offs, 1):
         o_rows.append({"offering_id": i, "name_norm": o.key[0], "teacher": o.key[1],
-                       "time_raw": o.key[2] if not o.key[2].startswith("1142") else None,
+                       # a class without a time slot is keyed by its own course id, not a time
+                       "time_raw": o.key[2] if o.key[2] not in o.course_ids else None,
                        "primary_course_id": o.primary, "n_channels": len(o.channels)})
         for ch in o.channels:
             c_rows.append({"offering_id": i, "course_id": ch.course_id, "sub_num": ch.sub_num, "unit": ch.unit,
@@ -73,17 +76,23 @@ def _offering_rows(depts) -> tuple[list[dict], list[dict]]:
     return o_rows, c_rows
 
 
-def build(mode: str = "off", out: Path = OUT_DB, log=print) -> dict[str, int]:
+def build(mode: str = "off", out: Path = OUT_DB, log=print, sem: Semester | None = None,
+          src: Path | None = None) -> dict[str, int]:
+    sem, src = sem or current(), src or SRC_DB
+    if not src.exists():
+        raise FileNotFoundError(f"raw database {src} not found")
     t0 = time.time()
-    con = sqlite3.connect(f"file:{SRC_DB}?mode=ro", uri=True)
-    depts = dept_registry(SRC_DB)
-    raws = load_raw(con)
-    result = load_result(con)
+    con = sqlite3.connect(f"file:{src}?mode=ro", uri=True)
+    depts = dept_registry(src)
+    raws = load_raw(con, sem.year, sem.term)
+    if not raws:
+        raise ValueError(f"{src} has no COURSE rows for {sem.label}")
+    result = load_result(con, sem.ys)
     parsed = [parse_course(r, depts, result) for r in raws]
     raw_by_id = {r.course_id: r.row for r in raws}
     log(f"rule pass: {len(parsed)} courses in {time.time() - t0:.1f}s")
 
-    cat = load_catalogue(con)
+    cat = load_catalogue(con, sem.ys)
     aliases = build_aliases(con, cat)
     resolver = Resolver(aliases, cat)
     log(f"aliases: {len(aliases)}")
@@ -117,9 +126,9 @@ def build(mode: str = "off", out: Path = OUT_DB, log=print) -> dict[str, int]:
                                     "label_zh": LABEL_ZH.get(p.ai.category or "", None),
                                     "detail": p.ai.detail, "detail_source": p.ai.detail_source})
     tables["alias"] = [{**asdict(a), "members": list(a.members)} for a in aliases]
-    tables["offering"], tables["channel"] = _offering_rows(depts)
+    tables["offering"], tables["channel"] = _offering_rows(depts, sem, src)
     con.close()
-    meta = {"built_at": time.strftime("%Y/%m/%d %H:%M"), "source_db": str(SRC_DB.name), "semester": "114-2",
+    meta = {"built_at": time.strftime("%Y/%m/%d %H:%M"), "source_db": str(src.name), "semester": sem.label,
             "llm_mode": mode, "seconds": f"{time.time() - t0:.1f}"}
     store.write(out, tables, meta)
     counts = {k: len(v) for k, v in tables.items()}

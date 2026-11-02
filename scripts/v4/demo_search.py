@@ -21,6 +21,7 @@ from src.v4.identity import FormInput, UnitTable, resolve
 from src.v4.planner import plan
 from src.v4.present import row, to_markdown
 from src.v4.profile import load_profile
+from src.v4.semester import parse as parse_semester
 
 
 def main() -> None:
@@ -43,8 +44,9 @@ def main() -> None:
     form = FormInput(a.dept, a.level, a.year, tuple(a.status), english_exempt=a.english_exempt) if a.dept else None
     if form is None and a.status:
         form = FormInput("", statuses=tuple(a.status))
-    ident = resolve(UnitTable.load(), b.depts, profile=prof, form=form if form and form.dept else None,
-                    student_id=os.environ.get("STUDENT_ID"))
+    ident = resolve(b.units or UnitTable.load(), b.depts, profile=prof, form=form if form and form.dept else None,
+                    student_id=os.environ.get("STUDENT_ID"),
+                    academic_year=parse_semester(b.meta.get("semester", "114-2")).academic_year)
     if ident:
         print(f"身分（來源：{ident.source}）：{ident.college}學院 {ident.level} {ident.year} 年級，系所代碼 "
               f"{ident.dept_code}；其他系所 {sorted(ident.other_depts) or '無'}；身分 {sorted(ident.statuses) or '一般'}；"

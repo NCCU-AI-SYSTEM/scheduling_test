@@ -130,10 +130,10 @@ def audience_level(note: str) -> str:
     return {"大學部": "學士", "學士班": "學士", "碩士班": "碩士", "博士班": "博士"}.get(m.group(1), "") if m else ""
 
 
-def _course_extra(db: Path = DB) -> dict[str, tuple[str, str]]:
+def _course_extra(year: str, term: str, db: Path = DB) -> dict[str, tuple[str, str]]:
     con = sqlite3.connect(db)
     rows = {cid: (t or "", u or "") for cid, t, u in
-            con.execute("SELECT substr(id,1,13), tranTpe, teaSchmUrl FROM COURSE WHERE y='114' AND s='2'")}
+            con.execute("SELECT substr(id,1,13), tranTpe, teaSchmUrl FROM COURSE WHERE y = ? AND s = ?", (year, term))}
     con.close()
     return rows
 
@@ -152,9 +152,11 @@ def make_channel(c: CatalogCourse, depts: dict[str, Dept], extra: dict[str, tupl
         status_only=status_only(x.note), special_class=special_class(x.note), url=url, note=x.note or "")
 
 
-def group_offerings(catalog: list[CatalogCourse], depts: dict[str, Dept] | None = None) -> list[Offering]:
-    depts = depts if depts is not None else dept_registry()
-    extra = _course_extra()
+def group_offerings(catalog: list[CatalogCourse], depts: dict[str, Dept] | None = None,
+                    db: Path = DB) -> list[Offering]:
+    depts = depts if depts is not None else dept_registry(db)
+    first = catalog[0].course if catalog else None
+    extra = _course_extra(first.year, first.semester, db) if first else {}
     groups: dict[tuple, list[CatalogCourse]] = defaultdict(list)
     for c in catalog:
         x = c.course

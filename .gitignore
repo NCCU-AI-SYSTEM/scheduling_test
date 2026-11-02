@@ -47,3 +47,6 @@ data/raw
 # v4 structured DB: 26 MB, rebuilt in ~20 s from data/1142.db + data/v4/structured_cache
 data/v4/course_struct.db
 data/v4/course_struct.tmp
+data/v4/course_struct.db.new
+data/v4/staging/
+data/v4/archive/

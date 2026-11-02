@@ -28,9 +28,10 @@ from src.loader.time_parser import Session
 from src.v4.assessment import EXAM_ITEMS, FORMAT_KEYS, AssessmentProfile, profile_from
 from src.v4.catalog import CatalogCourse, _norm_name
 from src.v4.offering import Channel, Dept, Offering
+from src.v4.semester import Semester, parse as parse_semester, struct_db
 
 ROOT = Path(__file__).resolve().parents[2]
-STRUCT_DB = ROOT / "data" / "v4" / "course_struct.db"
+STRUCT_DB = struct_db()   # data/v4/course_struct.db unless V4_STRUCT_DB says otherwise
 TRUSTED_ALIAS_SOURCES = ("rate", "seed")   # jieba-generated aliases were 27/33 correct (user: do not use)
 _ITEM_NAMES = {k for k, _ in FORMAT_KEYS}
 # grading["by_cat"] keys the rest of the code reads (src.v4.catalog._EVAL_CAT, src.v4.aspects)
@@ -54,6 +55,7 @@ class StructBundle:
     aspects: dict[str, dict[str, float]] = field(default_factory=dict)
     embeddings: dict[str, np.ndarray] = field(default_factory=dict)   # model -> (n, d) aligned with catalog
     meta: dict[str, str] = field(default_factory=dict)
+    units: "UnitTable | None" = None               # names <-> codes for identity resolution
 
 
 def _hour(hhmm: str, end: bool) -> int:
@@ -78,11 +80,12 @@ def _grouped(con: sqlite3.Connection, sql: str) -> dict[str, list[sqlite3.Row]]:
     return out
 
 
-def _course(r: sqlite3.Row, sessions: list[sqlite3.Row], paths: list[sqlite3.Row], topics: list[str]) -> Course:
+def _course(r: sqlite3.Row, sessions: list[sqlite3.Row], paths: list[sqlite3.Row], topics: list[str],
+            sem: Semester) -> Course:
     sess = [Session(weekday=s["weekday"], start_hour=_hour(s["start"], False), end_hour=_hour(s["end"], True),
                     raw=s["periods"] or "") for s in sessions if s["source"] == "time"]
     return Course(
-        course_id=r["course_id"], year="114", semester="2", sub_num=r["sub_num"] or "", name=r["name"] or "",
+        course_id=r["course_id"], year=sem.year, semester=sem.term, sub_num=r["sub_num"] or "", name=r["name"] or "",
         name_en=r["name_en"] or "", teacher=r["teacher_raw"] or "", teacher_en="", kind=r["kind_code"] or 0,
         lmt_kind=_lmt_kind(r["ge_category"], r["ge_detail"]), core=r["ge_core"] or 0, lang=r["lang"] or "",
         point=float(r["credits"] or 0), classroom=r["classroom_raw"] or "", classroom_id=r["room_id"] or "",
@@ -187,13 +190,15 @@ def load_struct(db: Path = STRUCT_DB, include_cancelled: bool = False,
     evals = _grouped(con, "SELECT course_id, * FROM eval_item ORDER BY course_id, seq")
     restr = _grouped(con, "SELECT course_id, * FROM restriction")
     weekly = _grouped(con, "SELECT course_id, topic FROM weekly ORDER BY course_id, week")
+    meta = dict(con.execute("SELECT key, value FROM meta"))
+    sem = parse_semester(meta.get("semester", "114-2"))
     cat, assess = [], {}
     for r in con.execute("SELECT * FROM course ORDER BY course_id"):
         if r["cancelled"] and not include_cancelled:
             continue
         cid = r["course_id"]
         topics = [w["topic"] for w in weekly.get(cid, []) if w["topic"]][:24]
-        c = _course(r, sessions.get(cid, []), paths.get(cid, []), topics)
+        c = _course(r, sessions.get(cid, []), paths.get(cid, []), topics, sem)
         cat.append(_catalog_course(r, c, evals.get(cid, []), restr.get(cid, []), topics))
         assess[cid] = _assessment(evals.get(cid, []), r["evaluation"] or "", bool(r["eval_reliable"]))
     tables = _tables(con)
@@ -215,11 +220,15 @@ def load_struct(db: Path = STRUCT_DB, include_cancelled: bool = False,
                 if cid in pos:
                     m[pos[cid]] = np.frombuffer(vec, dtype=np.float32, count=dim)
             embs[model] = m
-    meta = dict(con.execute("SELECT key, value FROM meta"))
     offerings = [o for o in _offerings(con) if any(cid in assess for cid in o.course_ids)]
     aliases = _aliases(con)
+    units = None
+    if "unit" in tables:
+        from src.v4.identity import UnitTable
+
+        units = UnitTable.from_rows(con.execute("SELECT code, name, college, level, source FROM unit"))
     con.close()
-    return StructBundle(cat, offerings, depts, aliases, assess, dict(aspects), embs, meta)
+    return StructBundle(cat, offerings, depts, aliases, assess, dict(aspects), embs, meta, units)
 
 
 def expand_aliases(text: str, aliases: dict[str, tuple[str, ...]]) -> tuple[str, list[str]]:

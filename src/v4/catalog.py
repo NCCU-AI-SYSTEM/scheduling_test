@@ -24,9 +24,10 @@ from pathlib import Path
 from src.doc_builders import _course_metadata
 from src.eval.conditions import course_categories
 from src.loader import Course, load_courses
+from src.v4.semester import current, source_db
 
 ROOT = Path(__file__).resolve().parents[2]
-DB = ROOT / "data" / "1142.db"
+DB = source_db()   # data/1142.db unless V4_SOURCE_DB says otherwise
 
 _SCHED_HEAD = re.compile(r"^每周課程進度與作業要求\|Course Schedule & Requirements\|")
 _TEXTBOOK_TAIL = re.compile(r"已申請之圖書館指定參考書目.*?Respect Copyright\.?", re.S)
@@ -124,11 +125,14 @@ class CatalogCourse:
         return self.course.course_id
 
 
-def load_catalog(year: str = "114", semester: str = "2", with_reviews: bool = True,
-                 include_cancelled: bool = False) -> list[CatalogCourse]:
-    con = sqlite3.connect(DB)
+def load_catalog(year: str | None = None, semester: str | None = None, with_reviews: bool = True,
+                 include_cancelled: bool = False, db: Path | None = None) -> list[CatalogCourse]:
+    """Defaults: the semester and raw DB from src.v4.semester (V4_SEMESTER, V4_SOURCE_DB)."""
+    sem = current()
+    year, semester, db = year or sem.year, semester or sem.term, db or DB
+    con = sqlite3.connect(db)
     out: list[CatalogCourse] = []
-    for c in load_courses(year=year, semester=semester):
+    for c in load_courses(db_path=db, year=year, semester=semester):
         meta = _course_metadata(c)
         meta["dept_code"] = (c.sub_num or "")[:3]
         restr = [k for k, pat in _RESTRICT.items() if re.search(pat, c.note or "")]

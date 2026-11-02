@@ -41,10 +41,15 @@ REVIEW_TRUSTED = ("workload", "difficulty", "group_work", "teaching", "usefulnes
 
 def build_aspects(catalog: list[CatalogCourse], review_file: Path | None) -> dict[str, dict]:
     out = {c.course_id: syllabus_aspects(c) for c in catalog}
+    # rows carry the course ids of the semester they were extracted in; a new semester has
+    # new ids, so match by family (normalised name | teacher) as well (2026/11/02)
+    by_family: dict[str, list[str]] = {}
+    for c in catalog:
+        by_family.setdefault("|".join(c.family), []).append(c.course_id)
     if review_file and review_file.exists():
         for line in review_file.open(encoding="utf-8"):
             r = json.loads(line)
-            for cid in r["course_ids"]:
+            for cid in set(r["course_ids"]) | set(by_family.get(r.get("family", ""), [])):
                 if cid in out:
                     for k in REVIEW_TRUSTED:
                         if r.get(k) is not None:

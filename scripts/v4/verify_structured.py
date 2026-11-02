@@ -13,6 +13,7 @@ import argparse
 import json
 import sqlite3
 import sys
+from pathlib import Path
 
 from src.v4.structured import aliaseval, audit, verify
 from src.v4.structured.aliases import Alias, Resolver, load_catalogue
@@ -31,15 +32,20 @@ def _resolver(out: sqlite3.Connection, src: sqlite3.Connection) -> Resolver:
     rows = [dict(zip(cols, r)) for r in out.execute(f"SELECT {', '.join(cols)} FROM alias")]
     aliases = [Alias(**{**r, "members": tuple(json.loads(r["members"])), "in_1142": bool(r["in_1142"])})
                for r in rows]
-    return Resolver(aliases, load_catalogue(src))
+    ys = "".join(dict(out.execute("SELECT key, value FROM meta")).get("semester", "114-2").split("-"))
+    return Resolver(aliases, load_catalogue(src, ys))
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--samples", action="store_true")
+    ap.add_argument("--db", type=Path, default=OUT_DB, help="structured DB to check")
+    ap.add_argument("--src", type=Path, default=SRC_DB, help="raw scrape it was built from")
+    ap.add_argument("--report-dir", type=Path, default=AUDIT, help="where report.json and alias_eval.json go")
     args = ap.parse_args()
-    src = sqlite3.connect(f"file:{SRC_DB}?mode=ro", uri=True)
-    out = sqlite3.connect(f"file:{OUT_DB}?mode=ro", uri=True)
+    args.report_dir.mkdir(parents=True, exist_ok=True)
+    src = sqlite3.connect(f"file:{args.src}?mode=ro", uri=True)
+    out = sqlite3.connect(f"file:{args.db}?mode=ro", uri=True)
     raw, st = verify.load(src, out)
     cov = verify.coverage(raw, st)
     print("| 欄位 | 覆蓋率 | 說明 |\n|---|---|---|")
@@ -64,13 +70,13 @@ def main() -> int:
     al = aliaseval.evaluate(_resolver(out, src), out)
     for k, v in al["summary"].items():
         print(f"alias {k}: resolved {pct(v['resolved'], v['n'])}, in 114-2 {v['in_1142']}; unresolved {v['unresolved'][:12]}")
-    aliaseval.save(al, AUDIT / "alias_eval.json")
+    aliaseval.save(al, args.report_dir / "alias_eval.json")
     report = {"coverage": {k: {kk: vv for kk, vv in v.items() if kk != "misses"} | {"misses": v["misses"][:40]}
                            for k, v in cov.items()},
               "surprises": {k: v[:60] if isinstance(v, list) else v for k, v in sur.items()},
               "surprise_counts": {k: len(v) for k, v in sur.items()},
               "precision": prec, "alias": al["summary"]}
-    (AUDIT / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1, default=list), encoding="utf-8")
+    (args.report_dir / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1, default=list), encoding="utf-8")
     return 0
 
 

@@ -55,6 +55,26 @@ def test_resolve_priority(units):
     assert resolve(units, depts) is None
 
 
+def test_unit_table_round_trips_through_rows(units):
+    again = UnitTable.from_rows(units.rows())
+    for name, level in [("資訊科學系", "學士"), ("資訊科學系", "碩士"), ("企業管理學系", "學士"), ("法律學系", "碩士")]:
+        assert again.code_for(name, level) == units.code_for(name, level)
+    assert again.names == units.names
+    assert again.code_for("資訊科學系碩士在職專班", "碩士") == "971"
+
+
+def test_struct_bundle_carries_unit_table():
+    from src.v4.struct_store import STRUCT_DB, load_struct
+
+    if not STRUCT_DB.exists():
+        pytest.skip("needs data/v4/course_struct.db")
+    b = load_struct()
+    if b.units is None:
+        pytest.skip("course_struct.db built before the unit table existed")
+    assert b.units.code_for("資訊科學系", "碩士") == "753"
+    assert b.units.names.get("971") == "資訊科學系碩士在職專班"
+
+
 def _ch(**kw) -> Channel:
     base = dict(course_id="1142305001001", sub_num="305001001", unit="企管三", dept_code="305", college="商",
                 level="學士", targets=unit_targets("企管三"), enroll_mode="一般", audience_level="",

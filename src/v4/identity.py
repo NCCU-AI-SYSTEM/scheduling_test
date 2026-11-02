@@ -6,9 +6,12 @@
                      department, blind to double majors and statuses, so a last resort
 
 Department names become codes through the course system's own unit tree
-(data/v4/unit.json: college -> 學士/碩士/博士 -> code + name), so 資訊科學系 at 碩士 level is
-753 while the same name at 學士 level is 703. data/v4/nccu_units.tsv (the school's
-administrative unit list) supplies names for codes the tree lacks.
+(unit.json from qrysub.nccu.edu.tw: college -> 學士/碩士/博士 -> code + name), so 資訊科學系
+at 碩士 level is 753 while the same name at 學士 level is 703. nccu_units.tsv (the school's
+administrative unit list, pasted by the user from a DepDDL drop-down) supplies names
+for codes the tree lacks. Both are merged into the `unit` table of course_struct.db by
+scripts.v4.build_runtime; at runtime UnitTable comes from there (struct_store), the two
+files are read only at build time.
 """
 
 from __future__ import annotations
@@ -48,11 +51,13 @@ def _n(s: str) -> str:
 
 class UnitTable:
     def __init__(self, units: list[Unit], names: dict[str, str]):
+        self.units = list(dict.fromkeys(units))
         self.by_code = {}
-        for u in units:
+        for u in self.units:
             self.by_code.setdefault(u.code, u)
-        self.by_name = {(_n(u.name), u.level): u for u in units}
-        self.names = names
+        self.by_name = {(_n(u.name), u.level): u for u in self.units}
+        self.names = names                      # school unit list: code -> name, every unit
+        self.by_listed_name = {_n(n): c for c, n in names.items()}
 
     @classmethod
     def load(cls, tree: Path = UNIT_TREE, listing: Path = UNIT_LIST) -> "UnitTable":
@@ -72,6 +77,20 @@ class UnitTable:
                 names = {r["code"]: r["name"] for r in csv.DictReader(f, delimiter="\t")}
         return cls(units, names)
 
+    def rows(self) -> list[tuple[str, str, str, str, str]]:
+        """(code, name, college, level, source) for the `unit` table in course_struct.db.
+        unit.json rows carry a level; the school's unit list is kept whole with level ''."""
+        tree = [(u.code, u.name, u.college, u.level, "unit.json") for u in self.units]
+        listing = [(code, name, "", "", "nccu_units") for code, name in sorted(self.names.items())]
+        return tree + listing
+
+    @classmethod
+    def from_rows(cls, rows) -> "UnitTable":
+        rows = list(rows)   # a DB cursor can only be read once
+        units = [Unit(code, name, college, level) for code, name, college, level, src in rows if src == "unit.json"]
+        names = {code: name for code, name, _c, _l, src in rows if src == "nccu_units"}
+        return cls(units, names)
+
     def code_for(self, name: str, level: str) -> str | None:
         """資訊科學系 + 碩士 -> 753; 資訊科學系碩士班 -> 753; a 3-character code passes through."""
         s = _n(name)
@@ -85,7 +104,10 @@ class UnitTable:
             if key in self.by_name:
                 return self.by_name[key].code
         hits = {u.code for (nm, lv), u in self.by_name.items() if lv == level and (base in nm or nm in base)}
-        return hits.pop() if len(hits) == 1 else None
+        if len(hits) == 1:
+            return hits.pop()
+        # 在職專班 and programs missing from the tree: the school unit list has their exact name
+        return self.by_listed_name.get(s) if level != "學士" or s in self.by_listed_name else None
 
     def dept(self, code: str, level: str | None = None) -> Dept | None:
         u = self.by_code.get(code)
@@ -133,15 +155,17 @@ def from_form(f: FormInput, units: UnitTable) -> StudentIdentity:
 
 
 def resolve(units: UnitTable, depts: dict[str, Dept], profile: StudentProfile | None = None,
-            form: FormInput | None = None, student_id: str | None = None) -> StudentIdentity | None:
-    """First source that works wins; self-declared statuses from the form are added to any source."""
+            form: FormInput | None = None, student_id: str | None = None,
+            academic_year: int = 114) -> StudentIdentity | None:
+    """First source that works wins; self-declared statuses from the form are added to any source.
+    academic_year (the DB's semester) turns a student number's entry year into a grade."""
     ident = None
     if profile is not None:
         ident = from_profile(profile, units)
     elif form is not None:
         ident = from_form(form, units)
     elif student_id:
-        ident = replace(from_student_id(student_id, depts), source="學號")
+        ident = replace(from_student_id(student_id, depts, academic_year), source="學號")
     if ident is not None and form is not None and ident.source != "自行輸入":
         ident = replace(ident, statuses=ident.statuses | frozenset(form.statuses))
     return ident

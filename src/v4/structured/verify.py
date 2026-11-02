@@ -110,8 +110,10 @@ def fields() -> list[Field]:
 
 def load(src: sqlite3.Connection, out: sqlite3.Connection) -> tuple[dict, dict]:
     raw: dict[str, dict] = {}
+    label = dict(out.execute("SELECT key, value FROM meta")).get("semester", "114-2")
+    year, term = label.split("-")
     src.row_factory = sqlite3.Row
-    for r in src.execute("SELECT * FROM COURSE WHERE y='114' AND s='2' ORDER BY id, dp1, dp2, dp3"):
+    for r in src.execute("SELECT * FROM COURSE WHERE y = ? AND s = ? ORDER BY id, dp1, dp2, dp3", (year, term)):
         d = raw.setdefault(r["id"], dict(r) | {"dp1s": set()})
         d["dp1s"].add(r["dp1"])
     src.row_factory = None
