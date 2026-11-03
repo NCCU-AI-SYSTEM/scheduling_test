@@ -108,9 +108,10 @@ class V4Search:
         self.ids = [c.course_id for c in catalog]
         self.pos = {cid: i for i, cid in enumerate(self.ids)}
         self.texts = [doc_fn(c) for c in catalog]
-        self.bm25 = BM25(tokenize_all(self.texts, "char12"))
+        self.bm25 = None if pg is not None else BM25(tokenize_all(self.texts, "char12"))
         self.encoder = encoder
-        self.demb = doc_emb if doc_emb is not None else (encoder.encode_docs(self.texts)[0] if encoder else None)
+        self.demb = doc_emb if doc_emb is not None or pg is not None else (
+            encoder.encode_docs(self.texts)[0] if encoder else None)
         self.reranker = reranker
         self.aspects = aspects or {}
         self.names = [_norm(c.course.name) for c in catalog]

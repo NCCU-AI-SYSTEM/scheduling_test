@@ -8,7 +8,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field, replace
 
-from src.llm.ollama_http import chat, parse_json_object
+from src.llm.ollama_http import parse_json_object
+from src.llm.router import chat
 from src.v4.assessment import CONDITION_ITEMS, parse_query as parse_assessment
 from src.parsers.base import ConditionResult
 from src.parsers.ollama_parser import sanitize

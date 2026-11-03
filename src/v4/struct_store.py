@@ -69,7 +69,38 @@ def _lmt_kind(cat: str | None, detail: str | None) -> str:
     return f"跨領域({detail})" if cat == "跨領域" and detail else f"{cat}通識"
 
 
-def _tables(con: sqlite3.Connection) -> set[str]:
+def _pg_sql(sql: str) -> str:
+    """The queries below in PostgreSQL's dialect. ctid is rowid's counterpart: load_v4 inserts
+    rows in rowid order and pg_dump preserves it, which is what channel order relies on."""
+    return re.sub(r"\browid\b", "ctid", sql.replace("?", "%s"))
+
+
+def _vector(text: str) -> np.ndarray:
+    return np.array(json.loads(text), dtype=np.float32)
+
+
+class _PgCon:
+    """The small part of sqlite3.Connection the loader uses, over one release's v4 schema."""
+
+    def __init__(self, dsn: str):
+        import psycopg2
+        import psycopg2.extras
+
+        self._conn = psycopg2.connect(dsn)
+        self._factory = psycopg2.extras.DictCursor     # rows take both r["col"] and tuple unpacking
+
+    def execute(self, sql: str, params: tuple = ()):
+        cur = self._conn.cursor(cursor_factory=self._factory)
+        cur.execute(_pg_sql(sql), params or None)
+        return cur
+
+    def close(self) -> None:
+        self._conn.close()
+
+
+def _tables(con) -> set[str]:
+    if isinstance(con, _PgCon):
+        return {r[0] for r in con.execute("SELECT tablename FROM pg_tables WHERE schemaname = 'v4'")}
     return {r[0] for r in con.execute("SELECT name FROM sqlite_master WHERE type='table'")}
 
 
@@ -185,6 +216,52 @@ def load_struct(db: Path = STRUCT_DB, include_cancelled: bool = False,
         raise FileNotFoundError(f"{db} missing: run scripts.v4.build_structured then scripts.v4.build_runtime")
     con = sqlite3.connect(db)
     con.row_factory = sqlite3.Row
+
+    def embeddings(cat: list[CatalogCourse]) -> dict[str, np.ndarray]:
+        embs = {}
+        if "embedding" in _tables(con):
+            pos = {c.course_id: i for i, c in enumerate(cat)}
+            for model in embedding_models:
+                rows = con.execute("SELECT course_id, dim, vec FROM embedding WHERE model = ?", (model,)).fetchall()
+                if not rows:
+                    raise ValueError(f"no embeddings for {model} in {db}: run scripts.v4.build_runtime --encoder {model}")
+                m = np.zeros((len(cat), rows[0][1]), dtype=np.float32)
+                for cid, dim, vec in rows:
+                    if cid in pos:
+                        m[pos[cid]] = np.frombuffer(vec, dtype=np.float32, count=dim)
+                embs[model] = m
+        return embs
+
+    return _load(con, include_cancelled, embeddings)
+
+
+def load_struct_pg(dsn: str, include_cancelled: bool = False, embedding_models: tuple[str, ...] = ()) -> StructBundle:
+    """The same bundle from a release's v4 schema (CourseDataPrep prep.load_v4). The schema holds
+    one encoder's vectors in v4.doc; pass embedding_models only when ranking in memory, since
+    PgRanker uses pgvector and does not need them."""
+    con = _PgCon(dsn)
+    (exists,) = con.execute("SELECT to_regclass('v4.course')").fetchone()
+    if exists is None:
+        con.close()
+        raise FileNotFoundError("no v4 schema in this database: run CourseDataPrep's prep.load_v4 or restore a release")
+    con.execute("SET search_path = v4, public")
+
+    def embeddings(cat: list[CatalogCourse]) -> dict[str, np.ndarray]:
+        embs = {}
+        pos = {c.course_id: i for i, c in enumerate(cat)}
+        for model in embedding_models:
+            rows = con.execute("SELECT course_id, emb::text FROM doc").fetchall()
+            m = np.zeros((len(cat), len(_vector(rows[0][1]))), dtype=np.float32)
+            for cid, text in rows:
+                if cid in pos:
+                    m[pos[cid]] = _vector(text)
+            embs[model] = m
+        return embs
+
+    return _load(con, include_cancelled, embeddings)
+
+
+def _load(con, include_cancelled: bool, embeddings) -> StructBundle:
     sessions = _grouped(con, "SELECT course_id, * FROM session ORDER BY course_id, seq")
     paths = _grouped(con, "SELECT course_id, * FROM course_path")
     evals = _grouped(con, "SELECT course_id, * FROM eval_item ORDER BY course_id, seq")
@@ -208,18 +285,7 @@ def load_struct(db: Path = STRUCT_DB, include_cancelled: bool = False,
     if "aspect" in tables:
         for cid, aspect, value in con.execute("SELECT course_id, aspect, value FROM aspect"):
             aspects[cid][aspect] = value
-    embs = {}
-    if "embedding" in tables:
-        pos = {c.course_id: i for i, c in enumerate(cat)}
-        for model in embedding_models:
-            rows = con.execute("SELECT course_id, dim, vec FROM embedding WHERE model = ?", (model,)).fetchall()
-            if not rows:
-                raise ValueError(f"no embeddings for {model} in {db}: run scripts.v4.build_runtime --encoder {model}")
-            m = np.zeros((len(cat), rows[0][1]), dtype=np.float32)
-            for cid, dim, vec in rows:
-                if cid in pos:
-                    m[pos[cid]] = np.frombuffer(vec, dtype=np.float32, count=dim)
-            embs[model] = m
+    embs = embeddings(cat)
     offerings = [o for o in _offerings(con) if any(cid in assess for cid in o.course_ids)]
     aliases = _aliases(con)
     units = None

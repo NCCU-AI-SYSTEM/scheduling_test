@@ -119,7 +119,13 @@ def stage_run(a) -> None:
 
         rr = load(a.reranker, device=a.device, max_len=a.rerank_maxlen or None, int8=a.rerank_int8)
     bundle = None
-    if a.struct:  # runtime path: everything from course_struct.db, nothing from 1142.db
+    if a.struct_pg:  # what the backend will do: everything from a release's v4 schema
+        from src.v4.pg_backend import DSN
+        from src.v4.struct_store import load_struct_pg
+
+        bundle = load_struct_pg(DSN)
+        cat = bundle.catalog
+    elif a.struct:  # runtime path: everything from course_struct.db, nothing from 1142.db
         from src.v4.struct_store import load_struct
 
         bundle = load_struct(embedding_models=(a.encoder,) if a.encoder else ())
@@ -376,6 +382,8 @@ def main() -> None:
     p.add_argument("--pg", choices=["", "whitespace", "ngram", "jieba"], default="",
                    help="rank in PostgreSQL (V4_PG_DSN) with this pg_search tokenizer")
     p.add_argument("--pg-conditions", action="store_true", help="hard conditions as SQL WHERE")
+    p.add_argument("--struct-pg", action="store_true",
+                   help="load courses from V4_PG_DSN's v4 schema (use with --pg); no SQLite at all")
     p.add_argument("--hype", default="")
     p.add_argument("--aspects", default="")
     p.add_argument("--no-cond", action="store_true")
