@@ -1,0 +1,24 @@
+{
+ "gemma4:12b": {
+  "queries": 248,
+  "identical_plans": 0.8306451612903226,
+  "identical_conditions": 0.9717741935483871,
+  "failed_native": 0,
+  "failed_openai": 0,
+  "gold_conditions_native": 0.782258064516129,
+  "gold_conditions_openai": 0.7782258064516129,
+  "p50_s_native": 0.45243096351623535,
+  "p50_s_openai": 0.4952096939086914
+ },
+ "gemma4:e4b": {
+  "queries": 248,
+  "identical_plans": 0.9153225806451613,
+  "identical_conditions": 0.9879032258064516,
+  "failed_native": 0,
+  "failed_openai": 0,
+  "gold_conditions_native": 0.7620967741935484,
+  "gold_conditions_openai": 0.7620967741935484,
+  "p50_s_native": 0.18504929542541504,
+  "p50_s_openai": 0.18445563316345215
+ }
+}

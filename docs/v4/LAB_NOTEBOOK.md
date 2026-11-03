@@ -710,3 +710,17 @@
 - docker-compose 的 postgres 原本開在所有網卡、預設密碼，改成只綁 127.0.0.1。
 - hopelab 試跑 114-2 抓到三個問題（舊爬蟲檔 smtQty 型別、pgloader 記憶體、paradedb schema 衝突），細節在 PG_MIGRATION.md。修好後成品還原到全新容器，搜尋分數和實驗表相同（0.864 / 0.918）。
 - 使用者另外問自動上線：資料庫容器只在第一次啟動匯入 `db/init/`，換版要另外處理，建議匯入新資料庫再改名切換，寫在 PG_MIGRATION.md，還沒實作。
+
+## 2026/11/03　整理 repo、移植準備
+
+**整理**（使用者決定：照 v4 移植、v5 凍結、舊實驗搬 `archive/`）
+- 依 import、`python -m` 與文字引用，算出 v4 和 v5 分支都用不到的 70 個檔案，搬進 `archive/`。`scripts/v4` 分成這一層、`analysis/`、`runs/`，v5 與 `prep.release` 依賴的路徑不動。
+- 驗收條件是和 v5 的合併衝突不增加，整理前後都是 `pipeline.py`、`run_e2e.py` 兩個檔案。
+- hopelab：舊 `scheduling_test/` 刪除前比對內容，有 43 個檔案別處沒有（主要是 `results/v3`），和未提交的 diff 一起打包成 `archive/old_scheduling_test_unique.tgz`。Ollama 從 100 GB 降到 23 GB，留 e4b、12b、qwen3:14b、31b-cloud。
+
+**移植準備**：兩個缺口補上並驗證，數字在 `PORTING.md` 第 5 節。
+- `load_struct_pg` 從成品的 `v4` schema 載入，和 SQLite 完全相同。`channel` 原本靠 `rowid` 排序，PostgreSQL 用 `ctid`。
+- 規劃器透過 `src/llm/router.py` 可走 OpenAI 相容端點，因為後端已經拿掉 Ollama 原生 client。
+- 建置資料庫的 BM25 比還原後的成品慢 40 多倍（65 ms 對 1.4 ms）。線上走還原路徑，所以沒有再追原因。
+
+**使用者新資訊**：老師會提供 GPU 主機，預設改成 GPU 設定。使用者問 v5 要不要先做完，看過 v5 紀錄後的判斷：v4 先上線，v5 繼續，第一階段的設定之後用開關轉接（`PORTING.md` 第 9 節）。
