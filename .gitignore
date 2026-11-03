@@ -50,3 +50,8 @@ data/v4/course_struct.tmp
 data/v4/course_struct.db.new
 data/v4/staging/
 data/v4/archive/
+
+# archived OpenAI batch outputs and experiment logs
+archive/batches/*.jsonl
+archive/batches/*.out
+logs/
