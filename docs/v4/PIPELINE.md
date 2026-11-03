@@ -121,7 +121,7 @@ python -m scripts.v4.demo_search "大英要選哪一班" --dept 資訊科學系 
 STUDENT_ID=112703001 python -m scripts.v4.demo_search "初會(一)有晚上的班嗎"
 
 # 每一步的實際輸出
-python -m scripts.v4.explain_examples
+python -m scripts.v4.analysis.explain_examples
 ```
 
 每一步的實際範例輸出在 `docs/v4/examples_output.txt`，縮寫對照表在 `docs/v4/aliases.md`。

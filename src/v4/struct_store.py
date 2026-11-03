@@ -7,7 +7,7 @@ reads at runtime (dept, aspect, embedding).
 
 Objects are the same ones the pipeline already uses (CatalogCourse, Offering, Dept), so
 src/v4/pipeline.py does not need to know where they came from. Field mapping is checked
-course by course against src/v4/catalog.py in scripts/v4/check_struct_catalog.py.
+course by course against src/v4/catalog.py in scripts/v4/analysis/check_struct_catalog.py.
 """
 
 from __future__ import annotations

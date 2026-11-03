@@ -461,7 +461,7 @@
 - 硬體：hopelab 的 Ryzen 9 9900X，12 核。另外限制成 4 執行緒，模擬一般筆電。
 - 每個模型各開一個行程，所以記憶體是單一模型的峰值。
 - 建索引時間：用 200 份課程文件實測，再推算到全部 2,655 門。
-- 程式：`scripts/v4/cpu_bench.py`，結果在 `results/v4/cpu_bench.json`。
+- 程式：`scripts/v4/analysis/cpu_bench.py`，結果在 `results/v4/cpu_bench.json`。
 
 **編碼器**
 
@@ -484,7 +484,7 @@
 - **Reranker 在 CPU 上不能即時使用**。一題要 15–45 秒，比 GPU 慢 75–200 倍。原因是每門課要和問句一起讀，最多 1,536 個 token，20 門課合計約 2 萬個 token。6.4 的消融顯示，重排在完整流程裡只多 0.011 nDCG，所以沒有顯卡就直接關掉重排，搜尋延遲是編碼器加 BM25，約 60–90 ms。
 - **沒有顯卡時建議用 e5-large-instruct**。它在 4 執行緒的查詢延遲（79 ms）只比 bge-m3（55 ms）多 24 ms，補評後的分數較高；端到端兩者差不多（6.4）。記憶體只有 2 GB 的機器才考慮 bge-base-zh，它的補評分數低 0.042。
 
-**CPU 上的重排加速**（2026/11/02）：上表是 1,536 token、前 20 門。這裡改成輸入截到 512 token、只重排前 10 或 20 門，另外試 int8 動態量化與兩個較小的 cross-encoder。規劃器固定 gemma4:e4b，12 執行緒，R 子集 176 題，程式是 `scripts/v4/phase7_cpu_rerank.sh`。
+**CPU 上的重排加速**（2026/11/02）：上表是 1,536 token、前 20 門。這裡改成輸入截到 512 token、只重排前 10 或 20 門，另外試 int8 動態量化與兩個較小的 cross-encoder。規劃器固定 gemma4:e4b，12 執行緒，R 子集 176 題，程式是 `scripts/v4/runs/phase7_cpu_rerank.sh`。
 
 | 重排設定 | 以課程計 nDCG@10 | MRR@10 | 搜尋 p50 | 搜尋 p95 |
 |---|---|---|---|---|
@@ -502,7 +502,7 @@
 
 **規劃器與完整查詢**
 
-純 CPU 設定是 `src/v4/deploy.py` 的 cpu preset：Ollama `num_gpu=0`、e5 跑在 CPU、不重排、向量從資料庫讀取。量測用 R 子集 20 題，模型先載入過再計時，程式是 `scripts/v4/cpu_e2e_bench.py`。
+純 CPU 設定是 `src/v4/deploy.py` 的 cpu preset：Ollama `num_gpu=0`、e5 跑在 CPU、不重排、向量從資料庫讀取。量測用 R 子集 20 題，模型先載入過再計時，程式是 `scripts/v4/analysis/cpu_e2e_bench.py`。
 
 | 規劃器 | 執行緒 | 規劃 p50 / p95 | 搜尋 p50 / p95 | 一次查詢約 | 和 GPU 規劃結果相同 |
 |---|---|---|---|---|---|
@@ -528,7 +528,7 @@
 
 ### 6.7 放進 PostgreSQL 的影響
 
-線上系統的課程詳情、排課、檢索都讀 ParadeDB（PostgreSQL 加 pg_search 與 pgvector）。這裡把 course_struct.db 的課程載入同一套 ParadeDB（映像 2026/10/29 版，PostgreSQL 18.6、pg_search 0.26.4、pgvector 0.8.6），把三個環節依序換成 SQL，看品質和延遲變多少。規劃結果用同一份 gemma4:12b 的輸出，其餘設定和 6.4 的 v4s 相同。程式在 `src/v4/pg_backend.py`、`scripts/v4/phase8_pg.sh`。
+線上系統的課程詳情、排課、檢索都讀 ParadeDB（PostgreSQL 加 pg_search 與 pgvector）。這裡把 course_struct.db 的課程載入同一套 ParadeDB（映像 2026/10/29 版，PostgreSQL 18.6、pg_search 0.26.4、pgvector 0.8.6），把三個環節依序換成 SQL，看品質和延遲變多少。規劃結果用同一份 gemma4:12b 的輸出，其餘設定和 6.4 的 v4s 相同。程式在 `src/v4/pg_backend.py`、`scripts/v4/runs/phase8_pg.sh`。
 
 **逐環節比對**（不經評審，直接比排序）：
 

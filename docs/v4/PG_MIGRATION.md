@@ -111,7 +111,7 @@ PostgreSQL 容器只在資料目錄是空的時候執行 `db/init/`，所以換�
 - pgloader 用預設批次大小匯入完整爬蟲檔會記憶體不足，改成每批 2,000 列。
 - ParadeDB 映像在每個新資料庫都會自己建 paradedb、tiger、topology schema，完整 dump 還原到新容器會在 `schema "paradedb" already exists` 停下。改成只 dump public 與 v4。
 
-把成品還原到全新的 ParadeDB 容器，v4 搜尋讀 `v4.doc` 的結果和 §6.7 的實驗表相同：以課程計 nDCG@10 0.864、MRR 0.918；不重排 0.842、0.903（`scripts/v4/release_e2e.sh`）。
+把成品還原到全新的 ParadeDB 容器，v4 搜尋讀 `v4.doc` 的結果和 §6.7 的實驗表相同：以課程計 nDCG@10 0.864、MRR 0.918；不重排 0.842、0.903（`scripts/v4/runs/release_e2e.sh`）。
 
 ## 還沒做
 
