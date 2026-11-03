@@ -57,3 +57,39 @@
 {"key": "2926c49350a8532a51889bd39053eb66ed97b13f", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "(大學部)經濟學", "kind": "course"}, {"name": "(大學部)投資學", "kind": "course"}], "logic": "any", "consent_ok": true}, "error": ""}
 {"key": "4fe4a226d76f4faf4895c82cda4643a1665ac35f", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "(大學部)經濟學", "kind": "course"}, {"name": "(大學部)財務管理", "kind": "course"}], "logic": "all", "consent_ok": true}, "error": ""}
 {"key": "e697af48122bd35e0b8846a3c6d6c37d9e60cc29", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "(大學部)經濟學", "kind": "course"}, {"name": "(大學部)統計學", "kind": "course"}], "logic": "any", "consent_ok": true}, "error": ""}
+{"key": "297c41e264e21ed57ba164e287874cb2e9fe69eb", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "Prerequisite Management", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "6cbc08460e4ed90be18d972bbffa3faa3e6d41a4", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "Economics", "kind": "course"}, {"name": "Investments", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "c549181d609e2ff19266ef80f38e135edf5ca453", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "(商用)中級口語訓練", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "52803029d640b45eb3099b82ab784066ef11d60c", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "(商用)寫作與口語訓練(一)", "kind": "course"}, {"name": "(商用)寫作與口語訓練(二)", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "f332e3c0f957da49b6e96becfac6a55104aab67f", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "心測", "kind": "course"}, {"name": "變態", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "62e5e69e31c284daf68f2db1efef36077119c920", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "統計學", "kind": "course"}, {"name": "統計學(一)", "kind": "course"}], "logic": "any", "consent_ok": false}, "error": ""}
+{"key": "7d0891d5c6d8b2f32efe1509d3560bcdbf810dd3", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "ZU1012001 研究方法", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "269552b126206df1dae989377666b1e0c72bf413", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "國際公法 ZU1005011", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "435b66f119db33ae43e81f35d08dfd197c26c0e4", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "科技與創新管理", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "12e77185b5596931507c6e068ca54dcbe99027e3", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "機率論", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "d7faee66fe6160b4a9c661af0e01c13e3fdbbe5f", "model": "gemma4:31b-cloud", "output": {"courses": [], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "74232e16886a9aa60287bc4d180265c0c37482a5", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "語法導論", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "c6ea9f3b3ea8a988263d55b804085fda99fb89f2", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "音韻學導論", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "e7dcf3bf66af761999ea9f5c20e4b427e04b9f03", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "德文B1(或以上)程度", "kind": "knowledge"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "74909016cfb8c167a07c0738087ebdb43c0eba63", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "德語能力", "kind": "knowledge"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "5bdc150286328ab96e9efc8cdaee28cb06744502", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "西文B1(或以上)程度", "kind": "knowledge"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "986f41dc21bec50c6c412588eb1522b83f941ae7", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "統計學基礎概念(Mean、Variance、Covariance、Correlation coefficient、Normal distribution 、Regression)", "kind": "knowledge"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "66634ff19b7bcb48f637fb863e005e22ffee288e", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "Python程式設計", "kind": "course"}, {"name": "基本機率概念", "kind": "knowledge"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "f16fb68e3fc905d2fa7f0d0537830d1810cb2669", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "國際政治", "kind": "course"}, {"name": "國際關係", "kind": "course"}], "logic": "any", "consent_ok": false}, "error": ""}
+{"key": "05146eceb071847f96e372dadf1a16f1ab3c8574", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "進階西文聽力會話", "kind": "course"}, {"name": "DELE B1程度以上", "kind": "knowledge"}], "logic": "any", "consent_ok": false}, "error": ""}
+{"key": "a11808ea91d68ca41c7c391fbd2065c6df854caa", "model": "gemma4:31b-cloud", "output": {"courses": [], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "9ef8b7d60c2a5f18e5cf6fc01960d5c830f78c22", "model": "gemma4:31b-cloud", "output": {"courses": [], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "6a60eae2b80c903c90cb84c37e0913dd6d4b51e2", "model": "gemma4:31b-cloud", "output": {"courses": [], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "34412a1044590e98638f9e3adf7b71ad0379cd19", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "商業資料分析基礎:Python(一)", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "4049097b576945c154244da00f61920cda7ee741", "model": "gemma4:31b-cloud", "output": {"courses": [], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "28f59ca395141ab27f123c85529bb29dc1704eed", "model": "gemma4:31b-cloud", "output": {"courses": [], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "d73898765d337de44acb307b74aeb0b710f340e9", "model": "gemma4:31b-cloud", "output": {"courses": [], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "4b9ae5faa5c51555b3e17046ce76617ca94f1f63", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "程式設計基礎", "kind": "knowledge"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "6fe11f7714969d4d14fc523c12b46c15555a87b9", "model": "gemma4:31b-cloud", "output": {"courses": [], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "8e776a8bc400c8679aabe9bb8cc77b58d1ff7bb9", "model": "gemma4:31b-cloud", "output": {"courses": [], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "c7036211b751f170375ce47e68c7bf9705af691f", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "民法概要", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "4687b4662d7b9ffbc37b3f6645addc928717c448", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "程度在B1以上", "kind": "knowledge"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "843086251681f89eafda2cd8c8cffb69847ea986", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "Python", "kind": "course"}, {"name": "R基礎程式設計課程", "kind": "course"}], "logic": "any", "consent_ok": false}, "error": ""}
+{"key": "237a94a471b40c187a65e2b2a0ba84d5c390e30a", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "中級會計學", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "d75b564999aaa8f26469467355697235315234ad", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "財政學", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
+{"key": "e73713a63b571cd39f7db0990bd77b1635b42981", "model": "gemma4:31b-cloud", "output": {"courses": [{"name": "基本保險學", "kind": "course"}, {"name": "統計學", "kind": "course"}], "logic": "all", "consent_ok": false}, "error": ""}
